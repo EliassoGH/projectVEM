@@ -15,38 +15,17 @@ namespace geometry
     protected:
         std::array<real, sizeof...(Args)> coordinates;
 
-    private:
-        std::shared_ptr<Point<Args...>> selfSharedPtr; // Shared pointer to self
-
     public:
         // Default constructor to initialize coordinates to 0
         Point() : coordinates{0} {}
 
-        Point(Args... args) : coordinates{static_cast<real>(args)...}
-        {
-            // Create shared pointer to self during construction
-            selfSharedPtr = std::shared_ptr<Point<Args...>>(this, [](Point<Args...> *) {});
-        }
-
-        // Method to get the shared pointer to this Point instance
-        std::shared_ptr<Point<Args...>> getSharedPtr() const
-        {
-            return selfSharedPtr;
-        }
+        Point(Args... args) : coordinates{static_cast<real>(args)...} {}
 
         constexpr std::size_t getDimension() const
         {
             return coordinates.size();
         }
 
-        /*
-                void
-                set(Args... args)
-                {
-                    static_assert(coordinates.size() == sizeof...(Args), "Invalid number of input coordinates.");
-                    coordinates = {static_cast<real>(args)...};
-                }
-        */
         /*
                 // Setter to modify all coordinates of a point
                 template <typename... OtherArgs>
@@ -176,7 +155,7 @@ namespace geometry
         bool operator==(const Point<OtherArgs...> &other) const
         {
             static_assert(sizeof...(Args) == sizeof...(OtherArgs), "Invalid number of arguments.");
-            
+
             return coordinates == other.coordinates;
         }
 

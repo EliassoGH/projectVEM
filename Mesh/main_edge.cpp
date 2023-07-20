@@ -20,13 +20,10 @@ int main()
     Edge edge1(point1, point2);
     std::cout<<"first point of edge1 is "<<edge1[0]<<", second point of edge1 is "
     <<edge1[1]<<std::endl;
-    std::cout<<"addresses are: "<<edge1[0].getSharedPtr()<<" and "<<edge1[1].getSharedPtr()<<std::endl<<std::endl;
 
     // test assignment
-    std::cout<<"addresses of points before the assignment : "<<point1.getSharedPtr()<<" and "<<point3.getSharedPtr()<<std::endl;
     point1=point3;
     edge1.update();
-    std::cout<<"addresses of points after the assignment : "<<point1.getSharedPtr()<<" and "<<point3.getSharedPtr()<<std::endl;
     std::cout<<"after assignment first point of edge1 is "<<edge1[0]<<", second point of edge1 is "
     <<edge1[1]<<std::endl;
     std::cout<<"now check what happened to the other point which was part of edge1 before: "
@@ -36,7 +33,6 @@ int main()
     Edge edge2(point1,point2);
     std::cout<<"first point is "<<edge2[0]<<", second point is "
     <<edge2[1]<<std::endl;
-    std::cout<<"addresses are: "<<edge2[0].getSharedPtr()<<" and "<<edge2[1].getSharedPtr()<<std::endl;
 
     // equivalence
     std::cout<<"the 2 edges are equal? "<<(edge1==edge2)<<std::endl;
