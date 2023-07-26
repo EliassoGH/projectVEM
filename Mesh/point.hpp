@@ -12,18 +12,35 @@ namespace geometry
     template <typename... Args>
     class Point
     {
+    private:
+        static std::size_t lastId;
+        std::size_t id;
+
     protected:
         std::array<real, sizeof...(Args)> coordinates;
 
     public:
         // Default constructor to initialize coordinates to 0
-        Point() : coordinates{0} {}
+        Point() : coordinates{0}, id(lastId++) {}
 
-        Point(Args... args) : coordinates{static_cast<real>(args)...} {}
+        Point(Args... args) : coordinates{static_cast<real>(args)...}, id(lastId++) {}
 
         constexpr std::size_t getDimension() const
         {
             return coordinates.size();
+        }
+
+        // Set id
+        void setId(std::size_t _id)
+        {
+            id=_id;
+            lastId=_id+1;
+        }
+
+        // Get id
+        const std::size_t getId() const
+        {
+            return id;
         }
 
         /*
@@ -150,6 +167,19 @@ namespace geometry
             return std::sqrt(diff.dot(diff));
         }
 
+        // Define the comparison function based on edge Ids
+        bool operator<(const Point<Args...> &other) const
+        {
+            if (*this == other)
+            {
+                return false;
+            }
+            else
+            {
+                return id < other.id;
+            }
+        }
+
         // Custom definition of operator== for Point
         template <typename... OtherArgs>
         bool operator==(const Point<OtherArgs...> &other) const
@@ -162,10 +192,14 @@ namespace geometry
         // Output stream operator to stream coordinates
         friend std::ostream &operator<<(std::ostream &os, const Point<Args...> &point)
         {
-            for (const auto &coord : point.coordinates)
+            os << "Point " << point.getId() << ": (";
+            for (std::size_t i = 0; i < point.getDimension(); ++i)
             {
-                os << coord << " ";
+                if (i > 0)
+                    os << " ";
+                os << point.getCoordinates()[i];
             }
+            os << ")";
             return os;
         }
     };
@@ -217,6 +251,10 @@ namespace geometry
     {
         ((sum += std::pow(point[Indices], p)), ...);
     }
+
+    // Initialize lastId
+    template <typename... Args>
+    std::size_t Point<Args...>::lastId = 0;
 
     using Point3D = Point<real, real, real>;
 

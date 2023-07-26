@@ -81,6 +81,7 @@ int main()
     {
         std::cout << "p1!=p2" << std::endl;
     }
+    std::cout<<"p1 < p2? "<<(p1<p2)<<std::endl;
 
     return 0;
 }

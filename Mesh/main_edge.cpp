@@ -36,11 +36,11 @@ int main()
 
     // equivalence
     std::cout<<"the 2 edges are equal? "<<(edge1==edge2)<<std::endl;
+    std::cout<<"edge1 < edge2? "<<(edge1<edge2)<<std::endl;
 
     // properties
     std::cout<<"length is "<<edge1.getLength()<<std::endl;
     std::cout<<"direction is "<<edge1.getDirection()<<std::endl;
-
 
     return 0;
 }
