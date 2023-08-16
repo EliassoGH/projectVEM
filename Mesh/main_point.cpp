@@ -81,6 +81,18 @@ int main()
     {
         std::cout << "p1!=p2" << std::endl;
     }
+    std::cout<<"p1 < p2? "<<(p1<p2)<<std::endl;
+
+    // Normalize
+    Point3D pointN(1,2,3);
+    std::cout<<pointN.normalize()<<std::endl;
+
+    // Transform point
+    Point3D p3D(10,10,10);
+    Point3D O(9,9,10);
+    Point3D x(1,1,0);
+    Point3D y(1,-1,0);
+    std::cout<<transformTo2D(p3D,O,x,y)<<std::endl;
 
     return 0;
 }

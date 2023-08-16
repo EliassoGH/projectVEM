@@ -1,10 +1,11 @@
 #ifndef __TRAITS_HPP_
 #define __TRAITS_HPP_
 
-namespace geometry
+namespace traits
 {
 using real = double;
-} // namespace VEM
+using IndexType = long int;
+} // namespace traits
 
 
 #endif

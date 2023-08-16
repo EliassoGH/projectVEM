@@ -4,34 +4,55 @@
 #include <array>
 #include <iostream>
 #include <memory>
+#include <set>
 // #include <functional> // only needed for out-of-class piecewiseMultiply
 #include <cmath>
+
+using namespace traits;
 
 namespace geometry
 {
     template <typename... Args>
     class Point
     {
-    protected:
-        std::array<real, sizeof...(Args)> coordinates;
-
     private:
-        std::shared_ptr<Point<Args...>> selfSharedPtr; // Shared pointer to self
+        static IndexType lastId; // current available id
+        static std::set<IndexType> freeIds;
+        IndexType id;
+        std::array<real, sizeof...(Args)> coordinates;
 
     public:
         // Default constructor to initialize coordinates to 0
-        Point() : coordinates{0} {}
+        Point() : coordinates{0}
+        {
+            if (freeIds.empty())
+            {
+                id = lastId++;
+            }
+            else
+            {
+                id = *freeIds.begin();
+                freeIds.erase(freeIds.begin());
+            }
+        }
 
         Point(Args... args) : coordinates{static_cast<real>(args)...}
         {
-            // Create shared pointer to self during construction
-            selfSharedPtr = std::shared_ptr<Point<Args...>>(this, [](Point<Args...> *) {});
+            if (freeIds.empty())
+            {
+                id = lastId++;
+            }
+            else
+            {
+                id = *freeIds.begin();
+                freeIds.erase(freeIds.begin());
+            }
         }
 
-        // Method to get the shared pointer to this Point instance
-        std::shared_ptr<Point<Args...>> getSharedPtr() const
+        // Destructor to free the id when the point goes out of scope
+        ~Point()
         {
-            return selfSharedPtr;
+            freeIds.insert(id);
         }
 
         constexpr std::size_t getDimension() const
@@ -39,21 +60,42 @@ namespace geometry
             return coordinates.size();
         }
 
-        /*
-                void
-                set(Args... args)
+        // Set id
+        void setId(IndexType _id)
+        {
+            if (_id != id)
+            {
+                if (_id < lastId)
                 {
-                    static_assert(coordinates.size() == sizeof...(Args), "Invalid number of input coordinates.");
-                    coordinates = {static_cast<real>(args)...};
+                    // Check if the new id is already used by another point
+                    if (freeIds.find(_id) == freeIds.end())
+                    {
+                        std::cerr << "Error: Id " << _id << " is already used by another point." << std::endl;
+                        return;
+                    }
+                    freeIds.erase(_id);
                 }
-        */
+                else
+                {
+                    lastId = _id + 1;
+                }
+                id = _id;
+            }
+        }
+
+        // Get id
+        const IndexType &getId() const
+        {
+            return id;
+        }
+
         /*
                 // Setter to modify all coordinates of a point
                 template <typename... OtherArgs>
                 void setCoordinates(OtherArgs... args)
                 {
                     static_assert(sizeof...(Args) == sizeof...(OtherArgs), "Invalid number of arguments.");
-                    std::size_t index = 0;
+                    IndexType index = 0;
                     for (const auto coordinate : {args...})
                     {
                         coordinates[index] = coordinate;
@@ -68,7 +110,7 @@ namespace geometry
         }
 
         /*
-                real &operator[](std::size_t index)
+                real &operator[](IndexType index)
                 {
                     if (index >= sizeof...(Args))
                     {
@@ -79,7 +121,7 @@ namespace geometry
         */
         const real &operator[](std::size_t index) const
         {
-            if (index >= sizeof...(Args))
+            if (index >= this->getDimension())
             {
                 throw std::out_of_range("Invalid dimension index.");
             }
@@ -171,22 +213,52 @@ namespace geometry
             return std::sqrt(diff.dot(diff));
         }
 
+        // Norm
+        auto norm() const
+        {
+            Point<Args...> O;
+            return this->distance(O);
+        }
+
+        // Normalize coordinates
+        auto normalize() const
+        {
+            return ((*this)/(this->norm()));
+        }
+
+        // Define the comparison function based on edge Ids
+        bool operator<(const Point<Args...> &other) const
+        {
+            if (*this == other)
+            {
+                return false;
+            }
+            else
+            {
+                return id < other.id;
+            }
+        }
+
         // Custom definition of operator== for Point
         template <typename... OtherArgs>
         bool operator==(const Point<OtherArgs...> &other) const
         {
             static_assert(sizeof...(Args) == sizeof...(OtherArgs), "Invalid number of arguments.");
-            
+
             return coordinates == other.coordinates;
         }
 
         // Output stream operator to stream coordinates
         friend std::ostream &operator<<(std::ostream &os, const Point<Args...> &point)
         {
-            for (const auto &coord : point.coordinates)
+            os << "Point " << point.getId() << ": (";
+            for (std::size_t i = 0; i < point.getDimension(); ++i)
             {
-                os << coord << " ";
+                if (i > 0)
+                    os << " ";
+                os << point.getCoordinates()[i];
             }
+            os << ")";
             return os;
         }
     };
@@ -234,12 +306,28 @@ namespace geometry
 
     // Computes the sum of the powers
     template <typename... Args, size_t... Indices>
-    void sumOfPowers(const Point<Args...> &point, const auto &p, real &sum, std::index_sequence<Indices...>)
+    void sumOfPowers(const Point<Args...> &point, const real &p, real &sum, std::index_sequence<Indices...>)
     {
         ((sum += std::pow(point[Indices], p)), ...);
     }
 
+    // Initialize lastId
+    template <typename... Args>
+    IndexType Point<Args...>::lastId = 0;
+
+    // Initialize freeIds
+    template <typename... Args>
+    std::set<IndexType> Point<Args...>::freeIds = {};
+
     using Point3D = Point<real, real, real>;
+    using Point2D = Point<real, real>;
+
+    // Transform a point P(X,Y,Z) in P(x,y)
+    // given O(X,Y,Z) center of the local system and (e_x,e_y) orthogonal directions of the local system
+    Point2D transformTo2D(const Point3D &P, const Point3D &X_F, const Point3D &e_x, const Point3D &e_y, const real &scale = 1.0)
+    {
+        return (Point2D((P -X_F).dot(e_x.normalize()), (P - X_F).dot(e_y.normalize()))*scale);
+    }
 
 }
 
