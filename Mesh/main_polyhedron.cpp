@@ -32,14 +32,16 @@ int main()
     Edge3D edge8(point6, point3);
     Edge3D edge9(point4, point5);
 
+    Edge3D edge60(point5, point6);
+
     // create polygons
     Polygon3D polygon1{edge1, edge2, edge3, edge4};
     Polygon3D polygon2{edge1, edge5, edge6, edge7};
     Polygon3D polygon3{};
-    polygon3.addEdge(edge6, 1);
-    polygon3.addEdge(edge8, 0);
-    polygon3.addEdge(edge3, 0);
-    polygon3.addEdge(edge9, 0);
+    polygon3.addEdge(edge60);
+    polygon3.addEdge(edge8);
+    polygon3.addEdge(edge3);
+    polygon3.addEdge(edge9);
     Polygon3D polygon4{edge4, edge3, edge2, edge1}; // equivalent polygon as polygon1, but different id
     std::cout<<"polygon1==polygon4? "<<(polygon1==polygon4)<<std::endl;
 
@@ -64,6 +66,7 @@ int main()
     std::cout<<polyhedron2<<std::endl;
 
     // try to create a polyhedron with two coinciding polygons
+    std::cout<<"Now try to create a polyhedron with two coinciding polygons"<<std::endl;
     Polyhedron<Polygon3D> polyhedron3{polygon1, polygon2, polygon4};
     std::cout << polyhedron3.numPolygons() << std::endl;
 

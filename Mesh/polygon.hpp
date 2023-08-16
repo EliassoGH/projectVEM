@@ -14,18 +14,21 @@ namespace geometry
     class Polygon
     {
     private:
-        static std::size_t lastId;
-        std::size_t id;
+        static IndexType lastId;
+        IndexType id;
+        bool orientation;
         std::vector<std::reference_wrapper<const EdgeType>> edges;
-        std::vector<bool> edgeDirections; // Vector to store the reading direction of each edge
+        Point3D outwardNormalArea;
+        real diameter = 0.0;
+        // Point3D centroid;
 
     public:
-        Polygon() : id(lastId++) {};
+        Polygon() : Polygon({}){};
 
         // Constructor taking individual edges
-        Polygon(const std::initializer_list<EdgeType> &edgesWithoutDirection) : id(lastId++)
+        Polygon(const std::initializer_list<EdgeType> &edges_, bool _orientation = false) : id(lastId++), orientation(_orientation)
         {
-            for (const auto &edge : edgesWithoutDirection)
+            for (const auto &edge : edges_)
             {
                 for (const auto &existingEdge : edges)
                 {
@@ -35,12 +38,19 @@ namespace geometry
                     }
                 }
                 edges.push_back(std::cref(edge));
-                edgeDirections.push_back(false); // Default direction is assumed to be false
             }
+            if (edges.size() > 0)
+                computeProperties();
+        }
+
+        // Set orientation
+        void setOrientation(bool _orientation)
+        {
+            orientation = _orientation;
         }
 
         // Add an edge and its direction to the polygon
-        void addEdge(const EdgeType &edge, const bool &direction = false)
+        void addEdge(const EdgeType &edge)
         {
             for (const auto &existingEdge : edges)
             {
@@ -50,18 +60,17 @@ namespace geometry
                 }
             }
             edges.push_back(std::cref(edge));
-            edgeDirections.push_back(direction);
         }
 
         // Set id
-        void setId(std::size_t _id)
+        void setId(IndexType _id)
         {
             id = _id;
             lastId = _id + 1;
         }
 
         // Get id
-        const std::size_t getId() const
+        const IndexType &getId() const
         {
             return id;
         }
@@ -73,19 +82,36 @@ namespace geometry
         }
 
         // Get an edge by index
-        const EdgeType &getEdge(size_t index) const
+        const EdgeType &getEdge(std::size_t index) const
         {
             if (index >= edges.size())
             {
                 throw std::out_of_range("Invalid index for Polygon edge.");
             }
-            return edges[index].get();
+            if (orientation == false)
+                return edges[index].get();
+            else
+            {
+                return edges[edges.size() - index - 1].get().getOtherHalfEdge();
+                // return edges[edges.size() - index - 1].get();
+            }
         }
 
         // Access edges through []
-        const EdgeType &operator[](size_t index) const
+        const EdgeType &operator[](IndexType index) const
         {
             return getEdge(index);
+        }
+
+        // Get original Edge
+        const EdgeType &getPositiveEdge(std::size_t index) const
+        {
+            if (this->getEdge(index).getId() > 0)
+                return this->getEdge(index);
+            if (orientation == false)
+                return edges[index].get().getOtherHalfEdge();
+            else
+                return edges[edges.size() - index - 1].get();
         }
 
         // Check if the edges are stored consistently
@@ -97,24 +123,20 @@ namespace geometry
             }
 
             size_t numEdges = edges.size();
-            size_t currentEdgeFlipped, nextEdgeFlipped;
             for (size_t i = 0; i < numEdges; ++i)
             {
+                // std::cout<<edges[1].get()<<std::endl;
+                // std::cout<<edges[2].get()<<std::endl;
+                // std::cout<<edges[3].get()<<std::endl;
+                // std::cout<<edges[0].get()<<std::endl;
                 EdgeType currentEdge = edges[i].get();
+                // std::cout<<currentEdge<<std::endl;
+                // std::cout<<"qui1"<<std::endl;
                 EdgeType nextEdge = edges[(i + 1) % numEdges].get();
-                currentEdgeFlipped = 0;
-                nextEdgeFlipped = 0;
+                // std::cout<<nextEdge<<std::endl;
+                // std::cout<<"qui2"<<std::endl;
 
-                if (edgeDirections[i] == true)
-                {
-                    currentEdgeFlipped++;
-                }
-                if (edgeDirections[(i + 1) % numEdges] == true)
-                {
-                    nextEdgeFlipped++;
-                }
-
-                if (currentEdge[1 - currentEdgeFlipped] != nextEdge[0 + nextEdgeFlipped])
+                if (currentEdge[1] != nextEdge[0])
                 {
                     return false; // Inconsistent edges found
                 }
@@ -123,6 +145,116 @@ namespace geometry
             return true; // All edges are consistent
         }
 
+        // Compute properties
+        void computeProperties()
+        {
+            computeOutwardNormalArea();
+            computeDiameter();
+            // computeCentroid();
+        }
+
+        // Compute outward normal unit vector
+        void computeOutwardNormalArea()
+        {
+            outwardNormalArea = Point3D();
+            for (std::size_t e = 0; e < edges.size(); e++)
+            {
+                outwardNormalArea = outwardNormalArea + (0.5 * cross(this->getEdge(e)[0], this->getEdge(e)[1]));
+            }
+            /*
+            real nx(0.0), ny(0.0), nz(0.0);
+            for (std::size_t e = 0; e < edges.size(); e++)
+            {
+                nx += ((edges[e].get()[0][1] - edges[e].get()[1][1]) * (edges[e].get()[0][2] + edges[e].get()[1][2]));
+                ny += ((edges[e].get()[0][2] - edges[e].get()[1][2]) * (edges[e].get()[0][0] + edges[e].get()[1][0]));
+                nz += ((edges[e].get()[0][0] - edges[e].get()[1][0]) * (edges[e].get()[0][1] + edges[e].get()[1][1]));
+            }
+            outwardNormalArea = Point3D(nx, ny, nz)/2.0;
+            */
+        }
+
+        // Get outward normal unit vector
+        const Point3D getOutwardNormal() const
+        {
+            if (outwardNormalArea == Point3D())
+            {
+                throw std::logic_error("Outward normal area has not been computed yet.");
+            }
+            return outwardNormalArea.normalize();
+        }
+
+        // Get first local axis e_x
+        const Point3D get_e_x() const
+        {
+            return this->getEdge(0).getDirection();
+        }
+
+        // Get second local axis e_y
+        const Point3D get_e_y() const
+        {
+            return cross(this->getOutwardNormal(), this->get_e_x());
+        }
+
+        // Get area
+        real getArea() const
+        {
+            if (outwardNormalArea == Point3D())
+            {
+                throw std::logic_error("Outward normal area has not been computed yet.");
+            }
+            return outwardNormalArea.norm();
+        }
+
+        // Compute diameter
+        void computeDiameter()
+        {
+            diameter = 0.0;
+            for (std::size_t i = 0; i < (edges.size() - 1); i++)
+            {
+                for (std::size_t j = i + 1; j < edges.size(); j++)
+                {
+                    if (distance(this->getEdge(i)[0], this->getEdge(j)[0]) > diameter)
+                        diameter = distance(this->getEdge(i)[0], this->getEdge(j)[0]);
+                }
+            }
+        }
+
+        // Get diameter
+        real getDiameter() const
+        {
+            if (diameter == 0.0)
+            {
+                throw std::logic_error("Diameter has not been computed yet.");
+            }
+            return diameter;
+        }
+        /*
+                // Compute centroid
+                void computeCentroid()
+                {
+                    real cx(0.0), cy(0.0), cz(0.0);
+                    if (this->getOutwardNormal()[]==
+                    for (std::size_t e = 0; e < edges.size(); e++)
+                    {
+                        cx += ((edges[e].get()[0][0] + edges[e].get()[1][0]) * ((edges[e].get()[0][0]*edges[e].get()[1][1]) - (edges[e].get()[1][0]*edges[e].get()[0][1])));
+                        cy += ((edges[e].get()[0][1] + edges[e].get()[1][1]) * ((edges[e].get()[0][0]*edges[e].get()[1][1]) - (edges[e].get()[1][0]*edges[e].get()[0][1])));
+                        cz += ((edges[e].get()[0][2] + edges[e].get()[1][2]) * ((edges[e].get()[0][0]*edges[e].get()[1][2]) - (edges[e].get()[1][0]*edges[e].get()[0][2])));
+                        std::cout<<"cx"<<cx<<cy<<cz<<std::endl;
+                    }
+                    centroid = Point3D(cx,cy,cz)/(6*this->getArea());
+                    std::cout<<centroid<<std::endl;
+                }
+
+                // Get centroid
+                const Point3D &getCentroid() const
+                {
+                    if (centroid == Point3D())
+                    {
+                        throw std::logic_error("Centroid has not been computed yet.");
+                    }
+                    return centroid;
+                }
+        */
         // Define the comparison function based on polygon Ids
         bool operator<(const Polygon<EdgeType> &other) const
         {
@@ -212,7 +344,7 @@ namespace geometry
 
     // Initialize lastId
     template <typename EdgeType>
-    std::size_t Polygon<EdgeType>::lastId = 0;
+    IndexType Polygon<EdgeType>::lastId = 1;
 
     using Polygon3D = Polygon<Edge3D>;
 }

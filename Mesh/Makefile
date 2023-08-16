@@ -1,8 +1,8 @@
 CXX      ?= g++
-CXXFLAGS ?= -std=c++20
+CXXFLAGS ?= -std=c++20 -g
 LINK.o := $(LINK.cc) # Use C++ linker
 
-CPPFLAGS += -O3 -Wall -I.
+CPPFLAGS += -O0 -Wall -Wextra -I.
 
 # Source files and object files
 POINT_SRCS := main_point.cpp
@@ -50,7 +50,7 @@ $(MESH_EXEC): $(MESH_OBJS)
 
 # Compile .cpp files into .o files
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c -o $@ $<
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c -o $@ $<
 
 # Clean up object files and executables
 clean:

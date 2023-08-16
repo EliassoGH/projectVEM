@@ -17,7 +17,6 @@ namespace geometry
         static std::size_t lastId;
         std::size_t id;
         std::vector<std::reference_wrapper<const PolygonType>> polygons;
-        std::vector<bool> polygonDirections; // Vector to store the reading direction of each polygoon
 
     public:
         // Constructor taking individual polygons
@@ -33,24 +32,11 @@ namespace geometry
                     }
                 }
                 polygons.push_back(std::cref(polygon));
-                polygonDirections.push_back(false); // Default direction is assumed to be false
             }
-        }
-
-        // Method to add a polygon to the Polyhedron
-        void addPolygon(const PolygonType &polygon)
-        {
-            // Check if the polygon already exists
-            if (polygons.find(polygon) != polygons.end())
-            {
-                throw std::invalid_argument("Cannot add duplicate polygon to the Polyhedron.");
-            }
-
-            polygons.insert(polygon);
         }
 
         // Add a polygon and its direction to the polyhedron
-        void addPolygon(const PolygonType &polygon, const bool &direction = false)
+        void addPolygon(const PolygonType &polygon)
         {
             for (const auto &existingPolygon : polygons)
             {
@@ -60,7 +46,6 @@ namespace geometry
                 }
             }
             polygons.push_back(std::cref(polygon));
-            polygonDirections.push_back(direction);
         }
 
         // Set id
@@ -71,7 +56,7 @@ namespace geometry
         }
 
         // Get id
-        const std::size_t getId() const
+        const std::size_t &getId() const
         {
             return id;
         }
