@@ -52,7 +52,6 @@ int main()
     std::string filename = "N2.geo";
     Mesh<Point3D, Edge3D, Polygon3D, Polyhedron<Polygon3D>> mesh(filename);
 
-    
     for (std::size_t p = 0; p < mesh.numPolyhedra(); p++)
     {
         /*
@@ -140,14 +139,15 @@ int main()
     Point3D e_x = F.get_e_x();
     Point3D e_y = F.get_e_y();
     real A_F = F.getArea();
-    std::cout << X_F << std::endl
-              << h_F << std::endl
-              << e_x << std::endl
-              << e_y << std::endl
-              << A_F << std::endl;
+    std::cout << "Centroid = " << X_F << std::endl
+              << "Diameter = " << h_F << std::endl
+              << "First local axis = " << e_x << std::endl
+              << "Second local axis = " << e_y << std::endl
+              << "Area = " << A_F << std::endl
+              << std::endl;
 
-    //std::cout << integrateMonomial(2, F, Monomial2D(1, 0, 1.0), X_F, h_F, e_x, e_y) << std::endl;
-    //std::cout << integrateMonomial(2, F, Monomial2D(2, 0, 1.0), X_F, h_F, e_x, e_y) << std::endl;
+    // std::cout << integrateMonomial(2, F, Monomial2D(1, 0, 1.0), X_F, h_F, e_x, e_y) << std::endl;
+    // std::cout << integrateMonomial(2, F, Monomial2D(2, 0, 1.0), X_F, h_F, e_x, e_y) << std::endl;
     /*
     std::cout << integrateMonomial(2, F, Monomial2D(3, 0, 1.0), X_F, h_F, e_x, e_y) << std::endl;
     std::cout << integrateMonomial(2, F, Monomial2D(4, 0, 1.0), X_F, h_F, e_x, e_y) << std::endl;
@@ -172,44 +172,43 @@ int main()
     std::cout << integrateMonomial(2, F, Monomial2D(2, 3, 1.0), X_F, h_F, e_x, e_y) << std::endl;
 */
 
-        // Test integration over polygons of monomials embedded in plane, global reference system
-        // Compute integrals of all monomials in 2D up to order N
-        std::size_t N = 16;
-        std::vector<Monomial2D> monomialOrdered2D = Monomial2D::getMonomialsOrdered(N);
-        /*
-        for (std::size_t i = 0; i < monomialOrdered2D.size(); i++)
-        {
-            // Measure the execution time of the integrateMonomial function
-            auto start = std::chrono::high_resolution_clock::now();
-            real result = integrateMonomial(2, F, monomialOrdered2D[i]);
-            auto end = std::chrono::high_resolution_clock::now();
+    // Test integration over polygons of monomials embedded in plane, global reference system
+    // Compute integrals of all monomials in 2D up to order N
+    std::size_t N = 20;
+    std::vector<Monomial2D> monomialOrdered2D = Monomial2D::getMonomialsOrdered(N);
+    /*
+    for (std::size_t i = 0; i < monomialOrdered2D.size(); i++)
+    {
+        // Measure the execution time of the integrateMonomial function
+        auto start = std::chrono::high_resolution_clock::now();
+        real result = integrateMonomial(2, F, monomialOrdered2D[i]);
+        auto end = std::chrono::high_resolution_clock::now();
 
-            // Calculate the elapsed time
-            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        // Calculate the elapsed time
+        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 
-            // Print the result and execution time
-            std::cout << "Integral of " << monomialOrdered2D[i] << ": " << result << std::endl;
-            std::cout << "Execution time: " << duration << " microseconds" << std::endl
-                      << std::endl;
-        }
-        */
-        // Test integration over polygons of monomials embedded in plane, local reference system
-        for (std::size_t i = 140; i < monomialOrdered2D.size(); i++)
-        {
-            // Measure the execution time of the integrateMonomial function
-            auto start = std::chrono::high_resolution_clock::now();
-            real result = integrateMonomial(2, F, monomialOrdered2D[i], X_F, h_F, e_x, e_y);
-            auto end = std::chrono::high_resolution_clock::now();
+        // Print the result and execution time
+        std::cout << "Integral of " << monomialOrdered2D[i] << ": " << result << std::endl;
+        std::cout << "Execution time: " << duration << " microseconds" << std::endl
+                  << std::endl;
+    }
+    */
+    // Test integration over polygons of monomials embedded in plane, local reference system
+    for (std::size_t i = 0; i < monomialOrdered2D.size(); i++)
+    {
+        // Measure the execution time of the integrateMonomial function
+        auto start = std::chrono::high_resolution_clock::now();
+        real result = integrateMonomial(2, F, monomialOrdered2D[i], X_F, h_F, e_x, e_y);
+        auto end = std::chrono::high_resolution_clock::now();
 
-            // Calculate the elapsed time
-            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
+        // Calculate the elapsed time
+        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 
-            // Print the result and execution time
-            std::cout << "Integral of " << monomialOrdered2D[i] << ": " << result << std::endl;
-            std::cout << "Execution time: " << duration << " microseconds" << std::endl
-                      << std::endl;
-        }
-    
+        // Print the result and execution time
+        std::cout << "Integral of " << monomialOrdered2D[i] << ": " << result << std::endl;
+        std::cout << "Execution time: " << duration << " microseconds" << std::endl
+                  << std::endl;
+    }
 
     /*
      // Test integration over polygons of monomials embedded in space restricted to polygons

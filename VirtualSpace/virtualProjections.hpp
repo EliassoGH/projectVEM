@@ -22,13 +22,13 @@ private:
 public:
     VirtualProjections(const VirtualDofsCollection &dofs, const Mesh<Point3D, Edge3D, Polygon3D, Polyhedron<Polygon3D>> &mesh, const unsigned int &order)
     {
-        /*
+/*
         for (const auto &F : mesh.getPolygons())
         {
             computeFaceProjection(dofs, F.second, order, true);
             //std::cout<<F.second<<std::endl;
         }
-        */
+*/        
         computeFaceProjection(dofs, mesh.getPolygon(1), order, true);
     }
 
@@ -43,13 +43,13 @@ public:
         Point3D e_x = face.get_e_x();
         Point3D e_y = face.get_e_y();
         real A_F = face.getArea();
-        /*
+        
         std::cout << X_F << std::endl
                   << h_F << std::endl
                   << e_x << std::endl
                   << e_y << std::endl
                   << A_F << std::endl;
-        */
+        
 
         Eigen::SparseMatrix<real> G_F(m.size(), m.size());
         Eigen::MatrixXd B_F(m.size(), nDof);
@@ -204,6 +204,7 @@ public:
                       << std::endl;
 
             Eigen::MatrixXd diff = G_F - (B_F * D_F);
+/*
             for (std::size_t i = 0; i < diff.rows(); i++)
             {
                 for (std::size_t j = 0; j < diff.cols(); j++)
@@ -212,6 +213,7 @@ public:
                         std::cout << i << " " << j << std::endl;
                 }
             }
+*/
             std::cout << "Froebenius norm = " << diff.norm() << std::endl;
         }
 

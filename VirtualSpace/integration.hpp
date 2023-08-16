@@ -178,7 +178,8 @@ namespace IntegrationMonomial
 {
     using traits::real;
 
-    // static int count=1;
+    static int count=1;
+
     // Integrate a (scaled) 2D or 3D monomial respectively over a non-scaled 2D or 3D domain.
     // To get the integral of a (scaled) monomial over the scaled domain simply multiply the result by h^d.
     // Can also perform integration of a (scaled) monomial in 3D over a 2D domain.
@@ -200,7 +201,7 @@ namespace IntegrationMonomial
                 else if (d == 2)
                 {
                     Point2D p2D = transformTo2D(E, O, ex, ey, (1.0 / h));
-                    //std::cout << E << " " << p2D << "   " << ex << " " << ey << " " << h << std::endl;
+                    // std::cout << E << " " << p2D << "   " << ex << " " << ey << " " << h << std::endl;
                     return monomial.evaluate(p2D);
                 }
             }
@@ -229,12 +230,11 @@ namespace IntegrationMonomial
             }
             else if constexpr (std::is_same_v<DomainType, Edge3D>)
             {
-                di = E.getLength() / h;
-                //std::cout<<di<<std::endl;
-                I += di * integrateMonomial(N - 1, E[1], monomial, O, h, ex, ey);
-
                 if (d == 3)
                 {
+                    di = E.getLength() / h;
+                    // std::cout<<di<<std::endl;
+                    I += di * integrateMonomial(N - 1, E[1], monomial, O, h, ex, ey);
                     Point3D x0 = (E[0] - O) / h;
                     for (std::size_t i = 0; i < d; i++)
                     {
@@ -246,11 +246,29 @@ namespace IntegrationMonomial
                 }
                 else if (d == 2)
                 {
-                    Point2D x0 = transformTo2D(E[0], O, ex, ey, (1.0 / h));
-                    //std::cout<<x0<<std::endl;
+                    Point2D x1 = transformTo2D(E[0], O, ex, ey, (1.0 / h));
+                    Point2D x2 = transformTo2D(E[1], O, ex, ey, (1.0 / h));
+                    Point2D dir = transformTo2D(E.getDirection(), Point3D(), ex, ey);
+                    real x01(0.0), x02(0.0);
+                    if (std::abs(dir[0]) == 1.0)
+                        x02 = x1[1];
+                    else if (std::abs(dir[1]) == 1.0)
+                        x01 = x1[0];
+                    else
+                    {
+                        if (monomial.getExponents()[0] < monomial.getExponents()[1])
+                            x01 = (-(x2 - x1)[0] / (x2 - x1)[1] * x2[1] + x2[0]);
+                        else
+                            x02 = (-(x2 - x1)[1] / (x2 - x1)[0] * x2[0] + x2[1]);
+                    }
+                    Point2D x0(x01, x02);
+                    I += (x2 - x0).dot(dir) * monomial.evaluate(x1);
+                    //count++;
+                    I += (x0 - x1).dot(dir) * monomial.evaluate(x2);
+                    //count++;
                     for (std::size_t i = 0; i < d; i++)
                     {
-                        if (monomial.getExponents()[i] > 0)
+                        if ((monomial.getExponents()[i]) > 0 && (x0[i] != 0.0))
                         {
                             I += x0[i] * integrateMonomial(N, E, monomial.derivative(i), O, h, ex, ey);
                         }
@@ -286,7 +304,8 @@ namespace IntegrationMonomial
                 I /= (N + monomial.getOrder());
                 I *= std::pow(h, d);
             }
-            // count=1;
+            //std::cout<<"functions evaluations: "<<count<<std::endl;
+            //count=1;
             return I;
         }
         else
@@ -302,7 +321,7 @@ namespace IntegrationMonomial
         return (X_F / F.getArea());
     }
 
-    // Integrate over a polygon 
+    // Integrate over a polygon
     real integrateMonomial3DRestrictedMonomial2D(const Point3D &X_P, const real &h_P, const Polygon3D &F, const Monomial3D &m3D, const Monomial2D &m2D)
     {
         Point3D X_F = getPolygonCentroid(F);
@@ -318,12 +337,12 @@ namespace IntegrationMonomial
                   << e_z << std::endl;
         */
         auto m3Din2D = toPolynomial2D(m3D, h_P, h_F, X_P, X_F, e_x, e_y, e_z);
-        auto poly2D=m3Din2D*m2D;
+        auto poly2D = m3Din2D * m2D;
         real I = 0.0;
         for (const auto &monomialPair : poly2D.getPolynomial())
         {
             auto m = monomialPair.second;
-            //std::cout<<m<<std::endl;
+            // std::cout<<m<<std::endl;
             I += integrateMonomial(2, F, m, X_F, h_F, e_x, e_y);
         }
         return I;
