@@ -22,14 +22,14 @@ private:
 public:
     VirtualProjections(const VirtualDofsCollection &dofs, const Mesh<Point3D, Edge3D, Polygon3D, Polyhedron<Polygon3D>> &mesh, const unsigned int &order)
     {
-        /*
+        
         for (const auto &F : mesh.getPolygons())
         {
             computeFaceProjection(dofs, F.second, order, true);
             //std::cout<<F.second<<std::endl;
         }
-        */
-        computeFaceProjection(dofs, mesh.getPolygon(1), order, true);
+        
+        //computeFaceProjection(dofs, mesh.getPolygon(1), order, true);
     }
 
     void computeFaceProjection(const VirtualDofsCollection &dofs, const Polygon3D &face, const unsigned int &order, bool checkConsistency = false)
@@ -190,7 +190,7 @@ public:
                     D_F(i, j) = integrateMonomial(2, face, (m[j] * m[f]), X_F, h_F, e_x, e_y) / A_F;
                 }
             }
-
+/*
             Eigen::MatrixXd denseMatrix = G_F;
             std::cout << denseMatrix << std::endl
                       << std::endl;
@@ -202,8 +202,9 @@ public:
                       << std::endl;
             std::cout << denseMatrix << std::endl
                       << std::endl;
-
+*/
             Eigen::MatrixXd diff = G_F - (B_F * D_F);
+/*
             for (std::size_t i = 0; i < diff.rows(); i++)
             {
                 for (std::size_t j = 0; j < diff.cols(); j++)
@@ -212,6 +213,7 @@ public:
                         std::cout << i << " " << j << std::endl;
                 }
             }
+*/
             std::cout << "Froebenius norm = " << diff.norm() << std::endl;
         }
 
