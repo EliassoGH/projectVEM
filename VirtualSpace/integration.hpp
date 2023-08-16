@@ -178,7 +178,7 @@ namespace IntegrationMonomial
 {
     using traits::real;
 
-    static int count=1;
+    static int count = 1;
 
     // Integrate a (scaled) 2D or 3D monomial respectively over a non-scaled 2D or 3D domain.
     // To get the integral of a (scaled) monomial over the scaled domain simply multiply the result by h^d.
@@ -257,15 +257,15 @@ namespace IntegrationMonomial
                     else
                     {
                         if (monomial.getExponents()[0] < monomial.getExponents()[1])
-                            x01 = (-(x2 - x1)[0] / (x2 - x1)[1] * x2[1] + x2[0]);
+                            x01 = ((x1 - x2)[0] / (x2 - x1)[1] * x2[1] + x2[0]);
                         else
-                            x02 = (-(x2 - x1)[1] / (x2 - x1)[0] * x2[0] + x2[1]);
+                            x02 = ((x1 - x2)[1] / (x2 - x1)[0] * x2[0] + x2[1]);
                     }
                     Point2D x0(x01, x02);
-                    I += (x2 - x0).dot(dir) * monomial.evaluate(x1);
-                    //count++;
-                    I += (x0 - x1).dot(dir) * monomial.evaluate(x2);
-                    //count++;
+                    I += (x0 - x1).dot(dir) * monomial.evaluate(x1);
+                    // count++;
+                    I += (x2 - x0).dot(dir) * monomial.evaluate(x2);
+                    // count++;
                     for (std::size_t i = 0; i < d; i++)
                     {
                         if ((monomial.getExponents()[i]) > 0 && (x0[i] != 0.0))
@@ -304,8 +304,8 @@ namespace IntegrationMonomial
                 I /= (N + monomial.getOrder());
                 I *= std::pow(h, d);
             }
-            //std::cout<<"functions evaluations: "<<count<<std::endl;
-            //count=1;
+            // std::cout<<"functions evaluations: "<<count<<std::endl;
+            // count=1;
             return I;
         }
         else
