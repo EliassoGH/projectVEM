@@ -62,6 +62,42 @@ int main()
     std::cout << mesh.getPolygon(36).getPositiveEdge(2) << std::endl;
     std::cout << mesh.getPolygon(36).getPositiveEdge(3) << std::endl;
 
+    for (std::size_t p = 1; p < mesh.numPolygons() + 1; p++)
+    {
+        std::cout << "polygon" << std::endl;
+        std::cout << mesh.getPolygon(p) << std::endl;
+        for (std::size_t e = 0; e < mesh.getPolygon(p).numEdges(); e++)
+        {
+            std::cout << "edge: " << mesh.getPolygon(p).getEdge(e) << std::endl;
+            std::cout << "twin edge: " << mesh.getPolygon(p).getEdge(e).getOtherHalfEdge() << std::endl;
+        }
+        std::cout << std::endl;
+        std::cout << "other polygon" << std::endl;
+        std::cout << mesh.getPolygon(p).getOtherPolygon() << std::endl;
+        for (std::size_t e = 0; e < mesh.getPolygon(p).getOtherPolygon().numEdges(); e++)
+        {
+            std::cout << "edge: " << mesh.getPolygon(p).getOtherPolygon().getEdge(e) << std::endl;
+            std::cout << "twin edge: " << mesh.getPolygon(p).getOtherPolygon().getEdge(e) << std::endl;
+        }
+
+        auto F=mesh.getPolygon(5);
+        std::cout<<F<<std::endl;
+        auto Fpos=F.getOtherPolygon();
+        std::cout<<Fpos<<std::endl;
+        std::cout<<"edges:"<<std::endl;
+        for (std::size_t e=0;e<Fpos.numEdges();e++)
+        {
+            std::cout<<Fpos.getEdge(e)<<std::endl;
+            std::cout<<Fpos.getEdge(e)[0]<<std::endl;
+            std::cout<<Fpos.getEdge(e)[1]<<std::endl;
+            std::cout<<Fpos.getEdge(e).getOtherHalfEdge()<<std::endl;
+            std::cout<<std::endl;
+        }
+        //std::cout<<mesh.getPolygon(-1).getOtherPolygon().getEdge(0).getOtherHalfEdge()<<std::endl;
+
+        std::cout << std::endl;
+    }
+
     // auto myedge=mesh.getPolyhedron(6)[2][3];
     // std::cout<<myedge<<"with points"<<myedge[0]<<myedge[1]<<"and length"<<myedge.getLength()<<std::endl;
 

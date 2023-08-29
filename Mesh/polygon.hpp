@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <iostream>
 #include <stdexcept>
+#include <memory>
 
 namespace geometry
 {
@@ -18,6 +19,7 @@ namespace geometry
         IndexType id;
         bool orientation;
         std::vector<std::reference_wrapper<const EdgeType>> edges;
+        std::shared_ptr<Polygon<EdgeType>> otherPolygon; // Pointer to store the other polygon
         Point3D outwardNormalArea;
         real diameter = 0.0;
         // Point3D centroid;
@@ -41,6 +43,25 @@ namespace geometry
             }
             if (edges.size() > 0)
                 computeProperties();
+        }
+
+        // Setter method to set the other polygon
+        void setOtherPolygon(const Polygon<EdgeType> &otherPolygon_)
+        {
+            otherPolygon = std::make_shared<Polygon<EdgeType>>(otherPolygon_);
+        }
+
+        // Getter method to get the other polygon
+        Polygon<EdgeType> &getOtherPolygon() const
+        {
+            if (otherPolygon)
+            {
+                return *otherPolygon;
+            }
+            else
+            {
+                throw std::runtime_error("Twin polygon not set!");
+            }
         }
 
         // Set orientation

@@ -2,7 +2,7 @@ CXX       ?= g++
 CXXFLAGS  ?= -std=c++17
 LINK.o    := $(LINK.cc) # Use C++ linker
 
-CPPFLAGS  += -O0 -Wall -Wextra -g -I. -I../Mesh -I${mkBoostInc} -I${mkEigenInc}
+CPPFLAGS  += -fopenmp -O3 -Wall -Wextra -I. -I../Mesh -I../Solver -I${mkBoostInc} -I${mkEigenInc}
 LDFLAGS = -L. -L${mkBoostLib} -L${mkEigenLib} -Wl,-rpath=${PWD}
 LIBS += -lboost_system -lboost_filesystem
 
@@ -34,7 +34,7 @@ VIRTUALPROJECTIONS_EXEC  := main_virtualprojections
 
 .DEFAULT_GOAL := all
 
-# Targets and rules for main_monomial
+# Targets and rules
 all: $(MONOMIAL_EXEC) $(VIRTUALDOFS_EXEC) $(INTEGRATION_EXEC) $(VIRTUALPROJECTIONS_EXEC)
 
 # Targets and rules for main_monomial

@@ -6,6 +6,7 @@
 #include "mesh.hpp"
 #include <memory>
 #include <vector>
+#include <map>
 #include <utility>
 #include <typeinfo>
 
@@ -18,16 +19,28 @@ class PolyhedronDof;
 // Base class for degrees of freedom
 class VirtualDof
 {
+private:
+    std::size_t id;
+    static std::size_t last_id;
+
 public:
+    VirtualDof() : id(last_id++){};
     virtual ~VirtualDof() = default;
-    virtual std::size_t getId() const = 0;
+    // virtual std::size_t getId() const;
     virtual std::ostream &operator<<(std::ostream &os) const = 0;
 
     friend std::ostream &operator<<(std::ostream &os, const VertexDof &vDof);
     friend std::ostream &operator<<(std::ostream &os, const EdgeDof &eDof);
     friend std::ostream &operator<<(std::ostream &os, const FaceDof &fDof);
     friend std::ostream &operator<<(std::ostream &os, const PolyhedronDof &pDof);
+
+    virtual std::size_t getId() const
+    {
+        return id;
+    }
 };
+
+std::size_t VirtualDof::last_id = 0;
 
 // Derived class for VertexDof
 class VertexDof : public VirtualDof
@@ -51,7 +64,7 @@ public:
 
     std::ostream &operator<<(std::ostream &os) const override
     {
-        os << "Vertex Dof - Vertex ID: " << getId() << ", Coordinates: " << getVertex() << "\n";
+        os << "Vertex Dof " << VirtualDof::getId() << " - Vertex ID: " << getId() << ", Coordinates: " << getVertex() << "\n";
         return os;
     }
 };
@@ -92,7 +105,7 @@ public:
 
     std::ostream &operator<<(std::ostream &os) const override
     {
-        os << "Edge Dof - Edge ID: " << getId() << ", Gauss-Lobatto Point: " << getGaussLobattoPoint() << ", weight: " << getWeight() << "\n";
+        os << "Edge Dof " << VirtualDof::getId() << " - Edge ID: " << getId() << ", Gauss-Lobatto Point: " << getGaussLobattoPoint() << ", weight: " << getWeight() << "\n";
         return os;
     }
 };
@@ -126,7 +139,7 @@ public:
 
     std::ostream &operator<<(std::ostream &os) const override
     {
-        os << "Face Dof - Face ID: " << getId() << ", Monomial: " << getMonomial() << "\n";
+        os << "Face Dof " << VirtualDof::getId() << " - Face ID: " << getId() << ", Monomial: " << getMonomial() << "\n";
         return os;
     }
 };
@@ -160,7 +173,7 @@ public:
 
     std::ostream &operator<<(std::ostream &os) const override
     {
-        os << "Polyhedron Dof - Polyhedron ID: " << getId() << ", Monomial: " << getMonomial() << "\n";
+        os << "Polyhedron Dof " << VirtualDof::getId() << " - Polyhedron ID: " << getId() << ", Monomial: " << getMonomial() << "\n";
         return os;
     }
 };
@@ -205,7 +218,7 @@ public:
         if (order > 1)
         {
             // Create EdgeDof objects
-            numEdofs = mesh.numEdges() * order;
+            numEdofs = mesh.numEdges() * (order - 1);
             for (const auto &edgePair : mesh.getEdges())
             {
                 std::size_t edgeId = edgePair.first;
@@ -258,8 +271,11 @@ public:
                 }
             }
         }
+    }
 
-        // You can similarly add other types of dofs (edges, faces, polyhedra) here if needed.
+    static unsigned int getOrder()
+    {
+        return order;
     }
 
     std::size_t getnumVdofs() const
@@ -280,6 +296,11 @@ public:
     std::size_t getnumPdofs() const
     {
         return numPdofs;
+    }
+
+    std::size_t getnumDofs() const
+    {
+        return dofs.size();
     }
 
     // Method to get the corresponding specialized dof to a given id
@@ -319,9 +340,241 @@ public:
         }
         return os;
     }
+
+    // Print VirtualDofsCollection information
+    void print() const
+    {
+        std::cout<<"VIRTUAL DOFS"<<std::endl;
+        std::cout<<"Number of vertex dofs           : "<<this->getnumVdofs()*3<<std::endl;
+        std::cout<<"Number of edge dofs             : "<<this->getnumEdofs()*3<<std::endl;
+        std::cout<<"Number of face dofs             : "<<this->getnumFdofs()*3<<std::endl;
+        std::cout<<"Number of polyhedron dofs       : "<<this->getnumPdofs()*3<<std::endl;
+        std::cout<<"Total number of dofs            : "<<this->getnumDofs()*3<<std::endl;
+    }
 };
 
 // Initialize the static member outside the class definition
 unsigned int VirtualDofsCollection::order;
+
+class LocalVirtualDofs
+{
+private:
+    std::vector<std::shared_ptr<VirtualDof>> dofs; // map local dofs to global DOFS
+    std::map<std::size_t, std::size_t> V_map;
+    std::map<std::size_t, std::vector<std::size_t>> E_map;
+    std::map<std::size_t, std::vector<std::size_t>> F_map;
+    std::vector<std::size_t> P_vector;
+
+public:
+    LocalVirtualDofs(const Polyhedron<Polygon3D> &P, const VirtualDofsCollection &DOFS)
+    {
+        auto order = DOFS.getOrder();
+        std::size_t localDofCounter(0);
+        for (std::size_t f = 0; f < P.numPolygons(); f++)
+        {
+            for (std::size_t e = 0; e < P[f].numEdges(); e++)
+            {
+                // Insert the vertex into the map and check if it was inserted
+                auto inserted = V_map.insert(std::make_pair(P[f][e][0].getId(), localDofCounter));
+                // If the vertex was newly inserted, increment local dof counter and add vertex dof to local dofs
+                if (inserted.second)
+                {
+                    ++localDofCounter;
+                    dofs.push_back(DOFS.getDof<VertexDof>(P[f][e][0].getId()));
+                }
+            }
+        }
+        if (order > 1)
+        {
+            for (std::size_t f = 0; f < P.numPolygons(); f++)
+            {
+                for (std::size_t e = 0; e < P[f].numEdges(); e++)
+                {
+                    //if (P[f][e].getId() > 0)
+                    auto EID=P[f].getPositiveEdge(e).getId();
+                    if (E_map.find(EID)==E_map.end())
+                    {
+                        std::vector<std::size_t> Edofs;
+                        for (unsigned int i = 0; i < (order - 1); i++)
+                        {
+                            Edofs.push_back(localDofCounter);
+                            auto EDOFId = DOFS.getnumVdofs() + (order - 1) * (EID - 1) + i;
+                            // std::cout << EDOFId << " " << std::endl;
+                            // std::cout << DOFS.getDof<EdgeDof>(EDOFId)->getGaussLobattoPoint() << std::endl;
+                            //  Add edge dof to local dofs
+                            dofs.push_back(DOFS.getDof<EdgeDof>(EDOFId));
+                            ++localDofCounter;
+                        }
+                        // Insert the edge dofs into the map
+                        E_map.insert(std::make_pair(EID, Edofs));
+                        //std::cout<<"inserted a vector of Edofs at position"
+                    }
+                }
+            }
+            for (std::size_t f = 0; f < P.numPolygons(); f++)
+            {
+                auto FId = std::abs(P[f].getId());
+                std::vector<std::size_t> Fdofs;
+                for (unsigned int i = 0; i < order * (order - 1) / 2; i++)
+                {
+                    Fdofs.push_back(localDofCounter);
+                    auto FDOFId = DOFS.getnumVdofs() + DOFS.getnumEdofs() + (order * (order - 1) / 2) * (FId - 1) + i;
+                    // Add face dof to local dofs
+                    dofs.push_back(DOFS.getDof<FaceDof>(FDOFId));
+                    ++localDofCounter;
+                }
+                // Insert the face dofs into the map
+                F_map.insert(std::make_pair(FId, Fdofs));
+            }
+            for (unsigned int i = 0; i < (order + 1) * order * (order - 1) / 6; i++)
+            {
+                P_vector.push_back(localDofCounter);
+                auto PDOFId = DOFS.getnumVdofs() + DOFS.getnumEdofs() + DOFS.getnumFdofs() + ((order + 1) * order * (order - 1) / 6) * P.getId() + i;
+                // Add polyhedron dof to local dofs
+                dofs.push_back(DOFS.getDof<PolyhedronDof>(PDOFId));
+                ++localDofCounter;
+            }
+        }
+        /*
+        // Print vertices dof
+        std::cout << "vertices" << std::endl;
+        for (const auto &v : V_map)
+        {
+            std::cout << v.first << " " << v.second << std::endl;
+        }
+        for (std::size_t v = 0; v < this->getnumVdofs(); v++)
+        {
+            std::cout << "Global dof: " << this->getID(v) << " , " << this->getDof<VertexDof>(v)->getVertex() << std::endl;
+        }
+
+        // Print edges dof
+        std::cout << "edges" << std::endl;
+        for (const auto &e : E_map)
+        {
+            for (const auto &i : e.second)
+                std::cout << e.first << " " << i << std::endl;
+        }
+        for (std::size_t e = this->getnumVdofs(); e < this->getnumVdofs() + this->getnumEdofs(); e++)
+        {
+            std::cout << "Global dof: " << this->getID(e) << " , " << this->getDof<EdgeDof>(e)->getGaussLobattoPoint() << std::endl;
+        }
+
+        // Print faces dof
+        std::cout << "faces" << std::endl;
+        for (const auto &f : F_map)
+        {
+            for (const auto &i : f.second)
+                std::cout << f.first << " " << i << std::endl;
+        }
+        for (std::size_t f = this->getnumVdofs() + this->getnumEdofs(); f < this->getnumVdofs() + this->getnumEdofs() + this->getnumFdofs(); f++)
+        {
+            std::cout << "Global dof: " << this->getID(f) << " , " << this->getDof<FaceDof>(f)->getMonomial() << std::endl;
+        }
+
+        // Print polyhedron dof
+        std::cout << "polyhedron" << std::endl;
+        for (const auto &p : P_vector)
+        {
+            std::cout << p << std::endl;
+        }
+        for (std::size_t p = this->getnumVdofs() + this->getnumEdofs() + this->getnumFdofs(); p < this->getnumVdofs() + this->getnumEdofs() + this->getnumFdofs() + this->getnumPdofs(); p++)
+        {
+            std::cout << "Global dof: " << this->getID(p) << " , " << this->getDof<PolyhedronDof>(p)->getMonomial() << std::endl;
+        }
+        */
+    }
+
+    // Method to get the global id of the corresponding local dof id
+    std::size_t getID(std::size_t id) const
+    {
+        if (id >= dofs.size())
+        {
+            throw std::out_of_range("Invalid local id."); // Local Dof with the given id does not exist
+        }
+        return dofs[id]->VirtualDof::getId();
+    }
+
+    // Method to get the corresponding specialized dof to a given id
+    template <typename DofType>
+    std::shared_ptr<DofType> getDof(std::size_t id) const
+    {
+        if (id < dofs.size())
+        {
+            return std::dynamic_pointer_cast<DofType>(dofs[id]);
+        }
+        else
+        {
+            return nullptr; // Dof with the given id not found
+        }
+    }
+
+    std::size_t VToLocalId(const std::size_t &ID) const { return V_map.at(ID); }
+    std::vector<std::size_t> EToLocalId(const std::size_t &ID) const { return E_map.at(ID); }
+    std::vector<std::size_t> FToLocalId(const std::size_t &ID) const { return F_map.at(ID); }
+    std::size_t PToLocalId(const std::size_t &ID) const { return P_vector[ID]; }
+
+    std::size_t getnumVdofs() const
+    {
+        return V_map.size();
+    }
+
+    std::size_t getnumEdofs() const
+    {
+        return E_map.size() * (VirtualDofsCollection::getOrder() - 1);
+    }
+
+    std::size_t getnumFdofs() const
+    {
+        return F_map.size() * (VirtualDofsCollection::getOrder() * (VirtualDofsCollection::getOrder() - 1) / 2);
+    }
+
+    std::size_t getnumPdofs() const
+    {
+        return P_vector.size();
+    }
+
+    std::size_t getnumDofs() const
+    {
+        return dofs.size();
+    }
+
+    // Output stream operator for LocalVirtualDofs
+    friend std::ostream &operator<<(std::ostream &os, const LocalVirtualDofs &dofsCollection)
+    {
+        os << "Virtual local degrees of freedom collection - Order: " << VirtualDofsCollection::getOrder() << "\n";
+        for (const auto &dof : dofsCollection.dofs)
+        {
+            dof->operator<<(os);
+        }
+        return os;
+    }
+};
+
+class LocalVirtualDofsCollection
+{
+private:
+    std::vector<LocalVirtualDofs> Pdofs;
+
+public:
+    LocalVirtualDofsCollection(const Mesh<Point3D, Edge3D, Polygon3D, Polyhedron<Polygon3D>> &mesh, const VirtualDofsCollection &DOFS)
+    {
+        for (const auto &P : mesh.getPolyhedra())
+        {
+            Pdofs.emplace_back(LocalVirtualDofs(P.second, DOFS));
+            //std::cout<<"inserted polyhedron "<<P.second.getId()<<std::endl;
+        }
+    }
+
+    const LocalVirtualDofs &getLocalDofs(const std::size_t &Id) const
+    {
+        //std::cout<<"asked to get dofs of polyherdon "<<Id<<std::endl;
+        return Pdofs[Id];
+    }
+
+    size_t numLocalDofsCollection() const
+    {
+        return Pdofs.size();
+    }
+};
 
 #endif // __VIRTUALDOFS_HPP_

@@ -3,7 +3,7 @@
 
 int main()
 {
-    std::string filename = "test.geo";
+    std::string filename = "N2.geo";
     Mesh<Point3D, Edge3D, Polygon3D, Polyhedron<Polygon3D>> mesh(filename);
 
     // std::cout << "here!" << std::endl;
@@ -47,20 +47,60 @@ int main()
     std::cout << std::endl;
     */
 
-    unsigned int k = 2;
-    VirtualDofsCollection DOFS(mesh, k);
-    VirtualProjections vp(DOFS, mesh, k);
-    //vp.computeFaceProjection(DOFS, F, 1, true);
+    unsigned int k = 3;
+    MonomialsFaceIntegralsCache::initialize(mesh, 2 * k - 1);
 
-/*
-    real I=0.0;
-    I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(0,0,2.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
-    I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(1,0,0.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
-    I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(0,1,0.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
-    I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(2,0,-12.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
-    I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(1,1,0.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
-    I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(0,2,-12.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
-    std::cout<<I<<std::endl;
-*/
+    real E = 2.5;
+    real nu = 0.25;
+    VirtualDofsCollection DOFS(mesh, k);
+    /*
+    VirtualFaceProjections vp(DOFS, mesh, k);
+    auto projections = vp.getFaceProjection(mesh.getPolygons().at(1));
+    for (const auto &p : projections)
+    {
+        for (const auto &m : p.getPolynomial())
+        {
+            std::cout << m.second << " ";
+        }
+        std::cout << std::endl;
+    }
+    // vp.computeFaceProjection(DOFS, F, 1, true);
+    */
+    VirtualFaceProjections vf(DOFS, mesh, k);
+
+    LocalVirtualDofsCollection dofs(mesh, DOFS);
+
+    auto funcx = [](real x, real y, real z)
+    {
+        return 0.2;
+    };
+    auto funcy = [](real x, real y, real z)
+    {
+        return 0.0;
+    };
+    auto funcz = [](real x, real y, real z)
+    {
+        return 0.0;
+    };
+    VirtualPolyhedronProjections vp(E, nu, vf, dofs, mesh, funcx, funcy, funcz, k);
+
+    /*
+        for (std::size_t p = 0; p < 8; p++)
+        {
+            std::cout << vp.getPolyhedronProjection(p) << std::endl
+                      << std::endl;
+        }
+    */
+    /*
+        real I=0.0;
+        I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(0,0,2.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
+        I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(1,0,0.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
+        I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(0,1,0.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
+        I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(2,0,-12.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
+        I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(1,1,0.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
+        I+=integrateMonomial(2,mesh.getPolygon(1),Monomial2D(0,2,-12.0),Point3D(0.5,0.25,0.25),sqrt(2.0)/2,Point3D(0,0,1),Point3D(0,1,0));
+        std::cout<<I<<std::endl;
+    */
+
     return 0;
 }

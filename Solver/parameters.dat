@@ -1,0 +1,10 @@
+#-------------------------------------------------
+# Data file for parameters.
+#-------------------------------------------------
+[materials]
+    first_lame = 1.0
+    second_lame = 1.0
+[VEM]
+    order = 1
+[integration]
+    initializeFaceIntegrals = 1

@@ -17,6 +17,7 @@ namespace geometry
         static std::size_t lastId;
         std::size_t id;
         std::vector<std::reference_wrapper<const PolygonType>> polygons;
+        real diameter = 0.0;
 
     public:
         // Constructor taking individual polygons
@@ -33,6 +34,8 @@ namespace geometry
                 }
                 polygons.push_back(std::cref(polygon));
             }
+            if (polygons.size() > 0)
+                computeDiameter();
         }
 
         // Add a polygon and its direction to the polyhedron
@@ -82,6 +85,39 @@ namespace geometry
         const PolygonType &operator[](std::size_t index) const
         {
             return getPolygon(index);
+        }
+
+        // Compute diameter
+        void computeDiameter()
+        {
+            diameter = 0.0;
+            std::set<Point3D> vertices;
+            for (std::size_t f = 0; f < polygons.size(); f++)
+            {
+                for (std::size_t e = 0; e < this->getPolygon(f).numEdges(); e++)
+                {
+                    vertices.insert(this->getPolygon(f)[e][0]);
+                }
+            }
+            for (auto it1 = vertices.begin(); it1 != vertices.end(); ++it1)
+            {
+                for (auto it2 = std::next(it1); it2 != vertices.end(); ++it2)
+                {
+                    real dist = distance(*it1, *it2);
+                    if (dist > diameter)
+                        diameter = dist;
+                }
+            }
+        }
+
+        // Get diameter
+        real getDiameter() const
+        {
+            if (diameter == 0.0)
+            {
+                throw std::logic_error("Diameter has not been computed yet.");
+            }
+            return diameter;
         }
 
         // Stream output operator for the Polyhedron class

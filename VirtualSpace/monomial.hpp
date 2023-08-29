@@ -10,6 +10,7 @@
 #include <utility>
 #include <cmath>
 #include <map>
+#include <array>
 
 using namespace traits;
 using namespace geometry;
@@ -302,6 +303,10 @@ class Monomial3D : public Monomial<3>
 private:
     static unsigned int order;
     static std::vector<Monomial3D> monomials_ordered;
+    static std::vector<std::array<std::pair<real, std::size_t>, 3>>
+        gradients_to_monomials_ordered;
+    static std::vector<std::array<std::pair<real, std::size_t>, 3>>
+        laplacians_to_monomials_ordered;
 
 public:
     // Default constructor
@@ -358,6 +363,138 @@ public:
         }
         std::size_t endIndex = (order_ + 1) * (order_ + 2) * (order_ + 3) / 6;
         return std::vector<Monomial3D>(monomials_ordered.begin(), monomials_ordered.begin() + endIndex);
+    }
+
+    static void computeGradientsToMonomialsOrdered(unsigned int order_)
+    {
+        auto monomials = getMonomialsOrdered(order_);
+        std::size_t nu_kminus1 = 0;
+        if (order_ > 0)
+            nu_kminus1 = getMonomialsOrdered(order_ - 1).size();
+        for (std::size_t i = gradients_to_monomials_ordered.size(); i < monomials.size(); i++)
+        {
+            auto mdx = monomials[i].dx();
+            auto mdy = monomials[i].dy();
+            auto mdz = monomials[i].dz();
+            real c1(0.0), c2(0.0), c3(0.0);
+            std::size_t m1(0), m2(0), m3(0);
+            if (mdx.getCoefficient() != 0.0)
+            {
+                for (std::size_t j = 0; j < nu_kminus1; j++)
+                {
+                    if (monomials[j].getExponents() == mdx.getExponents())
+                    {
+                        c1 = mdx.getCoefficient();
+                        m1 = j;
+                        break;
+                    }
+                }
+            }
+            if (mdy.getCoefficient() != 0.0)
+            {
+                for (std::size_t j = 0; j < nu_kminus1; j++)
+                {
+                    if (monomials[j].getExponents() == mdy.getExponents())
+                    {
+                        c2 = mdy.getCoefficient();
+                        m2 = j;
+                        break;
+                    }
+                }
+            }
+            if (mdz.getCoefficient() != 0.0)
+            {
+                for (std::size_t j = 0; j < nu_kminus1; j++)
+                {
+                    if (monomials[j].getExponents() == mdz.getExponents())
+                    {
+                        c3 = mdz.getCoefficient();
+                        m3 = j;
+                        break;
+                    }
+                }
+            }
+            gradients_to_monomials_ordered.emplace_back(std::array<std::pair<real, std::size_t>, 3>{std::make_pair(c1, m1),
+                                                                                                    std::make_pair(c2, m2),
+                                                                                                    std::make_pair(c3, m3)});
+        }
+    }
+
+    static const std::vector<std::array<std::pair<real, std::size_t>, 3>>
+    getGradientsToMonomialsOrdered(unsigned int order_)
+    {
+        if ((gradients_to_monomials_ordered.size() < ((order_ + 1) * (order_ + 2) + (order_ + 3) / 6))) // Check if the cache for n doesn't exist
+        {
+            computeGradientsToMonomialsOrdered(order_); // Initialize the cache for n
+        }
+        std::size_t endIndex = (order_ + 1) * (order_ + 2) * (order_ + 3) / 6;
+        return std::vector<std::array<std::pair<real, std::size_t>, 3>>(gradients_to_monomials_ordered.begin(), gradients_to_monomials_ordered.begin() + endIndex);
+    }
+
+    static void computeLaplaciansToMonomialsOrdered(unsigned int order_)
+    {
+        auto monomials = getMonomialsOrdered(order_);
+        std::size_t nu_kminus2 = 0;
+        if (order_ > 1)
+            nu_kminus2 = getMonomialsOrdered(order_ - 2).size();
+        for (std::size_t i = laplacians_to_monomials_ordered.size(); i < monomials.size(); i++)
+        {
+            auto mdxx = monomials[i].dx().dx();
+            auto mdyy = monomials[i].dy().dy();
+            auto mdzz = monomials[i].dz().dz();
+            real c1(0.0), c2(0.0), c3(0.0);
+            std::size_t m1(0), m2(0), m3(0);
+            if (mdxx.getCoefficient() != 0.0)
+            {
+                for (std::size_t j = 0; j < nu_kminus2; j++)
+                {
+                    if (monomials[j].getExponents() == mdxx.getExponents())
+                    {
+                        c1 = mdxx.getCoefficient();
+                        m1 = j;
+                        break;
+                    }
+                }
+            }
+            if (mdyy.getCoefficient() != 0.0)
+            {
+                for (std::size_t j = 0; j < nu_kminus2; j++)
+                {
+                    if (monomials[j].getExponents() == mdyy.getExponents())
+                    {
+                        c2 = mdyy.getCoefficient();
+                        m2 = j;
+                        break;
+                    }
+                }
+            }
+            if (mdzz.getCoefficient() != 0.0)
+            {
+                for (std::size_t j = 0; j < nu_kminus2; j++)
+                {
+                    if (monomials[j].getExponents() == mdzz.getExponents())
+                    {
+                        c3 = mdzz.getCoefficient();
+                        m3 = j;
+                        break;
+                    }
+                }
+            }
+            laplacians_to_monomials_ordered.emplace_back(std::array<std::pair<real, std::size_t>, 3>{std::make_pair(c1, m1),
+                                                                                                     std::make_pair(c2, m2),
+                                                                                                     std::make_pair(c3, m3)});
+        }
+    }
+
+    static const std::vector<std::array<std::pair<real, std::size_t>, 3>>
+    getLaplaciansToMonomialsOrdered(unsigned int order_)
+    {
+        if ((laplacians_to_monomials_ordered.size() < ((order_ + 1) * (order_ + 2) + (order_ + 3) / 6))) // Check if the cache for n doesn't exist
+        {
+            computeLaplaciansToMonomialsOrdered(order_); // Initialize the cache for n
+        }
+        std::size_t endIndex = (order_ + 1) * (order_ + 2) * (order_ + 3) / 6;
+        return std::vector<std::array<std::pair<real, std::size_t>, 3>>(laplacians_to_monomials_ordered.begin(), laplacians_to_monomials_ordered.begin() + endIndex);
     }
 
     // Method to compute the product of two monomials and return a new Monomial2D instance
@@ -439,6 +576,10 @@ public:
 
 unsigned int Monomial3D::order = 0;
 std::vector<Monomial3D> Monomial3D::monomials_ordered = {Monomial3D(0, 0, 0, 1.0)};
+std::vector<std::array<std::pair<real, std::size_t>, 3>>
+    Monomial3D::gradients_to_monomials_ordered = {};
+std::vector<std::array<std::pair<real, std::size_t>, 3>>
+    Monomial3D::laplacians_to_monomials_ordered = {};
 
 unsigned int factorial(unsigned int n)
 {
@@ -462,6 +603,7 @@ class Polynomial
 protected:
     // Map of monomials
     std::map<std::vector<unsigned int>, Monomial<Dimension>> polynomial;
+    unsigned int order = 0;
 
 public:
     Polynomial() = default;
@@ -488,7 +630,15 @@ public:
         {
             // Monomial with the given exponents does not exist, add it to the map
             polynomial[monomial.getExponents()] = monomial;
+            if (monomial.getOrder() > order)
+                order = monomial.getOrder();
         }
+    }
+
+    // Get the polynomial order
+    unsigned int getOrder() const
+    {
+        return order;
     }
 
     // Overload * operator to compute the product of two polynomials

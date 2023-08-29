@@ -90,37 +90,65 @@ int main()
     {
         std::cout << monomialPair.second << std::endl;
     }
+    std::cout<<std::endl;
 
     // Test trinomial power
+    std::cout<<"Trinomial power test"<<std::endl;
     LinearTrinomialPower tp(1, 1, 1, 3);
     for (const auto &monomialPair : tp.getPolynomial())
     {
         std::cout << monomialPair.second << std::endl;
     }
+    std::cout<<std::endl;
 
     // Test toPolynomial2D
+    std::cout<<"toPolynomial2D test"<<std::endl;
     Monomial3D m3D(0, 0, 2, 1.0);
     auto m3Din2D = toPolynomial2D(m3D, sqrt(3)/2, sqrt(2)/2, Point3D(0.25, 0.25, 0.25), Point3D(0.5, 0.25, 0.25), Point3D(0, 0, 1), Point3D(0, 1, 0), Point3D(-1, 0, 0));
     for (const auto &monomialPair : m3Din2D.getPolynomial())
     {
         std::cout << monomialPair.second << std::endl;
     }
+    std::cout<<"order of m3D = "<<m3D.getOrder()<<", order of m3Din2D = "<<m3Din2D.getOrder()<<std::endl;
 
-    // Test getLaplaciansToMonomialsOrdered
-    auto laplacians=Monomial2D::getLaplaciansToMonomialsOrdered(2);
-    for (const auto& l:laplacians)
+    /*
+    // Test getLaplaciansToMonomialsOrdered in 2D
+    auto laplacians2D=Monomial2D::getLaplaciansToMonomialsOrdered(2);
+    for (const auto& l:laplacians2D)
     {
         std::cout<<l.first.first<<" "<<monomialOrdered2D[l.first.second]<<std::endl;
         std::cout<<l.second.first<<" "<<monomialOrdered2D[l.second.second]<<std::endl;
     }
 
     monomialOrdered2D=Monomial2D::getMonomialsOrdered(5);
-    laplacians=Monomial2D::getLaplaciansToMonomialsOrdered(5);
-    for (const auto& l:laplacians)
+    laplacians2D=Monomial2D::getLaplaciansToMonomialsOrdered(5);
+    for (const auto& l:laplacians2D)
     {
         std::cout<<l.first.first<<" "<<monomialOrdered2D[l.first.second]<<std::endl;
         std::cout<<l.second.first<<" "<<monomialOrdered2D[l.second.second]<<std::endl;
     }
 
+    // Test getLaplaciansToMonomialsOrdered in 3D
+    std::cout<<"Test getLaplaciansToMonomialsOrdered in 3D"<<std::endl;
+    auto laplacians3D=Monomial3D::getLaplaciansToMonomialsOrdered(3);
+    for (const auto& l:laplacians3D)
+    {
+        std::cout<<l[0].first<<" "<<monomialOrdered3D[l[0].second]<<std::endl;
+        std::cout<<l[1].first<<" "<<monomialOrdered3D[l[1].second]<<std::endl;
+        std::cout<<l[2].first<<" "<<monomialOrdered3D[l[2].second]<<std::endl;
+        std::cout<<std::endl;
+    }
+
+    // Test getLaplaciansToMonomialsOrdered in 3D
+    std::cout<<"Test getGradientsToMonomialsOrdered in 3D"<<std::endl;
+    auto gradients3D=Monomial3D::getGradientsToMonomialsOrdered(3);
+    for (const auto& g:gradients3D)
+    {
+        std::cout<<g[0].first<<" "<<monomialOrdered3D[g[0].second]<<std::endl;
+        std::cout<<g[1].first<<" "<<monomialOrdered3D[g[1].second]<<std::endl;
+        std::cout<<g[2].first<<" "<<monomialOrdered3D[g[2].second]<<std::endl;
+        std::cout<<std::endl;
+    }
+*/
     return 0;
 }

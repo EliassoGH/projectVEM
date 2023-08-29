@@ -77,8 +77,5 @@ int main()
     // Test to compute the diameter
     std::cout<<p1.getDiameter()<<std::endl;
 
-    // Test to compute the centroid
-    //std::cout<<p1.getCentroid()<<std::endl;
-
     return 0;
 }

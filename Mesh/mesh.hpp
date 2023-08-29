@@ -25,7 +25,7 @@ private:
         std::vector<std::pair<PolygonType, PolygonType>> polygons;
         std::vector<PolyhedronType> polyhedra;
     */
-    // Temporary maps to handle the non ordered entries in the .geo file
+    // Maps to handle the non ordered entries in the .geo file
     // I cannot resize the vectors and then use random access to insert entities since
     // not all entities can have a default constructor (e.g., edge, which requires two existing points)
     std::map<std::size_t, PointType> points;
@@ -33,6 +33,7 @@ private:
     std::map<IndexType, PolygonType> polygons;
     std::map<std::size_t, std::size_t> PlaneSurfaceMap;
     std::map<std::size_t, PolyhedronType> polyhedra;
+    real h; // size of the mesh
 
 public:
     Mesh() = default;
@@ -45,6 +46,8 @@ public:
         {
             throw std::runtime_error("Failed to open the file: " + filename);
         }
+
+        h=0.0;
 
         std::map<IndexType, PolygonType> polygonsTEMP;
 
@@ -106,6 +109,7 @@ public:
                 issline >> id;
                 issline.ignore(3); // ignore the three characters of the string ")={"
                 PolygonType polygon1{};
+                PolygonType polygon2{};
 
                 // Read the Lines
                 IndexType signedEdgeId;
@@ -120,11 +124,14 @@ public:
                     }
                     signedEdgeId = std::stoll(edgeIdStr);
                     polygon1.addEdge(edges.at(signedEdgeId));
+                    polygon2.addEdge(edges.at(signedEdgeId));
                 }
-                PolygonType polygon2(polygon1);
+                //PolygonType polygon2(polygon1);
                 polygon2.setOrientation(true);
                 polygon1.computeProperties();
                 polygon2.computeProperties();
+                polygon1.setOtherPolygon(polygon2);
+                polygon2.setOtherPolygon(polygon1);
                 polygonsTEMP.insert(std::make_pair(id, polygon1));
                 polygonsTEMP.insert(std::make_pair(-id, polygon2));
             }
@@ -140,7 +147,9 @@ public:
                 issline >> LineLoopId;
 
                 polygonsTEMP.at(LineLoopId).setId(id);
+                polygonsTEMP.at(LineLoopId).getOtherPolygon().setId(-id);
                 polygonsTEMP.at(-LineLoopId).setId(-id);
+                polygonsTEMP.at(-LineLoopId).getOtherPolygon().setId(id);
                 polygons.insert(std::make_pair(id, polygonsTEMP.at(LineLoopId)));
                 polygons.insert(std::make_pair(-id, polygonsTEMP.at(-LineLoopId)));
             }
@@ -167,9 +176,12 @@ public:
                     polyhedron.addPolygon(polygons.at(-signedPlaneSurfaceId));
                 }
                 polyhedron.setId(id);
+                polyhedron.computeDiameter();
+                h+=polyhedron.getDiameter();
                 polyhedra.insert(std::make_pair(id, polyhedron));
             }
         }
+        h/=polyhedra.size();
 
         inputFile.close();
     }
@@ -500,6 +512,23 @@ public:
     const std::map<std::size_t, PolyhedronType> &getPolyhedra() const
     {
         return polyhedra;
+    }
+
+    // Getter for the average diameter
+    const real &getSize() const
+    {
+        return h;
+    }
+
+    // Print mesh information
+    void print() const
+    {
+        std::cout<<"MESH"<<std::endl;
+        std::cout<<"Average element size            : "<<this->getSize()<<std::endl;
+        std::cout<<"Number of vertices              : "<<this->numVertices()<<std::endl;
+        std::cout<<"Number of edges                 : "<<this->numEdges()<<std::endl;
+        std::cout<<"Number of polygons              : "<<this->numPolygons()<<std::endl;
+        std::cout<<"Number of polyhedra             : "<<this->numPolyhedra()<<std::endl;
     }
 };
 
