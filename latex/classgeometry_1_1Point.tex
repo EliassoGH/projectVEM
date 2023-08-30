@@ -1,0 +1,100 @@
+\hypertarget{classgeometry_1_1Point}{}\doxysubsection{geometry\+::Point$<$ Args $>$ Class Template Reference}
+\label{classgeometry_1_1Point}\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a19bbc4521b4cf40cc0c46f4598bde7be}\label{classgeometry_1_1Point_a19bbc4521b4cf40cc0c46f4598bde7be}} 
+\mbox{\hyperlink{classgeometry_1_1Point_a19bbc4521b4cf40cc0c46f4598bde7be}{Point}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor to initialize coordinates to 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgeometry_1_1Point_ae9afee96cbad0bd763deb463d6e8c531}{Point}} (Args... args)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classgeometry_1_1Point}{Point}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a2655db0b73e1e0090307f358523c76b5}\label{classgeometry_1_1Point_a2655db0b73e1e0090307f358523c76b5}} 
+constexpr std\+::size\+\_\+t {\bfseries get\+Dimension} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a1473578988cd179effe2d85d47a7662a}\label{classgeometry_1_1Point_a1473578988cd179effe2d85d47a7662a}} 
+void {\bfseries set\+Id} (Index\+Type \+\_\+id)
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a031426b882ad32a53dace5610c219cc7}\label{classgeometry_1_1Point_a031426b882ad32a53dace5610c219cc7}} 
+const Index\+Type \& {\bfseries get\+Id} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_ab7b87e8fc20551b1d0cdd55ab80b2bda}\label{classgeometry_1_1Point_ab7b87e8fc20551b1d0cdd55ab80b2bda}} 
+const std\+::array$<$ real, sizeof...(Args)$>$ {\bfseries get\+Coordinates} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a407f98d7d2d8bec1c1439a0f57c4120f}\label{classgeometry_1_1Point_a407f98d7d2d8bec1c1439a0f57c4120f}} 
+const real \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t index) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a997af977ccccb43b4d9bc5b58a4556ef}\label{classgeometry_1_1Point_a997af977ccccb43b4d9bc5b58a4556ef}} 
+auto {\bfseries operator$\ast$} (const real \&scalar) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a1670281c92b8c01eafc14dc8c64401ac}\label{classgeometry_1_1Point_a1670281c92b8c01eafc14dc8c64401ac}} 
+{\footnotesize template$<$size\+\_\+t... Indices$>$ }\\auto {\bfseries multiply\+By\+Scalar} (real scalar, std\+::index\+\_\+sequence$<$ Indices... $>$) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_ada07bcb3bb7e0df395d1ba351cf5ccd2}\label{classgeometry_1_1Point_ada07bcb3bb7e0df395d1ba351cf5ccd2}} 
+auto {\bfseries operator/} (const real \&scalar) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a7a13fe805835867ead10750760660248}\label{classgeometry_1_1Point_a7a13fe805835867ead10750760660248}} 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries operator+} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a329b32fbcedc45d196fc74c4dc948509}\label{classgeometry_1_1Point_a329b32fbcedc45d196fc74c4dc948509}} 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries operator-\/} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a7f25bc6dae714ce8c9384acc2cd7ced4}\label{classgeometry_1_1Point_a7f25bc6dae714ce8c9384acc2cd7ced4}} 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries piecewise\+Multiply} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a33b2262b6989886d93a7ae67ae3b2f04}\label{classgeometry_1_1Point_a33b2262b6989886d93a7ae67ae3b2f04}} 
+{\footnotesize template$<$typename... Other\+Args, size\+\_\+t... Indices, typename Operation $>$ }\\auto {\bfseries binary\+Operation} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other, Operation operation, std\+::index\+\_\+sequence$<$ Indices... $>$) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a9a1389f6f0f9c379fffb2690094d4287}\label{classgeometry_1_1Point_a9a1389f6f0f9c379fffb2690094d4287}} 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries dot} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a4069148c9fd7837802dfd579d53b8ce7}\label{classgeometry_1_1Point_a4069148c9fd7837802dfd579d53b8ce7}} 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries cross} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a8ba38755b3ecd8971c9ccf0213424191}\label{classgeometry_1_1Point_a8ba38755b3ecd8971c9ccf0213424191}} 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries distance} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a37ef86043e41af79e6e804cb0a54d9ac}\label{classgeometry_1_1Point_a37ef86043e41af79e6e804cb0a54d9ac}} 
+auto {\bfseries norm} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a8787291025bef9a73ba7b9ac468a22d0}\label{classgeometry_1_1Point_a8787291025bef9a73ba7b9ac468a22d0}} 
+auto {\bfseries normalize} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_aa17a863152777a30594b81197ae98535}\label{classgeometry_1_1Point_aa17a863152777a30594b81197ae98535}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Args... $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_aed21364b59fce7fca41001aa22db4694}\label{classgeometry_1_1Point_aed21364b59fce7fca41001aa22db4694}} 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\bool {\bfseries operator==} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_ae214bb96b7d9dc9064120d57679f57c7}\label{classgeometry_1_1Point_ae214bb96b7d9dc9064120d57679f57c7}} 
+auto {\bfseries operator$\ast$} (const real \&scalar, const \mbox{\hyperlink{classgeometry_1_1Point}{Point}} \&point)
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a3e56ea203baff1a44ba69b79ff28bc4e}\label{classgeometry_1_1Point_a3e56ea203baff1a44ba69b79ff28bc4e}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Args... $>$ \&point)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgeometry_1_1Point_ae9afee96cbad0bd763deb463d6e8c531}\label{classgeometry_1_1Point_ae9afee96cbad0bd763deb463d6e8c531}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!Point@{Point}}
+\index{Point@{Point}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{Point()}{Point()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+\mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::\mbox{\hyperlink{classgeometry_1_1Point}{Point}} (\begin{DoxyParamCaption}\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classgeometry_1_1Point}{Point}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & coordinates of the point \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mesh/point.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{1}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{2}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{2}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!Point@{Point}|hyperpage}{3}
+\indexentry{Point@{Point}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{3}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{3}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{4}

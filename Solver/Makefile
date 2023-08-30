@@ -7,7 +7,7 @@ LDFLAGS = -L. -L${mkBoostLib} -L${mkEigenLib} -Wl,-rpath=${PWD}
 LIBS += -lboost_system -lboost_filesystem
 
 # Source files and object files for main_integration
-SOLVER_SRCS  = main_solver.cpp
+SOLVER_SRCS  = main_solver.cpp monomial.cpp
 SOLVER_OBJS  = $(SOLVER_SRCS:.cpp=.o)
 
 # Source files and object files for main_exportresults
@@ -19,7 +19,7 @@ PARAMETERS_SRCS  = main_parameters.cpp
 PARAMETERS_OBJS  = $(PARAMETERS_SRCS:.cpp=.o)
 
 # Source files and object files for main
-MAIN_SRCS  = main.cpp
+MAIN_SRCS  = main.cpp monomial.cpp
 MAIN_OBJS  = $(MAIN_SRCS:.cpp=.o)
 
 HEADERS = $(wildcard *.hpp *.h *.hh)

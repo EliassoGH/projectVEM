@@ -23,7 +23,11 @@ int main()
     Edge3D edge6(point2, point1);
 
     // create polygon
-    Polygon3D polygon1{edge1, edge2, edge3, edge4};
+    Polygon3D polygon1;
+    polygon1.addEdge(edge1);
+    polygon1.addEdge(edge2);
+    polygon1.addEdge(edge3);
+    polygon1.addEdge(edge4);
     Polygon3D polygon2;
     polygon2.addEdge(edge1);
     polygon2.addEdge(edge2);
@@ -44,9 +48,6 @@ int main()
     std::cout << "id of polygon 1 is " << polygon1.getId() << std::endl;
     std::cout << "id of polygon 2 is " << polygon2.getId() << std::endl;
     std::cout << "id of polygon 3 is " << polygon3.getId() << std::endl;
-
-    // check if it prevents insertion of same edge
-    // Polygon3D polygon4{edge1, edge6};
 
     // test areCyclicPermutations for vectors
     std::vector<Edge3D> v1{edge1, edge2, edge3, edge4};

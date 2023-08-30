@@ -1,0 +1,12 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {section}{\numberline {1}Class Index}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Class List}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Class Documentation}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Edge$<$ Point\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Mesh$<$ Point\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Edge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Polygon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Polyhedron\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Point$<$ Args $>$ Class Template Reference}{2}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Constructor \& Destructor Documentation}{3}{subsubsection.2.3.1}%
+\contentsline {paragraph}{\numberline {2.3.1.1}Point()}{3}{paragraph.2.3.1.1}%
+\contentsline {subsection}{\numberline {2.4}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Polygon$<$ Edge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{3}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Polyhedron$<$ Polygon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{4}{subsection.2.5}%
+\contentsline {section}{Index}{5}{section*.10}%

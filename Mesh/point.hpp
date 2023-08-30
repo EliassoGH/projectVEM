@@ -3,9 +3,7 @@
 #include "traits.hpp"
 #include <array>
 #include <iostream>
-#include <memory>
 #include <set>
-// #include <functional> // only needed for out-of-class piecewiseMultiply
 #include <cmath>
 
 using namespace traits;
@@ -22,7 +20,10 @@ namespace geometry
         std::array<real, sizeof...(Args)> coordinates;
 
     public:
-        // Default constructor to initialize coordinates to 0
+        /**
+         * @brief Default constructor to initialize coordinates to 0
+         * 
+         */
         Point() : coordinates{0}
         {
             if (freeIds.empty())
@@ -36,6 +37,11 @@ namespace geometry
             }
         }
 
+        /**
+         * @brief Construct a new Point object
+         * 
+         * @param args coordinates of the point
+         */
         Point(Args... args) : coordinates{static_cast<real>(args)...}
         {
             if (freeIds.empty())
@@ -49,7 +55,10 @@ namespace geometry
             }
         }
 
-        // Destructor to free the id when the point goes out of scope
+        /**
+         * @brief Destructor to free the id when the point goes out of scope
+         * 
+         */
         ~Point()
         {
             freeIds.insert(id);
@@ -60,7 +69,11 @@ namespace geometry
             return coordinates.size();
         }
 
-        // Set id
+        /**
+         * @brief Set the Id object
+         * 
+         * @param _id id
+         */
         void setId(IndexType _id)
         {
             if (_id != id)
@@ -83,42 +96,33 @@ namespace geometry
             }
         }
 
-        // Get id
+        /**
+         * @brief Get the Id object
+         * 
+         * @return const IndexType& 
+         */
         const IndexType &getId() const
         {
             return id;
         }
 
-        /*
-                // Setter to modify all coordinates of a point
-                template <typename... OtherArgs>
-                void setCoordinates(OtherArgs... args)
-                {
-                    static_assert(sizeof...(Args) == sizeof...(OtherArgs), "Invalid number of arguments.");
-                    IndexType index = 0;
-                    for (const auto coordinate : {args...})
-                    {
-                        coordinates[index] = coordinate;
-                        index++;
-                    }
-                }
-        */
+        /**
+         * @brief Get the Coordinates object
+         * 
+         * @return const std::array<real, sizeof...(Args)> 
+         */
         const std::array<real, sizeof...(Args)>
         getCoordinates() const
         {
             return coordinates;
         }
 
-        /*
-                real &operator[](IndexType index)
-                {
-                    if (index >= sizeof...(Args))
-                    {
-                        throw std::out_of_range("Invalid dimension index.");
-                    }
-                    return coordinates[index];
-                }
-        */
+        /**
+         * @brief Access operator []
+         * 
+         * @param index index i corresponding to coordinate i
+         * @return const real& coordinate i
+         */
         const real &operator[](std::size_t index) const
         {
             if (index >= this->getDimension())
@@ -128,32 +132,60 @@ namespace geometry
             return coordinates[index];
         }
 
-        // Overloaded * operator to compute the scalar multiplication of a point (point*scalar)
+        /**
+         * @brief Overloaded * operator to compute the scalar multiplication of a point (point*scalar)
+         * 
+         * @param scalar
+         * @return auto
+         */
         auto operator*(const real &scalar) const
         {
             return multiplyByScalar(scalar, std::make_index_sequence<sizeof...(Args)>());
         }
 
-        // Overloaded * operator to support scalar * point multiplication
+        /**
+         * @brief Overloaded * operator to support scalar * point multiplication
+         * 
+         * @param scalar 
+         * @param point 
+         * @return auto 
+         */
         friend auto operator*(const real &scalar, const Point &point)
         {
             return point * scalar;
         }
 
-        // scalar multiplication of a point
+        /**
+         * @brief scalar multiplication of a point
+         * 
+         * @tparam Indices 
+         * @param scalar 
+         * @return auto 
+         */
         template <size_t... Indices>
         auto multiplyByScalar(real scalar, std::index_sequence<Indices...>) const
         {
             return Point<Args...>((coordinates[Indices] * scalar)...);
         }
 
-        // Overloaded / operator to compute the scalar division of a point (point/scalar)
+        /**
+         * @brief Overloaded / operator to compute the scalar division of a point (point/scalar)
+         * 
+         * @param scalar 
+         * @return auto 
+         */
         auto operator/(const real &scalar) const
         {
             return multiplyByScalar(1. / scalar, std::make_index_sequence<sizeof...(Args)>());
         }
 
-        // Overloaded + operator to compute the sum of two points
+        /**
+         * @brief Overloaded + operator to compute the sum of two points
+         * 
+         * @tparam OtherArgs
+         * @param other other point
+         * @return auto 
+         */
         template <typename... OtherArgs>
         auto operator+(const Point<OtherArgs...> &other) const
         {
@@ -161,7 +193,13 @@ namespace geometry
             return binaryOperation<OtherArgs...>(other, std::plus<>(), std::index_sequence_for<Args...>());
         }
 
-        // Overloaded - operator to compute the difference of two points
+        /**
+         * @brief Overloaded - operator to compute the difference of two points
+         * 
+         * @tparam OtherArgs
+         * @param other other point
+         * @return auto 
+         */
         template <typename... OtherArgs>
         auto operator-(const Point<OtherArgs...> &other) const
         {
@@ -169,7 +207,13 @@ namespace geometry
             return binaryOperation<OtherArgs...>(other, std::minus<>(), std::index_sequence_for<Args...>());
         }
 
-        // Piecewise multiplication of two points
+        /**
+         * @brief Piecewise multiplication of two points
+         * 
+         * @tparam OtherArgs
+         * @param other other point
+         * @return auto 
+         */
         template <typename... OtherArgs>
         auto piecewiseMultiply(const Point<OtherArgs...> &other) const
         {
@@ -177,14 +221,29 @@ namespace geometry
             return binaryOperation<OtherArgs...>(other, std::multiplies<>(), std::index_sequence_for<Args...>());
         }
 
-        // Binary operation in class
+        /**
+         * @brief Binary operation in class
+         * 
+         * @tparam OtherArgs
+         * @tparam Indices
+         * @tparam Operation
+         * @param other other point
+         * @param operation 
+         * @return auto 
+         */
         template <typename... OtherArgs, size_t... Indices, typename Operation>
         auto binaryOperation(const Point<OtherArgs...> &other, Operation operation, std::index_sequence<Indices...>) const
         {
             return Point<OtherArgs...>(operation(coordinates[Indices], other[Indices])...);
         }
 
-        // Dot product in the form point1.dot(point2)
+        /**
+         * @brief Dot product in the form point1.dot(point2)
+         * 
+         * @tparam OtherArgs 
+         * @param other other point
+         * @return auto 
+         */
         template <typename... OtherArgs>
         auto dot(const Point<OtherArgs...> &other) const
         {
@@ -195,7 +254,13 @@ namespace geometry
             return sum;
         }
 
-        // In-class cross product calculation (3D points only) in the form point1.cross(point2)
+        /**
+         * @brief In-class cross product calculation (3D points only) in the form point1.cross(point2)
+         * 
+         * @tparam OtherArgs 
+         * @param other other point
+         * @return auto 
+         */
         template <typename... OtherArgs>
         auto cross(const Point<OtherArgs...> &other) const
         {
@@ -203,7 +268,13 @@ namespace geometry
             return Point((*this)[1] * other[2] - (*this)[2] * other[1], (*this)[2] * other[0] - (*this)[0] * other[2], (*this)[0] * other[1] - (*this)[1] * other[0]);
         }
 
-        // Euclidean distance
+        /**
+         * @brief Euclidean distance
+         * 
+         * @tparam OtherArgs 
+         * @param other other point
+         * @return auto 
+         */
         template <typename... OtherArgs>
         auto distance(const Point<OtherArgs...> &other) const
         {
@@ -213,20 +284,34 @@ namespace geometry
             return std::sqrt(diff.dot(diff));
         }
 
-        // Norm
+        /**
+         * @brief Compute the norm
+         * 
+         * @return auto 
+         */
         auto norm() const
         {
             Point<Args...> O;
             return this->distance(O);
         }
 
-        // Normalize coordinates
+        /**
+         * @brief Normalize coordinates
+         * 
+         * @return auto 
+         */
         auto normalize() const
         {
             return ((*this)/(this->norm()));
         }
 
-        // Define the comparison function based on edge Ids
+        /**
+         * @brief Define the comparison function based on edge Ids
+         * 
+         * @param other other point
+         * @return true 
+         * @return false 
+         */
         bool operator<(const Point<Args...> &other) const
         {
             if (*this == other)
@@ -239,7 +324,14 @@ namespace geometry
             }
         }
 
-        // Custom definition of operator== for Point
+        /**
+         * @brief Custom definition of operator== for Point
+         * 
+         * @tparam OtherArgs 
+         * @param other other point
+         * @return true 
+         * @return false 
+         */
         template <typename... OtherArgs>
         bool operator==(const Point<OtherArgs...> &other) const
         {
@@ -248,7 +340,13 @@ namespace geometry
             return coordinates == other.coordinates;
         }
 
-        // Output stream operator to stream coordinates
+        /**
+         * @brief Output stream operator to stream coordinates
+         * 
+         * @param os 
+         * @param point 
+         * @return std::ostream& 
+         */
         friend std::ostream &operator<<(std::ostream &os, const Point<Args...> &point)
         {
             os << "Point " << point.getId() << ": (";
@@ -263,48 +361,78 @@ namespace geometry
         }
     };
 
-    /*
-        // Function to compute piecewise multiplication between two points
-        template <typename... Args, typename... OtherArgs>
-        auto piecewiseMultiply(const Point<Args...> &p1, const Point<OtherArgs...> &p2)
-        {
-            static_assert(sizeof...(Args) == sizeof...(OtherArgs), "Invalid number of arguments.");
-
-            std::function<real(real, real)> operation = [](real a, real b)
-            { return a * b; };
-            return binaryOperation(p1, p2, operation, std::index_sequence_for<Args...>());
-        }
-    */
-
-    // Binary operation out of class
+    /**
+     * @brief Binary operation out of class
+     * 
+     * @tparam Args 
+     * @tparam OtherArgs 
+     * @tparam Indices 
+     * @tparam Operation 
+     * @param p1 
+     * @param p2 
+     * @param operation 
+     * @return auto 
+     */
     template <typename... Args, typename... OtherArgs, size_t... Indices, typename Operation>
     auto binaryOperation(const Point<Args...> &p1, const Point<OtherArgs...> &p2, Operation operation, std::index_sequence<Indices...>)
     {
         return Point<Args...>(operation(p1.getCoordinates()[Indices], p2[Indices])...);
     }
 
-    // Euclidean distance out of class, distance(point1,point2)
+    /**
+     * @brief Euclidean distance out of class, distance(point1,point2)
+     * 
+     * @tparam Args 
+     * @tparam OtherArgs 
+     * @param p1 
+     * @param p2 
+     * @return auto 
+     */
     template <typename... Args, typename... OtherArgs>
     auto distance(const Point<Args...> &p1, const Point<OtherArgs...> &p2)
     {
         return p1.distance(p2);
     }
 
-    // Dot product out of class, dot(point1,point2)
+    /**
+     * @brief Dot product out of class, dot(point1,point2)
+     * 
+     * @tparam Args 
+     * @tparam OtherArgs 
+     * @param p1 
+     * @param p2 
+     * @return auto 
+     */
     template <typename... Args, typename... OtherArgs>
     auto dot(const Point<Args...> &p1, const Point<OtherArgs...> &p2)
     {
         return p1.dot(p2);
     }
 
-    // Cross product out of class, cross(point1,point2)
+    /**
+     * @brief Cross product out of class, cross(point1,point2)
+     * 
+     * @tparam Args 
+     * @tparam OtherArgs 
+     * @param p1 
+     * @param p2 
+     * @return auto 
+     */
     template <typename... Args, typename... OtherArgs>
     auto cross(const Point<Args...> &p1, const Point<OtherArgs...> &p2)
     {
         return p1.cross(p2);
     }
 
-    // Computes the sum of the powers
+    /**
+     * @brief Computes the sum of the powers
+     * 
+     * @tparam Args 
+     * @tparam Indices 
+     * @param point 
+     * @param p 
+     * @param sum 
+     */
     template <typename... Args, size_t... Indices>
     void sumOfPowers(const Point<Args...> &point, const real &p, real &sum, std::index_sequence<Indices...>)
     {
@@ -322,9 +450,19 @@ namespace geometry
     using Point3D = Point<real, real, real>;
     using Point2D = Point<real, real>;
 
-    // Transform a point P(X,Y,Z) in P(x,y)
-    // given O(X,Y,Z) center of the local system and (e_x,e_y) orthogonal directions of the local system
-    Point2D transformTo2D(const Point3D &P, const Point3D &X_F, const Point3D &e_x, const Point3D &e_y, const real &scale = 1.0)
+    /**
+     * @brief Transform a point P(X,Y,Z) in P(x,y)
+     *        given O(X,Y,Z) center of the local system and (e_x,e_y)
+     *        orthogonal directions of the local system
+     * 
+     * @param P point to be transformed
+     * @param X_F local reference system origin
+     * @param e_x first local axis
+     * @param e_y second local axis
+     * @param scale optional scale
+     * @return Point2D 
+     */
+    inline Point2D transformTo2D(const Point3D &P, const Point3D &X_F, const Point3D &e_x, const Point3D &e_y, const real &scale = 1.0)
     {
         return (Point2D((P -X_F).dot(e_x.normalize()), (P - X_F).dot(e_y.normalize()))*scale);
     }

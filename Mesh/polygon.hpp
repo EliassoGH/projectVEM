@@ -22,12 +22,20 @@ namespace geometry
         std::shared_ptr<Polygon<EdgeType>> otherPolygon; // Pointer to store the other polygon
         Point3D outwardNormalArea;
         real diameter = 0.0;
-        // Point3D centroid;
 
     public:
+        /**
+         * @brief Construct a new Polygon object
+         * 
+         */
         Polygon() : Polygon({}){};
 
-        // Constructor taking individual edges
+        /**
+         * @brief Constructor taking individual edges
+         * 
+         * @param edges_ 
+         * @param _orientation 
+         */
         Polygon(const std::initializer_list<EdgeType> &edges_, bool _orientation = false) : id(lastId++), orientation(_orientation)
         {
             for (const auto &edge : edges_)
@@ -45,13 +53,21 @@ namespace geometry
                 computeProperties();
         }
 
-        // Setter method to set the other polygon
+        /**
+         * @brief Setter method to set the other polygon
+         * 
+         * @param otherPolygon_ 
+         */
         void setOtherPolygon(const Polygon<EdgeType> &otherPolygon_)
         {
             otherPolygon = std::make_shared<Polygon<EdgeType>>(otherPolygon_);
         }
 
-        // Getter method to get the other polygon
+        /**
+         * @brief Getter method to get the other polygon
+         * 
+         * @return Polygon<EdgeType>& 
+         */
         Polygon<EdgeType> &getOtherPolygon() const
         {
             if (otherPolygon)
@@ -64,13 +80,21 @@ namespace geometry
             }
         }
 
-        // Set orientation
+        /**
+         * @brief Set orientation
+         * 
+         * @param _orientation 
+         */
         void setOrientation(bool _orientation)
         {
             orientation = _orientation;
         }
 
-        // Add an edge and its direction to the polygon
+        /**
+         * @brief Add an edge and its direction to the polygon
+         * 
+         * @param edge 
+         */
         void addEdge(const EdgeType &edge)
         {
             for (const auto &existingEdge : edges)
@@ -83,26 +107,43 @@ namespace geometry
             edges.push_back(std::cref(edge));
         }
 
-        // Set id
+        /**
+         * @brief Set id
+         * 
+         * @param _id 
+         */
         void setId(IndexType _id)
         {
             id = _id;
             lastId = _id + 1;
         }
 
-        // Get id
+        /**
+         * @brief Get id
+         * 
+         * @return const IndexType& 
+         */
         const IndexType &getId() const
         {
             return id;
         }
 
-        // Get the number of edges in the polygon
+        /**
+         * @brief Get the number of edges in the polygon
+         * 
+         * @return std::size_t 
+         */
         std::size_t numEdges() const
         {
             return edges.size();
         }
 
-        // Get an edge by index
+        /**
+         * @brief Get an edge by index
+         * 
+         * @param index 
+         * @return const EdgeType& 
+         */
         const EdgeType &getEdge(std::size_t index) const
         {
             if (index >= edges.size())
@@ -114,17 +155,26 @@ namespace geometry
             else
             {
                 return edges[edges.size() - index - 1].get().getOtherHalfEdge();
-                // return edges[edges.size() - index - 1].get();
             }
         }
 
-        // Access edges through []
+        /**
+         * @brief Access edges through []
+         * 
+         * @param index 
+         * @return const EdgeType& 
+         */
         const EdgeType &operator[](IndexType index) const
         {
             return getEdge(index);
         }
 
-        // Get original Edge
+        /**
+         * @brief Get original Edge
+         * 
+         * @param index 
+         * @return const EdgeType& 
+         */
         const EdgeType &getPositiveEdge(std::size_t index) const
         {
             if (this->getEdge(index).getId() > 0)
@@ -135,7 +185,12 @@ namespace geometry
                 return edges[edges.size() - index - 1].get();
         }
 
-        // Check if the edges are stored consistently
+        /**
+         * @brief Check if the edges are stored consistently
+         * 
+         * @return true 
+         * @return false 
+         */
         bool areEdgesConsistent() const
         {
             if (edges.size() <= 1)
@@ -146,16 +201,8 @@ namespace geometry
             size_t numEdges = edges.size();
             for (size_t i = 0; i < numEdges; ++i)
             {
-                // std::cout<<edges[1].get()<<std::endl;
-                // std::cout<<edges[2].get()<<std::endl;
-                // std::cout<<edges[3].get()<<std::endl;
-                // std::cout<<edges[0].get()<<std::endl;
                 EdgeType currentEdge = edges[i].get();
-                // std::cout<<currentEdge<<std::endl;
-                // std::cout<<"qui1"<<std::endl;
                 EdgeType nextEdge = edges[(i + 1) % numEdges].get();
-                // std::cout<<nextEdge<<std::endl;
-                // std::cout<<"qui2"<<std::endl;
 
                 if (currentEdge[1] != nextEdge[0])
                 {
@@ -166,15 +213,20 @@ namespace geometry
             return true; // All edges are consistent
         }
 
-        // Compute properties
+        /**
+         * @brief Compute properties
+         * 
+         */
         void computeProperties()
         {
             computeOutwardNormalArea();
             computeDiameter();
-            // computeCentroid();
         }
 
-        // Compute outward normal unit vector
+        /**
+         * @brief Compute outward normal unit vector
+         * 
+         */
         void computeOutwardNormalArea()
         {
             outwardNormalArea = Point3D();
@@ -182,19 +234,13 @@ namespace geometry
             {
                 outwardNormalArea = outwardNormalArea + (0.5 * cross(this->getEdge(e)[0], this->getEdge(e)[1]));
             }
-            /*
-            real nx(0.0), ny(0.0), nz(0.0);
-            for (std::size_t e = 0; e < edges.size(); e++)
-            {
-                nx += ((edges[e].get()[0][1] - edges[e].get()[1][1]) * (edges[e].get()[0][2] + edges[e].get()[1][2]));
-                ny += ((edges[e].get()[0][2] - edges[e].get()[1][2]) * (edges[e].get()[0][0] + edges[e].get()[1][0]));
-                nz += ((edges[e].get()[0][0] - edges[e].get()[1][0]) * (edges[e].get()[0][1] + edges[e].get()[1][1]));
-            }
-            outwardNormalArea = Point3D(nx, ny, nz)/2.0;
-            */
         }
 
-        // Get outward normal unit vector
+        /**
+         * @brief Get outward normal unit vector
+         * 
+         * @return const Point3D 
+         */
         const Point3D getOutwardNormal() const
         {
             if (outwardNormalArea == Point3D())
@@ -204,19 +250,31 @@ namespace geometry
             return outwardNormalArea.normalize();
         }
 
-        // Get first local axis e_x
+        /**
+         * @brief Get first local axis e_x
+         * 
+         * @return const Point3D 
+         */
         const Point3D get_e_x() const
         {
             return this->getEdge(0).getDirection();
         }
 
-        // Get second local axis e_y
+        /**
+         * @brief Get second local axis e_y
+         * 
+         * @return const Point3D 
+         */
         const Point3D get_e_y() const
         {
             return cross(this->getOutwardNormal(), this->get_e_x());
         }
 
-        // Get area
+        /**
+         * @brief Get area
+         * 
+         * @return real 
+         */
         real getArea() const
         {
             if (outwardNormalArea == Point3D())
@@ -226,7 +284,10 @@ namespace geometry
             return outwardNormalArea.norm();
         }
 
-        // Compute diameter
+        /**
+         * @brief Compute diameter
+         * 
+         */
         void computeDiameter()
         {
             diameter = 0.0;
@@ -240,7 +301,11 @@ namespace geometry
             }
         }
 
-        // Get diameter
+        /**
+         * @brief Get diameter
+         * 
+         * @return real 
+         */
         real getDiameter() const
         {
             if (diameter == 0.0)
@@ -249,34 +314,14 @@ namespace geometry
             }
             return diameter;
         }
-        /*
-                // Compute centroid
-                void computeCentroid()
-                {
-                    real cx(0.0), cy(0.0), cz(0.0);
-                    if (this->getOutwardNormal()[]==
-                    for (std::size_t e = 0; e < edges.size(); e++)
-                    {
-                        cx += ((edges[e].get()[0][0] + edges[e].get()[1][0]) * ((edges[e].get()[0][0]*edges[e].get()[1][1]) - (edges[e].get()[1][0]*edges[e].get()[0][1])));
-                        cy += ((edges[e].get()[0][1] + edges[e].get()[1][1]) * ((edges[e].get()[0][0]*edges[e].get()[1][1]) - (edges[e].get()[1][0]*edges[e].get()[0][1])));
-                        cz += ((edges[e].get()[0][2] + edges[e].get()[1][2]) * ((edges[e].get()[0][0]*edges[e].get()[1][2]) - (edges[e].get()[1][0]*edges[e].get()[0][2])));
-                        std::cout<<"cx"<<cx<<cy<<cz<<std::endl;
-                    }
-                    centroid = Point3D(cx,cy,cz)/(6*this->getArea());
-                    std::cout<<centroid<<std::endl;
-                }
-
-                // Get centroid
-                const Point3D &getCentroid() const
-                {
-                    if (centroid == Point3D())
-                    {
-                        throw std::logic_error("Centroid has not been computed yet.");
-                    }
-                    return centroid;
-                }
-        */
-        // Define the comparison function based on polygon Ids
+        
+        /**
+         * @brief Define the comparison function based on polygon Ids
+         * 
+         * @param other 
+         * @return true 
+         * @return false 
+         */
         bool operator<(const Polygon<EdgeType> &other) const
         {
             if (*this == other)
@@ -289,7 +334,13 @@ namespace geometry
             }
         }
 
-        // Comparison operator for polygons (==)
+        /**
+         * @brief Comparison operator for polygons (==)
+         * 
+         * @param other 
+         * @return true 
+         * @return false 
+         */
         bool operator==(const Polygon<EdgeType> &other) const
         {
 
@@ -303,7 +354,13 @@ namespace geometry
             return true;
         }
 
-        // Stream output operator for the Polygon class
+        /**
+         * @brief Stream output operator for the Polygon class
+         * 
+         * @param os 
+         * @param polygon 
+         * @return std::ostream& 
+         */
         friend std::ostream &operator<<(std::ostream &os, const Polygon<EdgeType> &polygon)
         {
             os << "Polygon " << polygon.getId() << ": ";
@@ -317,7 +374,15 @@ namespace geometry
         }
     };
 
-    // Define the comparison function for reference_wrappers
+    /**
+     * @brief Define the comparison function for reference_wrappers
+     * 
+     * @tparam EdgeType 
+     * @param lhs 
+     * @param rhs 
+     * @return true 
+     * @return false 
+     */
     template <typename EdgeType>
     bool operator<(const std::reference_wrapper<const Polygon<EdgeType>> &lhs,
                    const std::reference_wrapper<const Polygon<EdgeType>> &rhs)
@@ -325,6 +390,13 @@ namespace geometry
         return lhs.get() < rhs.get();
     }
 
+    /**
+     * @brief dereference a vector of reference_wrapper
+     * 
+     * @tparam T 
+     * @param v 
+     * @return std::vector<T> 
+     */
     template <typename T>
     std::vector<T> dereferenceVector(const std::vector<std::reference_wrapper<const T>> &v)
     {
@@ -337,6 +409,15 @@ namespace geometry
         return result;
     }
 
+    /**
+     * @brief check if two vectors are equivalent cyclic permutations
+     * 
+     * @tparam T 
+     * @param v1 
+     * @param v2 
+     * @return true 
+     * @return false 
+     */
     template <typename T>
     bool areEquivalentCyclicPermutations(const std::vector<T> &v1,
                                          const std::vector<T> &v2)

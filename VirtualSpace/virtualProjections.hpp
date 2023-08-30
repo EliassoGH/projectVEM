@@ -30,42 +30,13 @@ private:
 public:
     VirtualFaceProjections(const VirtualDofsCollection &dofs, const Mesh<Point3D, Edge3D, Polygon3D, Polyhedron<Polygon3D>> &mesh, const unsigned int &order)
     {
-<<<<<<< HEAD
-=======
         
->>>>>>> master
         for (const auto &F : mesh.getPolygons())
         {
             faceProjections.insert(std::make_pair(F.second.getId(), computeFaceProjection(dofs, F.second, order)));
         }
-<<<<<<< HEAD
-        // faceProjections.insert(std::make_pair(mesh.getPolygon(1).getId(), computeFaceProjection(dofs, mesh.getPolygon(1), order, true)));
-        //  computeFaceProjection(dofs, mesh.getPolygon(3), order, true);
-        /*
-                const unsigned int numThreads = omp_get_max_threads();
-                std::cout << numThreads << std::endl;
-        #pragma omp parallel for
-                for (int i = 0; i < 10; ++i)
-                {
-                    int threadNum = omp_get_thread_num();
-        #pragma omp critical
-                    {
-                        std::cout << "Thread " << threadNum << " is executing." << std::endl;
-                    }
-                    //  Perform some calculations
-                    int value = i * i;
-
-        // Safely insert into the map using critical section
-        #pragma omp critical
-                    {
-                        myMap[i] = value;
-                    }
-                }
-        */
-=======
         
         //computeFaceProjection(dofs, mesh.getPolygon(1), order, true);
->>>>>>> master
     }
 
     std::vector<Polynomial<2>>
@@ -228,32 +199,6 @@ public:
                     D_F(i, j) = integrateMonomial(2, face, (m[j] * m[f]), X_F, h_F, e_x, e_y) / A_F;
                 }
             }
-<<<<<<< HEAD
-            /*
-                        Eigen::MatrixXd denseMatrix = G_F;
-                        std::cout << denseMatrix << std::endl
-                                  << std::endl;
-                        std::cout << B_F << std::endl
-                                  << std::endl;
-                        std::cout << D_F << std::endl
-                                  << std::endl;
-                        std::cout << (B_F * D_F) << std::endl
-                                  << std::endl;
-                        std::cout << denseMatrix << std::endl
-                                  << std::endl;
-            */
-            Eigen::MatrixXd diff = G_F - (B_F * D_F);
-            /*
-                        for (std::size_t i = 0; i < diff.rows(); i++)
-                        {
-                            for (std::size_t j = 0; j < diff.cols(); j++)
-                            {
-                                if (std::abs(diff(i, j)) > 1e-9)
-                                    std::cout << i << " " << j << std::endl;
-                            }
-                        }
-            */
-=======
 /*
             Eigen::MatrixXd denseMatrix = G_F;
             std::cout << denseMatrix << std::endl
@@ -278,7 +223,6 @@ public:
                 }
             }
 */
->>>>>>> master
             std::cout << "Froebenius norm = " << diff.norm() << std::endl;
         }
 

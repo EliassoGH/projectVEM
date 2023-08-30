@@ -7,19 +7,19 @@ LDFLAGS = -L. -L${mkBoostLib} -L${mkEigenLib} -Wl,-rpath=${PWD}
 LIBS += -lboost_system -lboost_filesystem
 
 # Source files and object files for main_monomial
-MONOMIAL_SRCS  = main_monomial.cpp
+MONOMIAL_SRCS  = main_monomial.cpp monomial.cpp
 MONOMIAL_OBJS  = $(MONOMIAL_SRCS:.cpp=.o)
 
 # Source files and object files for main_virtualdofs
-VIRTUALDOFS_SRCS  = main_virtualdofs.cpp
+VIRTUALDOFS_SRCS  = main_virtualdofs.cpp monomial.cpp
 VIRTUALDOFS_OBJS  = $(VIRTUALDOFS_SRCS:.cpp=.o)
 
 # Source files and object files for main_integration
-INTEGRATION_SRCS  = main_integration.cpp
+INTEGRATION_SRCS  = main_integration.cpp monomial.cpp
 INTEGRATION_OBJS  = $(INTEGRATION_SRCS:.cpp=.o)
 
 # Source files and object files for main_integration
-VIRTUALPROJECTIONS_SRCS  = main_virtualprojections.cpp
+VIRTUALPROJECTIONS_SRCS  = main_virtualprojections.cpp monomial.cpp
 VIRTUALPROJECTIONS_OBJS  = $(VIRTUALPROJECTIONS_SRCS:.cpp=.o)
 
 HEADERS = $(wildcard *.hpp *.h *.hh)

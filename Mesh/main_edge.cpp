@@ -24,7 +24,7 @@ int main()
               << edge1[1] << std::endl;
 
     // test assignment
-    //point1 = point3;
+    point1 = point3;
     std::cout<<point1<<std::endl;
     edge1.update();
     std::cout << "after assignment first point of edge1 is " << edge1[0] << ", second point of edge1 is "

@@ -35,14 +35,26 @@ int main()
     Edge3D edge60(point5, point6);
 
     // create polygons
-    Polygon3D polygon1{edge1, edge2, edge3, edge4};
-    Polygon3D polygon2{edge1, edge5, edge6, edge7};
+    Polygon3D polygon1;
+    polygon1.addEdge(edge1);
+    polygon1.addEdge(edge2);
+    polygon1.addEdge(edge3);
+    polygon1.addEdge(edge4);
+    Polygon3D polygon2;
+    polygon2.addEdge(edge1);
+    polygon2.addEdge(edge5);
+    polygon2.addEdge(edge6);
+    polygon2.addEdge(edge7);
     Polygon3D polygon3{};
     polygon3.addEdge(edge60);
     polygon3.addEdge(edge8);
     polygon3.addEdge(edge3);
     polygon3.addEdge(edge9);
-    Polygon3D polygon4{edge4, edge3, edge2, edge1}; // equivalent polygon as polygon1, but different id
+    Polygon3D polygon4; // equivalent polygon as polygon1, but different id
+    polygon4.addEdge(edge4);
+    polygon4.addEdge(edge3);
+    polygon4.addEdge(edge2);
+    polygon4.addEdge(edge1);
     std::cout<<"polygon1==polygon4? "<<(polygon1==polygon4)<<std::endl;
 
     // check consistency

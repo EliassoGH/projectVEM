@@ -1,0 +1,19 @@
+\begin{theindex}
+
+  \item {geometry::Edge$<$ PointType $>$}, \hyperpage{1}
+  \item {geometry::Point$<$ Args $>$}, \hyperpage{2}
+    \subitem {Point}, \hyperpage{3}
+  \item {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{3}
+  \item {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{4}
+
+  \indexspace
+
+  \item {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{2}
+
+  \indexspace
+
+  \item {Point}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{3}
+
+\end{theindex}

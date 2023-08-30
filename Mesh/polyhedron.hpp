@@ -20,7 +20,11 @@ namespace geometry
         real diameter = 0.0;
 
     public:
-        // Constructor taking individual polygons
+        /**
+         * @brief Constructor taking individual polygons
+         * 
+         * @param polygonsWithoutDirection 
+         */
         Polyhedron(const std::initializer_list<PolygonType> &polygonsWithoutDirection) : id(lastId++)
         {
             for (const auto &polygon : polygonsWithoutDirection)
@@ -38,7 +42,11 @@ namespace geometry
                 computeDiameter();
         }
 
-        // Add a polygon and its direction to the polyhedron
+        /**
+         * @brief Add a polygon and its direction to the polyhedron
+         * 
+         * @param polygon 
+         */
         void addPolygon(const PolygonType &polygon)
         {
             for (const auto &existingPolygon : polygons)
@@ -51,26 +59,43 @@ namespace geometry
             polygons.push_back(std::cref(polygon));
         }
 
-        // Set id
+        /**
+         * @brief Set id
+         * 
+         * @param _id 
+         */
         void setId(std::size_t _id)
         {
             id = _id;
             lastId = _id + 1;
         }
 
-        // Get id
+        /**
+         * @brief Get id
+         * 
+         * @return const std::size_t& 
+         */
         const std::size_t &getId() const
         {
             return id;
         }
 
-        // Method to get the number of polygons in the Polyhedron
+        /**
+         * @brief Method to get the number of polygons in the Polyhedron
+         * 
+         * @return std::size_t 
+         */
         std::size_t numPolygons() const
         {
             return polygons.size();
         }
 
-        // Method to get a polygon by index
+        /**
+         * @brief Method to get a polygon by index
+         * 
+         * @param index 
+         * @return const PolygonType& 
+         */
         const PolygonType &getPolygon(std::size_t index) const
         {
             if (index >= polygons.size())
@@ -81,13 +106,21 @@ namespace geometry
             return polygons[index].get();
         }
 
-        // Access operator [] to get a polygon by index
+        /**
+         * @brief Access operator [] to get a polygon by index
+         * 
+         * @param index 
+         * @return const PolygonType& 
+         */
         const PolygonType &operator[](std::size_t index) const
         {
             return getPolygon(index);
         }
 
-        // Compute diameter
+        /**
+         * @brief Compute diameter
+         * 
+         */
         void computeDiameter()
         {
             diameter = 0.0;
@@ -110,7 +143,11 @@ namespace geometry
             }
         }
 
-        // Get diameter
+        /**
+         * @brief Get diameter
+         * 
+         * @return real 
+         */
         real getDiameter() const
         {
             if (diameter == 0.0)
@@ -120,7 +157,13 @@ namespace geometry
             return diameter;
         }
 
-        // Stream output operator for the Polyhedron class
+        /**
+         * @brief Stream output operator for the Polyhedron class
+         * 
+         * @param os 
+         * @param polyhedron 
+         * @return std::ostream& 
+         */
         friend std::ostream &operator<<(std::ostream &os, const Polyhedron<PolygonType> &polyhedron)
         {
             os << "Polyhedron " << polyhedron.getId() << ": ";

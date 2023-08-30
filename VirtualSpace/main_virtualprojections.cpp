@@ -9,12 +9,8 @@ int main()
     // std::cout << "here!" << std::endl;
     // std::cout << integrateMonomial(2, mesh.getPolygon(1), Monomial2D(2, 0, 1.0), Point3D(0.5, 0.25, 0.25), sqrt(2) / 2.0, Point3D(0, 0, 1), Point3D(0, 1, 0)) << std::endl;
     // std::cout << integrateMonomial3DRestrictedMonomial2D(Point3D(0.25, 0.25, 0.25), sqrt(3) / 2.0, mesh.getPolygon(1), Monomial3D(0, 0, 2, 1.0), Monomial2D(0, 0, 1.0)) << std::endl;
-<<<<<<< HEAD
 
     /*
-=======
-/*
->>>>>>> master
     Point3D p0(0, 0, 0);
     Point3D p1(3, 0, 0);
     Point3D p2(3, 2, 0);
@@ -49,7 +45,6 @@ int main()
         std::cout << v << std::endl;
     }
     std::cout << std::endl;
-<<<<<<< HEAD
     */
 
     unsigned int k = 3;
@@ -57,11 +52,6 @@ int main()
 
     real E = 2.5;
     real nu = 0.25;
-=======
-*/
-
-    unsigned int k = 2;
->>>>>>> master
     VirtualDofsCollection DOFS(mesh, k);
     /*
     VirtualFaceProjections vp(DOFS, mesh, k);

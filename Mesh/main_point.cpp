@@ -15,7 +15,6 @@ int main()
     std::cout << "coordinates =" << p1.getCoordinates()[0] << std::endl;
 
     Point p3(p1);
-    // p3.setCoordinates(0, 1, 0);
     Point<real, real> p2D(1, 2);
 
     // Compute the sum of two points using the + operator
@@ -32,13 +31,6 @@ int main()
     auto multPoint = p1.piecewiseMultiply(p2);
     std::cout << "piecewise mult: (" << multPoint[1] << ", "
               << multPoint[2] << ")" << std::endl;
-
-    /*
-        // Compute the piecewise multiplication between two points using inclass method
-        auto multPoint1 = piecewiseMultiply(p1,p2);
-        std::cout << "piecewise mult: (" << multPoint1[1] << ", "
-                  << multPoint1[2] << ")" << std::endl;
-    */
 
     // distance
     auto dist_inClass = p1.distance(p2);

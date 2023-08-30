@@ -108,7 +108,7 @@ public:
         std::cout << std::endl;
         const unsigned int order = parameters.getOrder();
 
-        std::string meshName = "N10.geo";
+        std::string meshName = "N2.geo";
         // READ MESH
         std::cout << "Reading mesh " << meshName << "..." << std::endl;
         Mesh<Point3D, Edge3D, Polygon3D, Polyhedron<Polygon3D>> mesh(meshName);

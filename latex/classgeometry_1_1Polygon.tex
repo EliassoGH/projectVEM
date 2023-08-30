@@ -1,0 +1,82 @@
+\hypertarget{classgeometry_1_1Polygon}{}\doxysubsection{geometry\+::Polygon$<$ Edge\+Type $>$ Class Template Reference}
+\label{classgeometry_1_1Polygon}\index{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a8bafe53654cef88fdacfe55f3ffeccba}\label{classgeometry_1_1Polygon_a8bafe53654cef88fdacfe55f3ffeccba}} 
+{\bfseries Polygon} (const std\+::initializer\+\_\+list$<$ Edge\+Type $>$ \&edges\+\_\+, bool \+\_\+orientation=false)
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a0a6c17d455f665b38f1441eb1946d1bd}\label{classgeometry_1_1Polygon_a0a6c17d455f665b38f1441eb1946d1bd}} 
+void {\bfseries set\+Other\+Polygon} (const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon}}$<$ Edge\+Type $>$ \&other\+Polygon\+\_\+)
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a4a8ae00c94f668d592aa797b3b31c461}\label{classgeometry_1_1Polygon_a4a8ae00c94f668d592aa797b3b31c461}} 
+\mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon}}$<$ Edge\+Type $>$ \& {\bfseries get\+Other\+Polygon} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a5e64669b1205b0a85bdbb90405c4aed8}\label{classgeometry_1_1Polygon_a5e64669b1205b0a85bdbb90405c4aed8}} 
+void {\bfseries set\+Orientation} (bool \+\_\+orientation)
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a70745e1c5ab9eca3b81eab397e044cfd}\label{classgeometry_1_1Polygon_a70745e1c5ab9eca3b81eab397e044cfd}} 
+void {\bfseries add\+Edge} (const Edge\+Type \&edge)
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_ad1876b299498b4e5277f35ba2659da83}\label{classgeometry_1_1Polygon_ad1876b299498b4e5277f35ba2659da83}} 
+void {\bfseries set\+Id} (Index\+Type \+\_\+id)
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_ae3664980e2b0ff62ad302b5b04764e5b}\label{classgeometry_1_1Polygon_ae3664980e2b0ff62ad302b5b04764e5b}} 
+const Index\+Type \& {\bfseries get\+Id} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a13a8dec250b22a65204cc8ae4dbe9768}\label{classgeometry_1_1Polygon_a13a8dec250b22a65204cc8ae4dbe9768}} 
+std\+::size\+\_\+t {\bfseries num\+Edges} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a968883c1dfa8c2eef5c46416386e3409}\label{classgeometry_1_1Polygon_a968883c1dfa8c2eef5c46416386e3409}} 
+const Edge\+Type \& {\bfseries get\+Edge} (std\+::size\+\_\+t index) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_ab84e3a69965a2385f13ff74e5caf7db4}\label{classgeometry_1_1Polygon_ab84e3a69965a2385f13ff74e5caf7db4}} 
+const Edge\+Type \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (Index\+Type index) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a05d2dd5fddedd3f2c8e6c9a6e5e4123d}\label{classgeometry_1_1Polygon_a05d2dd5fddedd3f2c8e6c9a6e5e4123d}} 
+const Edge\+Type \& {\bfseries get\+Positive\+Edge} (std\+::size\+\_\+t index) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a7c8018a60a047c08cfeec5913c86df20}\label{classgeometry_1_1Polygon_a7c8018a60a047c08cfeec5913c86df20}} 
+bool {\bfseries are\+Edges\+Consistent} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a549dd82b33bb884e77e37d63d21dd1e5}\label{classgeometry_1_1Polygon_a549dd82b33bb884e77e37d63d21dd1e5}} 
+void {\bfseries compute\+Properties} ()
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_af93287949409967aafbd305df7285469}\label{classgeometry_1_1Polygon_af93287949409967aafbd305df7285469}} 
+void {\bfseries compute\+Outward\+Normal\+Area} ()
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_ab2a4057a66d79e831070039ce07f40fd}\label{classgeometry_1_1Polygon_ab2a4057a66d79e831070039ce07f40fd}} 
+const \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}} {\bfseries get\+Outward\+Normal} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a4ab69ef6990705eb48995e329761281c}\label{classgeometry_1_1Polygon_a4ab69ef6990705eb48995e329761281c}} 
+const \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}} {\bfseries get\+\_\+e\+\_\+x} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_aaa4a6ca7ef24f4c182e89db1deef3fd5}\label{classgeometry_1_1Polygon_aaa4a6ca7ef24f4c182e89db1deef3fd5}} 
+const \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}} {\bfseries get\+\_\+e\+\_\+y} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_ab8370ddcef68265be56dbf4f78037ece}\label{classgeometry_1_1Polygon_ab8370ddcef68265be56dbf4f78037ece}} 
+real {\bfseries get\+Area} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a3e9f6cf41f2ab8c1105f814fb0fb62e1}\label{classgeometry_1_1Polygon_a3e9f6cf41f2ab8c1105f814fb0fb62e1}} 
+void {\bfseries compute\+Diameter} ()
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_aec71f8b8f8e500466bca3357b6a84e47}\label{classgeometry_1_1Polygon_aec71f8b8f8e500466bca3357b6a84e47}} 
+real {\bfseries get\+Diameter} () const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a22a70b0025b039194049618b22fa398a}\label{classgeometry_1_1Polygon_a22a70b0025b039194049618b22fa398a}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon}}$<$ Edge\+Type $>$ \&other) const
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a3754ead221aaacc551dfea8bb1949592}\label{classgeometry_1_1Polygon_a3754ead221aaacc551dfea8bb1949592}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon}}$<$ Edge\+Type $>$ \&other) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgeometry_1_1Polygon_a3eb8836f6e222b7ae252640d90377951}\label{classgeometry_1_1Polygon_a3eb8836f6e222b7ae252640d90377951}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon}}$<$ Edge\+Type $>$ \&polygon)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Mesh/polygon.\+hpp\end{DoxyCompactItemize}

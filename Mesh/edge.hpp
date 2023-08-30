@@ -5,10 +5,8 @@
 #include <array>
 #include <functional>
 #include <memory>
-// #include <set> // used for existingEdges data structure
 #include <iostream>
 #include <stdexcept>
-#include <optional>
 
 namespace geometry
 {
@@ -22,13 +20,16 @@ namespace geometry
         std::array<std::reference_wrapper<const PointType>, 2> points;
         real length;
         PointType direction;
-        // Edge<PointType> *otherHalfEdge; // Pointer to store the other half-edge
         std::shared_ptr<Edge<PointType>> otherHalfEdge; // Pointer to store the other half-edge
-        // std::weak_ptr<Edge<PointType>> otherHalfEdge; // Use std::weak_ptr for non-owning reference
-        // std::optional<std::reference_wrapper<const Edge<PointType>>> otherHalfEdge;
 
     public:
-        // Constructor with two points
+        /**
+         * @brief Constructor with two points
+         * 
+         * @param point1 
+         * @param point2 
+         * @param _flipped if reading direction is flipped
+         */
         Edge(const PointType &point1, const PointType &point2, bool _flipped = false) : id(lastId++), flipped(_flipped), points({point1, point2})
         {
             // Cannot create an edge composed of the same point
@@ -39,65 +40,22 @@ namespace geometry
 
             update();
         }
-        /*
-                // Method to set the other half-edge
-                void setOtherHalfEdge(Edge<PointType> &otherEdge)
-                {
-                    otherHalfEdge = std::make_shared<Edge<PointType>>(otherEdge);
-                }
-
-                // Method to get the other half-edge
-                std::shared_ptr<Edge<PointType>> getOtherHalfEdge() const
-                // Edge<PointType> getOtherHalfEdge() const
-                {
-                    if (!otherHalfEdge)
-                    {
-                        throw std::runtime_error("Twin edge not set!");
-                    }
-                    return otherHalfEdge;
-                }
-        */
-        /*
-        void setOtherHalfEdge(const Edge<PointType> &otherEdge)
-        {
-            otherHalfEdge = std::ref(otherEdge);
-            std::cout << "other half edge has just been set to" << std::endl;
-            std::cout << otherHalfEdge.value() << std::endl;
-        }
-
-        const Edge<PointType> &getOtherHalfEdge() const
-        {
-            if (otherHalfEdge.has_value())
-            {
-                std::cout << std::endl<< "other half edge is set" << std::endl;
-                // Return the reference to the other edge inside the optional
-                return otherHalfEdge.value().get();
-            }
-            else
-            {
-                std::cout << "other half edge not set" << std::endl;
-                // Return a reference to the edge itself
-                return *this;
-            }
-        }
-
-        void setOtherHalfEdge(const Edge<PointType> &otherEdge)
-        {
-            *otherHalfEdge = otherEdge;
-        }
-
-        const Edge<PointType> &getOtherHalfEdge() const
-        {
-            return *otherHalfEdge;
-        }
-*/
-        // Setter method to set the other half-edge
+        
+        /**
+         * @brief Setter method to set the other half-edge
+         * 
+         * @param otherEdge 
+         */
         void setOtherHalfEdge(const Edge<PointType> &otherEdge)
         {
             otherHalfEdge = std::make_shared<Edge<PointType>>(otherEdge);
         }
 
-        // Getter method to get the other half-edge
+        /**
+         * @brief Getter method to get the other half-edge
+         * 
+         * @return Edge<PointType>& 
+         */
         Edge<PointType> &getOtherHalfEdge() const
         {
             if (otherHalfEdge)
@@ -109,9 +67,14 @@ namespace geometry
                 throw std::runtime_error("Twin edge not set!");
             }
         }
-        // Update the properties of the edge.
-        // When modifying one point, the edge autmatically sees the change as they are references
-        // It is not the case for other data structures
+
+        /**
+         * @brief Update the properties of the edge.
+                  When modifying one point, the edge autmatically
+                  sees the change as they are references.
+                  It is not the case for other data structures
+         * 
+         */
         void update()
         {
             length = distance(points[0].get(), points[1].get());
@@ -121,44 +84,53 @@ namespace geometry
                 direction = (points[0].get() - points[1].get()) / length;
         }
 
-        // Set id
+        /**
+         * @brief Set id
+         * 
+         * @param _id 
+         */
         void setId(IndexType _id)
         {
             id = _id;
             lastId++;
         }
 
-        // Get id
+        /**
+         * @brief Get id
+         * 
+         * @return const IndexType& 
+         */
         const IndexType &getId() const
         {
             return id;
         }
 
-        // Get length
+        /**
+         * @brief Get length
+         * 
+         * @return const real& 
+         */
         const real &getLength() const
         {
             return length;
         }
 
-        // Get direction
+        /**
+         * @brief Get direction
+         * 
+         * @return const PointType 
+         */
         const PointType getDirection() const
         {
             return direction;
         }
 
-        /*
-                // Getter
-                PointType &operator[](size_t index)
-                {
-                    if (index >= 2)
-                    {
-                        throw std::out_of_range("Invalid index for Edge.");
-                    }
-                    return points[index];
-                }
-        */
-
-        // Constant getter
+        /**
+         * @brief Constant getter
+         * 
+         * @param index 
+         * @return const PointType& 
+         */
         const PointType &operator[](IndexType index) const
         {
             if (index >= 2)
@@ -171,7 +143,13 @@ namespace geometry
                 return points[1 - index].get();
         }
 
-        // Define the comparison function based on edge Ids
+        /**
+         * @brief Define the comparison function based on edge Ids
+         * 
+         * @param other 
+         * @return true 
+         * @return false 
+         */
         bool operator<(const Edge<PointType> &other) const
         {
             // if edges are made by the same points, one cannot be < than the other
@@ -186,7 +164,13 @@ namespace geometry
             }
         }
 
-        // Equality operator for edges
+        /**
+         * @brief Equality operator for edges
+         * 
+         * @param other 
+         * @return true 
+         * @return false 
+         */
         bool operator==(const Edge<PointType> &other) const
         {
             // Compare two edges by comparing the points they contain (regardless of order)
@@ -194,7 +178,13 @@ namespace geometry
                     (points[0].get() == (other.points[1].get()) && points[1].get() == (other.points[0].get())));
         }
 
-        // Stream output operator for the Edge class
+        /**
+         * @brief Stream output operator for the Edge class
+         * 
+         * @param os 
+         * @param edge 
+         * @return std::ostream& 
+         */
         friend std::ostream &operator<<(std::ostream &os, const Edge<PointType> &edge)
         {
             os << "Edge " << edge.getId() << ": (" << edge[0].getId() << ", " << edge[1].getId() << ")";
@@ -208,7 +198,15 @@ namespace geometry
 
     using Edge3D = Edge<Point3D>;
 
-    // Method to construct a pair of half-edges and set their id
+    /**
+     * @brief Method to construct a pair of half-edges and set their id
+     * 
+     * @tparam PointType 
+     * @param point1 
+     * @param point2 
+     * @param id 
+     * @return std::pair<Edge<PointType>, Edge<PointType>> 
+     */
     template <typename PointType>
     std::pair<Edge<PointType>, Edge<PointType>> createPairEdges(const PointType &point1, const PointType &point2, IndexType id)
     {
