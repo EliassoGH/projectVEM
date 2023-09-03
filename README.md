@@ -68,13 +68,13 @@ make
 ```
 
 ## Run
-To run the main program simply do from bash
+To run the **main program** simply do from bash
 ```bash
 ./main
 ```
 and some messages will be printed in real time on screen concerning the evolution of the program.
 
-To run the examples, e.g. the code contained in `main_monomial.cpp`, do
+To run the **examples**, e.g. the code contained in `main_monomial.cpp`, do
 ```bash
 ./main_monomial
 ```
