@@ -3,41 +3,190 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a52b63fb82b370ecb4b4d93e086f1b54e}\label{classgeometry_1_1Polyhedron_a52b63fb82b370ecb4b4d93e086f1b54e}} 
-{\bfseries Polyhedron} (const std\+::initializer\+\_\+list$<$ Polygon\+Type $>$ \&polygons\+Without\+Direction)
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a15e7c2a9f80b5f0b41e630356adfd363}\label{classgeometry_1_1Polyhedron_a15e7c2a9f80b5f0b41e630356adfd363}} 
-void {\bfseries add\+Polygon} (const Polygon\+Type \&polygon)
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a7c4ebcc88e2b1d552850ce88afae1adf}\label{classgeometry_1_1Polyhedron_a7c4ebcc88e2b1d552850ce88afae1adf}} 
-void {\bfseries set\+Id} (std\+::size\+\_\+t \+\_\+id)
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a68215260d3298c2be78cd1b548d21ea0}\label{classgeometry_1_1Polyhedron_a68215260d3298c2be78cd1b548d21ea0}} 
-const std\+::size\+\_\+t \& {\bfseries get\+Id} () const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Polyhedron_abf8a157b8615d7af1e62185b1a4793e1}\label{classgeometry_1_1Polyhedron_abf8a157b8615d7af1e62185b1a4793e1}} 
-std\+::size\+\_\+t {\bfseries num\+Polygons} () const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a33f58127413b717b874dc6b9caf53c82}\label{classgeometry_1_1Polyhedron_a33f58127413b717b874dc6b9caf53c82}} 
-const Polygon\+Type \& {\bfseries get\+Polygon} (std\+::size\+\_\+t index) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Polyhedron_aeecf039a67ad97742f22ef7584c04583}\label{classgeometry_1_1Polyhedron_aeecf039a67ad97742f22ef7584c04583}} 
-const Polygon\+Type \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t index) const
-\item 
+\mbox{\hyperlink{classgeometry_1_1Polyhedron_a52b63fb82b370ecb4b4d93e086f1b54e}{Polyhedron}} (const std\+::initializer\+\_\+list$<$ Polygon\+Type $>$ \&polygons\+Without\+Direction)
+\begin{DoxyCompactList}\small\item\em Constructor taking individual polygons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgeometry_1_1Polyhedron_a15e7c2a9f80b5f0b41e630356adfd363}{add\+Polygon}} (const Polygon\+Type \&polygon)
+\begin{DoxyCompactList}\small\item\em Add a polygon and its direction to the polyhedron. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgeometry_1_1Polyhedron_a7c4ebcc88e2b1d552850ce88afae1adf}{set\+Id}} (std\+::size\+\_\+t \+\_\+id)
+\begin{DoxyCompactList}\small\item\em Set id. \end{DoxyCompactList}\item 
+const std\+::size\+\_\+t \& \mbox{\hyperlink{classgeometry_1_1Polyhedron_a68215260d3298c2be78cd1b548d21ea0}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Get id. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classgeometry_1_1Polyhedron_abf8a157b8615d7af1e62185b1a4793e1}{num\+Polygons}} () const
+\begin{DoxyCompactList}\small\item\em Method to get the number of polygons in the \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}. \end{DoxyCompactList}\item 
+const Polygon\+Type \& \mbox{\hyperlink{classgeometry_1_1Polyhedron_a33f58127413b717b874dc6b9caf53c82}{get\+Polygon}} (std\+::size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Method to get a polygon by index. \end{DoxyCompactList}\item 
+const Polygon\+Type \& \mbox{\hyperlink{classgeometry_1_1Polyhedron_aeecf039a67ad97742f22ef7584c04583}{operator\mbox{[}$\,$\mbox{]}}} (std\+::size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Access operator \mbox{[}\mbox{]} to get a polygon by index. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classgeometry_1_1Polyhedron_a7a603ec1de41f110a4db3c6c1fcaa2bf}\label{classgeometry_1_1Polyhedron_a7a603ec1de41f110a4db3c6c1fcaa2bf}} 
-void {\bfseries compute\+Diameter} ()
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a141154e05180e803ba37ff5b327a12c5}\label{classgeometry_1_1Polyhedron_a141154e05180e803ba37ff5b327a12c5}} 
-real {\bfseries get\+Diameter} () const
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classgeometry_1_1Polyhedron_a7a603ec1de41f110a4db3c6c1fcaa2bf}{compute\+Diameter}} ()
+\begin{DoxyCompactList}\small\item\em Compute diameter. \end{DoxyCompactList}\item 
+real \mbox{\hyperlink{classgeometry_1_1Polyhedron_a141154e05180e803ba37ff5b327a12c5}{get\+Diameter}} () const
+\begin{DoxyCompactList}\small\item\em Get diameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
+std\+::ostream \& \mbox{\hyperlink{classgeometry_1_1Polyhedron_a651fefc8c99197e6c3f126ed74b7cb85}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ Polygon\+Type $>$ \&polyhedron)
+\begin{DoxyCompactList}\small\item\em Stream output operator for the \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a52b63fb82b370ecb4b4d93e086f1b54e}\label{classgeometry_1_1Polyhedron_a52b63fb82b370ecb4b4d93e086f1b54e}} 
+\index{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!Polyhedron@{Polyhedron}}
+\index{Polyhedron@{Polyhedron}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}}
+\doxyparagraph{\texorpdfstring{Polyhedron()}{Polyhedron()}}
+{\footnotesize\ttfamily template$<$typename Polygon\+Type $>$ \\
+\mbox{\hyperlink{classgeometry_1_1Polyhedron}{geometry\+::\+Polyhedron}}$<$ Polygon\+Type $>$\+::\mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}} (\begin{DoxyParamCaption}\item[{const std\+::initializer\+\_\+list$<$ Polygon\+Type $>$ \&}]{polygons\+Without\+Direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor taking individual polygons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em polygons\+Without\+Direction} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a15e7c2a9f80b5f0b41e630356adfd363}\label{classgeometry_1_1Polyhedron_a15e7c2a9f80b5f0b41e630356adfd363}} 
+\index{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!addPolygon@{addPolygon}}
+\index{addPolygon@{addPolygon}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}}
+\doxyparagraph{\texorpdfstring{addPolygon()}{addPolygon()}}
+{\footnotesize\ttfamily template$<$typename Polygon\+Type $>$ \\
+void \mbox{\hyperlink{classgeometry_1_1Polyhedron}{geometry\+::\+Polyhedron}}$<$ Polygon\+Type $>$\+::add\+Polygon (\begin{DoxyParamCaption}\item[{const Polygon\+Type \&}]{polygon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a polygon and its direction to the polyhedron. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em polygon} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a141154e05180e803ba37ff5b327a12c5}\label{classgeometry_1_1Polyhedron_a141154e05180e803ba37ff5b327a12c5}} 
+\index{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!getDiameter@{getDiameter}}
+\index{getDiameter@{getDiameter}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}}
+\doxyparagraph{\texorpdfstring{getDiameter()}{getDiameter()}}
+{\footnotesize\ttfamily template$<$typename Polygon\+Type $>$ \\
+real \mbox{\hyperlink{classgeometry_1_1Polyhedron}{geometry\+::\+Polyhedron}}$<$ Polygon\+Type $>$\+::get\+Diameter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get diameter. 
+
+\begin{DoxyReturn}{Returns}
+real 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a68215260d3298c2be78cd1b548d21ea0}\label{classgeometry_1_1Polyhedron_a68215260d3298c2be78cd1b548d21ea0}} 
+\index{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!getId@{getId}}
+\index{getId@{getId}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}}
+\doxyparagraph{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily template$<$typename Polygon\+Type $>$ \\
+const std\+::size\+\_\+t\& \mbox{\hyperlink{classgeometry_1_1Polyhedron}{geometry\+::\+Polyhedron}}$<$ Polygon\+Type $>$\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get id. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::size\+\_\+t\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a33f58127413b717b874dc6b9caf53c82}\label{classgeometry_1_1Polyhedron_a33f58127413b717b874dc6b9caf53c82}} 
+\index{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!getPolygon@{getPolygon}}
+\index{getPolygon@{getPolygon}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}}
+\doxyparagraph{\texorpdfstring{getPolygon()}{getPolygon()}}
+{\footnotesize\ttfamily template$<$typename Polygon\+Type $>$ \\
+const Polygon\+Type\& \mbox{\hyperlink{classgeometry_1_1Polyhedron}{geometry\+::\+Polyhedron}}$<$ Polygon\+Type $>$\+::get\+Polygon (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to get a polygon by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const Polygon\+Type\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Polyhedron_abf8a157b8615d7af1e62185b1a4793e1}\label{classgeometry_1_1Polyhedron_abf8a157b8615d7af1e62185b1a4793e1}} 
+\index{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!numPolygons@{numPolygons}}
+\index{numPolygons@{numPolygons}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}}
+\doxyparagraph{\texorpdfstring{numPolygons()}{numPolygons()}}
+{\footnotesize\ttfamily template$<$typename Polygon\+Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classgeometry_1_1Polyhedron}{geometry\+::\+Polyhedron}}$<$ Polygon\+Type $>$\+::num\+Polygons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to get the number of polygons in the \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Polyhedron_aeecf039a67ad97742f22ef7584c04583}\label{classgeometry_1_1Polyhedron_aeecf039a67ad97742f22ef7584c04583}} 
+\index{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}}
+\doxyparagraph{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename Polygon\+Type $>$ \\
+const Polygon\+Type\& \mbox{\hyperlink{classgeometry_1_1Polyhedron}{geometry\+::\+Polyhedron}}$<$ Polygon\+Type $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access operator \mbox{[}\mbox{]} to get a polygon by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const Polygon\+Type\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Polyhedron_a7c4ebcc88e2b1d552850ce88afae1adf}\label{classgeometry_1_1Polyhedron_a7c4ebcc88e2b1d552850ce88afae1adf}} 
+\index{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!setId@{setId}}
+\index{setId@{setId}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}}
+\doxyparagraph{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily template$<$typename Polygon\+Type $>$ \\
+void \mbox{\hyperlink{classgeometry_1_1Polyhedron}{geometry\+::\+Polyhedron}}$<$ Polygon\+Type $>$\+::set\+Id (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Friends And Related Function Documentation}
 \mbox{\Hypertarget{classgeometry_1_1Polyhedron_a651fefc8c99197e6c3f126ed74b7cb85}\label{classgeometry_1_1Polyhedron_a651fefc8c99197e6c3f126ed74b7cb85}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ Polygon\+Type $>$ \&polyhedron)
-\end{DoxyCompactItemize}
+\index{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename Polygon\+Type $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ Polygon\+Type $>$ \&}]{polyhedron }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Stream output operator for the \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+{\em polyhedron} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Mesh/polyhedron.\+hpp\end{DoxyCompactItemize}
+include/polyhedron.\+hpp\end{DoxyCompactItemize}

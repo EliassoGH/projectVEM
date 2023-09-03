@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mesh_1',['Mesh',['../classMesh.html',1,'']]]
+  ['binaryoperation_4',['binaryOperation',['../classgeometry_1_1Point.html#a33b2262b6989886d93a7ae67ae3b2f04',1,'geometry::Point']]]
 ];

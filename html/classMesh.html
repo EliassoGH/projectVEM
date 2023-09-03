@@ -71,54 +71,515 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7d1bff13d5001e8d4382e4bc76ebbf20"><td class="memItemLeft" align="right" valign="top"><a id="a7d1bff13d5001e8d4382e4bc76ebbf20"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Mesh</b> (const std::string &amp;filename)</td></tr>
+<tr class="memitem:ad0a790b51a91c01e87848d779cedd5ed"><td class="memItemLeft" align="right" valign="top"><a id="ad0a790b51a91c01e87848d779cedd5ed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#ad0a790b51a91c01e87848d779cedd5ed">Mesh</a> ()=default</td></tr>
+<tr class="memdesc:ad0a790b51a91c01e87848d779cedd5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="separator:ad0a790b51a91c01e87848d779cedd5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1bff13d5001e8d4382e4bc76ebbf20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a7d1bff13d5001e8d4382e4bc76ebbf20">Mesh</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a7d1bff13d5001e8d4382e4bc76ebbf20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor reading entities from Gmsh .geo file.  <a href="classMesh.html#a7d1bff13d5001e8d4382e4bc76ebbf20">More...</a><br /></td></tr>
 <tr class="separator:a7d1bff13d5001e8d4382e4bc76ebbf20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b3bb2401b09ad2e824e473cf442646d"><td class="memItemLeft" align="right" valign="top"><a id="a9b3bb2401b09ad2e824e473cf442646d"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>numVertices</b> () const</td></tr>
+<tr class="memitem:a9b3bb2401b09ad2e824e473cf442646d"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a9b3bb2401b09ad2e824e473cf442646d">numVertices</a> () const</td></tr>
+<tr class="memdesc:a9b3bb2401b09ad2e824e473cf442646d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to get the number of vertices.  <a href="classMesh.html#a9b3bb2401b09ad2e824e473cf442646d">More...</a><br /></td></tr>
 <tr class="separator:a9b3bb2401b09ad2e824e473cf442646d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fe0a4347f90a3e1c23951736b446fda"><td class="memItemLeft" align="right" valign="top"><a id="a2fe0a4347f90a3e1c23951736b446fda"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>numEdges</b> () const</td></tr>
+<tr class="memitem:a2fe0a4347f90a3e1c23951736b446fda"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a2fe0a4347f90a3e1c23951736b446fda">numEdges</a> () const</td></tr>
+<tr class="memdesc:a2fe0a4347f90a3e1c23951736b446fda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to get the number of edges.  <a href="classMesh.html#a2fe0a4347f90a3e1c23951736b446fda">More...</a><br /></td></tr>
 <tr class="separator:a2fe0a4347f90a3e1c23951736b446fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1160685d782baf4b03fafb55c6ad16f"><td class="memItemLeft" align="right" valign="top"><a id="ac1160685d782baf4b03fafb55c6ad16f"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>numPolygons</b> () const</td></tr>
+<tr class="memitem:ac1160685d782baf4b03fafb55c6ad16f"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#ac1160685d782baf4b03fafb55c6ad16f">numPolygons</a> () const</td></tr>
+<tr class="memdesc:ac1160685d782baf4b03fafb55c6ad16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to get the number of polygons.  <a href="classMesh.html#ac1160685d782baf4b03fafb55c6ad16f">More...</a><br /></td></tr>
 <tr class="separator:ac1160685d782baf4b03fafb55c6ad16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f6eefd43cb38be5dd67e26799c1b12f"><td class="memItemLeft" align="right" valign="top"><a id="a4f6eefd43cb38be5dd67e26799c1b12f"></a>
-std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>numPolyhedra</b> () const</td></tr>
+<tr class="memitem:a4f6eefd43cb38be5dd67e26799c1b12f"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a4f6eefd43cb38be5dd67e26799c1b12f">numPolyhedra</a> () const</td></tr>
+<tr class="memdesc:a4f6eefd43cb38be5dd67e26799c1b12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to get the number of polyhedra.  <a href="classMesh.html#a4f6eefd43cb38be5dd67e26799c1b12f">More...</a><br /></td></tr>
 <tr class="separator:a4f6eefd43cb38be5dd67e26799c1b12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3688a68c29d7bdd4a78a2edba5f5332b"><td class="memItemLeft" align="right" valign="top"><a id="a3688a68c29d7bdd4a78a2edba5f5332b"></a>
-const PointType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVertex</b> (std::size_t index) const</td></tr>
+<tr class="memitem:a3688a68c29d7bdd4a78a2edba5f5332b"><td class="memItemLeft" align="right" valign="top">const PointType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a3688a68c29d7bdd4a78a2edba5f5332b">getVertex</a> (std::size_t index) const</td></tr>
+<tr class="memdesc:a3688a68c29d7bdd4a78a2edba5f5332b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for a vertex.  <a href="classMesh.html#a3688a68c29d7bdd4a78a2edba5f5332b">More...</a><br /></td></tr>
 <tr class="separator:a3688a68c29d7bdd4a78a2edba5f5332b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99ba4ec4136502fd58f65fada0d9558d"><td class="memItemLeft" align="right" valign="top"><a id="a99ba4ec4136502fd58f65fada0d9558d"></a>
-const EdgeType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEdge</b> (IndexType index) const</td></tr>
+<tr class="memitem:a99ba4ec4136502fd58f65fada0d9558d"><td class="memItemLeft" align="right" valign="top">const EdgeType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a99ba4ec4136502fd58f65fada0d9558d">getEdge</a> (IndexType index) const</td></tr>
+<tr class="memdesc:a99ba4ec4136502fd58f65fada0d9558d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for an edge.  <a href="classMesh.html#a99ba4ec4136502fd58f65fada0d9558d">More...</a><br /></td></tr>
 <tr class="separator:a99ba4ec4136502fd58f65fada0d9558d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a534d94a68dc85ea466217384174f4591"><td class="memItemLeft" align="right" valign="top"><a id="a534d94a68dc85ea466217384174f4591"></a>
-const PolygonType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPolygon</b> (IndexType index) const</td></tr>
+<tr class="memitem:a534d94a68dc85ea466217384174f4591"><td class="memItemLeft" align="right" valign="top">const PolygonType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a534d94a68dc85ea466217384174f4591">getPolygon</a> (IndexType index) const</td></tr>
+<tr class="memdesc:a534d94a68dc85ea466217384174f4591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for a polygon.  <a href="classMesh.html#a534d94a68dc85ea466217384174f4591">More...</a><br /></td></tr>
 <tr class="separator:a534d94a68dc85ea466217384174f4591"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25741c9ef507e3b248479318c290ea5b"><td class="memItemLeft" align="right" valign="top"><a id="a25741c9ef507e3b248479318c290ea5b"></a>
-const PolyhedronType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPolyhedron</b> (std::size_t index) const</td></tr>
+<tr class="memitem:a25741c9ef507e3b248479318c290ea5b"><td class="memItemLeft" align="right" valign="top">const PolyhedronType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a25741c9ef507e3b248479318c290ea5b">getPolyhedron</a> (std::size_t index) const</td></tr>
+<tr class="memdesc:a25741c9ef507e3b248479318c290ea5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for a polyhedron.  <a href="classMesh.html#a25741c9ef507e3b248479318c290ea5b">More...</a><br /></td></tr>
 <tr class="separator:a25741c9ef507e3b248479318c290ea5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c3cea5d8b3e22cd8b4602fe2c43af9d"><td class="memItemLeft" align="right" valign="top"><a id="a5c3cea5d8b3e22cd8b4602fe2c43af9d"></a>
-const std::map&lt; std::size_t, PointType &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVertices</b> () const</td></tr>
+<tr class="memitem:a5c3cea5d8b3e22cd8b4602fe2c43af9d"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::size_t, PointType &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a5c3cea5d8b3e22cd8b4602fe2c43af9d">getVertices</a> () const</td></tr>
+<tr class="memdesc:a5c3cea5d8b3e22cd8b4602fe2c43af9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the map of vertices.  <a href="classMesh.html#a5c3cea5d8b3e22cd8b4602fe2c43af9d">More...</a><br /></td></tr>
 <tr class="separator:a5c3cea5d8b3e22cd8b4602fe2c43af9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17e4aa905f33fb41370164c60f65458f"><td class="memItemLeft" align="right" valign="top"><a id="a17e4aa905f33fb41370164c60f65458f"></a>
-const std::map&lt; IndexType, EdgeType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEdges</b> () const</td></tr>
+<tr class="memitem:a17e4aa905f33fb41370164c60f65458f"><td class="memItemLeft" align="right" valign="top">const std::map&lt; IndexType, EdgeType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a17e4aa905f33fb41370164c60f65458f">getEdges</a> () const</td></tr>
+<tr class="memdesc:a17e4aa905f33fb41370164c60f65458f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the map of edges.  <a href="classMesh.html#a17e4aa905f33fb41370164c60f65458f">More...</a><br /></td></tr>
 <tr class="separator:a17e4aa905f33fb41370164c60f65458f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25cad622752cf44ad8aca70b3fdaeece"><td class="memItemLeft" align="right" valign="top"><a id="a25cad622752cf44ad8aca70b3fdaeece"></a>
-const std::map&lt; IndexType, PolygonType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getPolygons</b> () const</td></tr>
+<tr class="memitem:a25cad622752cf44ad8aca70b3fdaeece"><td class="memItemLeft" align="right" valign="top">const std::map&lt; IndexType, PolygonType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a25cad622752cf44ad8aca70b3fdaeece">getPolygons</a> () const</td></tr>
+<tr class="memdesc:a25cad622752cf44ad8aca70b3fdaeece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the map of polygons.  <a href="classMesh.html#a25cad622752cf44ad8aca70b3fdaeece">More...</a><br /></td></tr>
 <tr class="separator:a25cad622752cf44ad8aca70b3fdaeece"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23be74f14f96efd73b744153e784b8f3"><td class="memItemLeft" align="right" valign="top"><a id="a23be74f14f96efd73b744153e784b8f3"></a>
-const std::map&lt; std::size_t, PolyhedronType &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPolyhedra</b> () const</td></tr>
+<tr class="memitem:a23be74f14f96efd73b744153e784b8f3"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::size_t, PolyhedronType &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a23be74f14f96efd73b744153e784b8f3">getPolyhedra</a> () const</td></tr>
+<tr class="memdesc:a23be74f14f96efd73b744153e784b8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the map of polyhedra.  <a href="classMesh.html#a23be74f14f96efd73b744153e784b8f3">More...</a><br /></td></tr>
 <tr class="separator:a23be74f14f96efd73b744153e784b8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4051cfb1246741f58e61d66dbf29fbfb"><td class="memItemLeft" align="right" valign="top"><a id="a4051cfb1246741f58e61d66dbf29fbfb"></a>
-const real &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getSize</b> () const</td></tr>
+<tr class="memitem:a4051cfb1246741f58e61d66dbf29fbfb"><td class="memItemLeft" align="right" valign="top">const real &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a4051cfb1246741f58e61d66dbf29fbfb">getSize</a> () const</td></tr>
+<tr class="memdesc:a4051cfb1246741f58e61d66dbf29fbfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the average diameter.  <a href="classMesh.html#a4051cfb1246741f58e61d66dbf29fbfb">More...</a><br /></td></tr>
 <tr class="separator:a4051cfb1246741f58e61d66dbf29fbfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52e1e957d9d3710db1f5c785ae6d57f3"><td class="memItemLeft" align="right" valign="top"><a id="a52e1e957d9d3710db1f5c785ae6d57f3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> () const</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMesh.html#a52e1e957d9d3710db1f5c785ae6d57f3">print</a> () const</td></tr>
+<tr class="memdesc:a52e1e957d9d3710db1f5c785ae6d57f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print mesh information. <br /></td></tr>
 <tr class="separator:a52e1e957d9d3710db1f5c785ae6d57f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7d1bff13d5001e8d4382e4bc76ebbf20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1bff13d5001e8d4382e4bc76ebbf20">&#9670;&nbsp;</a></span>Mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::<a class="el" href="classMesh.html">Mesh</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor reading entities from Gmsh .geo file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a99ba4ec4136502fd58f65fada0d9558d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ba4ec4136502fd58f65fada0d9558d">&#9670;&nbsp;</a></span>getEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EdgeType&amp; <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::getEdge </td>
+          <td>(</td>
+          <td class="paramtype">IndexType&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for an edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>const EdgeType&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a17e4aa905f33fb41370164c60f65458f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e4aa905f33fb41370164c60f65458f">&#9670;&nbsp;</a></span>getEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;IndexType, EdgeType&gt; <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::getEdges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the map of edges. </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::map&lt;IndexType, EdgeType&gt; </dd></dl>
+
+</div>
+</div>
+<a id="a534d94a68dc85ea466217384174f4591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a534d94a68dc85ea466217384174f4591">&#9670;&nbsp;</a></span>getPolygon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PolygonType&amp; <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::getPolygon </td>
+          <td>(</td>
+          <td class="paramtype">IndexType&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for a polygon. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>const PolygonType&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a25cad622752cf44ad8aca70b3fdaeece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25cad622752cf44ad8aca70b3fdaeece">&#9670;&nbsp;</a></span>getPolygons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;IndexType, PolygonType&gt; <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::getPolygons </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the map of polygons. </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::map&lt;IndexType, PolygonType&gt; </dd></dl>
+
+</div>
+</div>
+<a id="a23be74f14f96efd73b744153e784b8f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23be74f14f96efd73b744153e784b8f3">&#9670;&nbsp;</a></span>getPolyhedra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;std::size_t, PolyhedronType&gt;&amp; <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::getPolyhedra </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the map of polyhedra. </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::map&lt;std::size_t, PolyhedronType&gt;&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a25741c9ef507e3b248479318c290ea5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25741c9ef507e3b248479318c290ea5b">&#9670;&nbsp;</a></span>getPolyhedron()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PolyhedronType&amp; <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::getPolyhedron </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for a polyhedron. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>const PolyhedronType&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a4051cfb1246741f58e61d66dbf29fbfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4051cfb1246741f58e61d66dbf29fbfb">&#9670;&nbsp;</a></span>getSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const real&amp; <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the average diameter. </p>
+<dl class="section return"><dt>Returns</dt><dd>const real&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a3688a68c29d7bdd4a78a2edba5f5332b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3688a68c29d7bdd4a78a2edba5f5332b">&#9670;&nbsp;</a></span>getVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PointType&amp; <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::getVertex </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for a vertex. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>const PointType&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a5c3cea5d8b3e22cd8b4602fe2c43af9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3cea5d8b3e22cd8b4602fe2c43af9d">&#9670;&nbsp;</a></span>getVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;std::size_t, PointType&gt;&amp; <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::getVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the map of vertices. </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::map&lt;std::size_t, PointType&gt;&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a2fe0a4347f90a3e1c23951736b446fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fe0a4347f90a3e1c23951736b446fda">&#9670;&nbsp;</a></span>numEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::numEdges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to get the number of edges. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::size_t </dd></dl>
+
+</div>
+</div>
+<a id="ac1160685d782baf4b03fafb55c6ad16f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1160685d782baf4b03fafb55c6ad16f">&#9670;&nbsp;</a></span>numPolygons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::numPolygons </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to get the number of polygons. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::size_t </dd></dl>
+
+</div>
+</div>
+<a id="a4f6eefd43cb38be5dd67e26799c1b12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6eefd43cb38be5dd67e26799c1b12f">&#9670;&nbsp;</a></span>numPolyhedra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::numPolyhedra </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to get the number of polyhedra. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::size_t </dd></dl>
+
+</div>
+</div>
+<a id="a9b3bb2401b09ad2e824e473cf442646d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b3bb2401b09ad2e824e473cf442646d">&#9670;&nbsp;</a></span>numVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType , typename EdgeType , typename PolygonType , typename PolyhedronType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classMesh.html">Mesh</a>&lt; PointType, EdgeType, PolygonType, PolyhedronType &gt;::numVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to get the number of vertices. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::size_t </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Mesh/<a class="el" href="mesh_8hpp_source.html">mesh.hpp</a></li>
+<li>include/<a class="el" href="mesh_8hpp_source.html">mesh.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

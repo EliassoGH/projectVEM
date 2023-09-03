@@ -1,12 +1,283 @@
 \@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
-\contentsline {section}{\numberline {1}Class Index}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Class List}{1}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Class Documentation}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Edge$<$ Point\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Mesh$<$ Point\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Edge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Polygon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Polyhedron\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Point$<$ Args $>$ Class Template Reference}{2}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Constructor \& Destructor Documentation}{3}{subsubsection.2.3.1}%
-\contentsline {paragraph}{\numberline {2.3.1.1}Point()}{3}{paragraph.2.3.1.1}%
-\contentsline {subsection}{\numberline {2.4}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Polygon$<$ Edge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{3}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Polyhedron$<$ Polygon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{4}{subsection.2.5}%
-\contentsline {section}{Index}{5}{section*.10}%
+\contentsline {section}{\numberline {1}Hierarchical Index}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Class Hierarchy}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Class Index}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Class List}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Class Documentation}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Edge$<$ Point\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{3}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Constructor \& Destructor Documentation}{4}{subsubsection.3.1.1}%
+\contentsline {paragraph}{\numberline {3.1.1.1}Edge()}{4}{paragraph.3.1.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Member Function Documentation}{4}{subsubsection.3.1.2}%
+\contentsline {paragraph}{\numberline {3.1.2.1}getDirection()}{4}{paragraph.3.1.2.1}%
+\contentsline {paragraph}{\numberline {3.1.2.2}getId()}{4}{paragraph.3.1.2.2}%
+\contentsline {paragraph}{\numberline {3.1.2.3}getLength()}{5}{paragraph.3.1.2.3}%
+\contentsline {paragraph}{\numberline {3.1.2.4}getOtherHalfEdge()}{5}{paragraph.3.1.2.4}%
+\contentsline {paragraph}{\numberline {3.1.2.5}operator$<$()}{5}{paragraph.3.1.2.5}%
+\contentsline {paragraph}{\numberline {3.1.2.6}operator==()}{5}{paragraph.3.1.2.6}%
+\contentsline {paragraph}{\numberline {3.1.2.7}operator[]()}{6}{paragraph.3.1.2.7}%
+\contentsline {paragraph}{\numberline {3.1.2.8}setId()}{6}{paragraph.3.1.2.8}%
+\contentsline {paragraph}{\numberline {3.1.2.9}setOtherHalfEdge()}{6}{paragraph.3.1.2.9}%
+\contentsline {subsubsection}{\numberline {3.1.3}Friends And Related Function Documentation}{7}{subsubsection.3.1.3}%
+\contentsline {paragraph}{\numberline {3.1.3.1}operator$<$$<$}{7}{paragraph.3.1.3.1}%
+\contentsline {subsection}{\numberline {3.2}Edge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dof Class Reference}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Face\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dof Class Reference}{7}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Constructor \& Destructor Documentation}{7}{subsubsection.3.3.1}%
+\contentsline {paragraph}{\numberline {3.3.1.1}FaceDof()}{7}{paragraph.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Member Function Documentation}{8}{subsubsection.3.3.2}%
+\contentsline {paragraph}{\numberline {3.3.2.1}getId()}{8}{paragraph.3.3.2.1}%
+\contentsline {paragraph}{\numberline {3.3.2.2}getMonomial()}{8}{paragraph.3.3.2.2}%
+\contentsline {paragraph}{\numberline {3.3.2.3}operator$<$$<$()}{8}{paragraph.3.3.2.3}%
+\contentsline {subsection}{\numberline {3.4}Gauss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gauss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data Struct Reference}{9}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Gauss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lobatto\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Gauss\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Lobatto\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cache Class Reference}{9}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Member Function Documentation}{9}{subsubsection.3.5.1}%
+\contentsline {paragraph}{\numberline {3.5.1.1}getCache()}{9}{paragraph.3.5.1.1}%
+\contentsline {paragraph}{\numberline {3.5.1.2}initialize()}{10}{paragraph.3.5.1.2}%
+\contentsline {subsection}{\numberline {3.6}Linear\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Trinomial\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Power Class Reference}{10}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Constructor \& Destructor Documentation}{10}{subsubsection.3.6.1}%
+\contentsline {paragraph}{\numberline {3.6.1.1}LinearTrinomialPower()}{10}{paragraph.3.6.1.1}%
+\contentsline {subsection}{\numberline {3.7}Local\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Virtual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dofs Class Reference}{11}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Constructor \& Destructor Documentation}{11}{subsubsection.3.7.1}%
+\contentsline {paragraph}{\numberline {3.7.1.1}LocalVirtualDofs()}{11}{paragraph.3.7.1.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Member Function Documentation}{12}{subsubsection.3.7.2}%
+\contentsline {paragraph}{\numberline {3.7.2.1}EToLocalId()}{12}{paragraph.3.7.2.1}%
+\contentsline {paragraph}{\numberline {3.7.2.2}FToLocalId()}{12}{paragraph.3.7.2.2}%
+\contentsline {paragraph}{\numberline {3.7.2.3}getDof()}{12}{paragraph.3.7.2.3}%
+\contentsline {paragraph}{\numberline {3.7.2.4}getID()}{13}{paragraph.3.7.2.4}%
+\contentsline {paragraph}{\numberline {3.7.2.5}getnumDofs()}{13}{paragraph.3.7.2.5}%
+\contentsline {paragraph}{\numberline {3.7.2.6}getnumEdofs()}{13}{paragraph.3.7.2.6}%
+\contentsline {paragraph}{\numberline {3.7.2.7}getnumFdofs()}{14}{paragraph.3.7.2.7}%
+\contentsline {paragraph}{\numberline {3.7.2.8}getnumPdofs()}{14}{paragraph.3.7.2.8}%
+\contentsline {paragraph}{\numberline {3.7.2.9}getnumVdofs()}{14}{paragraph.3.7.2.9}%
+\contentsline {paragraph}{\numberline {3.7.2.10}PToLocalId()}{14}{paragraph.3.7.2.10}%
+\contentsline {paragraph}{\numberline {3.7.2.11}VToLocalId()}{14}{paragraph.3.7.2.11}%
+\contentsline {subsubsection}{\numberline {3.7.3}Friends And Related Function Documentation}{15}{subsubsection.3.7.3}%
+\contentsline {paragraph}{\numberline {3.7.3.1}operator$<$$<$}{15}{paragraph.3.7.3.1}%
+\contentsline {subsection}{\numberline {3.8}Local\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Virtual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dofs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collection Class Reference}{15}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Constructor \& Destructor Documentation}{15}{subsubsection.3.8.1}%
+\contentsline {paragraph}{\numberline {3.8.1.1}LocalVirtualDofsCollection()}{15}{paragraph.3.8.1.1}%
+\contentsline {subsubsection}{\numberline {3.8.2}Member Function Documentation}{16}{subsubsection.3.8.2}%
+\contentsline {paragraph}{\numberline {3.8.2.1}getLocalDofs()}{16}{paragraph.3.8.2.1}%
+\contentsline {paragraph}{\numberline {3.8.2.2}numLocalDofsCollection()}{16}{paragraph.3.8.2.2}%
+\contentsline {subsection}{\numberline {3.9}Mesh$<$ Point\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Edge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Polygon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type, Polyhedron\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{16}{subsection.3.9}%
+\contentsline {subsubsection}{\numberline {3.9.1}Constructor \& Destructor Documentation}{17}{subsubsection.3.9.1}%
+\contentsline {paragraph}{\numberline {3.9.1.1}Mesh()}{17}{paragraph.3.9.1.1}%
+\contentsline {subsubsection}{\numberline {3.9.2}Member Function Documentation}{17}{subsubsection.3.9.2}%
+\contentsline {paragraph}{\numberline {3.9.2.1}getEdge()}{18}{paragraph.3.9.2.1}%
+\contentsline {paragraph}{\numberline {3.9.2.2}getEdges()}{18}{paragraph.3.9.2.2}%
+\contentsline {paragraph}{\numberline {3.9.2.3}getPolygon()}{18}{paragraph.3.9.2.3}%
+\contentsline {paragraph}{\numberline {3.9.2.4}getPolygons()}{18}{paragraph.3.9.2.4}%
+\contentsline {paragraph}{\numberline {3.9.2.5}getPolyhedra()}{19}{paragraph.3.9.2.5}%
+\contentsline {paragraph}{\numberline {3.9.2.6}getPolyhedron()}{19}{paragraph.3.9.2.6}%
+\contentsline {paragraph}{\numberline {3.9.2.7}getSize()}{19}{paragraph.3.9.2.7}%
+\contentsline {paragraph}{\numberline {3.9.2.8}getVertex()}{20}{paragraph.3.9.2.8}%
+\contentsline {paragraph}{\numberline {3.9.2.9}getVertices()}{20}{paragraph.3.9.2.9}%
+\contentsline {paragraph}{\numberline {3.9.2.10}numEdges()}{20}{paragraph.3.9.2.10}%
+\contentsline {paragraph}{\numberline {3.9.2.11}numPolygons()}{20}{paragraph.3.9.2.11}%
+\contentsline {paragraph}{\numberline {3.9.2.12}numPolyhedra()}{21}{paragraph.3.9.2.12}%
+\contentsline {paragraph}{\numberline {3.9.2.13}numVertices()}{21}{paragraph.3.9.2.13}%
+\contentsline {subsection}{\numberline {3.10}Monomial$<$ Dimension $>$ Class Template Reference}{21}{subsection.3.10}%
+\contentsline {subsubsection}{\numberline {3.10.1}Constructor \& Destructor Documentation}{22}{subsubsection.3.10.1}%
+\contentsline {paragraph}{\numberline {3.10.1.1}Monomial()}{22}{paragraph.3.10.1.1}%
+\contentsline {subsubsection}{\numberline {3.10.2}Member Function Documentation}{22}{subsubsection.3.10.2}%
+\contentsline {paragraph}{\numberline {3.10.2.1}derivative()}{22}{paragraph.3.10.2.1}%
+\contentsline {paragraph}{\numberline {3.10.2.2}evaluate()}{22}{paragraph.3.10.2.2}%
+\contentsline {paragraph}{\numberline {3.10.2.3}getCoefficient()}{23}{paragraph.3.10.2.3}%
+\contentsline {paragraph}{\numberline {3.10.2.4}getExponents()}{23}{paragraph.3.10.2.4}%
+\contentsline {paragraph}{\numberline {3.10.2.5}getOrder()}{23}{paragraph.3.10.2.5}%
+\contentsline {paragraph}{\numberline {3.10.2.6}operator$\ast $()}{23}{paragraph.3.10.2.6}%
+\contentsline {paragraph}{\numberline {3.10.2.7}setCoefficient()}{24}{paragraph.3.10.2.7}%
+\contentsline {subsubsection}{\numberline {3.10.3}Friends And Related Function Documentation}{24}{subsubsection.3.10.3}%
+\contentsline {paragraph}{\numberline {3.10.3.1}operator$<$$<$}{24}{paragraph.3.10.3.1}%
+\contentsline {subsection}{\numberline {3.11}Monomial2D Class Reference}{24}{subsection.3.11}%
+\contentsline {subsubsection}{\numberline {3.11.1}Constructor \& Destructor Documentation}{25}{subsubsection.3.11.1}%
+\contentsline {paragraph}{\numberline {3.11.1.1}Monomial2D()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{25}{paragraph.3.11.1.1}%
+\contentsline {paragraph}{\numberline {3.11.1.2}Monomial2D()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{26}{paragraph.3.11.1.2}%
+\contentsline {subsubsection}{\numberline {3.11.2}Member Function Documentation}{26}{subsubsection.3.11.2}%
+\contentsline {paragraph}{\numberline {3.11.2.1}computeLaplaciansToMonomialsOrdered()}{26}{paragraph.3.11.2.1}%
+\contentsline {paragraph}{\numberline {3.11.2.2}computeMonomialsUpToOrder()}{26}{paragraph.3.11.2.2}%
+\contentsline {paragraph}{\numberline {3.11.2.3}derivative()}{26}{paragraph.3.11.2.3}%
+\contentsline {paragraph}{\numberline {3.11.2.4}dx()}{27}{paragraph.3.11.2.4}%
+\contentsline {paragraph}{\numberline {3.11.2.5}dy()}{27}{paragraph.3.11.2.5}%
+\contentsline {paragraph}{\numberline {3.11.2.6}getLaplaciansToMonomialsOrdered()}{27}{paragraph.3.11.2.6}%
+\contentsline {paragraph}{\numberline {3.11.2.7}getMonomialsOrdered()}{27}{paragraph.3.11.2.7}%
+\contentsline {paragraph}{\numberline {3.11.2.8}operator$\ast $()}{28}{paragraph.3.11.2.8}%
+\contentsline {subsubsection}{\numberline {3.11.3}Friends And Related Function Documentation}{28}{subsubsection.3.11.3}%
+\contentsline {paragraph}{\numberline {3.11.3.1}operator$<$$<$}{28}{paragraph.3.11.3.1}%
+\contentsline {subsection}{\numberline {3.12}Monomial3D Class Reference}{29}{subsection.3.12}%
+\contentsline {subsubsection}{\numberline {3.12.1}Constructor \& Destructor Documentation}{30}{subsubsection.3.12.1}%
+\contentsline {paragraph}{\numberline {3.12.1.1}Monomial3D()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{30}{paragraph.3.12.1.1}%
+\contentsline {paragraph}{\numberline {3.12.1.2}Monomial3D()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{30}{paragraph.3.12.1.2}%
+\contentsline {subsubsection}{\numberline {3.12.2}Member Function Documentation}{30}{subsubsection.3.12.2}%
+\contentsline {paragraph}{\numberline {3.12.2.1}computeGradientsToMonomialsOrdered()}{30}{paragraph.3.12.2.1}%
+\contentsline {paragraph}{\numberline {3.12.2.2}computeLaplaciansToMonomialsOrdered()}{31}{paragraph.3.12.2.2}%
+\contentsline {paragraph}{\numberline {3.12.2.3}computeMonomialsUpToOrder()}{31}{paragraph.3.12.2.3}%
+\contentsline {paragraph}{\numberline {3.12.2.4}derivative()}{31}{paragraph.3.12.2.4}%
+\contentsline {paragraph}{\numberline {3.12.2.5}dx()}{31}{paragraph.3.12.2.5}%
+\contentsline {paragraph}{\numberline {3.12.2.6}dy()}{32}{paragraph.3.12.2.6}%
+\contentsline {paragraph}{\numberline {3.12.2.7}dz()}{32}{paragraph.3.12.2.7}%
+\contentsline {paragraph}{\numberline {3.12.2.8}getGradientsToMonomialsOrdered()}{32}{paragraph.3.12.2.8}%
+\contentsline {paragraph}{\numberline {3.12.2.9}getLaplaciansToMonomialsOrdered()}{32}{paragraph.3.12.2.9}%
+\contentsline {paragraph}{\numberline {3.12.2.10}getMonomialsOrdered()}{33}{paragraph.3.12.2.10}%
+\contentsline {paragraph}{\numberline {3.12.2.11}operator$\ast $()}{33}{paragraph.3.12.2.11}%
+\contentsline {subsubsection}{\numberline {3.12.3}Friends And Related Function Documentation}{33}{subsubsection.3.12.3}%
+\contentsline {paragraph}{\numberline {3.12.3.1}operator$<$$<$}{33}{paragraph.3.12.3.1}%
+\contentsline {subsection}{\numberline {3.13}Integration\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Monomial\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Monomials\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Face\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Integrals\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Cache Class Reference}{34}{subsection.3.13}%
+\contentsline {subsubsection}{\numberline {3.13.1}Member Function Documentation}{34}{subsubsection.3.13.1}%
+\contentsline {paragraph}{\numberline {3.13.1.1}getCacheMonomial()}{34}{paragraph.3.13.1.1}%
+\contentsline {paragraph}{\numberline {3.13.1.2}getCacheMonomials()}{34}{paragraph.3.13.1.2}%
+\contentsline {paragraph}{\numberline {3.13.1.3}initialize()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{36}{paragraph.3.13.1.3}%
+\contentsline {paragraph}{\numberline {3.13.1.4}initialize()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{36}{paragraph.3.13.1.4}%
+\contentsline {subsection}{\numberline {3.14}Parameters Class Reference}{36}{subsection.3.14}%
+\contentsline {subsubsection}{\numberline {3.14.1}Constructor \& Destructor Documentation}{37}{subsubsection.3.14.1}%
+\contentsline {paragraph}{\numberline {3.14.1.1}Parameters()}{37}{paragraph.3.14.1.1}%
+\contentsline {subsubsection}{\numberline {3.14.2}Member Function Documentation}{37}{subsubsection.3.14.2}%
+\contentsline {paragraph}{\numberline {3.14.2.1}getExactSolution()}{37}{paragraph.3.14.2.1}%
+\contentsline {paragraph}{\numberline {3.14.2.2}getExactStrains()}{38}{paragraph.3.14.2.2}%
+\contentsline {paragraph}{\numberline {3.14.2.3}getFirstLame()}{38}{paragraph.3.14.2.3}%
+\contentsline {paragraph}{\numberline {3.14.2.4}getForcing()}{38}{paragraph.3.14.2.4}%
+\contentsline {paragraph}{\numberline {3.14.2.5}getHomogeneousDirichletBC()}{38}{paragraph.3.14.2.5}%
+\contentsline {paragraph}{\numberline {3.14.2.6}getInitializeFaceIntegrals()}{38}{paragraph.3.14.2.6}%
+\contentsline {paragraph}{\numberline {3.14.2.7}getInputMesh()}{39}{paragraph.3.14.2.7}%
+\contentsline {paragraph}{\numberline {3.14.2.8}getOrder()}{39}{paragraph.3.14.2.8}%
+\contentsline {paragraph}{\numberline {3.14.2.9}getPoissonRatio()}{39}{paragraph.3.14.2.9}%
+\contentsline {paragraph}{\numberline {3.14.2.10}getSecondLame()}{39}{paragraph.3.14.2.10}%
+\contentsline {paragraph}{\numberline {3.14.2.11}getYoungsModulus()}{39}{paragraph.3.14.2.11}%
+\contentsline {subsection}{\numberline {3.15}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Point$<$ Args $>$ Class Template Reference}{40}{subsection.3.15}%
+\contentsline {subsubsection}{\numberline {3.15.1}Constructor \& Destructor Documentation}{41}{subsubsection.3.15.1}%
+\contentsline {paragraph}{\numberline {3.15.1.1}Point()}{41}{paragraph.3.15.1.1}%
+\contentsline {subsubsection}{\numberline {3.15.2}Member Function Documentation}{41}{subsubsection.3.15.2}%
+\contentsline {paragraph}{\numberline {3.15.2.1}binaryOperation()}{41}{paragraph.3.15.2.1}%
+\contentsline {paragraph}{\numberline {3.15.2.2}cross()}{42}{paragraph.3.15.2.2}%
+\contentsline {paragraph}{\numberline {3.15.2.3}distance()}{42}{paragraph.3.15.2.3}%
+\contentsline {paragraph}{\numberline {3.15.2.4}dot()}{43}{paragraph.3.15.2.4}%
+\contentsline {paragraph}{\numberline {3.15.2.5}getCoordinates()}{43}{paragraph.3.15.2.5}%
+\contentsline {paragraph}{\numberline {3.15.2.6}getId()}{43}{paragraph.3.15.2.6}%
+\contentsline {paragraph}{\numberline {3.15.2.7}multiplyByScalar()}{43}{paragraph.3.15.2.7}%
+\contentsline {paragraph}{\numberline {3.15.2.8}norm()}{44}{paragraph.3.15.2.8}%
+\contentsline {paragraph}{\numberline {3.15.2.9}normalize()}{44}{paragraph.3.15.2.9}%
+\contentsline {paragraph}{\numberline {3.15.2.10}operator$\ast $()}{44}{paragraph.3.15.2.10}%
+\contentsline {paragraph}{\numberline {3.15.2.11}operator+()}{45}{paragraph.3.15.2.11}%
+\contentsline {paragraph}{\numberline {3.15.2.12}operator-\/()}{45}{paragraph.3.15.2.12}%
+\contentsline {paragraph}{\numberline {3.15.2.13}operator/()}{46}{paragraph.3.15.2.13}%
+\contentsline {paragraph}{\numberline {3.15.2.14}operator$<$()}{46}{paragraph.3.15.2.14}%
+\contentsline {paragraph}{\numberline {3.15.2.15}operator==()}{46}{paragraph.3.15.2.15}%
+\contentsline {paragraph}{\numberline {3.15.2.16}operator[]()}{47}{paragraph.3.15.2.16}%
+\contentsline {paragraph}{\numberline {3.15.2.17}piecewiseMultiply()}{47}{paragraph.3.15.2.17}%
+\contentsline {paragraph}{\numberline {3.15.2.18}setId()}{47}{paragraph.3.15.2.18}%
+\contentsline {subsubsection}{\numberline {3.15.3}Friends And Related Function Documentation}{48}{subsubsection.3.15.3}%
+\contentsline {paragraph}{\numberline {3.15.3.1}operator$\ast $}{48}{paragraph.3.15.3.1}%
+\contentsline {paragraph}{\numberline {3.15.3.2}operator$<$$<$}{48}{paragraph.3.15.3.2}%
+\contentsline {subsection}{\numberline {3.16}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Polygon$<$ Edge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{49}{subsection.3.16}%
+\contentsline {subsubsection}{\numberline {3.16.1}Constructor \& Destructor Documentation}{50}{subsubsection.3.16.1}%
+\contentsline {paragraph}{\numberline {3.16.1.1}Polygon()}{50}{paragraph.3.16.1.1}%
+\contentsline {subsubsection}{\numberline {3.16.2}Member Function Documentation}{50}{subsubsection.3.16.2}%
+\contentsline {paragraph}{\numberline {3.16.2.1}addEdge()}{50}{paragraph.3.16.2.1}%
+\contentsline {paragraph}{\numberline {3.16.2.2}areEdgesConsistent()}{50}{paragraph.3.16.2.2}%
+\contentsline {paragraph}{\numberline {3.16.2.3}get\_e\_x()}{51}{paragraph.3.16.2.3}%
+\contentsline {paragraph}{\numberline {3.16.2.4}get\_e\_y()}{51}{paragraph.3.16.2.4}%
+\contentsline {paragraph}{\numberline {3.16.2.5}getArea()}{51}{paragraph.3.16.2.5}%
+\contentsline {paragraph}{\numberline {3.16.2.6}getDiameter()}{51}{paragraph.3.16.2.6}%
+\contentsline {paragraph}{\numberline {3.16.2.7}getEdge()}{51}{paragraph.3.16.2.7}%
+\contentsline {paragraph}{\numberline {3.16.2.8}getId()}{52}{paragraph.3.16.2.8}%
+\contentsline {paragraph}{\numberline {3.16.2.9}getOtherPolygon()}{52}{paragraph.3.16.2.9}%
+\contentsline {paragraph}{\numberline {3.16.2.10}getOutwardNormal()}{52}{paragraph.3.16.2.10}%
+\contentsline {paragraph}{\numberline {3.16.2.11}getPositiveEdge()}{52}{paragraph.3.16.2.11}%
+\contentsline {paragraph}{\numberline {3.16.2.12}numEdges()}{53}{paragraph.3.16.2.12}%
+\contentsline {paragraph}{\numberline {3.16.2.13}operator$<$()}{53}{paragraph.3.16.2.13}%
+\contentsline {paragraph}{\numberline {3.16.2.14}operator==()}{53}{paragraph.3.16.2.14}%
+\contentsline {paragraph}{\numberline {3.16.2.15}operator[]()}{54}{paragraph.3.16.2.15}%
+\contentsline {paragraph}{\numberline {3.16.2.16}setId()}{54}{paragraph.3.16.2.16}%
+\contentsline {paragraph}{\numberline {3.16.2.17}setOrientation()}{54}{paragraph.3.16.2.17}%
+\contentsline {paragraph}{\numberline {3.16.2.18}setOtherPolygon()}{55}{paragraph.3.16.2.18}%
+\contentsline {subsubsection}{\numberline {3.16.3}Friends And Related Function Documentation}{55}{subsubsection.3.16.3}%
+\contentsline {paragraph}{\numberline {3.16.3.1}operator$<$$<$}{55}{paragraph.3.16.3.1}%
+\contentsline {subsection}{\numberline {3.17}geometry\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Polyhedron$<$ Polygon\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type $>$ Class Template Reference}{55}{subsection.3.17}%
+\contentsline {subsubsection}{\numberline {3.17.1}Constructor \& Destructor Documentation}{56}{subsubsection.3.17.1}%
+\contentsline {paragraph}{\numberline {3.17.1.1}Polyhedron()}{56}{paragraph.3.17.1.1}%
+\contentsline {subsubsection}{\numberline {3.17.2}Member Function Documentation}{56}{subsubsection.3.17.2}%
+\contentsline {paragraph}{\numberline {3.17.2.1}addPolygon()}{56}{paragraph.3.17.2.1}%
+\contentsline {paragraph}{\numberline {3.17.2.2}getDiameter()}{56}{paragraph.3.17.2.2}%
+\contentsline {paragraph}{\numberline {3.17.2.3}getId()}{57}{paragraph.3.17.2.3}%
+\contentsline {paragraph}{\numberline {3.17.2.4}getPolygon()}{57}{paragraph.3.17.2.4}%
+\contentsline {paragraph}{\numberline {3.17.2.5}numPolygons()}{57}{paragraph.3.17.2.5}%
+\contentsline {paragraph}{\numberline {3.17.2.6}operator[]()}{57}{paragraph.3.17.2.6}%
+\contentsline {paragraph}{\numberline {3.17.2.7}setId()}{58}{paragraph.3.17.2.7}%
+\contentsline {subsubsection}{\numberline {3.17.3}Friends And Related Function Documentation}{58}{subsubsection.3.17.3}%
+\contentsline {paragraph}{\numberline {3.17.3.1}operator$<$$<$}{58}{paragraph.3.17.3.1}%
+\contentsline {subsection}{\numberline {3.18}Polyhedron\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dof Class Reference}{59}{subsection.3.18}%
+\contentsline {subsubsection}{\numberline {3.18.1}Constructor \& Destructor Documentation}{59}{subsubsection.3.18.1}%
+\contentsline {paragraph}{\numberline {3.18.1.1}PolyhedronDof()}{59}{paragraph.3.18.1.1}%
+\contentsline {subsubsection}{\numberline {3.18.2}Member Function Documentation}{59}{subsubsection.3.18.2}%
+\contentsline {paragraph}{\numberline {3.18.2.1}getId()}{59}{paragraph.3.18.2.1}%
+\contentsline {paragraph}{\numberline {3.18.2.2}getMonomial()}{60}{paragraph.3.18.2.2}%
+\contentsline {paragraph}{\numberline {3.18.2.3}operator$<$$<$()}{60}{paragraph.3.18.2.3}%
+\contentsline {subsection}{\numberline {3.19}Polynomial$<$ Dimension $>$ Class Template Reference}{60}{subsection.3.19}%
+\contentsline {subsubsection}{\numberline {3.19.1}Constructor \& Destructor Documentation}{61}{subsubsection.3.19.1}%
+\contentsline {paragraph}{\numberline {3.19.1.1}Polynomial()}{61}{paragraph.3.19.1.1}%
+\contentsline {subsubsection}{\numberline {3.19.2}Member Function Documentation}{61}{subsubsection.3.19.2}%
+\contentsline {paragraph}{\numberline {3.19.2.1}addMonomial()}{61}{paragraph.3.19.2.1}%
+\contentsline {paragraph}{\numberline {3.19.2.2}getOrder()}{61}{paragraph.3.19.2.2}%
+\contentsline {paragraph}{\numberline {3.19.2.3}getPolynomial()}{62}{paragraph.3.19.2.3}%
+\contentsline {paragraph}{\numberline {3.19.2.4}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{62}{paragraph.3.19.2.4}%
+\contentsline {paragraph}{\numberline {3.19.2.5}operator$\ast $()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{62}{paragraph.3.19.2.5}%
+\contentsline {paragraph}{\numberline {3.19.2.6}size()}{62}{paragraph.3.19.2.6}%
+\contentsline {subsection}{\numberline {3.20}Problem Class Reference}{63}{subsection.3.20}%
+\contentsline {subsection}{\numberline {3.21}Solver Class Reference}{63}{subsection.3.21}%
+\contentsline {subsubsection}{\numberline {3.21.1}Constructor \& Destructor Documentation}{64}{subsubsection.3.21.1}%
+\contentsline {paragraph}{\numberline {3.21.1.1}Solver()}{64}{paragraph.3.21.1.1}%
+\contentsline {subsubsection}{\numberline {3.21.2}Member Function Documentation}{64}{subsubsection.3.21.2}%
+\contentsline {paragraph}{\numberline {3.21.2.1}getRightHandSide()}{64}{paragraph.3.21.2.1}%
+\contentsline {paragraph}{\numberline {3.21.2.2}getSolutionDisplacements()}{64}{paragraph.3.21.2.2}%
+\contentsline {paragraph}{\numberline {3.21.2.3}getSolutionDisplacementsEig()}{64}{paragraph.3.21.2.3}%
+\contentsline {subsection}{\numberline {3.22}Solver\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}VEM Class Reference}{65}{subsection.3.22}%
+\contentsline {subsubsection}{\numberline {3.22.1}Constructor \& Destructor Documentation}{65}{subsubsection.3.22.1}%
+\contentsline {paragraph}{\numberline {3.22.1.1}SolverVEM()}{65}{paragraph.3.22.1.1}%
+\contentsline {subsubsection}{\numberline {3.22.2}Member Function Documentation}{65}{subsubsection.3.22.2}%
+\contentsline {paragraph}{\numberline {3.22.2.1}computeStrainError()}{66}{paragraph.3.22.2.1}%
+\contentsline {paragraph}{\numberline {3.22.2.2}enforceHomogeneousDirichletBC()}{66}{paragraph.3.22.2.2}%
+\contentsline {subsection}{\numberline {3.23}Vertex\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dof Class Reference}{66}{subsection.3.23}%
+\contentsline {subsubsection}{\numberline {3.23.1}Constructor \& Destructor Documentation}{67}{subsubsection.3.23.1}%
+\contentsline {paragraph}{\numberline {3.23.1.1}VertexDof()}{67}{paragraph.3.23.1.1}%
+\contentsline {subsubsection}{\numberline {3.23.2}Member Function Documentation}{67}{subsubsection.3.23.2}%
+\contentsline {paragraph}{\numberline {3.23.2.1}getId()}{67}{paragraph.3.23.2.1}%
+\contentsline {paragraph}{\numberline {3.23.2.2}getVertex()}{67}{paragraph.3.23.2.2}%
+\contentsline {paragraph}{\numberline {3.23.2.3}operator$<$$<$()}{68}{paragraph.3.23.2.3}%
+\contentsline {subsection}{\numberline {3.24}Virtual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dof Class Reference}{68}{subsection.3.24}%
+\contentsline {subsubsection}{\numberline {3.24.1}Member Function Documentation}{68}{subsubsection.3.24.1}%
+\contentsline {paragraph}{\numberline {3.24.1.1}getId()}{69}{paragraph.3.24.1.1}%
+\contentsline {paragraph}{\numberline {3.24.1.2}operator$<$$<$()}{69}{paragraph.3.24.1.2}%
+\contentsline {subsubsection}{\numberline {3.24.2}Friends And Related Function Documentation}{69}{subsubsection.3.24.2}%
+\contentsline {paragraph}{\numberline {3.24.2.1}operator$<$$<$}{69}{paragraph.3.24.2.1}%
+\contentsline {subsection}{\numberline {3.25}Virtual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dofs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Collection Class Reference}{70}{subsection.3.25}%
+\contentsline {subsubsection}{\numberline {3.25.1}Constructor \& Destructor Documentation}{70}{subsubsection.3.25.1}%
+\contentsline {paragraph}{\numberline {3.25.1.1}VirtualDofsCollection()}{70}{paragraph.3.25.1.1}%
+\contentsline {subsubsection}{\numberline {3.25.2}Member Function Documentation}{71}{subsubsection.3.25.2}%
+\contentsline {paragraph}{\numberline {3.25.2.1}getDof()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{71}{paragraph.3.25.2.1}%
+\contentsline {paragraph}{\numberline {3.25.2.2}getDof()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{71}{paragraph.3.25.2.2}%
+\contentsline {paragraph}{\numberline {3.25.2.3}getnumDofs()}{72}{paragraph.3.25.2.3}%
+\contentsline {paragraph}{\numberline {3.25.2.4}getnumEdofs()}{72}{paragraph.3.25.2.4}%
+\contentsline {paragraph}{\numberline {3.25.2.5}getnumFdofs()}{72}{paragraph.3.25.2.5}%
+\contentsline {paragraph}{\numberline {3.25.2.6}getnumPdofs()}{72}{paragraph.3.25.2.6}%
+\contentsline {paragraph}{\numberline {3.25.2.7}getnumVdofs()}{72}{paragraph.3.25.2.7}%
+\contentsline {paragraph}{\numberline {3.25.2.8}getOrder()}{73}{paragraph.3.25.2.8}%
+\contentsline {subsubsection}{\numberline {3.25.3}Friends And Related Function Documentation}{73}{subsubsection.3.25.3}%
+\contentsline {paragraph}{\numberline {3.25.3.1}operator$<$$<$}{73}{paragraph.3.25.3.1}%
+\contentsline {subsection}{\numberline {3.26}Virtual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Face\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projections Class Reference}{73}{subsection.3.26}%
+\contentsline {subsubsection}{\numberline {3.26.1}Constructor \& Destructor Documentation}{73}{subsubsection.3.26.1}%
+\contentsline {paragraph}{\numberline {3.26.1.1}VirtualFaceProjections()}{74}{paragraph.3.26.1.1}%
+\contentsline {subsubsection}{\numberline {3.26.2}Member Function Documentation}{74}{subsubsection.3.26.2}%
+\contentsline {paragraph}{\numberline {3.26.2.1}computeFaceProjection()}{74}{paragraph.3.26.2.1}%
+\contentsline {paragraph}{\numberline {3.26.2.2}getFaceProjection()}{74}{paragraph.3.26.2.2}%
+\contentsline {subsection}{\numberline {3.27}Virtual\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Polyhedron\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Projections Class Reference}{75}{subsection.3.27}%
+\contentsline {subsubsection}{\numberline {3.27.1}Constructor \& Destructor Documentation}{75}{subsubsection.3.27.1}%
+\contentsline {paragraph}{\numberline {3.27.1.1}VirtualPolyhedronProjections()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{75}{paragraph.3.27.1.1}%
+\contentsline {paragraph}{\numberline {3.27.1.2}VirtualPolyhedronProjections()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{76}{paragraph.3.27.1.2}%
+\contentsline {subsubsection}{\numberline {3.27.2}Member Function Documentation}{76}{subsubsection.3.27.2}%
+\contentsline {paragraph}{\numberline {3.27.2.1}computePolyhedronProjections()}{76}{paragraph.3.27.2.1}%
+\contentsline {paragraph}{\numberline {3.27.2.2}getDeformationRBMMatrices()}{77}{paragraph.3.27.2.2}%
+\contentsline {paragraph}{\numberline {3.27.2.3}getElasticMatrices()}{77}{paragraph.3.27.2.3}%
+\contentsline {paragraph}{\numberline {3.27.2.4}getforcingProjections()}{77}{paragraph.3.27.2.4}%
+\contentsline {paragraph}{\numberline {3.27.2.5}getInverseMatricesG()}{78}{paragraph.3.27.2.5}%
+\contentsline {paragraph}{\numberline {3.27.2.6}getOrder()}{78}{paragraph.3.27.2.6}%
+\contentsline {paragraph}{\numberline {3.27.2.7}getPolyhedronProjections()}{78}{paragraph.3.27.2.7}%
+\contentsline {section}{Index}{79}{section*.44}%

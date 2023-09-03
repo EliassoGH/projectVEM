@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['edge_6',['Edge',['../classgeometry_1_1Edge.html',1,'geometry']]]
+  ['edge_150',['Edge',['../classgeometry_1_1Edge.html',1,'geometry']]],
+  ['edgedof_151',['EdgeDof',['../classEdgeDof.html',1,'']]]
 ];

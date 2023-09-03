@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.29)  29 AUG 2023 21:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.29)  3 SEP 2023 17:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -855,16 +855,17 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 6.29996pt on input line 165.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 165.
+ [1] [2]
 Package hyperref Info: Option `pageanchor' set `true' on input line 166.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 169.
- (./annotated.tex
+
+(./hierarchy.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 1.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 3.
-)
-(./classgeometry_1_1Edge.tex
+ [1]) (./annotated.tex [2]) (./classgeometry_1_1Edge.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -888,6 +889,180 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 6.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 7.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 7.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 7.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 41.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 41
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 42.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 42.
+ [3]
+Underfull \hbox (badness 10000) detected at line 71
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 85
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 99
+[][][]
+ []
+
+[4]
+Underfull \hbox (badness 10000) detected at line 113
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 132
+[][][]
+ []
+
+[5]
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+
+Overfull \hbox (1.97964pt too wide) in paragraph at lines 1--1
+\T1/phv/m/sl/10 _[] 
+ []
+
+[6]
+Underfull \hbox (badness 10000) detected at line 230
+[][][]
+ []
+
+) (./classEdgeDof.tex) (./classFaceDof.tex
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 monomial[] 
+ []
+
+[7]
+Underfull \hbox (badness 10000) detected at line 55
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 90
+[][][]
+ []
+
+[8]) (./structGauss_1_1GaussData.tex)
+(./classGaussLobatto_1_1GaussLobattoCache.tex
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+ \T1/phv/b/n/10 3.5.1.1 get-Cache()[] \T1/pcr/m/n/8 const std[]::pair$\OML/cmm/
+m/it/8 <$ \T1/pcr/m/n/8 std[]::vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real $\O
+ML/cmm/m/it/8 >$\T1/pcr/m/n/8 , std[]::vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 
+real $\OML/cmm/m/it/8 >$ $>$ \T1/pcr/m/n/8 & Gauss[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 28
+[][][]
+ []
+
+[9]) (./classLinearTrinomialPower.tex [10]) (./classLocalVirtualDofs.tex
+[11]
+Underfull \hbox (badness 10000) detected at line 73
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 91
+[][][]
+ []
+
+[12]
+Underfull \hbox (badness 10000) detected at line 115
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 133
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 146
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 159
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 172
+[][][]
+ []
+
+[13]
+Underfull \hbox (badness 10000) detected at line 185
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 198
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 216
+[][][]
+ []
+
+[14]
+Underfull \hbox (badness 10000) detected at line 234
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 257
+[][][]
+ []
+
+) (./classLocalVirtualDofsCollection.tex [15]
+Underfull \hbox (badness 10000) detected at line 50
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+ \T1/phv/b/n/10 3.8.2.2 num-Lo-calD-of-s-Col-lec-tion()[] \T1/pcr/m/n/8 size[]_
+[]t Local[]Virtual[]Dofs[]Collection[]::num[]Local[]Dofs[]Collection ( )
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
 ) (./classMesh.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -905,7 +1080,226 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[1]) (./classgeometry_1_1Point.tex
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
+ \T1/phv/b/n/10 3.9.2.1 get-Edge()[] \T1/pcr/m/n/8 template$\OML/cmm/m/it/8 <$\
+T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polygon[]Typ
+e ,
+ []
+
+[17]
+Underfull \hbox (badness 10000) detected at line 78
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+ \T1/phv/b/n/10 3.9.2.2 get-Edges()[] \T1/pcr/m/n/8 template$\OML/cmm/m/it/8 <$
+\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polygon[]Ty
+pe ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+\T1/pcr/m/n/8 const std[]::map$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 Index[]Type, Edg
+e[]Type$\OML/cmm/m/it/8 >$ []$<$ \T1/pcr/m/n/8 Point[]Type, Edge[]Type, Polygon
+[]Type, Polyhedron[]Type
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 92
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
+ \T1/phv/b/n/10 3.9.2.3 get-Poly-gon()[] \T1/pcr/m/n/8 template$\OML/cmm/m/it/8
+ <$\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polygon[
+]Type ,
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 111
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--120
+ \T1/phv/b/n/10 3.9.2.4 get-Poly-gons()[] \T1/pcr/m/n/8 template$\OML/cmm/m/it/
+8 <$\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polygon
+[]Type ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--120
+\T1/pcr/m/n/8 const std[]::map$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 Index[]Type, Pol
+ygon[]Type$\OML/cmm/m/it/8 >$ []$<$ \T1/pcr/m/n/8 Point[]Type, Edge[]Type, Poly
+gon[]Type, Polyhedron[]Type
+ []
+
+[18]
+Underfull \hbox (badness 10000) detected at line 125
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--134
+ \T1/phv/b/n/10 3.9.2.5 get-Poly-he-dra()[] \T1/pcr/m/n/8 template$\OML/cmm/m/i
+t/8 <$\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polyg
+on[]Type ,
+ []
+
+
+Overfull \hbox (15.1713pt too wide) in paragraph at lines 132--134
+\T1/pcr/m/n/8 const std[]::map$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 std[]::size[]_[]
+t, Polyhedron[]Type$\OML/cmm/m/it/8 >$\T1/pcr/m/n/8 & []$\OML/cmm/m/it/8 <$ \T1
+/pcr/m/n/8 Point[]Type, Edge[]Type, Polygon[]Type, Polyhedron[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 139
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+ \T1/phv/b/n/10 3.9.2.6 get-Poly-he-dron()[] \T1/pcr/m/n/8 template$\OML/cmm/m/
+it/8 <$\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Poly
+gon[]Type
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+\T1/pcr/m/n/8 const Polyhedron[]Type& []$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 Point
+[]Type, Edge[]Type, Polygon[]Type, Polyhedron[]Type $\OML/cmm/m/it/8 >$[]\T1/pc
+r/m/n/8 ::get[]Polyhedron
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 158
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--167
+ \T1/phv/b/n/10 3.9.2.7 get-Size()[] \T1/pcr/m/n/8 template$\OML/cmm/m/it/8 <$\
+T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polygon[]Typ
+e ,
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 172
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
+ \T1/phv/b/n/10 3.9.2.8 getVer-tex()[] \T1/pcr/m/n/8 template$\OML/cmm/m/it/8 <
+$\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polygon[]T
+ype ,
+ []
+
+[19]
+Underfull \hbox (badness 10000) detected at line 191
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
+ \T1/phv/b/n/10 3.9.2.9 getVer-tices()[] \T1/pcr/m/n/8 template$\OML/cmm/m/it/8
+ <$\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polygon[
+]Type ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
+\T1/pcr/m/n/8 const std[]::map$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 std[]::size[]_[]
+t, Point[]Type$\OML/cmm/m/it/8 >$\T1/pcr/m/n/8 & []$\OML/cmm/m/it/8 <$ \T1/pcr/
+m/n/8 Point[]Type, Edge[]Type, Polygon[]Type, Polyhedron[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 205
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+ \T1/phv/b/n/10 3.9.2.10 numEdges()[] \T1/pcr/m/n/8 template$\OML/cmm/m/it/8 <$
+\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polygon[]Ty
+pe ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+\T1/pcr/m/n/8 std[]::size[]_[]t []$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 Point[]Type
+, Edge[]Type, Polygon[]Type, Polyhedron[]Type $\OML/cmm/m/it/8 >$[]\T1/pcr/m/n/
+8 ::num[]Edges ( ) const
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 219
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
+ \T1/phv/b/n/10 3.9.2.11 numPoly-gons()[] \T1/pcr/m/n/8 template$\OML/cmm/m/it/
+8 <$\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polygon
+[]Type
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--228
+\T1/pcr/m/n/8 std[]::size[]_[]t []$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 Point[]Type
+, Edge[]Type, Polygon[]Type, Polyhedron[]Type $\OML/cmm/m/it/8 >$[]\T1/pcr/m/n/
+8 ::num[]Polygons ( ) const
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 233
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--242
+ \T1/phv/b/n/10 3.9.2.12 numPoly-he-dra()[] \T1/pcr/m/n/8 template$\OML/cmm/m/i
+t/8 <$\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polyg
+on[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--242
+\T1/pcr/m/n/8 std[]::size[]_[]t []$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 Point[]Type
+, Edge[]Type, Polygon[]Type, Polyhedron[]Type $\OML/cmm/m/it/8 >$[]\T1/pcr/m/n/
+8 ::num[]Polyhedra ( ) const
+ []
+
+[20]
+Underfull \hbox (badness 10000) detected at line 247
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--256
+ \T1/phv/b/n/10 3.9.2.13 numVer-tices()[] \T1/pcr/m/n/8 template$\OML/cmm/m/it/
+8 <$\T1/pcr/m/n/8 typename Point[]Type , typename Edge[]Type , typename Polygon
+[]Type
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--256
+\T1/pcr/m/n/8 std[]::size[]_[]t []$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 Point[]Type
+, Edge[]Type, Polygon[]Type, Polyhedron[]Type $\OML/cmm/m/it/8 >$[]\T1/pcr/m/n/
+8 ::num[]Vertices ( ) const
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 261
+[][][]
+ []
+
+) (./classMonomial.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -922,24 +1316,348 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 8.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 8.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 8.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 30.
-[2]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 84
-.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 85.
-)
-(./classgeometry_1_1Polygon.tex
+[21]
+Underfull \hbox (badness 10000) detected at line 70
+[][][]
+ []
+
+[22]
+Underfull \hbox (badness 10000) detected at line 95
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 109
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 123
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 137
+[][][]
+ []
+
+[23]
+Underfull \hbox (badness 10000) detected at line 156
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 196
+[][][]
+ []
+
+) (./classMonomial2D.tex [24]
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 52.
+
+Overfull \vbox (18.76704pt too high) has occurred while \output is active []
+
+
+[25]
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+
+Overfull \vbox (8.89857pt too high) has occurred while \output is active []
+
+
+[26]
+Underfull \hbox (badness 10000) detected at line 130
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 143
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 156
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+ \T1/phv/b/n/10 3.11.2.6 get-Lapla-ciansToMono-mi-al-sOr-dered()[] \T1/pcr/m/n/
+8 const std[]::vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::pair$\OML/cmm/m/i
+t/8 <$ \T1/pcr/m/n/8 std[]::pair$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+\T1/pcr/m/n/8 std[]::size[]_[]t $\OML/cmm/m/it/8 >$\T1/pcr/m/n/8 , std[]::pair$
+\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real, std[]::size[]_[]t $\OML/cmm/m/it/8 >$ $>
+$ $>$ \T1/pcr/m/n/8 Monomial2[]D[]::get[]Laplacians[]To[]Monomials[]
+ []
+
+
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+ \T1/phv/b/n/10 3.11.2.7 get-Mono-mi-al-sOr-dered()[] \T1/pcr/m/n/8 const std[]
+::vector$\OML/cmm/m/it/8 <$ [] $>$ \T1/pcr/m/n/8 Monomial2[]D[]::get[]Monomials
+[]
+ []
+
+
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+[27]
+Underfull \hbox (badness 10000) detected at line 192
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 210
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 233
+[][][]
+ []
+
+) (./classMonomial3D.tex [28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+ \T1/phv/b/n/10 3.12.2.1 com-pute-Gra-di-entsToMono-mi-al-sOr-dered()[] \T1/pcr
+/m/n/8 void Monomial3[]D[]::compute[]Gradients[]To[]Monomials[]
+ []
+
+
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+[30]
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 166
+[][][]
+ []
+
+[31]
+Underfull \hbox (badness 10000) detected at line 179
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 192
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+ \T1/phv/b/n/10 3.12.2.8 get-Gra-di-entsToMono-mi-al-sOr-dered()[] \T1/pcr/m/n/
+8 const std[]::vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::array$\OML/cmm/m/
+it/8 <$ \T1/pcr/m/n/8 std[]::pair$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real,
+ []
+
+
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 210
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
+ \T1/phv/b/n/10 3.12.2.9 get-Lapla-ciansToMono-mi-al-sOr-dered()[] \T1/pcr/m/n/
+8 const std[]::vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::array$\OML/cmm/m/
+it/8 <$ \T1/pcr/m/n/8 std[]::pair$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real,
+ []
+
+
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+[32]
+Underfull \hbox (badness 10000) detected at line 228
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
+ \T1/phv/b/n/10 3.12.2.10 get-Mono-mi-al-sOr-dered()[] \T1/pcr/m/n/8 const std[
+]::vector$\OML/cmm/m/it/8 <$ [] $>$ \T1/pcr/m/n/8 Monomial3[]D[]::get[]Monomial
+s[]
+ []
+
+
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 246
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 264
+[][][]
+ []
+
+
+Overfull \vbox (12.05266pt too high) has occurred while \output is active []
+
+
+[33]
+Underfull \hbox (badness 10000) detected at line 287
+[][][]
+ []
+
+) (./classIntegrationMonomial_1_1MonomialsFaceIntegralsCache.tex
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+ \T1/phv/b/n/10 3.13.1.1 get-CacheMono-mial()[] \T1/pcr/m/n/8 real & Integratio
+n[]Monomial[]::[]Monomials[]Face[]Integrals[]Cache[]::get[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 34
+[][][]
+ []
+
+[34] [35]
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+) (./classParameters.tex [36]
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 23.
+LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 23.
+
+Overfull \hbox (21.30212pt too wide) in paragraph at lines 58--59
+ \T1/phv/b/n/10 3.14.2.1 ge-tEx-act-So-lu-tion()[] \T1/pcr/m/n/8 const std[]::f
+unction$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 std[]::array$\OML/cmm/m/it/8 <$\T1/pcr/
+m/n/8 real, 3$\OML/cmm/m/it/8 >$\T1/pcr/m/n/8 real, real, real)$\OML/cmm/m/it/8
+ >$\T1/pcr/m/n/8 & Parameters[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 64
+[][][]
+ []
+
+
+Overfull \hbox (15.81209pt too wide) in paragraph at lines 71--72
+ \T1/phv/b/n/10 3.14.2.2 ge-tEx-act-Strains()[] \T1/pcr/m/n/8 const std[]::func
+tion$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 std[]::array$\OML/cmm/m/it/8 <$\T1/pcr/m/n
+/8 real, 6$\OML/cmm/m/it/8 >$\T1/pcr/m/n/8 real, real, real)$\OML/cmm/m/it/8 >$
+\T1/pcr/m/n/8 & Parameters[]
+ []
+
+[37]
+Underfull \hbox (badness 10000) detected at line 77
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 90
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+ \T1/phv/b/n/10 3.14.2.4 get-Forc-ing()[] \T1/pcr/m/n/8 const std[]::function$\
+OML/cmm/m/it/8 <$\T1/pcr/m/n/8 std[]::array$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 rea
+l, 3$\OML/cmm/m/it/8 >$\T1/pcr/m/n/8 real, real, real)$\OML/cmm/m/it/8 >$\T1/pc
+r/m/n/8 & Parameters[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 103
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+ \T1/phv/b/n/10 3.14.2.5 getH-o-mo-ge-neous-Dirich-letBC()[] \T1/pcr/m/n/8 cons
+t std[]::vector$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 std[]::function$\OML/cmm/m/it/8
+ <$\T1/pcr/m/n/8 real(real, real, real)$\OML/cmm/m/it/8 >$
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 116
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+ \T1/phv/b/n/10 3.14.2.6 ge-tIni-tial-ize-FaceIn-te-grals()[] \T1/pcr/m/n/8 con
+st bool& Parameters[]::get[]Initialize[]Face[]Integrals ( ) const
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 129
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 144
+[][][]
+ []
+
+[38]
+Underfull \hbox (badness 10000) detected at line 157
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 170
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 183
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 196
+[][][]
+ []
+
+) (./classgeometry_1_1Point.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -956,7 +1674,114 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-[3]) (./classgeometry_1_1Polyhedron.tex
+[39] [40] [41]
+Underfull \hbox (badness 10000) detected at line 113
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 138
+[][][]
+ []
+
+[42]
+Underfull \hbox (badness 10000) detected at line 163
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
+\T1/pcr/m/n/8 const std[]::array$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 real, sizeof..
+.(Args)$\OML/cmm/m/it/8 >$ []$<$ \T1/pcr/m/n/8 Args $\OML/cmm/m/it/8 >$[]\T1/pc
+r/m/n/8 ::get[]Coordinates ( ) const
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 202
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 216
+[][][]
+ []
+
+[43]
+Underfull \hbox (badness 10000) detected at line 241
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 255
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 269
+[][][]
+ []
+
+[44]
+Underfull \hbox (badness 10000) detected at line 288
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 313
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 338
+[][][]
+ []
+
+[45]
+Underfull \hbox (badness 10000) detected at line 357
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 376
+[][][]
+ []
+
+[46]
+Underfull \hbox (badness 10000) detected at line 403
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 424
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 449
+[][][]
+ []
+
+
+Overfull \hbox (1.97964pt too wide) in paragraph at lines 1--1
+\T1/phv/m/sl/10 _[] 
+ []
+
+[47]
+Underfull \hbox (badness 10000) detected at line 489
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 510
+[][][]
+ []
+
+) (./classgeometry_1_1Polygon.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -973,45 +1798,534 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-) [4] (./refman.ind
+[48] [49]
+Underfull \hbox (badness 10000) detected at line 112
+[][][]
+ []
+
+[50]
+Underfull \hbox (badness 10000) detected at line 128
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 142
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 156
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 170
+[][][]
+ []
+
+[51]
+Underfull \hbox (badness 10000) detected at line 189
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 203
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 217
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 231
+[][][]
+ []
+
+[52]
+Underfull \hbox (badness 10000) detected at line 250
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 264
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 283
+[][][]
+ []
+
+[53]
+Underfull \hbox (badness 10000) detected at line 304
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 325
+[][][]
+ []
+
+
+Overfull \hbox (1.97964pt too wide) in paragraph at lines 1--1
+\T1/phv/m/sl/10 _[] 
+ []
+
+[54]
+Underfull \hbox (badness 10000) detected at line 397
+[][][]
+ []
+
+) (./classgeometry_1_1Polyhedron.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+[55] [56]
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 93
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 112
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 126
+[][][]
+ []
+
+[57]
+Underfull \hbox (badness 10000) detected at line 145
+[][][]
+ []
+
+
+Overfull \hbox (1.97964pt too wide) in paragraph at lines 1--1
+\T1/phv/m/sl/10 _[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 185
+[][][]
+ []
+
+) (./classPolyhedronDof.tex [58]
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 monomial[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 55
+[][][]
+ []
+
+[59]
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 90
+[][][]
+ []
+
+) (./classPolynomial.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+[60]
+Underfull \hbox (badness 10000) detected at line 81
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
+\T1/pcr/m/n/8 const std[]::map$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 std[]::vector$\O
+ML/cmm/m/it/8 <$\T1/pcr/m/n/8 unsigned int$\OML/cmm/m/it/8 >$\T1/pcr/m/n/8 , []
+$\OML/cmm/m/it/8 <$\T1/pcr/m/n/8 Dimension$\OML/cmm/m/it/8 >$ $>$\T1/pcr/m/n/8 
+& []$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 Dimension $\OML/cmm/m/it/8 >$[]
+ []
+
+[61]
+Underfull \hbox (badness 10000) detected at line 95
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 114
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 133
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 147
+[][][]
+ []
+
+[62]) (./classProblem.tex) (./classSolver.tex [63]
+Underfull \hbox (badness 10000) detected at line 84
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+ \T1/phv/b/n/10 3.21.2.2 get-So-lu-tionDis-place-ments()[] \T1/pcr/m/n/8 std[]:
+:vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real $\OML/cmm/m/it/8 >$ \T1/pcr/m/n/8
+ Solver[]::get[]Solution[]Displacements ( )
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 97
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 110
+[][][]
+ []
+
+) (./classSolverVEM.tex [64]
+Underfull \hbox (badness 4353) in paragraph at lines 16--17
+[]\T1/phv/m/n/10 void [] (const []$\OML/cmm/m/it/10 <$ []\T1/phv/m/n/10 , [], [
+], []$\OML/cmm/m/it/10 <$
+ []
+
+[65]
+Underfull \hbox (badness 10000) detected at line 71
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+|  \T1/pcr/m/n/8 const std[]::vector$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::fu
+nction$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real(real, real, real)$\OML/cmm/m/it/8 
+>$$>$ \T1/pcr/m/n/8 & \T1/pcr/m/sl/8 constraint[]Functions
+ []
+
+) (./classVertexDof.tex [66]
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 vertex[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 55
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+[67]
+Underfull \hbox (badness 10000) detected at line 90
+[][][]
+ []
+
+) (./classVirtualDof.tex
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+[68]
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 96
+[][][]
+ []
+
+) (./classVirtualDofsCollection.tex [69]
+Overfull \hbox (3.9776pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 order[] 
+ []
+
+[70]
+Underfull \hbox (badness 10000) detected at line 82
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 100
+[][][]
+ []
+
+[71]
+Underfull \hbox (badness 10000) detected at line 113
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 126
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 139
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 152
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 165
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 178
+[][][]
+ []
+
+[72]
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+) (./classVirtualFaceProjections.tex
+Underfull \hbox (badness 1975) in paragraph at lines 8--9
+[]\T1/phv/m/n/10 std[]::vector$\OML/cmm/m/it/10 <$ []$<$ \T1/phv/m/n/10 2 $\OML
+/cmm/m/it/10 >$ $>$ [] \T1/phv/m/n/10 (const [] &dofs, const
+ []
+
+[73]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+ \T1/phv/b/n/10 3.26.2.1 com-pute-Face-Pro-jec-tion()[] \T1/pcr/m/n/8 std[]::ve
+ctor$\OML/cmm/m/it/8 <$ []$<$ \T1/pcr/m/n/8 2 $\OML/cmm/m/it/8 >$ $>$ \T1/pcr/m
+/n/8 Virtual[]Face[]Projections[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 58
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+ \T1/phv/b/n/10 3.26.2.2 get-Face-Pro-jec-tion()[] \T1/pcr/m/n/8 const std[]::v
+ector$\OML/cmm/m/it/8 <$ []$<$ \T1/pcr/m/n/8 2 $\OML/cmm/m/it/8 >$ $>$ \T1/pcr/
+m/n/8 & Virtual[]Face[]Projections[]
+ []
+
+[74]
+Underfull \hbox (badness 10000) detected at line 76
+[][][]
+ []
+
+) (./classVirtualPolyhedronProjections.tex
+Underfull \hbox (badness 2368) in paragraph at lines 6--7
+\T1/phv/m/n/10 const [] &dofs, const []$\OML/cmm/m/it/10 <$ []\T1/phv/m/n/10 , 
+[], [], []$\OML/cmm/m/it/10 <$
+ []
+
+
+Underfull \hbox (badness 4108) in paragraph at lines 8--9
+[][] \T1/phv/m/n/10 (const [] &pa-ram-e-ters, const [] &face[]
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 8--9
+\T1/phv/m/n/10 Projections, const [] &dofs, const []$\OML/cmm/m/it/10 <$ []\T1/
+phv/m/n/10 , [], [],
+ []
+
+
+Underfull \hbox (badness 5091) in paragraph at lines 10--11
+[]\T1/phv/m/n/10 Eigen[]::[]Sparse[]Matrix$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 r
+eal $\OML/cmm/m/it/10 >$ [] \T1/phv/m/n/10 (const [] &face[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+ \T1/phv/b/n/10 3.27.1.1 Vir-tu-alPoly-he-dron-Pro-jec-tions() \T1/pcr/b/n/8 [1
+/2][] \T1/pcr/m/n/8 Virtual[]Polyhedron[]Projections[]::[]Virtual[]Polyhedron[]
+
+ []
+
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+ \T1/phv/b/n/10 3.27.1.2 Vir-tu-alPoly-he-dron-Pro-jec-tions() \T1/pcr/b/n/8 [2
+/2][] \T1/pcr/m/n/8 Virtual[]Polyhedron[]Projections[]::[]Virtual[]Polyhedron[]
+
+ []
+
+
+Overfull \hbox (16.84792pt too wide) in paragraph at lines 86--87
+ \T1/phv/b/n/10 3.27.2.1 com-putePoly-he-dron-Pro-jec-tions()[] \T1/pcr/m/n/8 E
+igen[]::[]Sparse[]Matrix$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real $\OML/cmm/m/it/8
+ >$ \T1/pcr/m/n/8 Virtual[]Polyhedron[]Projections[]
+ []
+
+[76]
+Underfull \hbox (badness 10000) detected at line 109
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+ \T1/phv/b/n/10 3.27.2.2 get-De-for-ma-tion-RB-M-Ma-tri-ces()[] \T1/pcr/m/n/8 c
+onst std[]::map$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::size[]_[]t, Eigen[]::[]
+Sparse[]Matrix$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real $\OML/cmm/m/it/8 >$
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 122
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+ \T1/phv/b/n/10 3.27.2.3 getE-las-tic-Ma-tri-ces()[] \T1/pcr/m/n/8 const std[]:
+:map$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::size[]_[]t, Eigen[]::[]Sparse[]Mat
+rix$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real $\OML/cmm/m/it/8 >$ $>$ \T1/pcr/m/n/8
+ &
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 135
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+ \T1/phv/b/n/10 3.27.2.4 get-forc-ing-Pro-jec-tions()[] \T1/pcr/m/n/8 const std
+[]::map$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::size[]_[]t, Eigen[]::[]Vector[]
+Xd $\OML/cmm/m/it/8 >$ \T1/pcr/m/n/8 & Virtual[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 148
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+ \T1/phv/b/n/10 3.27.2.5 get-Inverse-Ma-tri-cesG()[] \T1/pcr/m/n/8 const std[]:
+:map$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::size[]_[]t, Eigen[]::[]Sparse[]Mat
+rix$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real $\OML/cmm/m/it/8 >$ $>$ \T1/pcr/m/n/8
+ &
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 161
+[][][]
+ []
+
+[77]
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+ \T1/phv/b/n/10 3.27.2.7 get-Poly-he-dron-Pro-jec-tions()[] \T1/pcr/m/n/8 const
+ std[]::map$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 std[]::size[]_[]t, Eigen[]::[]Spar
+se[]Matrix$\OML/cmm/m/it/8 <$ \T1/pcr/m/n/8 real $\OML/cmm/m/it/8 >$ $>$
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 187
+[][][]
+ []
+
+) [78] (./refman.ind
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
+ [79
 
-Underfull \hbox (badness 1092) in paragraph at lines 11--13
+
+] [80]
+Underfull \hbox (badness 10000) in paragraph at lines 307--309
+[]\T1/phv/m/n/10 IntegrationMonomial::MonomialsFaceIntegralsCache,
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 341--343
 []\T1/phv/m/n/10 Mesh$\OML/cmm/m/it/10 <$ \T1/phv/m/n/10 Point-Type, Ed-geType,
  Poly-gonType, Poly-he-
  []
 
-[5
-
-
-
-]) (./refman.aux)
+[81] [82] [83]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: E36C4B1913B1F67D6E3DD9A934B40729;2733.
+(rerunfilecheck)             Checksum: 482B45C4F2120FCDD7872F702ADF07B3;24153.
  ) 
 Here is how much of TeX's memory you used:
- 17420 strings out of 480247
- 284837 string characters out of 5896151
- 593294 words of memory out of 5000000
- 34915 multiletter control sequences out of 15000+600000
- 517226 words of font info for 94 fonts, out of 8000000 for 9000
+ 18643 strings out of 480247
+ 315568 string characters out of 5896151
+ 662660 words of memory out of 5000000
+ 35397 multiletter control sequences out of 15000+600000
+ 523769 words of font info for 107 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,15n,117p,551b,575s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/u
-crro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (6 pages, 101423 bytes).
+ 99i,16n,117p,1120b,645s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{classEdgeDof_a2a202585fac26154459b3ab275dcc508} h
+as been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{classEdgeDof_a797333e36ff827888c1bd78693b939ca} has
+ been referenced but does not exist, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uh
+vb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (86 pages, 357822 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 278 compressed objects within 3 object streams
- 117 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2894 PDF objects out of 2984 (max. 8388607)
+ 2734 compressed objects within 28 object streams
+ 805 named destinations out of 1000 (max. 500000)
+ 697 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,19 +1,567 @@
 \begin{theindex}
 
-  \item {geometry::Edge$<$ PointType $>$}, \hyperpage{1}
-  \item {geometry::Point$<$ Args $>$}, \hyperpage{2}
-    \subitem {Point}, \hyperpage{3}
-  \item {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{3}
-  \item {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{4}
+  \item {addEdge}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{50}
+  \item {addMonomial}
+    \subitem {Polynomial$<$ Dimension $>$}, \hyperpage{61}
+  \item {addPolygon}
+    \subitem {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{56}
+  \item {areEdgesConsistent}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{50}
 
   \indexspace
 
+  \item {binaryOperation}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{41}
+
+  \indexspace
+
+  \item {computeFaceProjection}
+    \subitem {VirtualFaceProjections}, \hyperpage{74}
+  \item {computeGradientsToMonomialsOrdered}
+    \subitem {Monomial3D}, \hyperpage{30}
+  \item {computeLaplaciansToMonomialsOrdered}
+    \subitem {Monomial2D}, \hyperpage{26}
+    \subitem {Monomial3D}, \hyperpage{30}
+  \item {computeMonomialsUpToOrder}
+    \subitem {Monomial2D}, \hyperpage{26}
+    \subitem {Monomial3D}, \hyperpage{31}
+  \item {computePolyhedronProjections}
+    \subitem {VirtualPolyhedronProjections}, \hyperpage{76}
+  \item {computeStrainError}
+    \subitem {SolverVEM}, \hyperpage{65}
+  \item {cross}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{42}
+
+  \indexspace
+
+  \item {derivative}
+    \subitem {Monomial$<$ Dimension $>$}, \hyperpage{22}
+    \subitem {Monomial2D}, \hyperpage{26}
+    \subitem {Monomial3D}, \hyperpage{31}
+  \item {distance}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{42}
+  \item {dot}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{43}
+  \item {dx}
+    \subitem {Monomial2D}, \hyperpage{27}
+    \subitem {Monomial3D}, \hyperpage{31}
+  \item {dy}
+    \subitem {Monomial2D}, \hyperpage{27}
+    \subitem {Monomial3D}, \hyperpage{31}
+  \item {dz}
+    \subitem {Monomial3D}, \hyperpage{32}
+
+  \indexspace
+
+  \item {Edge}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{4}
+  \item {EdgeDof}, \hyperpage{7}
+  \item {enforceHomogeneousDirichletBC}
+    \subitem {SolverVEM}, \hyperpage{66}
+  \item {EToLocalId}
+    \subitem {LocalVirtualDofs}, \hyperpage{12}
+  \item {evaluate}
+    \subitem {Monomial$<$ Dimension $>$}, \hyperpage{22}
+
+  \indexspace
+
+  \item {FaceDof}, \hyperpage{7}
+    \subitem {FaceDof}, \hyperpage{7}
+    \subitem {getId}, \hyperpage{8}
+    \subitem {getMonomial}, \hyperpage{8}
+    \subitem {operator$<$$<$}, \hyperpage{8}
+  \item {FToLocalId}
+    \subitem {LocalVirtualDofs}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Gauss::GaussData}, \hyperpage{9}
+  \item {GaussLobatto::GaussLobattoCache}, \hyperpage{9}
+    \subitem {getCache}, \hyperpage{9}
+    \subitem {initialize}, \hyperpage{9}
+  \item {geometry::Edge$<$ PointType $>$}, \hyperpage{3}
+    \subitem {Edge}, \hyperpage{4}
+    \subitem {getDirection}, \hyperpage{4}
+    \subitem {getId}, \hyperpage{4}
+    \subitem {getLength}, \hyperpage{4}
+    \subitem {getOtherHalfEdge}, \hyperpage{5}
+    \subitem {operator$<$}, \hyperpage{5}
+    \subitem {operator$<$$<$}, \hyperpage{7}
+    \subitem {operator==}, \hyperpage{5}
+    \subitem {operator[]}, \hyperpage{6}
+    \subitem {setId}, \hyperpage{6}
+    \subitem {setOtherHalfEdge}, \hyperpage{6}
+  \item {geometry::Point$<$ Args $>$}, \hyperpage{40}
+    \subitem {binaryOperation}, \hyperpage{41}
+    \subitem {cross}, \hyperpage{42}
+    \subitem {distance}, \hyperpage{42}
+    \subitem {dot}, \hyperpage{43}
+    \subitem {getCoordinates}, \hyperpage{43}
+    \subitem {getId}, \hyperpage{43}
+    \subitem {multiplyByScalar}, \hyperpage{43}
+    \subitem {norm}, \hyperpage{44}
+    \subitem {normalize}, \hyperpage{44}
+    \subitem {operator$<$}, \hyperpage{46}
+    \subitem {operator$<$$<$}, \hyperpage{48}
+    \subitem {operator$\ast$}, \hyperpage{44}, \hyperpage{48}
+    \subitem {operator+}, \hyperpage{45}
+    \subitem {operator-\/}, \hyperpage{45}
+    \subitem {operator/}, \hyperpage{45}
+    \subitem {operator==}, \hyperpage{46}
+    \subitem {operator[]}, \hyperpage{47}
+    \subitem {piecewiseMultiply}, \hyperpage{47}
+    \subitem {Point}, \hyperpage{41}
+    \subitem {setId}, \hyperpage{47}
+  \item {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{49}
+    \subitem {addEdge}, \hyperpage{50}
+    \subitem {areEdgesConsistent}, \hyperpage{50}
+    \subitem {get\_e\_x}, \hyperpage{50}
+    \subitem {get\_e\_y}, \hyperpage{51}
+    \subitem {getArea}, \hyperpage{51}
+    \subitem {getDiameter}, \hyperpage{51}
+    \subitem {getEdge}, \hyperpage{51}
+    \subitem {getId}, \hyperpage{52}
+    \subitem {getOtherPolygon}, \hyperpage{52}
+    \subitem {getOutwardNormal}, \hyperpage{52}
+    \subitem {getPositiveEdge}, \hyperpage{52}
+    \subitem {numEdges}, \hyperpage{53}
+    \subitem {operator$<$}, \hyperpage{53}
+    \subitem {operator$<$$<$}, \hyperpage{55}
+    \subitem {operator==}, \hyperpage{53}
+    \subitem {operator[]}, \hyperpage{54}
+    \subitem {Polygon}, \hyperpage{50}
+    \subitem {setId}, \hyperpage{54}
+    \subitem {setOrientation}, \hyperpage{54}
+    \subitem {setOtherPolygon}, \hyperpage{54}
+  \item {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{55}
+    \subitem {addPolygon}, \hyperpage{56}
+    \subitem {getDiameter}, \hyperpage{56}
+    \subitem {getId}, \hyperpage{57}
+    \subitem {getPolygon}, \hyperpage{57}
+    \subitem {numPolygons}, \hyperpage{57}
+    \subitem {operator$<$$<$}, \hyperpage{58}
+    \subitem {operator[]}, \hyperpage{57}
+    \subitem {Polyhedron}, \hyperpage{56}
+    \subitem {setId}, \hyperpage{58}
+  \item {get\_e\_x}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{50}
+  \item {get\_e\_y}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{51}
+  \item {getArea}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{51}
+  \item {getCache}
+    \subitem {GaussLobatto::GaussLobattoCache}, \hyperpage{9}
+  \item {getCacheMonomial}
+    \subitem {IntegrationMonomial::MonomialsFaceIntegralsCache}, 
+		\hyperpage{34}
+  \item {getCacheMonomials}
+    \subitem {IntegrationMonomial::MonomialsFaceIntegralsCache}, 
+		\hyperpage{34}
+  \item {getCoefficient}
+    \subitem {Monomial$<$ Dimension $>$}, \hyperpage{23}
+  \item {getCoordinates}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{43}
+  \item {getDeformationRBMMatrices}
+    \subitem {VirtualPolyhedronProjections}, \hyperpage{77}
+  \item {getDiameter}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{51}
+    \subitem {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{56}
+  \item {getDirection}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{4}
+  \item {getDof}
+    \subitem {LocalVirtualDofs}, \hyperpage{12}
+    \subitem {VirtualDofsCollection}, \hyperpage{71}
+  \item {getEdge}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{51}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{17}
+  \item {getEdges}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{18}
+  \item {getElasticMatrices}
+    \subitem {VirtualPolyhedronProjections}, \hyperpage{77}
+  \item {getExactSolution}
+    \subitem {Parameters}, \hyperpage{37}
+  \item {getExactStrains}
+    \subitem {Parameters}, \hyperpage{37}
+  \item {getExponents}
+    \subitem {Monomial$<$ Dimension $>$}, \hyperpage{23}
+  \item {getFaceProjection}
+    \subitem {VirtualFaceProjections}, \hyperpage{74}
+  \item {getFirstLame}
+    \subitem {Parameters}, \hyperpage{38}
+  \item {getForcing}
+    \subitem {Parameters}, \hyperpage{38}
+  \item {getforcingProjections}
+    \subitem {VirtualPolyhedronProjections}, \hyperpage{77}
+  \item {getGradientsToMonomialsOrdered}
+    \subitem {Monomial3D}, \hyperpage{32}
+  \item {getHomogeneousDirichletBC}
+    \subitem {Parameters}, \hyperpage{38}
+  \item {getID}
+    \subitem {LocalVirtualDofs}, \hyperpage{13}
+  \item {getId}
+    \subitem {FaceDof}, \hyperpage{8}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{4}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{43}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{52}
+    \subitem {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{57}
+    \subitem {PolyhedronDof}, \hyperpage{59}
+    \subitem {VertexDof}, \hyperpage{67}
+    \subitem {VirtualDof}, \hyperpage{68}
+  \item {getInitializeFaceIntegrals}
+    \subitem {Parameters}, \hyperpage{38}
+  \item {getInputMesh}
+    \subitem {Parameters}, \hyperpage{38}
+  \item {getInverseMatricesG}
+    \subitem {VirtualPolyhedronProjections}, \hyperpage{77}
+  \item {getLaplaciansToMonomialsOrdered}
+    \subitem {Monomial2D}, \hyperpage{27}
+    \subitem {Monomial3D}, \hyperpage{32}
+  \item {getLength}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{4}
+  \item {getLocalDofs}
+    \subitem {LocalVirtualDofsCollection}, \hyperpage{16}
+  \item {getMonomial}
+    \subitem {FaceDof}, \hyperpage{8}
+    \subitem {PolyhedronDof}, \hyperpage{59}
+  \item {getMonomialsOrdered}
+    \subitem {Monomial2D}, \hyperpage{27}
+    \subitem {Monomial3D}, \hyperpage{33}
+  \item {getnumDofs}
+    \subitem {LocalVirtualDofs}, \hyperpage{13}
+    \subitem {VirtualDofsCollection}, \hyperpage{71}
+  \item {getnumEdofs}
+    \subitem {LocalVirtualDofs}, \hyperpage{13}
+    \subitem {VirtualDofsCollection}, \hyperpage{72}
+  \item {getnumFdofs}
+    \subitem {LocalVirtualDofs}, \hyperpage{13}
+    \subitem {VirtualDofsCollection}, \hyperpage{72}
+  \item {getnumPdofs}
+    \subitem {LocalVirtualDofs}, \hyperpage{14}
+    \subitem {VirtualDofsCollection}, \hyperpage{72}
+  \item {getnumVdofs}
+    \subitem {LocalVirtualDofs}, \hyperpage{14}
+    \subitem {VirtualDofsCollection}, \hyperpage{72}
+  \item {getOrder}
+    \subitem {Monomial$<$ Dimension $>$}, \hyperpage{23}
+    \subitem {Parameters}, \hyperpage{39}
+    \subitem {Polynomial$<$ Dimension $>$}, \hyperpage{61}
+    \subitem {VirtualDofsCollection}, \hyperpage{72}
+    \subitem {VirtualPolyhedronProjections}, \hyperpage{78}
+  \item {getOtherHalfEdge}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{5}
+  \item {getOtherPolygon}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{52}
+  \item {getOutwardNormal}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{52}
+  \item {getPoissonRatio}
+    \subitem {Parameters}, \hyperpage{39}
+  \item {getPolygon}
+    \subitem {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{57}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{18}
+  \item {getPolygons}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{18}
+  \item {getPolyhedra}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{19}
+  \item {getPolyhedron}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{19}
+  \item {getPolyhedronProjections}
+    \subitem {VirtualPolyhedronProjections}, \hyperpage{78}
+  \item {getPolynomial}
+    \subitem {Polynomial$<$ Dimension $>$}, \hyperpage{61}
+  \item {getPositiveEdge}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{52}
+  \item {getRightHandSide}
+    \subitem {Solver}, \hyperpage{64}
+  \item {getSecondLame}
+    \subitem {Parameters}, \hyperpage{39}
+  \item {getSize}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{19}
+  \item {getSolutionDisplacements}
+    \subitem {Solver}, \hyperpage{64}
+  \item {getSolutionDisplacementsEig}
+    \subitem {Solver}, \hyperpage{64}
+  \item {getVertex}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{19}
+    \subitem {VertexDof}, \hyperpage{67}
+  \item {getVertices}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{20}
+  \item {getYoungsModulus}
+    \subitem {Parameters}, \hyperpage{39}
+
+  \indexspace
+
+  \item {initialize}
+    \subitem {GaussLobatto::GaussLobattoCache}, \hyperpage{9}
+    \subitem {IntegrationMonomial::MonomialsFaceIntegralsCache}, 
+		\hyperpage{36}
+  \item {IntegrationMonomial::MonomialsFaceIntegralsCache}, 
+		\hyperpage{34}
+    \subitem {getCacheMonomial}, \hyperpage{34}
+    \subitem {getCacheMonomials}, \hyperpage{34}
+    \subitem {initialize}, \hyperpage{36}
+
+  \indexspace
+
+  \item {LinearTrinomialPower}, \hyperpage{10}
+    \subitem {LinearTrinomialPower}, \hyperpage{10}
+  \item {LocalVirtualDofs}, \hyperpage{11}
+    \subitem {EToLocalId}, \hyperpage{12}
+    \subitem {FToLocalId}, \hyperpage{12}
+    \subitem {getDof}, \hyperpage{12}
+    \subitem {getID}, \hyperpage{13}
+    \subitem {getnumDofs}, \hyperpage{13}
+    \subitem {getnumEdofs}, \hyperpage{13}
+    \subitem {getnumFdofs}, \hyperpage{13}
+    \subitem {getnumPdofs}, \hyperpage{14}
+    \subitem {getnumVdofs}, \hyperpage{14}
+    \subitem {LocalVirtualDofs}, \hyperpage{11}
+    \subitem {operator$<$$<$}, \hyperpage{15}
+    \subitem {PToLocalId}, \hyperpage{14}
+    \subitem {VToLocalId}, \hyperpage{14}
+  \item {LocalVirtualDofsCollection}, \hyperpage{15}
+    \subitem {getLocalDofs}, \hyperpage{16}
+    \subitem {LocalVirtualDofsCollection}, \hyperpage{15}
+    \subitem {numLocalDofsCollection}, \hyperpage{16}
+
+  \indexspace
+
+  \item {Mesh}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{17}
   \item {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
-		\hyperpage{2}
+		\hyperpage{16}
+    \subitem {getEdge}, \hyperpage{17}
+    \subitem {getEdges}, \hyperpage{18}
+    \subitem {getPolygon}, \hyperpage{18}
+    \subitem {getPolygons}, \hyperpage{18}
+    \subitem {getPolyhedra}, \hyperpage{19}
+    \subitem {getPolyhedron}, \hyperpage{19}
+    \subitem {getSize}, \hyperpage{19}
+    \subitem {getVertex}, \hyperpage{19}
+    \subitem {getVertices}, \hyperpage{20}
+    \subitem {Mesh}, \hyperpage{17}
+    \subitem {numEdges}, \hyperpage{20}
+    \subitem {numPolygons}, \hyperpage{20}
+    \subitem {numPolyhedra}, \hyperpage{20}
+    \subitem {numVertices}, \hyperpage{21}
+  \item {Monomial}
+    \subitem {Monomial$<$ Dimension $>$}, \hyperpage{22}
+  \item {Monomial$<$ Dimension $>$}, \hyperpage{21}
+    \subitem {derivative}, \hyperpage{22}
+    \subitem {evaluate}, \hyperpage{22}
+    \subitem {getCoefficient}, \hyperpage{23}
+    \subitem {getExponents}, \hyperpage{23}
+    \subitem {getOrder}, \hyperpage{23}
+    \subitem {Monomial}, \hyperpage{22}
+    \subitem {operator$<$$<$}, \hyperpage{24}
+    \subitem {operator$\ast$}, \hyperpage{23}
+    \subitem {setCoefficient}, \hyperpage{24}
+  \item {Monomial2D}, \hyperpage{24}
+    \subitem {computeLaplaciansToMonomialsOrdered}, \hyperpage{26}
+    \subitem {computeMonomialsUpToOrder}, \hyperpage{26}
+    \subitem {derivative}, \hyperpage{26}
+    \subitem {dx}, \hyperpage{27}
+    \subitem {dy}, \hyperpage{27}
+    \subitem {getLaplaciansToMonomialsOrdered}, \hyperpage{27}
+    \subitem {getMonomialsOrdered}, \hyperpage{27}
+    \subitem {Monomial2D}, \hyperpage{25, 26}
+    \subitem {operator$<$$<$}, \hyperpage{28}
+    \subitem {operator$\ast$}, \hyperpage{28}
+  \item {Monomial3D}, \hyperpage{29}
+    \subitem {computeGradientsToMonomialsOrdered}, \hyperpage{30}
+    \subitem {computeLaplaciansToMonomialsOrdered}, \hyperpage{30}
+    \subitem {computeMonomialsUpToOrder}, \hyperpage{31}
+    \subitem {derivative}, \hyperpage{31}
+    \subitem {dx}, \hyperpage{31}
+    \subitem {dy}, \hyperpage{31}
+    \subitem {dz}, \hyperpage{32}
+    \subitem {getGradientsToMonomialsOrdered}, \hyperpage{32}
+    \subitem {getLaplaciansToMonomialsOrdered}, \hyperpage{32}
+    \subitem {getMonomialsOrdered}, \hyperpage{33}
+    \subitem {Monomial3D}, \hyperpage{30}
+    \subitem {operator$<$$<$}, \hyperpage{33}
+    \subitem {operator$\ast$}, \hyperpage{33}
+  \item {multiplyByScalar}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{43}
 
   \indexspace
 
+  \item {norm}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{44}
+  \item {normalize}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{44}
+  \item {numEdges}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{53}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{20}
+  \item {numLocalDofsCollection}
+    \subitem {LocalVirtualDofsCollection}, \hyperpage{16}
+  \item {numPolygons}
+    \subitem {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{57}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{20}
+  \item {numPolyhedra}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{20}
+  \item {numVertices}
+    \subitem {Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}, 
+		\hyperpage{21}
+
+  \indexspace
+
+  \item {operator$<$}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{5}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{46}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{53}
+  \item {operator$<$$<$}
+    \subitem {FaceDof}, \hyperpage{8}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{7}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{48}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{55}
+    \subitem {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{58}
+    \subitem {LocalVirtualDofs}, \hyperpage{15}
+    \subitem {Monomial$<$ Dimension $>$}, \hyperpage{24}
+    \subitem {Monomial2D}, \hyperpage{28}
+    \subitem {Monomial3D}, \hyperpage{33}
+    \subitem {PolyhedronDof}, \hyperpage{60}
+    \subitem {VertexDof}, \hyperpage{67}
+    \subitem {VirtualDof}, \hyperpage{69}
+    \subitem {VirtualDofsCollection}, \hyperpage{73}
+  \item {operator$\ast$}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{44}, 
+		\hyperpage{48}
+    \subitem {Monomial$<$ Dimension $>$}, \hyperpage{23}
+    \subitem {Monomial2D}, \hyperpage{28}
+    \subitem {Monomial3D}, \hyperpage{33}
+    \subitem {Polynomial$<$ Dimension $>$}, \hyperpage{62}
+  \item {operator+}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{45}
+  \item {operator-\/}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{45}
+  \item {operator/}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{45}
+  \item {operator==}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{5}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{46}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{53}
+  \item {operator[]}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{6}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{47}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{54}
+    \subitem {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{57}
+
+  \indexspace
+
+  \item {Parameters}, \hyperpage{36}
+    \subitem {getExactSolution}, \hyperpage{37}
+    \subitem {getExactStrains}, \hyperpage{37}
+    \subitem {getFirstLame}, \hyperpage{38}
+    \subitem {getForcing}, \hyperpage{38}
+    \subitem {getHomogeneousDirichletBC}, \hyperpage{38}
+    \subitem {getInitializeFaceIntegrals}, \hyperpage{38}
+    \subitem {getInputMesh}, \hyperpage{38}
+    \subitem {getOrder}, \hyperpage{39}
+    \subitem {getPoissonRatio}, \hyperpage{39}
+    \subitem {getSecondLame}, \hyperpage{39}
+    \subitem {getYoungsModulus}, \hyperpage{39}
+    \subitem {Parameters}, \hyperpage{37}
+  \item {piecewiseMultiply}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{47}
   \item {Point}
-    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{3}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{41}
+  \item {Polygon}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{50}
+  \item {Polyhedron}
+    \subitem {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{56}
+  \item {PolyhedronDof}, \hyperpage{59}
+    \subitem {getId}, \hyperpage{59}
+    \subitem {getMonomial}, \hyperpage{59}
+    \subitem {operator$<$$<$}, \hyperpage{60}
+    \subitem {PolyhedronDof}, \hyperpage{59}
+  \item {Polynomial}
+    \subitem {Polynomial$<$ Dimension $>$}, \hyperpage{61}
+  \item {Polynomial$<$ Dimension $>$}, \hyperpage{60}
+    \subitem {addMonomial}, \hyperpage{61}
+    \subitem {getOrder}, \hyperpage{61}
+    \subitem {getPolynomial}, \hyperpage{61}
+    \subitem {operator$\ast$}, \hyperpage{62}
+    \subitem {Polynomial}, \hyperpage{61}
+    \subitem {size}, \hyperpage{62}
+  \item {Problem}, \hyperpage{63}
+  \item {PToLocalId}
+    \subitem {LocalVirtualDofs}, \hyperpage{14}
+
+  \indexspace
+
+  \item {setCoefficient}
+    \subitem {Monomial$<$ Dimension $>$}, \hyperpage{24}
+  \item {setId}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{6}
+    \subitem {geometry::Point$<$ Args $>$}, \hyperpage{47}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{54}
+    \subitem {geometry::Polyhedron$<$ PolygonType $>$}, \hyperpage{58}
+  \item {setOrientation}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{54}
+  \item {setOtherHalfEdge}
+    \subitem {geometry::Edge$<$ PointType $>$}, \hyperpage{6}
+  \item {setOtherPolygon}
+    \subitem {geometry::Polygon$<$ EdgeType $>$}, \hyperpage{54}
+  \item {size}
+    \subitem {Polynomial$<$ Dimension $>$}, \hyperpage{62}
+  \item {Solver}, \hyperpage{63}
+    \subitem {getRightHandSide}, \hyperpage{64}
+    \subitem {getSolutionDisplacements}, \hyperpage{64}
+    \subitem {getSolutionDisplacementsEig}, \hyperpage{64}
+    \subitem {Solver}, \hyperpage{64}
+  \item {SolverVEM}, \hyperpage{65}
+    \subitem {computeStrainError}, \hyperpage{65}
+    \subitem {enforceHomogeneousDirichletBC}, \hyperpage{66}
+    \subitem {SolverVEM}, \hyperpage{65}
+
+  \indexspace
+
+  \item {VertexDof}, \hyperpage{66}
+    \subitem {getId}, \hyperpage{67}
+    \subitem {getVertex}, \hyperpage{67}
+    \subitem {operator$<$$<$}, \hyperpage{67}
+    \subitem {VertexDof}, \hyperpage{67}
+  \item {VirtualDof}, \hyperpage{68}
+    \subitem {getId}, \hyperpage{68}
+    \subitem {operator$<$$<$}, \hyperpage{69}
+  \item {VirtualDofsCollection}, \hyperpage{70}
+    \subitem {getDof}, \hyperpage{71}
+    \subitem {getnumDofs}, \hyperpage{71}
+    \subitem {getnumEdofs}, \hyperpage{72}
+    \subitem {getnumFdofs}, \hyperpage{72}
+    \subitem {getnumPdofs}, \hyperpage{72}
+    \subitem {getnumVdofs}, \hyperpage{72}
+    \subitem {getOrder}, \hyperpage{72}
+    \subitem {operator$<$$<$}, \hyperpage{73}
+    \subitem {VirtualDofsCollection}, \hyperpage{70}
+  \item {VirtualFaceProjections}, \hyperpage{73}
+    \subitem {computeFaceProjection}, \hyperpage{74}
+    \subitem {getFaceProjection}, \hyperpage{74}
+    \subitem {VirtualFaceProjections}, \hyperpage{73}
+  \item {VirtualPolyhedronProjections}, \hyperpage{75}
+    \subitem {computePolyhedronProjections}, \hyperpage{76}
+    \subitem {getDeformationRBMMatrices}, \hyperpage{77}
+    \subitem {getElasticMatrices}, \hyperpage{77}
+    \subitem {getforcingProjections}, \hyperpage{77}
+    \subitem {getInverseMatricesG}, \hyperpage{77}
+    \subitem {getOrder}, \hyperpage{78}
+    \subitem {getPolyhedronProjections}, \hyperpage{78}
+    \subitem {VirtualPolyhedronProjections}, \hyperpage{75, 76}
+  \item {VToLocalId}
+    \subitem {LocalVirtualDofs}, \hyperpage{14}
 
 \end{theindex}

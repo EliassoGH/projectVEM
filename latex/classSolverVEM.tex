@@ -1,0 +1,98 @@
+\hypertarget{classSolverVEM}{}\doxysubsection{Solver\+VEM Class Reference}
+\label{classSolverVEM}\index{SolverVEM@{SolverVEM}}
+
+
+Inheritance diagram for Solver\+VEM\+:
+% FIG 0
+
+
+Collaboration diagram for Solver\+VEM\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSolverVEM_a625da54e335c1c01d0bf998dd7f2f763}{Solver\+VEM}} (const \mbox{\hyperlink{classParameters}{Parameters}} \&parameters, const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&mesh, const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&DOFS, const \mbox{\hyperlink{classLocalVirtualDofsCollection}{Local\+Virtual\+Dofs\+Collection}} \&dofs, const \mbox{\hyperlink{classVirtualPolyhedronProjections}{Virtual\+Polyhedron\+Projections}} \&vp)
+\begin{DoxyCompactList}\small\item\em Constructor, assembles K and F. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSolverVEM_a7463e80696d74c1768899db204dc9052}{enforce\+Homogeneous\+Dirichlet\+BC}} (const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&mesh, const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&DOFS, const std\+::vector$<$ std\+::function$<$ real(real, real, real)$>$$>$ \&constraint\+Functions)
+\begin{DoxyCompactList}\small\item\em Enforce homogeneous Dirichlet boundary conditions. \end{DoxyCompactList}\item 
+real \mbox{\hyperlink{classSolverVEM_a848788010c87ef5c997d16b0d2d07a81}{compute\+Strain\+Error}} (const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&mesh, const \mbox{\hyperlink{classLocalVirtualDofsCollection}{Local\+Virtual\+Dofs\+Collection}} \&dofs, const \mbox{\hyperlink{classVirtualPolyhedronProjections}{Virtual\+Polyhedron\+Projections}} \&vp, const std\+::function$<$ std\+::array$<$ real, 6 $>$(real, real, real)$>$ \&Eps\+Ex\+\_\+func)
+\begin{DoxyCompactList}\small\item\em Compute the error in the L2 strain norm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSolverVEM_a625da54e335c1c01d0bf998dd7f2f763}\label{classSolverVEM_a625da54e335c1c01d0bf998dd7f2f763}} 
+\index{SolverVEM@{SolverVEM}!SolverVEM@{SolverVEM}}
+\index{SolverVEM@{SolverVEM}!SolverVEM@{SolverVEM}}
+\doxyparagraph{\texorpdfstring{SolverVEM()}{SolverVEM()}}
+{\footnotesize\ttfamily Solver\+VEM\+::\+Solver\+VEM (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classParameters}{Parameters}} \&}]{parameters,  }\item[{const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&}]{mesh,  }\item[{const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&}]{DOFS,  }\item[{const \mbox{\hyperlink{classLocalVirtualDofsCollection}{Local\+Virtual\+Dofs\+Collection}} \&}]{dofs,  }\item[{const \mbox{\hyperlink{classVirtualPolyhedronProjections}{Virtual\+Polyhedron\+Projections}} \&}]{vp }\end{DoxyParamCaption})}
+
+
+
+Constructor, assembles K and F. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & \\
+\hline
+{\em mesh} & \\
+\hline
+{\em DOFS} & \\
+\hline
+{\em dofs} & \\
+\hline
+{\em vp} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSolverVEM_a848788010c87ef5c997d16b0d2d07a81}\label{classSolverVEM_a848788010c87ef5c997d16b0d2d07a81}} 
+\index{SolverVEM@{SolverVEM}!computeStrainError@{computeStrainError}}
+\index{computeStrainError@{computeStrainError}!SolverVEM@{SolverVEM}}
+\doxyparagraph{\texorpdfstring{computeStrainError()}{computeStrainError()}}
+{\footnotesize\ttfamily real Solver\+VEM\+::compute\+Strain\+Error (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&}]{mesh,  }\item[{const \mbox{\hyperlink{classLocalVirtualDofsCollection}{Local\+Virtual\+Dofs\+Collection}} \&}]{dofs,  }\item[{const \mbox{\hyperlink{classVirtualPolyhedronProjections}{Virtual\+Polyhedron\+Projections}} \&}]{vp,  }\item[{const std\+::function$<$ std\+::array$<$ real, 6 $>$(real, real, real)$>$ \&}]{Eps\+Ex\+\_\+func }\end{DoxyParamCaption})}
+
+
+
+Compute the error in the L2 strain norm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+{\em dofs} & \\
+\hline
+{\em vp} & \\
+\hline
+{\em Eps\+Ex\+\_\+func} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+real 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSolverVEM_a7463e80696d74c1768899db204dc9052}\label{classSolverVEM_a7463e80696d74c1768899db204dc9052}} 
+\index{SolverVEM@{SolverVEM}!enforceHomogeneousDirichletBC@{enforceHomogeneousDirichletBC}}
+\index{enforceHomogeneousDirichletBC@{enforceHomogeneousDirichletBC}!SolverVEM@{SolverVEM}}
+\doxyparagraph{\texorpdfstring{enforceHomogeneousDirichletBC()}{enforceHomogeneousDirichletBC()}}
+{\footnotesize\ttfamily void Solver\+VEM\+::enforce\+Homogeneous\+Dirichlet\+BC (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&}]{mesh,  }\item[{const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&}]{DOFS,  }\item[{const std\+::vector$<$ std\+::function$<$ real(real, real, real)$>$$>$ \&}]{constraint\+Functions }\end{DoxyParamCaption})}
+
+
+
+Enforce homogeneous Dirichlet boundary conditions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+{\em DOFS} & \\
+\hline
+{\em constraint\+Functions} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/solver.\+hpp\item 
+src/solver.\+cpp\end{DoxyCompactItemize}

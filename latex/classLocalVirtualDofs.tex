@@ -1,0 +1,265 @@
+\hypertarget{classLocalVirtualDofs}{}\doxysubsection{Local\+Virtual\+Dofs Class Reference}
+\label{classLocalVirtualDofs}\index{LocalVirtualDofs@{LocalVirtualDofs}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLocalVirtualDofs_a97f890ee3685aaac0124f9cd00f4fa71}{Local\+Virtual\+Dofs}} (const \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$ \&P, const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&DOFS)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classLocalVirtualDofs_ab8a07bf7c3da2d74eaeabbf621307198}{get\+ID}} (std\+::size\+\_\+t id) const
+\begin{DoxyCompactList}\small\item\em Method to get the global id of the corresponding local dof id. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Dof\+Type $>$ }\\std\+::shared\+\_\+ptr$<$ Dof\+Type $>$ \mbox{\hyperlink{classLocalVirtualDofs_aa48775c40ea757bf2c6019d7e9042d56}{get\+Dof}} (std\+::size\+\_\+t id) const
+\begin{DoxyCompactList}\small\item\em Method to get the corresponding specialized dof to a given id. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classLocalVirtualDofs_abeb5f0190401205e85c9328e364f8b5e}{VTo\+Local\+Id}} (const std\+::size\+\_\+t \&ID) const
+\begin{DoxyCompactList}\small\item\em Get the corresponding local dof for vertex-\/type global dof. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{classLocalVirtualDofs_af1561b44306be6c363fae57b73ef006d}{ETo\+Local\+Id}} (const std\+::size\+\_\+t \&ID) const
+\begin{DoxyCompactList}\small\item\em Get the corresponding local dof for edge-\/type global dof. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::size\+\_\+t $>$ \mbox{\hyperlink{classLocalVirtualDofs_a89d9d0c9aa6e00f1345cad4791aa6fb1}{FTo\+Local\+Id}} (const std\+::size\+\_\+t \&ID) const
+\begin{DoxyCompactList}\small\item\em Get the corresponding local dof for face-\/type global dof. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classLocalVirtualDofs_aac8521f885f9e3f8b1f2b479d93960ed}{PTo\+Local\+Id}} (const std\+::size\+\_\+t \&ID) const
+\begin{DoxyCompactList}\small\item\em Get the corresponding local dof for polyhedron-\/type global dof. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classLocalVirtualDofs_adc2b4539b8216682c86eaeb64496d117}{getnum\+Vdofs}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of vertex-\/type dofs. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classLocalVirtualDofs_a7b965dde1fb2dacc69a82eb22c80e419}{getnum\+Edofs}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of edge-\/type dofs. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classLocalVirtualDofs_a0dc3b220e37f36c86ea191d2d3eec7cf}{getnum\+Fdofs}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of face-\/type dofs. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classLocalVirtualDofs_a00dae677869841b48fbfebe660dcece8}{getnum\+Pdofs}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of polyhedron-\/type dofs. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classLocalVirtualDofs_a2bf8dda0dcd38746643fd6ab1efcdec3}{getnum\+Dofs}} () const
+\begin{DoxyCompactList}\small\item\em Get the total number of local dofs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classLocalVirtualDofs_a32ee3fd337c2e74c37248acc85516ff3}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classLocalVirtualDofs}{Local\+Virtual\+Dofs}} \&dofs\+Collection)
+\begin{DoxyCompactList}\small\item\em Output stream operator for \mbox{\hyperlink{classLocalVirtualDofs}{Local\+Virtual\+Dofs}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLocalVirtualDofs_a97f890ee3685aaac0124f9cd00f4fa71}\label{classLocalVirtualDofs_a97f890ee3685aaac0124f9cd00f4fa71}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!LocalVirtualDofs@{LocalVirtualDofs}}
+\index{LocalVirtualDofs@{LocalVirtualDofs}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{LocalVirtualDofs()}{LocalVirtualDofs()}}
+{\footnotesize\ttfamily Local\+Virtual\+Dofs\+::\+Local\+Virtual\+Dofs (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$ \&}]{P,  }\item[{const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&}]{DOFS }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & \\
+\hline
+{\em DOFS} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLocalVirtualDofs_af1561b44306be6c363fae57b73ef006d}\label{classLocalVirtualDofs_af1561b44306be6c363fae57b73ef006d}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!EToLocalId@{EToLocalId}}
+\index{EToLocalId@{EToLocalId}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{EToLocalId()}{EToLocalId()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::size\+\_\+t$>$ Local\+Virtual\+Dofs\+::\+ETo\+Local\+Id (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t \&}]{ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the corresponding local dof for edge-\/type global dof. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::size\+\_\+t$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocalVirtualDofs_a89d9d0c9aa6e00f1345cad4791aa6fb1}\label{classLocalVirtualDofs_a89d9d0c9aa6e00f1345cad4791aa6fb1}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!FToLocalId@{FToLocalId}}
+\index{FToLocalId@{FToLocalId}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{FToLocalId()}{FToLocalId()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::size\+\_\+t$>$ Local\+Virtual\+Dofs\+::\+FTo\+Local\+Id (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t \&}]{ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the corresponding local dof for face-\/type global dof. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::size\+\_\+t$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocalVirtualDofs_aa48775c40ea757bf2c6019d7e9042d56}\label{classLocalVirtualDofs_aa48775c40ea757bf2c6019d7e9042d56}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!getDof@{getDof}}
+\index{getDof@{getDof}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{getDof()}{getDof()}}
+{\footnotesize\ttfamily template$<$typename Dof\+Type $>$ \\
+std\+::shared\+\_\+ptr$<$Dof\+Type$>$ Local\+Virtual\+Dofs\+::get\+Dof (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to get the corresponding specialized dof to a given id. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Dof\+Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Dof\+Type$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocalVirtualDofs_ab8a07bf7c3da2d74eaeabbf621307198}\label{classLocalVirtualDofs_ab8a07bf7c3da2d74eaeabbf621307198}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!getID@{getID}}
+\index{getID@{getID}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Local\+Virtual\+Dofs\+::get\+ID (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Method to get the global id of the corresponding local dof id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocalVirtualDofs_a2bf8dda0dcd38746643fd6ab1efcdec3}\label{classLocalVirtualDofs_a2bf8dda0dcd38746643fd6ab1efcdec3}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!getnumDofs@{getnumDofs}}
+\index{getnumDofs@{getnumDofs}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{getnumDofs()}{getnumDofs()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Local\+Virtual\+Dofs\+::getnum\+Dofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the total number of local dofs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocalVirtualDofs_a7b965dde1fb2dacc69a82eb22c80e419}\label{classLocalVirtualDofs_a7b965dde1fb2dacc69a82eb22c80e419}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!getnumEdofs@{getnumEdofs}}
+\index{getnumEdofs@{getnumEdofs}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{getnumEdofs()}{getnumEdofs()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Local\+Virtual\+Dofs\+::getnum\+Edofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of edge-\/type dofs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocalVirtualDofs_a0dc3b220e37f36c86ea191d2d3eec7cf}\label{classLocalVirtualDofs_a0dc3b220e37f36c86ea191d2d3eec7cf}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!getnumFdofs@{getnumFdofs}}
+\index{getnumFdofs@{getnumFdofs}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{getnumFdofs()}{getnumFdofs()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Local\+Virtual\+Dofs\+::getnum\+Fdofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of face-\/type dofs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocalVirtualDofs_a00dae677869841b48fbfebe660dcece8}\label{classLocalVirtualDofs_a00dae677869841b48fbfebe660dcece8}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!getnumPdofs@{getnumPdofs}}
+\index{getnumPdofs@{getnumPdofs}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{getnumPdofs()}{getnumPdofs()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Local\+Virtual\+Dofs\+::getnum\+Pdofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of polyhedron-\/type dofs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocalVirtualDofs_adc2b4539b8216682c86eaeb64496d117}\label{classLocalVirtualDofs_adc2b4539b8216682c86eaeb64496d117}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!getnumVdofs@{getnumVdofs}}
+\index{getnumVdofs@{getnumVdofs}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{getnumVdofs()}{getnumVdofs()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Local\+Virtual\+Dofs\+::getnum\+Vdofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of vertex-\/type dofs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocalVirtualDofs_aac8521f885f9e3f8b1f2b479d93960ed}\label{classLocalVirtualDofs_aac8521f885f9e3f8b1f2b479d93960ed}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!PToLocalId@{PToLocalId}}
+\index{PToLocalId@{PToLocalId}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{PToLocalId()}{PToLocalId()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Local\+Virtual\+Dofs\+::\+PTo\+Local\+Id (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t \&}]{ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the corresponding local dof for polyhedron-\/type global dof. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocalVirtualDofs_abeb5f0190401205e85c9328e364f8b5e}\label{classLocalVirtualDofs_abeb5f0190401205e85c9328e364f8b5e}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!VToLocalId@{VToLocalId}}
+\index{VToLocalId@{VToLocalId}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{VToLocalId()}{VToLocalId()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Local\+Virtual\+Dofs\+::\+VTo\+Local\+Id (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t \&}]{ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the corresponding local dof for vertex-\/type global dof. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+
+
+\doxysubsubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classLocalVirtualDofs_a32ee3fd337c2e74c37248acc85516ff3}\label{classLocalVirtualDofs_a32ee3fd337c2e74c37248acc85516ff3}} 
+\index{LocalVirtualDofs@{LocalVirtualDofs}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!LocalVirtualDofs@{LocalVirtualDofs}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classLocalVirtualDofs}{Local\+Virtual\+Dofs}} \&}]{dofs\+Collection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator for \mbox{\hyperlink{classLocalVirtualDofs}{Local\+Virtual\+Dofs}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+{\em dofs\+Collection} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/virtual\+Dofs.\+hpp\item 
+src/virtual\+Dofs.\+cpp\end{DoxyCompactItemize}

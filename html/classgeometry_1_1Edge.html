@@ -76,48 +76,461 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af1c7d1d35a2bcf44cee1f6f1fe95f86b"><td class="memItemLeft" align="right" valign="top"><a id="af1c7d1d35a2bcf44cee1f6f1fe95f86b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Edge</b> (const PointType &amp;point1, const PointType &amp;point2, bool _flipped=false)</td></tr>
+<tr class="memitem:af1c7d1d35a2bcf44cee1f6f1fe95f86b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#af1c7d1d35a2bcf44cee1f6f1fe95f86b">Edge</a> (const PointType &amp;point1, const PointType &amp;point2, bool _flipped=false)</td></tr>
+<tr class="memdesc:af1c7d1d35a2bcf44cee1f6f1fe95f86b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with two points.  <a href="classgeometry_1_1Edge.html#af1c7d1d35a2bcf44cee1f6f1fe95f86b">More...</a><br /></td></tr>
 <tr class="separator:af1c7d1d35a2bcf44cee1f6f1fe95f86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a281b1eb5375483ff963e8c3ea0820efc"><td class="memItemLeft" align="right" valign="top"><a id="a281b1eb5375483ff963e8c3ea0820efc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setOtherHalfEdge</b> (const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;otherEdge)</td></tr>
+<tr class="memitem:a281b1eb5375483ff963e8c3ea0820efc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#a281b1eb5375483ff963e8c3ea0820efc">setOtherHalfEdge</a> (const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;otherEdge)</td></tr>
+<tr class="memdesc:a281b1eb5375483ff963e8c3ea0820efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter method to set the other half-edge.  <a href="classgeometry_1_1Edge.html#a281b1eb5375483ff963e8c3ea0820efc">More...</a><br /></td></tr>
 <tr class="separator:a281b1eb5375483ff963e8c3ea0820efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40f7bcb64f184713b234889842736e99"><td class="memItemLeft" align="right" valign="top"><a id="a40f7bcb64f184713b234889842736e99"></a>
-<a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getOtherHalfEdge</b> () const</td></tr>
+<tr class="memitem:a40f7bcb64f184713b234889842736e99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#a40f7bcb64f184713b234889842736e99">getOtherHalfEdge</a> () const</td></tr>
+<tr class="memdesc:a40f7bcb64f184713b234889842736e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter method to get the other half-edge.  <a href="classgeometry_1_1Edge.html#a40f7bcb64f184713b234889842736e99">More...</a><br /></td></tr>
 <tr class="separator:a40f7bcb64f184713b234889842736e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acece96a0e74b14b9654aace6e3988fc4"><td class="memItemLeft" align="right" valign="top"><a id="acece96a0e74b14b9654aace6e3988fc4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#acece96a0e74b14b9654aace6e3988fc4">update</a> ()</td></tr>
+<tr class="memdesc:acece96a0e74b14b9654aace6e3988fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the properties of the edge. When modifying one point, the edge autmatically sees the change as they are references. It is not the case for other data structures. <br /></td></tr>
 <tr class="separator:acece96a0e74b14b9654aace6e3988fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3b9a294c44cefb28c8f99c6925efebb"><td class="memItemLeft" align="right" valign="top"><a id="aa3b9a294c44cefb28c8f99c6925efebb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setId</b> (IndexType _id)</td></tr>
+<tr class="memitem:aa3b9a294c44cefb28c8f99c6925efebb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#aa3b9a294c44cefb28c8f99c6925efebb">setId</a> (IndexType _id)</td></tr>
+<tr class="memdesc:aa3b9a294c44cefb28c8f99c6925efebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set id.  <a href="classgeometry_1_1Edge.html#aa3b9a294c44cefb28c8f99c6925efebb">More...</a><br /></td></tr>
 <tr class="separator:aa3b9a294c44cefb28c8f99c6925efebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb37272e097808f6843c94af84e4e29b"><td class="memItemLeft" align="right" valign="top"><a id="adb37272e097808f6843c94af84e4e29b"></a>
-const IndexType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const</td></tr>
+<tr class="memitem:adb37272e097808f6843c94af84e4e29b"><td class="memItemLeft" align="right" valign="top">const IndexType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#adb37272e097808f6843c94af84e4e29b">getId</a> () const</td></tr>
+<tr class="memdesc:adb37272e097808f6843c94af84e4e29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get id.  <a href="classgeometry_1_1Edge.html#adb37272e097808f6843c94af84e4e29b">More...</a><br /></td></tr>
 <tr class="separator:adb37272e097808f6843c94af84e4e29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee06c2bcf3037c9ab4d2416a48087ad8"><td class="memItemLeft" align="right" valign="top"><a id="aee06c2bcf3037c9ab4d2416a48087ad8"></a>
-const real &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getLength</b> () const</td></tr>
+<tr class="memitem:aee06c2bcf3037c9ab4d2416a48087ad8"><td class="memItemLeft" align="right" valign="top">const real &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#aee06c2bcf3037c9ab4d2416a48087ad8">getLength</a> () const</td></tr>
+<tr class="memdesc:aee06c2bcf3037c9ab4d2416a48087ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get length.  <a href="classgeometry_1_1Edge.html#aee06c2bcf3037c9ab4d2416a48087ad8">More...</a><br /></td></tr>
 <tr class="separator:aee06c2bcf3037c9ab4d2416a48087ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4b432fc1fb547667395667af424b535"><td class="memItemLeft" align="right" valign="top"><a id="aa4b432fc1fb547667395667af424b535"></a>
-const PointType&#160;</td><td class="memItemRight" valign="bottom"><b>getDirection</b> () const</td></tr>
+<tr class="memitem:aa4b432fc1fb547667395667af424b535"><td class="memItemLeft" align="right" valign="top">const PointType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#aa4b432fc1fb547667395667af424b535">getDirection</a> () const</td></tr>
+<tr class="memdesc:aa4b432fc1fb547667395667af424b535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get direction.  <a href="classgeometry_1_1Edge.html#aa4b432fc1fb547667395667af424b535">More...</a><br /></td></tr>
 <tr class="separator:aa4b432fc1fb547667395667af424b535"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88b796f377787434ddabc001f11be68d"><td class="memItemLeft" align="right" valign="top"><a id="a88b796f377787434ddabc001f11be68d"></a>
-const PointType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (IndexType index) const</td></tr>
+<tr class="memitem:a88b796f377787434ddabc001f11be68d"><td class="memItemLeft" align="right" valign="top">const PointType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#a88b796f377787434ddabc001f11be68d">operator[]</a> (IndexType index) const</td></tr>
+<tr class="memdesc:a88b796f377787434ddabc001f11be68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant getter.  <a href="classgeometry_1_1Edge.html#a88b796f377787434ddabc001f11be68d">More...</a><br /></td></tr>
 <tr class="separator:a88b796f377787434ddabc001f11be68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5809930ed76280c4944e994ebc754861"><td class="memItemLeft" align="right" valign="top"><a id="a5809930ed76280c4944e994ebc754861"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;other) const</td></tr>
+<tr class="memitem:a5809930ed76280c4944e994ebc754861"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#a5809930ed76280c4944e994ebc754861">operator&lt;</a> (const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a5809930ed76280c4944e994ebc754861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the comparison function based on edge Ids.  <a href="classgeometry_1_1Edge.html#a5809930ed76280c4944e994ebc754861">More...</a><br /></td></tr>
 <tr class="separator:a5809930ed76280c4944e994ebc754861"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf94838b1e75bfbd9025b631b27e40b4"><td class="memItemLeft" align="right" valign="top"><a id="abf94838b1e75bfbd9025b631b27e40b4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;other) const</td></tr>
+<tr class="memitem:abf94838b1e75bfbd9025b631b27e40b4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#abf94838b1e75bfbd9025b631b27e40b4">operator==</a> (const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;other) const</td></tr>
+<tr class="memdesc:abf94838b1e75bfbd9025b631b27e40b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality operator for edges.  <a href="classgeometry_1_1Edge.html#abf94838b1e75bfbd9025b631b27e40b4">More...</a><br /></td></tr>
 <tr class="separator:abf94838b1e75bfbd9025b631b27e40b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a8c829db7e7730a98add12918a1393095"><td class="memItemLeft" align="right" valign="top"><a id="a8c829db7e7730a98add12918a1393095"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;edge)</td></tr>
+<tr class="memitem:a8c829db7e7730a98add12918a1393095"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Edge.html#a8c829db7e7730a98add12918a1393095">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;edge)</td></tr>
+<tr class="memdesc:a8c829db7e7730a98add12918a1393095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream output operator for the <a class="el" href="classgeometry_1_1Edge.html">Edge</a> class.  <a href="classgeometry_1_1Edge.html#a8c829db7e7730a98add12918a1393095">More...</a><br /></td></tr>
 <tr class="separator:a8c829db7e7730a98add12918a1393095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af1c7d1d35a2bcf44cee1f6f1fe95f86b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c7d1d35a2bcf44cee1f6f1fe95f86b">&#9670;&nbsp;</a></span>Edge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgeometry_1_1Edge.html">geometry::Edge</a>&lt; PointType &gt;::<a class="el" href="classgeometry_1_1Edge.html">Edge</a> </td>
+          <td>(</td>
+          <td class="paramtype">const PointType &amp;&#160;</td>
+          <td class="paramname"><em>point1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const PointType &amp;&#160;</td>
+          <td class="paramname"><em>point2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_flipped</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor with two points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point1</td><td></td></tr>
+    <tr><td class="paramname">point2</td><td></td></tr>
+    <tr><td class="paramname">_flipped</td><td>if reading direction is flipped </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa4b432fc1fb547667395667af424b535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b432fc1fb547667395667af424b535">&#9670;&nbsp;</a></span>getDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PointType <a class="el" href="classgeometry_1_1Edge.html">geometry::Edge</a>&lt; PointType &gt;::getDirection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get direction. </p>
+<dl class="section return"><dt>Returns</dt><dd>const PointType </dd></dl>
+
+</div>
+</div>
+<a id="adb37272e097808f6843c94af84e4e29b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb37272e097808f6843c94af84e4e29b">&#9670;&nbsp;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const IndexType&amp; <a class="el" href="classgeometry_1_1Edge.html">geometry::Edge</a>&lt; PointType &gt;::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get id. </p>
+<dl class="section return"><dt>Returns</dt><dd>const IndexType&amp; </dd></dl>
+
+</div>
+</div>
+<a id="aee06c2bcf3037c9ab4d2416a48087ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee06c2bcf3037c9ab4d2416a48087ad8">&#9670;&nbsp;</a></span>getLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const real&amp; <a class="el" href="classgeometry_1_1Edge.html">geometry::Edge</a>&lt; PointType &gt;::getLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get length. </p>
+<dl class="section return"><dt>Returns</dt><dd>const real&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a40f7bcb64f184713b234889842736e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40f7bcb64f184713b234889842736e99">&#9670;&nbsp;</a></span>getOtherHalfEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt;PointType&gt;&amp; <a class="el" href="classgeometry_1_1Edge.html">geometry::Edge</a>&lt; PointType &gt;::getOtherHalfEdge </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter method to get the other half-edge. </p>
+<dl class="section return"><dt>Returns</dt><dd>Edge&lt;PointType&gt;&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a5809930ed76280c4944e994ebc754861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5809930ed76280c4944e994ebc754861">&#9670;&nbsp;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classgeometry_1_1Edge.html">geometry::Edge</a>&lt; PointType &gt;::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define the comparison function based on edge Ids. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="abf94838b1e75bfbd9025b631b27e40b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf94838b1e75bfbd9025b631b27e40b4">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classgeometry_1_1Edge.html">geometry::Edge</a>&lt; PointType &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Equality operator for edges. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a88b796f377787434ddabc001f11be68d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b796f377787434ddabc001f11be68d">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PointType&amp; <a class="el" href="classgeometry_1_1Edge.html">geometry::Edge</a>&lt; PointType &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">IndexType&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constant getter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>const PointType&amp; </dd></dl>
+
+</div>
+</div>
+<a id="aa3b9a294c44cefb28c8f99c6925efebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b9a294c44cefb28c8f99c6925efebb">&#9670;&nbsp;</a></span>setId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgeometry_1_1Edge.html">geometry::Edge</a>&lt; PointType &gt;::setId </td>
+          <td>(</td>
+          <td class="paramtype">IndexType&#160;</td>
+          <td class="paramname"><em>_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_id</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a281b1eb5375483ff963e8c3ea0820efc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a281b1eb5375483ff963e8c3ea0820efc">&#9670;&nbsp;</a></span>setOtherHalfEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgeometry_1_1Edge.html">geometry::Edge</a>&lt; PointType &gt;::setOtherHalfEdge </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>otherEdge</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setter method to set the other half-edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">otherEdge</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a8c829db7e7730a98add12918a1393095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c829db7e7730a98add12918a1393095">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename PointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Edge.html">Edge</a>&lt; PointType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>edge</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stream output operator for the <a class="el" href="classgeometry_1_1Edge.html">Edge</a> class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td></td></tr>
+    <tr><td class="paramname">edge</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Mesh/<a class="el" href="edge_8hpp_source.html">edge.hpp</a></li>
+<li>include/<a class="el" href="edge_8hpp_source.html">edge.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

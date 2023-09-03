@@ -1,0 +1,203 @@
+\hypertarget{classMonomial}{}\doxysubsection{Monomial$<$ Dimension $>$ Class Template Reference}
+\label{classMonomial}\index{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMonomial_a937a6a168b9e4a13cc20cb1fee3ad689}\label{classMonomial_a937a6a168b9e4a13cc20cb1fee3ad689}} 
+\mbox{\hyperlink{classMonomial_a937a6a168b9e4a13cc20cb1fee3ad689}{Monomial}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonomial_af582f6d30a3e3f8421071e97743e506c}{Monomial}} (std\+::vector$<$ unsigned int $>$ exponents, real coefficient)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+const std\+::vector$<$ unsigned int $>$ \& \mbox{\hyperlink{classMonomial_ad3e2a335ff4e0b6547321efead59f838}{get\+Exponents}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the exponents. \end{DoxyCompactList}\item 
+real \mbox{\hyperlink{classMonomial_a10c315e2aef9269c8d044f20605fbda4}{get\+Coefficient}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the coefficient. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMonomial_afe028342543f6cbd2adea1f5d695b528}{set\+Coefficient}} (real coeff)
+\begin{DoxyCompactList}\small\item\em Setter for the coefficient. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ \mbox{\hyperlink{classMonomial_a76cf3a7ff4a7a0b39b4d906ee726b6cb}{operator$\ast$}} (const \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Compute the product of two monomials. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ \mbox{\hyperlink{classMonomial_aee1d45cf908ae9c87872676a083aca52}{derivative}} (unsigned int variable\+Index) const
+\begin{DoxyCompactList}\small\item\em Compute the derivative with respect to a variable. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Point\+Type $>$ }\\real \mbox{\hyperlink{classMonomial_a7851695e3a3e1051812c3fc6234655a5}{evaluate}} (const Point\+Type \&point) const
+\begin{DoxyCompactList}\small\item\em Evaluate the monomial at a point. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classMonomial_a5ab62e597d896a85143af578228f8791}{get\+Order}} () const
+\begin{DoxyCompactList}\small\item\em Get the monomial order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classMonomial_ac515ade0953d0517bbf35bb140ca1c74}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classMonomial}{Monomial}} \&monomial)
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMonomial_af582f6d30a3e3f8421071e97743e506c}\label{classMonomial_af582f6d30a3e3f8421071e97743e506c}} 
+\index{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!Monomial@{Monomial}}
+\index{Monomial@{Monomial}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{Monomial()}{Monomial()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+\mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$\+::\mbox{\hyperlink{classMonomial}{Monomial}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ unsigned int $>$}]{exponents,  }\item[{real}]{coefficient }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exponents} & \\
+\hline
+{\em coefficient} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMonomial_aee1d45cf908ae9c87872676a083aca52}\label{classMonomial_aee1d45cf908ae9c87872676a083aca52}} 
+\index{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!derivative@{derivative}}
+\index{derivative@{derivative}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{derivative()}{derivative()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+\mbox{\hyperlink{classMonomial}{Monomial}}$<$Dimension$>$ \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$\+::derivative (\begin{DoxyParamCaption}\item[{unsigned int}]{variable\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the derivative with respect to a variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Monomial$<$\+Dimension$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial_a7851695e3a3e1051812c3fc6234655a5}\label{classMonomial_a7851695e3a3e1051812c3fc6234655a5}} 
+\index{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+template$<$typename Point\+Type $>$ \\
+real \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$\+::evaluate (\begin{DoxyParamCaption}\item[{const Point\+Type \&}]{point }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Evaluate the monomial at a point. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Point\+Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em point} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+real 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial_a10c315e2aef9269c8d044f20605fbda4}\label{classMonomial_a10c315e2aef9269c8d044f20605fbda4}} 
+\index{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!getCoefficient@{getCoefficient}}
+\index{getCoefficient@{getCoefficient}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{getCoefficient()}{getCoefficient()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+real \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$\+::get\+Coefficient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the coefficient. 
+
+\begin{DoxyReturn}{Returns}
+real 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial_ad3e2a335ff4e0b6547321efead59f838}\label{classMonomial_ad3e2a335ff4e0b6547321efead59f838}} 
+\index{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!getExponents@{getExponents}}
+\index{getExponents@{getExponents}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{getExponents()}{getExponents()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+const std\+::vector$<$unsigned int$>$\& \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$\+::get\+Exponents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the exponents. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$unsigned int$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial_a5ab62e597d896a85143af578228f8791}\label{classMonomial_a5ab62e597d896a85143af578228f8791}} 
+\index{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+unsigned int \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the monomial order. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial_a76cf3a7ff4a7a0b39b4d906ee726b6cb}\label{classMonomial_a76cf3a7ff4a7a0b39b4d906ee726b6cb}} 
+\index{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+\mbox{\hyperlink{classMonomial}{Monomial}}$<$Dimension$>$ \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the product of two monomials. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Monomial$<$\+Dimension$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial_afe028342543f6cbd2adea1f5d695b528}\label{classMonomial_afe028342543f6cbd2adea1f5d695b528}} 
+\index{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!setCoefficient@{setCoefficient}}
+\index{setCoefficient@{setCoefficient}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{setCoefficient()}{setCoefficient()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+void \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$\+::set\+Coefficient (\begin{DoxyParamCaption}\item[{real}]{coeff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter for the coefficient. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coeff} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classMonomial_ac515ade0953d0517bbf35bb140ca1c74}\label{classMonomial_ac515ade0953d0517bbf35bb140ca1c74}} 
+\index{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ \&}]{monomial }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+{\em monomial} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/monomial.\+hpp\end{DoxyCompactItemize}

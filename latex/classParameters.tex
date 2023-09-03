@@ -1,0 +1,204 @@
+\hypertarget{classParameters}{}\doxysubsection{Parameters Class Reference}
+\label{classParameters}\index{Parameters@{Parameters}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classParameters_a063fe1620c5a3fa27b6277e9552fe7ee}{Parameters}} (const char $\ast$parameters\+Filename)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classParameters_aaec47fa9dc729b9f02ae2eda5627e700}{get\+Input\+Mesh}} () const
+\begin{DoxyCompactList}\small\item\em Get the mesh string name. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::function$<$ real(real, real, real)$>$ $>$ \& \mbox{\hyperlink{classParameters_a6897409003406826b02ba775d2949e6c}{get\+Homogeneous\+Dirichlet\+BC}} () const
+\begin{DoxyCompactList}\small\item\em Get the homogeneous dirichlet boundary conditions. \end{DoxyCompactList}\item 
+const std\+::function$<$ std\+::array$<$ real, 3 $>$real, real, real)$>$ \& \mbox{\hyperlink{classParameters_a6ef624c9013cb17a6baa9c56cb96ed8a}{get\+Exact\+Solution}} () const
+\begin{DoxyCompactList}\small\item\em Get the exact displacement solution. \end{DoxyCompactList}\item 
+const std\+::function$<$ std\+::array$<$ real, 6 $>$real, real, real)$>$ \& \mbox{\hyperlink{classParameters_a44ca10ad24d2e8eb32b8e3cd84d0c390}{get\+Exact\+Strains}} () const
+\begin{DoxyCompactList}\small\item\em Get the exact strains. \end{DoxyCompactList}\item 
+const std\+::function$<$ std\+::array$<$ real, 3 $>$real, real, real)$>$ \& \mbox{\hyperlink{classParameters_a12d8d736efbf64f6941b0e56dc2deaef}{get\+Forcing}} () const
+\begin{DoxyCompactList}\small\item\em Get the forcing term. \end{DoxyCompactList}\item 
+const unsigned int \& \mbox{\hyperlink{classParameters_ad9bd6842f25ef9a5601df0b2d10b3f51}{get\+Order}} () const
+\begin{DoxyCompactList}\small\item\em Get the order. \end{DoxyCompactList}\item 
+const bool \& \mbox{\hyperlink{classParameters_ae7951e903ce27ec5fa7bcf10a2c86f23}{get\+Initialize\+Face\+Integrals}} () const
+\begin{DoxyCompactList}\small\item\em Get the bool returning true if face integrals are required to be initialized. \end{DoxyCompactList}\item 
+const real \& \mbox{\hyperlink{classParameters_a82d34de1599dbdb74317dac8b87a38fc}{get\+Youngs\+Modulus}} () const
+\begin{DoxyCompactList}\small\item\em Get Young\textquotesingle{}s modulus. \end{DoxyCompactList}\item 
+const real \& \mbox{\hyperlink{classParameters_aa803279aa24e0df030cb7d3eac76219a}{get\+Poisson\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em Get Poisson\textquotesingle{}s ratio. \end{DoxyCompactList}\item 
+const real \& \mbox{\hyperlink{classParameters_a33bf923d8e586d3559fce91680b3227d}{get\+First\+Lame}} () const
+\begin{DoxyCompactList}\small\item\em Get first Lame\textquotesingle{}s parameter. \end{DoxyCompactList}\item 
+const real \& \mbox{\hyperlink{classParameters_ad54263602f99434d18e3f08b4bef8837}{get\+Second\+Lame}} () const
+\begin{DoxyCompactList}\small\item\em Get second Lame\textquotesingle{}s parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classParameters_a84149b750d4dee74f4727df716315c6a}\label{classParameters_a84149b750d4dee74f4727df716315c6a}} 
+void \mbox{\hyperlink{classParameters_a84149b750d4dee74f4727df716315c6a}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print parameter information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classParameters_a063fe1620c5a3fa27b6277e9552fe7ee}\label{classParameters_a063fe1620c5a3fa27b6277e9552fe7ee}} 
+\index{Parameters@{Parameters}!Parameters@{Parameters}}
+\index{Parameters@{Parameters}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{Parameters()}{Parameters()}}
+{\footnotesize\ttfamily Parameters\+::\+Parameters (\begin{DoxyParamCaption}\item[{const char $\ast$}]{parameters\+Filename }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters\+Filename} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classParameters_a6ef624c9013cb17a6baa9c56cb96ed8a}\label{classParameters_a6ef624c9013cb17a6baa9c56cb96ed8a}} 
+\index{Parameters@{Parameters}!getExactSolution@{getExactSolution}}
+\index{getExactSolution@{getExactSolution}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getExactSolution()}{getExactSolution()}}
+{\footnotesize\ttfamily const std\+::function$<$std\+::array$<$real, 3$>$real, real, real)$>$\& Parameters\+::get\+Exact\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the exact displacement solution. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::function$<$std\+::array$<$real, 3$>$(real, real, real)$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParameters_a44ca10ad24d2e8eb32b8e3cd84d0c390}\label{classParameters_a44ca10ad24d2e8eb32b8e3cd84d0c390}} 
+\index{Parameters@{Parameters}!getExactStrains@{getExactStrains}}
+\index{getExactStrains@{getExactStrains}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getExactStrains()}{getExactStrains()}}
+{\footnotesize\ttfamily const std\+::function$<$std\+::array$<$real, 6$>$real, real, real)$>$\& Parameters\+::get\+Exact\+Strains (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the exact strains. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::function$<$std\+::array$<$real, 6$>$(real, real, real)$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParameters_a33bf923d8e586d3559fce91680b3227d}\label{classParameters_a33bf923d8e586d3559fce91680b3227d}} 
+\index{Parameters@{Parameters}!getFirstLame@{getFirstLame}}
+\index{getFirstLame@{getFirstLame}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getFirstLame()}{getFirstLame()}}
+{\footnotesize\ttfamily const real\& Parameters\+::get\+First\+Lame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get first Lame\textquotesingle{}s parameter. 
+
+\begin{DoxyReturn}{Returns}
+const real\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParameters_a12d8d736efbf64f6941b0e56dc2deaef}\label{classParameters_a12d8d736efbf64f6941b0e56dc2deaef}} 
+\index{Parameters@{Parameters}!getForcing@{getForcing}}
+\index{getForcing@{getForcing}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getForcing()}{getForcing()}}
+{\footnotesize\ttfamily const std\+::function$<$std\+::array$<$real, 3$>$real, real, real)$>$\& Parameters\+::get\+Forcing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the forcing term. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::function$<$std\+::array$<$real, 3$>$(real, real, real)$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParameters_a6897409003406826b02ba775d2949e6c}\label{classParameters_a6897409003406826b02ba775d2949e6c}} 
+\index{Parameters@{Parameters}!getHomogeneousDirichletBC@{getHomogeneousDirichletBC}}
+\index{getHomogeneousDirichletBC@{getHomogeneousDirichletBC}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getHomogeneousDirichletBC()}{getHomogeneousDirichletBC()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::function$<$real(real, real, real)$>$ $>$\& Parameters\+::get\+Homogeneous\+Dirichlet\+BC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the homogeneous dirichlet boundary conditions. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$std\+::function$<$real(real, real, real)$>$$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParameters_ae7951e903ce27ec5fa7bcf10a2c86f23}\label{classParameters_ae7951e903ce27ec5fa7bcf10a2c86f23}} 
+\index{Parameters@{Parameters}!getInitializeFaceIntegrals@{getInitializeFaceIntegrals}}
+\index{getInitializeFaceIntegrals@{getInitializeFaceIntegrals}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getInitializeFaceIntegrals()}{getInitializeFaceIntegrals()}}
+{\footnotesize\ttfamily const bool\& Parameters\+::get\+Initialize\+Face\+Integrals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the bool returning true if face integrals are required to be initialized. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParameters_aaec47fa9dc729b9f02ae2eda5627e700}\label{classParameters_aaec47fa9dc729b9f02ae2eda5627e700}} 
+\index{Parameters@{Parameters}!getInputMesh@{getInputMesh}}
+\index{getInputMesh@{getInputMesh}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getInputMesh()}{getInputMesh()}}
+{\footnotesize\ttfamily const std\+::string\& Parameters\+::get\+Input\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the mesh string name. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::string\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParameters_ad9bd6842f25ef9a5601df0b2d10b3f51}\label{classParameters_ad9bd6842f25ef9a5601df0b2d10b3f51}} 
+\index{Parameters@{Parameters}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily const unsigned int\& Parameters\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the order. 
+
+\begin{DoxyReturn}{Returns}
+const unsigned int\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParameters_aa803279aa24e0df030cb7d3eac76219a}\label{classParameters_aa803279aa24e0df030cb7d3eac76219a}} 
+\index{Parameters@{Parameters}!getPoissonRatio@{getPoissonRatio}}
+\index{getPoissonRatio@{getPoissonRatio}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getPoissonRatio()}{getPoissonRatio()}}
+{\footnotesize\ttfamily const real\& Parameters\+::get\+Poisson\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Poisson\textquotesingle{}s ratio. 
+
+\begin{DoxyReturn}{Returns}
+const real\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParameters_ad54263602f99434d18e3f08b4bef8837}\label{classParameters_ad54263602f99434d18e3f08b4bef8837}} 
+\index{Parameters@{Parameters}!getSecondLame@{getSecondLame}}
+\index{getSecondLame@{getSecondLame}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getSecondLame()}{getSecondLame()}}
+{\footnotesize\ttfamily const real\& Parameters\+::get\+Second\+Lame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get second Lame\textquotesingle{}s parameter. 
+
+\begin{DoxyReturn}{Returns}
+const real\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classParameters_a82d34de1599dbdb74317dac8b87a38fc}\label{classParameters_a82d34de1599dbdb74317dac8b87a38fc}} 
+\index{Parameters@{Parameters}!getYoungsModulus@{getYoungsModulus}}
+\index{getYoungsModulus@{getYoungsModulus}!Parameters@{Parameters}}
+\doxyparagraph{\texorpdfstring{getYoungsModulus()}{getYoungsModulus()}}
+{\footnotesize\ttfamily const real\& Parameters\+::get\+Youngs\+Modulus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Young\textquotesingle{}s modulus. 
+
+\begin{DoxyReturn}{Returns}
+const real\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/parameters.\+hpp\item 
+src/parameters.\+cpp\end{DoxyCompactItemize}

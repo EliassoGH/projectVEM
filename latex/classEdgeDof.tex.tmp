@@ -1,0 +1,119 @@
+\hypertarget{classEdgeDof}{}\doxysubsection{Edge\+Dof Class Reference}
+\label{classEdgeDof}\index{EdgeDof@{EdgeDof}}
+
+
+Inheritance diagram for Edge\+Dof\+:
+% FIG 0
+
+
+Collaboration diagram for Edge\+Dof\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEdgeDof_a2ff0f87523de090754ccd32267c9f74c}{Edge\+Dof}} (std\+::size\+\_\+t id, const \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}} \&gauss\+Lobatto\+Point\+\_\+, const real \&weight\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classEdgeDof_a797333e36ff827888c1bd78693b939ca}{get\+Id}} () const override
+\begin{DoxyCompactList}\small\item\em Getter for the id of the Edge DOF. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}} \& \mbox{\hyperlink{classEdgeDof_a7872ae32873754af3b1b6c0152a1cb4f}{get\+Gauss\+Lobatto\+Point}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the Gauss-\/\+Lobatto point. \end{DoxyCompactList}\item 
+const real \& \mbox{\hyperlink{classEdgeDof_a5192329126349aa2178096dff587c0b3}{get\+Weight}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the weight of the Gauss-\/\+Lobatto point. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classEdgeDof_a2a202585fac26154459b3ab275dcc508}{operator$<$$<$}} (std\+::ostream \&os) const override
+\begin{DoxyCompactList}\small\item\em Output stream operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEdgeDof_a2ff0f87523de090754ccd32267c9f74c}\label{classEdgeDof_a2ff0f87523de090754ccd32267c9f74c}} 
+\index{EdgeDof@{EdgeDof}!EdgeDof@{EdgeDof}}
+\index{EdgeDof@{EdgeDof}!EdgeDof@{EdgeDof}}
+\doxyparagraph{\texorpdfstring{EdgeDof()}{EdgeDof()}}
+{\footnotesize\ttfamily Edge\+Dof\+::\+Edge\+Dof (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{id,  }\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}} \&}]{gauss\+Lobatto\+Point\+\_\+,  }\item[{const real \&}]{weight\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+{\em gauss\+Lobatto\+Point\+\_\+} & \\
+\hline
+{\em weight\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEdgeDof_a7872ae32873754af3b1b6c0152a1cb4f}\label{classEdgeDof_a7872ae32873754af3b1b6c0152a1cb4f}} 
+\index{EdgeDof@{EdgeDof}!getGaussLobattoPoint@{getGaussLobattoPoint}}
+\index{getGaussLobattoPoint@{getGaussLobattoPoint}!EdgeDof@{EdgeDof}}
+\doxyparagraph{\texorpdfstring{getGaussLobattoPoint()}{getGaussLobattoPoint()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}} \& Edge\+Dof\+::get\+Gauss\+Lobatto\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the Gauss-\/\+Lobatto point. 
+
+\begin{DoxyReturn}{Returns}
+const Point3D\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEdgeDof_a797333e36ff827888c1bd78693b939ca}\label{classEdgeDof_a797333e36ff827888c1bd78693b939ca}} 
+\index{EdgeDof@{EdgeDof}!getId@{getId}}
+\index{getId@{getId}!EdgeDof@{EdgeDof}}
+\doxyparagraph{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Edge\+Dof\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Getter for the id of the Edge DOF. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classVirtualDof_ab11d19aefc3ccbcdfe037ffce8f34079}{Virtual\+Dof}}.
+
+\mbox{\Hypertarget{classEdgeDof_a5192329126349aa2178096dff587c0b3}\label{classEdgeDof_a5192329126349aa2178096dff587c0b3}} 
+\index{EdgeDof@{EdgeDof}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!EdgeDof@{EdgeDof}}
+\doxyparagraph{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily const real \& Edge\+Dof\+::get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the weight of the Gauss-\/\+Lobatto point. 
+
+\begin{DoxyReturn}{Returns}
+const real\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classEdgeDof_a2a202585fac26154459b3ab275dcc508}\label{classEdgeDof_a2a202585fac26154459b3ab275dcc508}} 
+\index{EdgeDof@{EdgeDof}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!EdgeDof@{EdgeDof}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& Edge\+Dof\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Output stream operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classVirtualDof_a1ebf35da3a7f4dec6bf18f30673c56c2}{Virtual\+Dof}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/virtual\+Dofs.\+hpp\item 
+src/virtual\+Dofs.\+cpp\end{DoxyCompactItemize}

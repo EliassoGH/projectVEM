@@ -1,0 +1,104 @@
+\hypertarget{classVirtualDof}{}\doxysubsection{Virtual\+Dof Class Reference}
+\label{classVirtualDof}\index{VirtualDof@{VirtualDof}}
+
+
+Inheritance diagram for Virtual\+Dof\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVirtualDof_ac16c5ac6144bdce6229e87e5062b30d3}\label{classVirtualDof_ac16c5ac6144bdce6229e87e5062b30d3}} 
+\mbox{\hyperlink{classVirtualDof_ac16c5ac6144bdce6229e87e5062b30d3}{Virtual\+Dof}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVirtualDof_a41b76cba3d2c71fcb31491d69f8111b1}\label{classVirtualDof_a41b76cba3d2c71fcb31491d69f8111b1}} 
+virtual \mbox{\hyperlink{classVirtualDof_a41b76cba3d2c71fcb31491d69f8111b1}{$\sim$\+Virtual\+Dof}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual std\+::ostream \& \mbox{\hyperlink{classVirtualDof_a1ebf35da3a7f4dec6bf18f30673c56c2}{operator$<$$<$}} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual output stream operator. \end{DoxyCompactList}\item 
+virtual std\+::size\+\_\+t \mbox{\hyperlink{classVirtualDof_ab11d19aefc3ccbcdfe037ffce8f34079}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the \mbox{\hyperlink{classVirtualDof}{Virtual\+Dof}} Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classVirtualDof_a516c229e97dd6271a66033b3de26dc2a}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classVertexDof}{Vertex\+Dof}} \&v\+Dof)
+\begin{DoxyCompactList}\small\item\em Output stream operators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVirtualDof_a52da2b887a141556e97801905078d7ff}\label{classVirtualDof_a52da2b887a141556e97801905078d7ff}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classEdgeDof}{Edge\+Dof}} \&e\+Dof)
+\item 
+\mbox{\Hypertarget{classVirtualDof_a0a6fe21abe47205057f5d141c9536340}\label{classVirtualDof_a0a6fe21abe47205057f5d141c9536340}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classFaceDof}{Face\+Dof}} \&f\+Dof)
+\item 
+\mbox{\Hypertarget{classVirtualDof_a51c65e539203296079d79182753ff4c4}\label{classVirtualDof_a51c65e539203296079d79182753ff4c4}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classPolyhedronDof}{Polyhedron\+Dof}} \&p\+Dof)
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVirtualDof_ab11d19aefc3ccbcdfe037ffce8f34079}\label{classVirtualDof_ab11d19aefc3ccbcdfe037ffce8f34079}} 
+\index{VirtualDof@{VirtualDof}!getId@{getId}}
+\index{getId@{getId}!VirtualDof@{VirtualDof}}
+\doxyparagraph{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily virtual std\+::size\+\_\+t Virtual\+Dof\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Getter for the \mbox{\hyperlink{classVirtualDof}{Virtual\+Dof}} Id. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classPolyhedronDof_a2dee6a9f82cc5dddda08a1bc055169af}{Polyhedron\+Dof}}, \mbox{\hyperlink{classFaceDof_a7057dfd4292e5deb77dce22dfebb3b8d}{Face\+Dof}}, \mbox{\hyperlink{classEdgeDof_a797333e36ff827888c1bd78693b939ca}{Edge\+Dof}}, and \mbox{\hyperlink{classVertexDof_a92c24f5e69f0ba7c80322a46fe438687}{Vertex\+Dof}}.
+
+\mbox{\Hypertarget{classVirtualDof_a1ebf35da3a7f4dec6bf18f30673c56c2}\label{classVirtualDof_a1ebf35da3a7f4dec6bf18f30673c56c2}} 
+\index{VirtualDof@{VirtualDof}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!VirtualDof@{VirtualDof}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily virtual std\+::ostream\& Virtual\+Dof\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual output stream operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classPolyhedronDof_a4aca7e413ebbe5184485503884a33b46}{Polyhedron\+Dof}}, \mbox{\hyperlink{classFaceDof_a877a729b02dd5fa51159229f1f830d3a}{Face\+Dof}}, \mbox{\hyperlink{classEdgeDof_a2a202585fac26154459b3ab275dcc508}{Edge\+Dof}}, and \mbox{\hyperlink{classVertexDof_a40b3ae22cb31bc75671f4453582903f3}{Vertex\+Dof}}.
+
+
+
+\doxysubsubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classVirtualDof_a516c229e97dd6271a66033b3de26dc2a}\label{classVirtualDof_a516c229e97dd6271a66033b3de26dc2a}} 
+\index{VirtualDof@{VirtualDof}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!VirtualDof@{VirtualDof}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classVertexDof}{Vertex\+Dof}} \&}]{v\+Dof }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operators. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+{\em v\+Dof} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/virtual\+Dofs.\+hpp\item 
+src/virtual\+Dofs.\+cpp\end{DoxyCompactItemize}

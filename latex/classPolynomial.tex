@@ -1,0 +1,154 @@
+\hypertarget{classPolynomial}{}\doxysubsection{Polynomial$<$ Dimension $>$ Class Template Reference}
+\label{classPolynomial}\index{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPolynomial_abab82ccfa903d1f1bc8b01e89a7632df}\label{classPolynomial_abab82ccfa903d1f1bc8b01e89a7632df}} 
+\mbox{\hyperlink{classPolynomial_abab82ccfa903d1f1bc8b01e89a7632df}{Polynomial}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPolynomial_aad9d29dfbf1783a93c0c57014b01620b}{Polynomial}} (const std\+::vector$<$ \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$$>$ \&monomials)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPolynomial_a3a82c5fdf35c7161919fce05e92ebf17}{add\+Monomial}} (const \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ \&monomial)
+\begin{DoxyCompactList}\small\item\em Method to add a monomial to the polynomial. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classPolynomial_a5b46905b6e2677cf07b818f708d6d259}{get\+Order}} () const
+\begin{DoxyCompactList}\small\item\em Get the polynomial order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$ \mbox{\hyperlink{classPolynomial_ae9550cb512bfe68a37daa4b972a9efe8}{operator$\ast$}} (const \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Overload $\ast$ operator to compute the product of two polynomials. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$ \mbox{\hyperlink{classPolynomial_aec8c694837beaf53d652a7ab8d649020}{operator$\ast$}} (const \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Overload $\ast$ operator to compute the product of a polynomial and a monomial. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classPolynomial_a13847315a4dd54b838e8e8e5fb26bfa6}{size}} () const
+\begin{DoxyCompactList}\small\item\em get the number of monomials making up the polynomial \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::vector$<$ unsigned int $>$, \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ $>$ \& \mbox{\hyperlink{classPolynomial_ac4efc219e77fc1cf79b4977fe183055e}{get\+Polynomial}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the polynomial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPolynomial_aced4588828981a30659bafd6e4c02bd5}\label{classPolynomial_aced4588828981a30659bafd6e4c02bd5}} 
+std\+::map$<$ std\+::vector$<$ unsigned int $>$, \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ $>$ {\bfseries polynomial}
+\item 
+\mbox{\Hypertarget{classPolynomial_ac062cdc6f70ce3ac0054faceebd825bf}\label{classPolynomial_ac062cdc6f70ce3ac0054faceebd825bf}} 
+unsigned int {\bfseries order} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPolynomial_aad9d29dfbf1783a93c0c57014b01620b}\label{classPolynomial_aad9d29dfbf1783a93c0c57014b01620b}} 
+\index{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!Polynomial@{Polynomial}}
+\index{Polynomial@{Polynomial}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{Polynomial()}{Polynomial()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+\mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$\+::\mbox{\hyperlink{classPolynomial}{Polynomial}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$$>$ \&}]{monomials }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monomials} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPolynomial_a3a82c5fdf35c7161919fce05e92ebf17}\label{classPolynomial_a3a82c5fdf35c7161919fce05e92ebf17}} 
+\index{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!addMonomial@{addMonomial}}
+\index{addMonomial@{addMonomial}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{addMonomial()}{addMonomial()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+void \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$\+::add\+Monomial (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ \&}]{monomial }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to add a monomial to the polynomial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monomial} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPolynomial_a5b46905b6e2677cf07b818f708d6d259}\label{classPolynomial_a5b46905b6e2677cf07b818f708d6d259}} 
+\index{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+unsigned int \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the polynomial order. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPolynomial_ac4efc219e77fc1cf79b4977fe183055e}\label{classPolynomial_ac4efc219e77fc1cf79b4977fe183055e}} 
+\index{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!getPolynomial@{getPolynomial}}
+\index{getPolynomial@{getPolynomial}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{getPolynomial()}{getPolynomial()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+const std\+::map$<$std\+::vector$<$unsigned int$>$, \mbox{\hyperlink{classMonomial}{Monomial}}$<$Dimension$>$ $>$\& \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$\+::get\+Polynomial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the polynomial. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$std\+::vector$<$unsigned int$>$, Monomial$<$\+Dimension$>$$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPolynomial_aec8c694837beaf53d652a7ab8d649020}\label{classPolynomial_aec8c694837beaf53d652a7ab8d649020}} 
+\index{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+\mbox{\hyperlink{classPolynomial}{Polynomial}}$<$Dimension$>$ \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMonomial}{Monomial}}$<$ Dimension $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload $\ast$ operator to compute the product of a polynomial and a monomial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Polynomial$<$\+Dimension$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPolynomial_ae9550cb512bfe68a37daa4b972a9efe8}\label{classPolynomial_ae9550cb512bfe68a37daa4b972a9efe8}} 
+\index{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+\mbox{\hyperlink{classPolynomial}{Polynomial}}$<$Dimension$>$ \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload $\ast$ operator to compute the product of two polynomials. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Polynomial$<$\+Dimension$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPolynomial_a13847315a4dd54b838e8e8e5fb26bfa6}\label{classPolynomial_a13847315a4dd54b838e8e8e5fb26bfa6}} 
+\index{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!size@{size}}
+\index{size@{size}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}}
+\doxyparagraph{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$unsigned int Dimension$>$ \\
+size\+\_\+t \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ Dimension $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get the number of monomials making up the polynomial 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/monomial.\+hpp\end{DoxyCompactItemize}

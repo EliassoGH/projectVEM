@@ -1,0 +1,195 @@
+\hypertarget{classVirtualPolyhedronProjections}{}\doxysubsection{Virtual\+Polyhedron\+Projections Class Reference}
+\label{classVirtualPolyhedronProjections}\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVirtualPolyhedronProjections_a0a688f9292939840a53ca1e9820db083}{Virtual\+Polyhedron\+Projections}} (const real \&E, const real \&nu, const \mbox{\hyperlink{classVirtualFaceProjections}{Virtual\+Face\+Projections}} \&face\+Projections, const \mbox{\hyperlink{classLocalVirtualDofsCollection}{Local\+Virtual\+Dofs\+Collection}} \&dofs, const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&mesh, const std\+::function$<$ real(real, real, real)$>$ \&funcx, const std\+::function$<$ real(real, real, real)$>$ \&funcy, const std\+::function$<$ real(real, real, real)$>$ \&funcz, const unsigned int \&order)
+\begin{DoxyCompactList}\small\item\em Constructor with the materials parameters and the forcing function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVirtualPolyhedronProjections_aa06587f29777757d0491198c1afacb44}{Virtual\+Polyhedron\+Projections}} (const \mbox{\hyperlink{classParameters}{Parameters}} \&parameters, const \mbox{\hyperlink{classVirtualFaceProjections}{Virtual\+Face\+Projections}} \&face\+Projections, const \mbox{\hyperlink{classLocalVirtualDofsCollection}{Local\+Virtual\+Dofs\+Collection}} \&dofs, const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&mesh)
+\begin{DoxyCompactList}\small\item\em Constructor taking an instance of parameters. \end{DoxyCompactList}\item 
+Eigen\+::\+Sparse\+Matrix$<$ real $>$ \mbox{\hyperlink{classVirtualPolyhedronProjections_a234af7c57c817a0cb4924074d09baf2f}{compute\+Polyhedron\+Projections}} (const \mbox{\hyperlink{classVirtualFaceProjections}{Virtual\+Face\+Projections}} \&face\+Projections, const \mbox{\hyperlink{classLocalVirtualDofs}{Local\+Virtual\+Dofs}} \&dofs, const \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$ \&polyhedron, const std\+::function$<$ real(real, real, real)$>$ \&funcx, const std\+::function$<$ real(real, real, real)$>$ \&funcy, const std\+::function$<$ real(real, real, real)$>$ \&funcz, const unsigned int \&order)
+\begin{DoxyCompactList}\small\item\em Compute the projections over the polyhedron. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$ real $>$ $>$ \& \mbox{\hyperlink{classVirtualPolyhedronProjections_aba41b8f6ef3fd34d3e3db56611cd198a}{get\+Inverse\+MatricesG}} () const
+\begin{DoxyCompactList}\small\item\em Get the matrices G. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$ real $>$ $>$ \& \mbox{\hyperlink{classVirtualPolyhedronProjections_a3b71e93bcefb286d3ebaef54dedef585}{get\+Polyhedron\+Projections}} () const
+\begin{DoxyCompactList}\small\item\em Get the projections C. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$ real $>$ $>$ \& \mbox{\hyperlink{classVirtualPolyhedronProjections_a893788359c758548ea07a4afb2f76934}{get\+Elastic\+Matrices}} () const
+\begin{DoxyCompactList}\small\item\em Get the elastic matrices E. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$ real $>$ $>$ \& \mbox{\hyperlink{classVirtualPolyhedronProjections_ae2e4bb8186497230c48e734ce3c824d3}{get\+Deformation\+RBMMatrices}} () const
+\begin{DoxyCompactList}\small\item\em Get the deformation and rigid body motion matrices Tdr. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::size\+\_\+t, Eigen\+::\+Vector\+Xd $>$ \& \mbox{\hyperlink{classVirtualPolyhedronProjections_afcd440027dcdda0e1f52221536bb7341}{getforcing\+Projections}} () const
+\begin{DoxyCompactList}\small\item\em Get the forcing projections. \end{DoxyCompactList}\item 
+const unsigned int \& \mbox{\hyperlink{classVirtualPolyhedronProjections_a6b48774461341f0be6493370d92dd5e6}{get\+Order}} () const
+\begin{DoxyCompactList}\small\item\em Get the order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVirtualPolyhedronProjections_a0a688f9292939840a53ca1e9820db083}\label{classVirtualPolyhedronProjections_a0a688f9292939840a53ca1e9820db083}} 
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\doxyparagraph{\texorpdfstring{VirtualPolyhedronProjections()}{VirtualPolyhedronProjections()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Virtual\+Polyhedron\+Projections\+::\+Virtual\+Polyhedron\+Projections (\begin{DoxyParamCaption}\item[{const real \&}]{E,  }\item[{const real \&}]{nu,  }\item[{const \mbox{\hyperlink{classVirtualFaceProjections}{Virtual\+Face\+Projections}} \&}]{face\+Projections,  }\item[{const \mbox{\hyperlink{classLocalVirtualDofsCollection}{Local\+Virtual\+Dofs\+Collection}} \&}]{dofs,  }\item[{const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&}]{mesh,  }\item[{const std\+::function$<$ real(real, real, real)$>$ \&}]{funcx,  }\item[{const std\+::function$<$ real(real, real, real)$>$ \&}]{funcy,  }\item[{const std\+::function$<$ real(real, real, real)$>$ \&}]{funcz,  }\item[{const unsigned int \&}]{order }\end{DoxyParamCaption})}
+
+
+
+Constructor with the materials parameters and the forcing function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em E} & youngs modulus \\
+\hline
+{\em nu} & poisson ratio \\
+\hline
+{\em face\+Projections} & \\
+\hline
+{\em dofs} & \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \\
+\hline
+{\em mesh} & \\
+\hline
+{\em funcx} & forcing function x direction \\
+\hline
+{\em funcy} & forcing function y direction \\
+\hline
+{\em funcz} & forcing function z direction \\
+\hline
+{\em order} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVirtualPolyhedronProjections_aa06587f29777757d0491198c1afacb44}\label{classVirtualPolyhedronProjections_aa06587f29777757d0491198c1afacb44}} 
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\doxyparagraph{\texorpdfstring{VirtualPolyhedronProjections()}{VirtualPolyhedronProjections()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Virtual\+Polyhedron\+Projections\+::\+Virtual\+Polyhedron\+Projections (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classParameters}{Parameters}} \&}]{parameters,  }\item[{const \mbox{\hyperlink{classVirtualFaceProjections}{Virtual\+Face\+Projections}} \&}]{face\+Projections,  }\item[{const \mbox{\hyperlink{classLocalVirtualDofsCollection}{Local\+Virtual\+Dofs\+Collection}} \&}]{dofs,  }\item[{const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&}]{mesh }\end{DoxyParamCaption})}
+
+
+
+Constructor taking an instance of parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & \\
+\hline
+{\em face\+Projections} & \\
+\hline
+{\em dofs} & \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \\
+\hline
+{\em mesh} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVirtualPolyhedronProjections_a234af7c57c817a0cb4924074d09baf2f}\label{classVirtualPolyhedronProjections_a234af7c57c817a0cb4924074d09baf2f}} 
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!computePolyhedronProjections@{computePolyhedronProjections}}
+\index{computePolyhedronProjections@{computePolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\doxyparagraph{\texorpdfstring{computePolyhedronProjections()}{computePolyhedronProjections()}}
+{\footnotesize\ttfamily Eigen\+::\+Sparse\+Matrix$<$ real $>$ Virtual\+Polyhedron\+Projections\+::compute\+Polyhedron\+Projections (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVirtualFaceProjections}{Virtual\+Face\+Projections}} \&}]{face\+Projections,  }\item[{const \mbox{\hyperlink{classLocalVirtualDofs}{Local\+Virtual\+Dofs}} \&}]{dofs,  }\item[{const \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$ \&}]{polyhedron,  }\item[{const std\+::function$<$ real(real, real, real)$>$ \&}]{funcx,  }\item[{const std\+::function$<$ real(real, real, real)$>$ \&}]{funcy,  }\item[{const std\+::function$<$ real(real, real, real)$>$ \&}]{funcz,  }\item[{const unsigned int \&}]{order }\end{DoxyParamCaption})}
+
+
+
+Compute the projections over the polyhedron. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face\+Projections} & \\
+\hline
+{\em dofs} & \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \\
+\hline
+{\em polyhedron} & \\
+\hline
+{\em funcx} & forcing function x direction \\
+\hline
+{\em funcy} & forcing function y direction \\
+\hline
+{\em funcz} & forcing function z direction \\
+\hline
+{\em order} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Eigen\+::\+Sparse\+Matrix$<$real$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualPolyhedronProjections_ae2e4bb8186497230c48e734ce3c824d3}\label{classVirtualPolyhedronProjections_ae2e4bb8186497230c48e734ce3c824d3}} 
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getDeformationRBMMatrices@{getDeformationRBMMatrices}}
+\index{getDeformationRBMMatrices@{getDeformationRBMMatrices}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\doxyparagraph{\texorpdfstring{getDeformationRBMMatrices()}{getDeformationRBMMatrices()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$ real $>$ $>$ \& Virtual\+Polyhedron\+Projections\+::get\+Deformation\+RBMMatrices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the deformation and rigid body motion matrices Tdr. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$real$>$$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualPolyhedronProjections_a893788359c758548ea07a4afb2f76934}\label{classVirtualPolyhedronProjections_a893788359c758548ea07a4afb2f76934}} 
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getElasticMatrices@{getElasticMatrices}}
+\index{getElasticMatrices@{getElasticMatrices}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\doxyparagraph{\texorpdfstring{getElasticMatrices()}{getElasticMatrices()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$ real $>$ $>$ \& Virtual\+Polyhedron\+Projections\+::get\+Elastic\+Matrices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the elastic matrices E. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$real$>$$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualPolyhedronProjections_afcd440027dcdda0e1f52221536bb7341}\label{classVirtualPolyhedronProjections_afcd440027dcdda0e1f52221536bb7341}} 
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getforcingProjections@{getforcingProjections}}
+\index{getforcingProjections@{getforcingProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\doxyparagraph{\texorpdfstring{getforcingProjections()}{getforcingProjections()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::size\+\_\+t, Eigen\+::\+Vector\+Xd $>$ \& Virtual\+Polyhedron\+Projections\+::getforcing\+Projections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the forcing projections. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$std\+::size\+\_\+t, Eigen\+::\+Vector\+Xd$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualPolyhedronProjections_aba41b8f6ef3fd34d3e3db56611cd198a}\label{classVirtualPolyhedronProjections_aba41b8f6ef3fd34d3e3db56611cd198a}} 
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getInverseMatricesG@{getInverseMatricesG}}
+\index{getInverseMatricesG@{getInverseMatricesG}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\doxyparagraph{\texorpdfstring{getInverseMatricesG()}{getInverseMatricesG()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$ real $>$ $>$ \& Virtual\+Polyhedron\+Projections\+::get\+Inverse\+MatricesG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the matrices G. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$real$>$$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualPolyhedronProjections_a6b48774461341f0be6493370d92dd5e6}\label{classVirtualPolyhedronProjections_a6b48774461341f0be6493370d92dd5e6}} 
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\doxyparagraph{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily const unsigned int\& Virtual\+Polyhedron\+Projections\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the order. 
+
+\begin{DoxyReturn}{Returns}
+const unsigned int\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualPolyhedronProjections_a3b71e93bcefb286d3ebaef54dedef585}\label{classVirtualPolyhedronProjections_a3b71e93bcefb286d3ebaef54dedef585}} 
+\index{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getPolyhedronProjections@{getPolyhedronProjections}}
+\index{getPolyhedronProjections@{getPolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}}
+\doxyparagraph{\texorpdfstring{getPolyhedronProjections()}{getPolyhedronProjections()}}
+{\footnotesize\ttfamily const std\+::map$<$ std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$ real $>$ $>$ \& Virtual\+Polyhedron\+Projections\+::get\+Polyhedron\+Projections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the projections C. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$std\+::size\+\_\+t, Eigen\+::\+Sparse\+Matrix$<$real$>$$>$\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/virtual\+Projections.\+hpp\item 
+src/virtual\+Projections.\+cpp\end{DoxyCompactItemize}

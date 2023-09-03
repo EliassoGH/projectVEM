@@ -1,0 +1,295 @@
+\hypertarget{classMonomial3D}{}\doxysubsection{Monomial3D Class Reference}
+\label{classMonomial3D}\index{Monomial3D@{Monomial3D}}
+
+
+Inheritance diagram for Monomial3D\+:
+% FIG 0
+
+
+Collaboration diagram for Monomial3D\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMonomial3D_aee61be5b620dfa861331f10f639eb161}\label{classMonomial3D_aee61be5b620dfa861331f10f639eb161}} 
+\mbox{\hyperlink{classMonomial3D_aee61be5b620dfa861331f10f639eb161}{Monomial3D}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonomial3D_a287151a6f7a2a7555ab2d9167089a69e}{Monomial3D}} (unsigned int expX, unsigned int expY, unsigned int expZ, double coeff)
+\begin{DoxyCompactList}\small\item\em Constructor with exponents and coefficient. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonomial3D_a618eb969c96bc493f9a4ac977e67cfad}{Monomial3D}} (const \mbox{\hyperlink{classMonomial}{Monomial}}$<$ 3 $>$ \&monomial)
+\begin{DoxyCompactList}\small\item\em Constructor for implicit conversion from \mbox{\hyperlink{classMonomial}{Monomial$<$3$>$}} to \mbox{\hyperlink{classMonomial3D}{Monomial3D}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonomial3D}{Monomial3D}} \mbox{\hyperlink{classMonomial3D_a129372778b482bffdd00397db059c062}{operator$\ast$}} (const \mbox{\hyperlink{classMonomial3D}{Monomial3D}} \&other) const
+\begin{DoxyCompactList}\small\item\em Method to compute the product of two monomials and return a new \mbox{\hyperlink{classMonomial2D}{Monomial2D}} instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonomial3D}{Monomial3D}} \mbox{\hyperlink{classMonomial3D_a13ac2f156d8ef9c40bc8b8f905d69817}{derivative}} (unsigned int variable\+Index) const
+\begin{DoxyCompactList}\small\item\em Method to compute the derivative with respect to a variable and return a new \mbox{\hyperlink{classMonomial2D}{Monomial2D}} instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonomial3D}{Monomial3D}} \mbox{\hyperlink{classMonomial3D_ae391f20eb2e4067b84c978bd89617182}{dx}} () const
+\begin{DoxyCompactList}\small\item\em Compute the derivative with respect to x. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonomial3D}{Monomial3D}} \mbox{\hyperlink{classMonomial3D_a28d9441661baa3405c49cc6a3c45683b}{dy}} () const
+\begin{DoxyCompactList}\small\item\em Compute the derivative with respect to y. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMonomial3D}{Monomial3D}} \mbox{\hyperlink{classMonomial3D_a71aa9172d5cfbb3c5a492539277b4f30}{dz}} () const
+\begin{DoxyCompactList}\small\item\em Compute the derivative with respect to z. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classMonomial3D_a06c4af9148ff3febecaf8a62e85749a1}{compute\+Monomials\+Up\+To\+Order}} (unsigned int order\+\_\+)
+\begin{DoxyCompactList}\small\item\em Method to compute the ordered monomials up to a given degree. \end{DoxyCompactList}\item 
+static const std\+::vector$<$ \mbox{\hyperlink{classMonomial3D}{Monomial3D}} $>$ \mbox{\hyperlink{classMonomial3D_a7bcc4299d9166bc733f03c4fd3732d12}{get\+Monomials\+Ordered}} (unsigned int order\+\_\+)
+\begin{DoxyCompactList}\small\item\em Method to get the ordered monomials up to a given degree. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classMonomial3D_a91f3a99bbd667b018d3bd60532de7c0d}{compute\+Gradients\+To\+Monomials\+Ordered}} (unsigned int order\+\_\+)
+\begin{DoxyCompactList}\small\item\em Method to compute the gradients of the ordered monomials up to a given degree. \end{DoxyCompactList}\item 
+static const std\+::vector$<$ std\+::array$<$ std\+::pair$<$ real, std\+::size\+\_\+t $>$, 3 $>$ $>$ \mbox{\hyperlink{classMonomial3D_a69561cd7027f45af26e116107c170933}{get\+Gradients\+To\+Monomials\+Ordered}} (unsigned int order\+\_\+)
+\begin{DoxyCompactList}\small\item\em ethod to get the gradients of the ordered monomials up to a given degree \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classMonomial3D_a43d243d0b2e28729580d2f9b452455ec}{compute\+Laplacians\+To\+Monomials\+Ordered}} (unsigned int order\+\_\+)
+\begin{DoxyCompactList}\small\item\em Method to compute the laplacians of the ordered monomials up to a given degree. \end{DoxyCompactList}\item 
+static const std\+::vector$<$ std\+::array$<$ std\+::pair$<$ real, std\+::size\+\_\+t $>$, 3 $>$ $>$ \mbox{\hyperlink{classMonomial3D_afad963c70c0adfdd6ac5d33adeb5d3e7}{get\+Laplacians\+To\+Monomials\+Ordered}} (unsigned int order\+\_\+)
+\begin{DoxyCompactList}\small\item\em Method to get the laplacians of the ordered monomials up to a given degree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classMonomial3D_a76b0bc4adf3cb58e8b78ed6cfcdd9000}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classMonomial3D}{Monomial3D}} \&monomial)
+\begin{DoxyCompactList}\small\item\em Overriding the output stream operator to print \char`\"{}x, y, z\char`\"{} for \mbox{\hyperlink{classMonomial3D}{Monomial3D}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMonomial3D_a287151a6f7a2a7555ab2d9167089a69e}\label{classMonomial3D_a287151a6f7a2a7555ab2d9167089a69e}} 
+\index{Monomial3D@{Monomial3D}!Monomial3D@{Monomial3D}}
+\index{Monomial3D@{Monomial3D}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{Monomial3D()}{Monomial3D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Monomial3\+D\+::\+Monomial3D (\begin{DoxyParamCaption}\item[{unsigned int}]{expX,  }\item[{unsigned int}]{expY,  }\item[{unsigned int}]{expZ,  }\item[{double}]{coeff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with exponents and coefficient. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expX} & \\
+\hline
+{\em expY} & \\
+\hline
+{\em expZ} & \\
+\hline
+{\em coeff} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMonomial3D_a618eb969c96bc493f9a4ac977e67cfad}\label{classMonomial3D_a618eb969c96bc493f9a4ac977e67cfad}} 
+\index{Monomial3D@{Monomial3D}!Monomial3D@{Monomial3D}}
+\index{Monomial3D@{Monomial3D}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{Monomial3D()}{Monomial3D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Monomial3\+D\+::\+Monomial3D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMonomial}{Monomial}}$<$ 3 $>$ \&}]{monomial }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for implicit conversion from \mbox{\hyperlink{classMonomial}{Monomial$<$3$>$}} to \mbox{\hyperlink{classMonomial3D}{Monomial3D}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monomial} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMonomial3D_a91f3a99bbd667b018d3bd60532de7c0d}\label{classMonomial3D_a91f3a99bbd667b018d3bd60532de7c0d}} 
+\index{Monomial3D@{Monomial3D}!computeGradientsToMonomialsOrdered@{computeGradientsToMonomialsOrdered}}
+\index{computeGradientsToMonomialsOrdered@{computeGradientsToMonomialsOrdered}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{computeGradientsToMonomialsOrdered()}{computeGradientsToMonomialsOrdered()}}
+{\footnotesize\ttfamily void Monomial3\+D\+::compute\+Gradients\+To\+Monomials\+Ordered (\begin{DoxyParamCaption}\item[{unsigned int}]{order\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to compute the gradients of the ordered monomials up to a given degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMonomial3D_a43d243d0b2e28729580d2f9b452455ec}\label{classMonomial3D_a43d243d0b2e28729580d2f9b452455ec}} 
+\index{Monomial3D@{Monomial3D}!computeLaplaciansToMonomialsOrdered@{computeLaplaciansToMonomialsOrdered}}
+\index{computeLaplaciansToMonomialsOrdered@{computeLaplaciansToMonomialsOrdered}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{computeLaplaciansToMonomialsOrdered()}{computeLaplaciansToMonomialsOrdered()}}
+{\footnotesize\ttfamily void Monomial3\+D\+::compute\+Laplacians\+To\+Monomials\+Ordered (\begin{DoxyParamCaption}\item[{unsigned int}]{order\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to compute the laplacians of the ordered monomials up to a given degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMonomial3D_a06c4af9148ff3febecaf8a62e85749a1}\label{classMonomial3D_a06c4af9148ff3febecaf8a62e85749a1}} 
+\index{Monomial3D@{Monomial3D}!computeMonomialsUpToOrder@{computeMonomialsUpToOrder}}
+\index{computeMonomialsUpToOrder@{computeMonomialsUpToOrder}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{computeMonomialsUpToOrder()}{computeMonomialsUpToOrder()}}
+{\footnotesize\ttfamily void Monomial3\+D\+::compute\+Monomials\+Up\+To\+Order (\begin{DoxyParamCaption}\item[{unsigned int}]{order\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to compute the ordered monomials up to a given degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMonomial3D_a13ac2f156d8ef9c40bc8b8f905d69817}\label{classMonomial3D_a13ac2f156d8ef9c40bc8b8f905d69817}} 
+\index{Monomial3D@{Monomial3D}!derivative@{derivative}}
+\index{derivative@{derivative}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{derivative()}{derivative()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMonomial3D}{Monomial3D}} Monomial3\+D\+::derivative (\begin{DoxyParamCaption}\item[{unsigned int}]{variable\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to compute the derivative with respect to a variable and return a new \mbox{\hyperlink{classMonomial2D}{Monomial2D}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classMonomial3D}{Monomial3D}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial3D_ae391f20eb2e4067b84c978bd89617182}\label{classMonomial3D_ae391f20eb2e4067b84c978bd89617182}} 
+\index{Monomial3D@{Monomial3D}!dx@{dx}}
+\index{dx@{dx}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{dx()}{dx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMonomial3D}{Monomial3D}} Monomial3\+D\+::dx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the derivative with respect to x. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classMonomial3D}{Monomial3D}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial3D_a28d9441661baa3405c49cc6a3c45683b}\label{classMonomial3D_a28d9441661baa3405c49cc6a3c45683b}} 
+\index{Monomial3D@{Monomial3D}!dy@{dy}}
+\index{dy@{dy}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{dy()}{dy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMonomial3D}{Monomial3D}} Monomial3\+D\+::dy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the derivative with respect to y. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classMonomial3D}{Monomial3D}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial3D_a71aa9172d5cfbb3c5a492539277b4f30}\label{classMonomial3D_a71aa9172d5cfbb3c5a492539277b4f30}} 
+\index{Monomial3D@{Monomial3D}!dz@{dz}}
+\index{dz@{dz}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{dz()}{dz()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMonomial3D}{Monomial3D}} Monomial3\+D\+::dz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the derivative with respect to z. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classMonomial3D}{Monomial3D}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial3D_a69561cd7027f45af26e116107c170933}\label{classMonomial3D_a69561cd7027f45af26e116107c170933}} 
+\index{Monomial3D@{Monomial3D}!getGradientsToMonomialsOrdered@{getGradientsToMonomialsOrdered}}
+\index{getGradientsToMonomialsOrdered@{getGradientsToMonomialsOrdered}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{getGradientsToMonomialsOrdered()}{getGradientsToMonomialsOrdered()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::array$<$ std\+::pair$<$ real, std\+::size\+\_\+t $>$, 3 $>$ $>$ Monomial3\+D\+::get\+Gradients\+To\+Monomials\+Ordered (\begin{DoxyParamCaption}\item[{unsigned int}]{order\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ethod to get the gradients of the ordered monomials up to a given degree 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$std\+::array$<$std\+::pair$<$real, std\+::size\+\_\+t$>$, 3$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial3D_afad963c70c0adfdd6ac5d33adeb5d3e7}\label{classMonomial3D_afad963c70c0adfdd6ac5d33adeb5d3e7}} 
+\index{Monomial3D@{Monomial3D}!getLaplaciansToMonomialsOrdered@{getLaplaciansToMonomialsOrdered}}
+\index{getLaplaciansToMonomialsOrdered@{getLaplaciansToMonomialsOrdered}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{getLaplaciansToMonomialsOrdered()}{getLaplaciansToMonomialsOrdered()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::array$<$ std\+::pair$<$ real, std\+::size\+\_\+t $>$, 3 $>$ $>$ Monomial3\+D\+::get\+Laplacians\+To\+Monomials\+Ordered (\begin{DoxyParamCaption}\item[{unsigned int}]{order\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to get the laplacians of the ordered monomials up to a given degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$std\+::array$<$std\+::pair$<$real, std\+::size\+\_\+t$>$, 3$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial3D_a7bcc4299d9166bc733f03c4fd3732d12}\label{classMonomial3D_a7bcc4299d9166bc733f03c4fd3732d12}} 
+\index{Monomial3D@{Monomial3D}!getMonomialsOrdered@{getMonomialsOrdered}}
+\index{getMonomialsOrdered@{getMonomialsOrdered}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{getMonomialsOrdered()}{getMonomialsOrdered()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classMonomial3D}{Monomial3D}} $>$ Monomial3\+D\+::get\+Monomials\+Ordered (\begin{DoxyParamCaption}\item[{unsigned int}]{order\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to get the ordered monomials up to a given degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$\+Monomial3\+D$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMonomial3D_a129372778b482bffdd00397db059c062}\label{classMonomial3D_a129372778b482bffdd00397db059c062}} 
+\index{Monomial3D@{Monomial3D}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMonomial3D}{Monomial3D}} Monomial3\+D\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMonomial3D}{Monomial3D}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to compute the product of two monomials and return a new \mbox{\hyperlink{classMonomial2D}{Monomial2D}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classMonomial3D}{Monomial3D}} 
+\end{DoxyReturn}
+
+
+\doxysubsubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classMonomial3D_a76b0bc4adf3cb58e8b78ed6cfcdd9000}\label{classMonomial3D_a76b0bc4adf3cb58e8b78ed6cfcdd9000}} 
+\index{Monomial3D@{Monomial3D}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Monomial3D@{Monomial3D}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classMonomial3D}{Monomial3D}} \&}]{monomial }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overriding the output stream operator to print \char`\"{}x, y, z\char`\"{} for \mbox{\hyperlink{classMonomial3D}{Monomial3D}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+{\em monomial} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/monomial.\+hpp\item 
+src/monomial.\+cpp\end{DoxyCompactItemize}

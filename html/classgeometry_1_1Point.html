@@ -83,80 +83,88 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9afee96cbad0bd763deb463d6e8c531"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#ae9afee96cbad0bd763deb463d6e8c531">Point</a> (Args... args)</td></tr>
 <tr class="memdesc:ae9afee96cbad0bd763deb463d6e8c531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classgeometry_1_1Point.html">Point</a> object.  <a href="classgeometry_1_1Point.html#ae9afee96cbad0bd763deb463d6e8c531">More...</a><br /></td></tr>
 <tr class="separator:ae9afee96cbad0bd763deb463d6e8c531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b28cf3f7043f7155f446af5fc80440"><td class="memItemLeft" align="right" valign="top"><a id="a11b28cf3f7043f7155f446af5fc80440"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a11b28cf3f7043f7155f446af5fc80440">~Point</a> ()</td></tr>
+<tr class="memdesc:a11b28cf3f7043f7155f446af5fc80440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor to free the id when the point goes out of scope. <br /></td></tr>
+<tr class="separator:a11b28cf3f7043f7155f446af5fc80440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2655db0b73e1e0090307f358523c76b5"><td class="memItemLeft" align="right" valign="top"><a id="a2655db0b73e1e0090307f358523c76b5"></a>
 constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getDimension</b> () const</td></tr>
 <tr class="separator:a2655db0b73e1e0090307f358523c76b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1473578988cd179effe2d85d47a7662a"><td class="memItemLeft" align="right" valign="top"><a id="a1473578988cd179effe2d85d47a7662a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setId</b> (IndexType _id)</td></tr>
+<tr class="memitem:a1473578988cd179effe2d85d47a7662a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a1473578988cd179effe2d85d47a7662a">setId</a> (IndexType _id)</td></tr>
+<tr class="memdesc:a1473578988cd179effe2d85d47a7662a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Id object.  <a href="classgeometry_1_1Point.html#a1473578988cd179effe2d85d47a7662a">More...</a><br /></td></tr>
 <tr class="separator:a1473578988cd179effe2d85d47a7662a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a031426b882ad32a53dace5610c219cc7"><td class="memItemLeft" align="right" valign="top"><a id="a031426b882ad32a53dace5610c219cc7"></a>
-const IndexType &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const</td></tr>
+<tr class="memitem:a031426b882ad32a53dace5610c219cc7"><td class="memItemLeft" align="right" valign="top">const IndexType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a031426b882ad32a53dace5610c219cc7">getId</a> () const</td></tr>
+<tr class="memdesc:a031426b882ad32a53dace5610c219cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Id object.  <a href="classgeometry_1_1Point.html#a031426b882ad32a53dace5610c219cc7">More...</a><br /></td></tr>
 <tr class="separator:a031426b882ad32a53dace5610c219cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7b87e8fc20551b1d0cdd55ab80b2bda"><td class="memItemLeft" align="right" valign="top"><a id="ab7b87e8fc20551b1d0cdd55ab80b2bda"></a>
-const std::array&lt; real, sizeof...(Args)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCoordinates</b> () const</td></tr>
+<tr class="memitem:ab7b87e8fc20551b1d0cdd55ab80b2bda"><td class="memItemLeft" align="right" valign="top">const std::array&lt; real, sizeof...(Args)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#ab7b87e8fc20551b1d0cdd55ab80b2bda">getCoordinates</a> () const</td></tr>
+<tr class="memdesc:ab7b87e8fc20551b1d0cdd55ab80b2bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Coordinates object.  <a href="classgeometry_1_1Point.html#ab7b87e8fc20551b1d0cdd55ab80b2bda">More...</a><br /></td></tr>
 <tr class="separator:ab7b87e8fc20551b1d0cdd55ab80b2bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a407f98d7d2d8bec1c1439a0f57c4120f"><td class="memItemLeft" align="right" valign="top"><a id="a407f98d7d2d8bec1c1439a0f57c4120f"></a>
-const real &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (std::size_t index) const</td></tr>
+<tr class="memitem:a407f98d7d2d8bec1c1439a0f57c4120f"><td class="memItemLeft" align="right" valign="top">const real &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a407f98d7d2d8bec1c1439a0f57c4120f">operator[]</a> (std::size_t index) const</td></tr>
+<tr class="memdesc:a407f98d7d2d8bec1c1439a0f57c4120f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access operator [].  <a href="classgeometry_1_1Point.html#a407f98d7d2d8bec1c1439a0f57c4120f">More...</a><br /></td></tr>
 <tr class="separator:a407f98d7d2d8bec1c1439a0f57c4120f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a997af977ccccb43b4d9bc5b58a4556ef"><td class="memItemLeft" align="right" valign="top"><a id="a997af977ccccb43b4d9bc5b58a4556ef"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const real &amp;scalar) const</td></tr>
+<tr class="memitem:a997af977ccccb43b4d9bc5b58a4556ef"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a997af977ccccb43b4d9bc5b58a4556ef">operator*</a> (const real &amp;scalar) const</td></tr>
+<tr class="memdesc:a997af977ccccb43b4d9bc5b58a4556ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded * operator to compute the scalar multiplication of a point (point*scalar)  <a href="classgeometry_1_1Point.html#a997af977ccccb43b4d9bc5b58a4556ef">More...</a><br /></td></tr>
 <tr class="separator:a997af977ccccb43b4d9bc5b58a4556ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1670281c92b8c01eafc14dc8c64401ac"><td class="memTemplParams" colspan="2"><a id="a1670281c92b8c01eafc14dc8c64401ac"></a>
-template&lt;size_t... Indices&gt; </td></tr>
-<tr class="memitem:a1670281c92b8c01eafc14dc8c64401ac"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>multiplyByScalar</b> (real scalar, std::index_sequence&lt; Indices... &gt;) const</td></tr>
+<tr class="memitem:a1670281c92b8c01eafc14dc8c64401ac"><td class="memTemplParams" colspan="2">template&lt;size_t... Indices&gt; </td></tr>
+<tr class="memitem:a1670281c92b8c01eafc14dc8c64401ac"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a1670281c92b8c01eafc14dc8c64401ac">multiplyByScalar</a> (real scalar, std::index_sequence&lt; Indices... &gt;) const</td></tr>
+<tr class="memdesc:a1670281c92b8c01eafc14dc8c64401ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">scalar multiplication of a point  <a href="classgeometry_1_1Point.html#a1670281c92b8c01eafc14dc8c64401ac">More...</a><br /></td></tr>
 <tr class="separator:a1670281c92b8c01eafc14dc8c64401ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada07bcb3bb7e0df395d1ba351cf5ccd2"><td class="memItemLeft" align="right" valign="top"><a id="ada07bcb3bb7e0df395d1ba351cf5ccd2"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>operator/</b> (const real &amp;scalar) const</td></tr>
+<tr class="memitem:ada07bcb3bb7e0df395d1ba351cf5ccd2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#ada07bcb3bb7e0df395d1ba351cf5ccd2">operator/</a> (const real &amp;scalar) const</td></tr>
+<tr class="memdesc:ada07bcb3bb7e0df395d1ba351cf5ccd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded / operator to compute the scalar division of a point (point/scalar)  <a href="classgeometry_1_1Point.html#ada07bcb3bb7e0df395d1ba351cf5ccd2">More...</a><br /></td></tr>
 <tr class="separator:ada07bcb3bb7e0df395d1ba351cf5ccd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a13fe805835867ead10750760660248"><td class="memTemplParams" colspan="2"><a id="a7a13fe805835867ead10750760660248"></a>
-template&lt;typename... OtherArgs&gt; </td></tr>
-<tr class="memitem:a7a13fe805835867ead10750760660248"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memitem:a7a13fe805835867ead10750760660248"><td class="memTemplParams" colspan="2">template&lt;typename... OtherArgs&gt; </td></tr>
+<tr class="memitem:a7a13fe805835867ead10750760660248"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a7a13fe805835867ead10750760660248">operator+</a> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a7a13fe805835867ead10750760660248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded + operator to compute the sum of two points.  <a href="classgeometry_1_1Point.html#a7a13fe805835867ead10750760660248">More...</a><br /></td></tr>
 <tr class="separator:a7a13fe805835867ead10750760660248"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a329b32fbcedc45d196fc74c4dc948509"><td class="memTemplParams" colspan="2"><a id="a329b32fbcedc45d196fc74c4dc948509"></a>
-template&lt;typename... OtherArgs&gt; </td></tr>
-<tr class="memitem:a329b32fbcedc45d196fc74c4dc948509"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator-</b> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memitem:a329b32fbcedc45d196fc74c4dc948509"><td class="memTemplParams" colspan="2">template&lt;typename... OtherArgs&gt; </td></tr>
+<tr class="memitem:a329b32fbcedc45d196fc74c4dc948509"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a329b32fbcedc45d196fc74c4dc948509">operator-</a> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a329b32fbcedc45d196fc74c4dc948509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded - operator to compute the difference of two points.  <a href="classgeometry_1_1Point.html#a329b32fbcedc45d196fc74c4dc948509">More...</a><br /></td></tr>
 <tr class="separator:a329b32fbcedc45d196fc74c4dc948509"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f25bc6dae714ce8c9384acc2cd7ced4"><td class="memTemplParams" colspan="2"><a id="a7f25bc6dae714ce8c9384acc2cd7ced4"></a>
-template&lt;typename... OtherArgs&gt; </td></tr>
-<tr class="memitem:a7f25bc6dae714ce8c9384acc2cd7ced4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>piecewiseMultiply</b> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memitem:a7f25bc6dae714ce8c9384acc2cd7ced4"><td class="memTemplParams" colspan="2">template&lt;typename... OtherArgs&gt; </td></tr>
+<tr class="memitem:a7f25bc6dae714ce8c9384acc2cd7ced4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a7f25bc6dae714ce8c9384acc2cd7ced4">piecewiseMultiply</a> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a7f25bc6dae714ce8c9384acc2cd7ced4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Piecewise multiplication of two points.  <a href="classgeometry_1_1Point.html#a7f25bc6dae714ce8c9384acc2cd7ced4">More...</a><br /></td></tr>
 <tr class="separator:a7f25bc6dae714ce8c9384acc2cd7ced4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33b2262b6989886d93a7ae67ae3b2f04"><td class="memTemplParams" colspan="2"><a id="a33b2262b6989886d93a7ae67ae3b2f04"></a>
-template&lt;typename... OtherArgs, size_t... Indices, typename Operation &gt; </td></tr>
-<tr class="memitem:a33b2262b6989886d93a7ae67ae3b2f04"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>binaryOperation</b> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other, Operation operation, std::index_sequence&lt; Indices... &gt;) const</td></tr>
+<tr class="memitem:a33b2262b6989886d93a7ae67ae3b2f04"><td class="memTemplParams" colspan="2">template&lt;typename... OtherArgs, size_t... Indices, typename Operation &gt; </td></tr>
+<tr class="memitem:a33b2262b6989886d93a7ae67ae3b2f04"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a33b2262b6989886d93a7ae67ae3b2f04">binaryOperation</a> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other, Operation operation, std::index_sequence&lt; Indices... &gt;) const</td></tr>
+<tr class="memdesc:a33b2262b6989886d93a7ae67ae3b2f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binary operation in class.  <a href="classgeometry_1_1Point.html#a33b2262b6989886d93a7ae67ae3b2f04">More...</a><br /></td></tr>
 <tr class="separator:a33b2262b6989886d93a7ae67ae3b2f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a1389f6f0f9c379fffb2690094d4287"><td class="memTemplParams" colspan="2"><a id="a9a1389f6f0f9c379fffb2690094d4287"></a>
-template&lt;typename... OtherArgs&gt; </td></tr>
-<tr class="memitem:a9a1389f6f0f9c379fffb2690094d4287"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>dot</b> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memitem:a9a1389f6f0f9c379fffb2690094d4287"><td class="memTemplParams" colspan="2">template&lt;typename... OtherArgs&gt; </td></tr>
+<tr class="memitem:a9a1389f6f0f9c379fffb2690094d4287"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a9a1389f6f0f9c379fffb2690094d4287">dot</a> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a9a1389f6f0f9c379fffb2690094d4287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dot product in the form point1.dot(point2)  <a href="classgeometry_1_1Point.html#a9a1389f6f0f9c379fffb2690094d4287">More...</a><br /></td></tr>
 <tr class="separator:a9a1389f6f0f9c379fffb2690094d4287"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4069148c9fd7837802dfd579d53b8ce7"><td class="memTemplParams" colspan="2"><a id="a4069148c9fd7837802dfd579d53b8ce7"></a>
-template&lt;typename... OtherArgs&gt; </td></tr>
-<tr class="memitem:a4069148c9fd7837802dfd579d53b8ce7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>cross</b> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memitem:a4069148c9fd7837802dfd579d53b8ce7"><td class="memTemplParams" colspan="2">template&lt;typename... OtherArgs&gt; </td></tr>
+<tr class="memitem:a4069148c9fd7837802dfd579d53b8ce7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a4069148c9fd7837802dfd579d53b8ce7">cross</a> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a4069148c9fd7837802dfd579d53b8ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-class cross product calculation (3D points only) in the form point1.cross(point2)  <a href="classgeometry_1_1Point.html#a4069148c9fd7837802dfd579d53b8ce7">More...</a><br /></td></tr>
 <tr class="separator:a4069148c9fd7837802dfd579d53b8ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ba38755b3ecd8971c9ccf0213424191"><td class="memTemplParams" colspan="2"><a id="a8ba38755b3ecd8971c9ccf0213424191"></a>
-template&lt;typename... OtherArgs&gt; </td></tr>
-<tr class="memitem:a8ba38755b3ecd8971c9ccf0213424191"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>distance</b> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memitem:a8ba38755b3ecd8971c9ccf0213424191"><td class="memTemplParams" colspan="2">template&lt;typename... OtherArgs&gt; </td></tr>
+<tr class="memitem:a8ba38755b3ecd8971c9ccf0213424191"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a8ba38755b3ecd8971c9ccf0213424191">distance</a> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a8ba38755b3ecd8971c9ccf0213424191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Euclidean distance.  <a href="classgeometry_1_1Point.html#a8ba38755b3ecd8971c9ccf0213424191">More...</a><br /></td></tr>
 <tr class="separator:a8ba38755b3ecd8971c9ccf0213424191"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37ef86043e41af79e6e804cb0a54d9ac"><td class="memItemLeft" align="right" valign="top"><a id="a37ef86043e41af79e6e804cb0a54d9ac"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>norm</b> () const</td></tr>
+<tr class="memitem:a37ef86043e41af79e6e804cb0a54d9ac"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a37ef86043e41af79e6e804cb0a54d9ac">norm</a> () const</td></tr>
+<tr class="memdesc:a37ef86043e41af79e6e804cb0a54d9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the norm.  <a href="classgeometry_1_1Point.html#a37ef86043e41af79e6e804cb0a54d9ac">More...</a><br /></td></tr>
 <tr class="separator:a37ef86043e41af79e6e804cb0a54d9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8787291025bef9a73ba7b9ac468a22d0"><td class="memItemLeft" align="right" valign="top"><a id="a8787291025bef9a73ba7b9ac468a22d0"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>normalize</b> () const</td></tr>
+<tr class="memitem:a8787291025bef9a73ba7b9ac468a22d0"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a8787291025bef9a73ba7b9ac468a22d0">normalize</a> () const</td></tr>
+<tr class="memdesc:a8787291025bef9a73ba7b9ac468a22d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize coordinates.  <a href="classgeometry_1_1Point.html#a8787291025bef9a73ba7b9ac468a22d0">More...</a><br /></td></tr>
 <tr class="separator:a8787291025bef9a73ba7b9ac468a22d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa17a863152777a30594b81197ae98535"><td class="memItemLeft" align="right" valign="top"><a id="aa17a863152777a30594b81197ae98535"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; Args... &gt; &amp;other) const</td></tr>
+<tr class="memitem:aa17a863152777a30594b81197ae98535"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#aa17a863152777a30594b81197ae98535">operator&lt;</a> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; Args... &gt; &amp;other) const</td></tr>
+<tr class="memdesc:aa17a863152777a30594b81197ae98535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the comparison function based on edge Ids.  <a href="classgeometry_1_1Point.html#aa17a863152777a30594b81197ae98535">More...</a><br /></td></tr>
 <tr class="separator:aa17a863152777a30594b81197ae98535"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed21364b59fce7fca41001aa22db4694"><td class="memTemplParams" colspan="2"><a id="aed21364b59fce7fca41001aa22db4694"></a>
-template&lt;typename... OtherArgs&gt; </td></tr>
-<tr class="memitem:aed21364b59fce7fca41001aa22db4694"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memitem:aed21364b59fce7fca41001aa22db4694"><td class="memTemplParams" colspan="2">template&lt;typename... OtherArgs&gt; </td></tr>
+<tr class="memitem:aed21364b59fce7fca41001aa22db4694"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#aed21364b59fce7fca41001aa22db4694">operator==</a> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="memdesc:aed21364b59fce7fca41001aa22db4694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom definition of operator== for <a class="el" href="classgeometry_1_1Point.html">Point</a>.  <a href="classgeometry_1_1Point.html#aed21364b59fce7fca41001aa22db4694">More...</a><br /></td></tr>
 <tr class="separator:aed21364b59fce7fca41001aa22db4694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a35a79dcb8d24e2569ec7b7b27629fe"><td class="memTemplParams" colspan="2"><a id="a0a35a79dcb8d24e2569ec7b7b27629fe"></a>
+template&lt;typename... OtherArgs&gt; </td></tr>
+<tr class="memitem:a0a35a79dcb8d24e2569ec7b7b27629fe"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;other) const</td></tr>
+<tr class="separator:a0a35a79dcb8d24e2569ec7b7b27629fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ae214bb96b7d9dc9064120d57679f57c7"><td class="memItemLeft" align="right" valign="top"><a id="ae214bb96b7d9dc9064120d57679f57c7"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const real &amp;scalar, const <a class="el" href="classgeometry_1_1Point.html">Point</a> &amp;point)</td></tr>
+<tr class="memitem:ae214bb96b7d9dc9064120d57679f57c7"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#ae214bb96b7d9dc9064120d57679f57c7">operator*</a> (const real &amp;scalar, const <a class="el" href="classgeometry_1_1Point.html">Point</a> &amp;point)</td></tr>
+<tr class="memdesc:ae214bb96b7d9dc9064120d57679f57c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded * operator to support scalar * point multiplication.  <a href="classgeometry_1_1Point.html#ae214bb96b7d9dc9064120d57679f57c7">More...</a><br /></td></tr>
 <tr class="separator:ae214bb96b7d9dc9064120d57679f57c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e56ea203baff1a44ba69b79ff28bc4e"><td class="memItemLeft" align="right" valign="top"><a id="a3e56ea203baff1a44ba69b79ff28bc4e"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; Args... &gt; &amp;point)</td></tr>
+<tr class="memitem:a3e56ea203baff1a44ba69b79ff28bc4e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgeometry_1_1Point.html#a3e56ea203baff1a44ba69b79ff28bc4e">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; Args... &gt; &amp;point)</td></tr>
+<tr class="memdesc:a3e56ea203baff1a44ba69b79ff28bc4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output stream operator to stream coordinates.  <a href="classgeometry_1_1Point.html#a3e56ea203baff1a44ba69b79ff28bc4e">More...</a><br /></td></tr>
 <tr class="separator:a3e56ea203baff1a44ba69b79ff28bc4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -196,8 +204,848 @@ template&lt;typename... Args&gt; </div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a33b2262b6989886d93a7ae67ae3b2f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b2262b6989886d93a7ae67ae3b2f04">&#9670;&nbsp;</a></span>binaryOperation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename... OtherArgs, size_t... Indices, typename Operation &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::binaryOperation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Operation&#160;</td>
+          <td class="paramname"><em>operation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::index_sequence&lt; Indices... &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Binary operation in class. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OtherArgs</td><td></td></tr>
+    <tr><td class="paramname">Indices</td><td></td></tr>
+    <tr><td class="paramname">Operation</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other point </td></tr>
+    <tr><td class="paramname">operation</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="a4069148c9fd7837802dfd579d53b8ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4069148c9fd7837802dfd579d53b8ce7">&#9670;&nbsp;</a></span>cross()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename... OtherArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::cross </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>In-class cross product calculation (3D points only) in the form point1.cross(point2) </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OtherArgs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="a8ba38755b3ecd8971c9ccf0213424191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ba38755b3ecd8971c9ccf0213424191">&#9670;&nbsp;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename... OtherArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::distance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Euclidean distance. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OtherArgs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="a9a1389f6f0f9c379fffb2690094d4287"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a1389f6f0f9c379fffb2690094d4287">&#9670;&nbsp;</a></span>dot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename... OtherArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::dot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dot product in the form point1.dot(point2) </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OtherArgs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="ab7b87e8fc20551b1d0cdd55ab80b2bda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b87e8fc20551b1d0cdd55ab80b2bda">&#9670;&nbsp;</a></span>getCoordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::array&lt;real, sizeof...(Args)&gt; <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::getCoordinates </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Coordinates object. </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::array&lt;real, sizeof...(Args)&gt; </dd></dl>
+
+</div>
+</div>
+<a id="a031426b882ad32a53dace5610c219cc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a031426b882ad32a53dace5610c219cc7">&#9670;&nbsp;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const IndexType&amp; <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Id object. </p>
+<dl class="section return"><dt>Returns</dt><dd>const IndexType&amp; </dd></dl>
+
+</div>
+</div>
+<a id="a1670281c92b8c01eafc14dc8c64401ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1670281c92b8c01eafc14dc8c64401ac">&#9670;&nbsp;</a></span>multiplyByScalar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;size_t... Indices&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::multiplyByScalar </td>
+          <td>(</td>
+          <td class="paramtype">real&#160;</td>
+          <td class="paramname"><em>scalar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::index_sequence&lt; Indices... &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>scalar multiplication of a point </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Indices</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scalar</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="a37ef86043e41af79e6e804cb0a54d9ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37ef86043e41af79e6e804cb0a54d9ac">&#9670;&nbsp;</a></span>norm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::norm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the norm. </p>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="a8787291025bef9a73ba7b9ac468a22d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8787291025bef9a73ba7b9ac468a22d0">&#9670;&nbsp;</a></span>normalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::normalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Normalize coordinates. </p>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="a997af977ccccb43b4d9bc5b58a4556ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a997af977ccccb43b4d9bc5b58a4556ef">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const real &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overloaded * operator to compute the scalar multiplication of a point (point*scalar) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scalar</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="a7a13fe805835867ead10750760660248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a13fe805835867ead10750760660248">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename... OtherArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overloaded + operator to compute the sum of two points. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OtherArgs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="a329b32fbcedc45d196fc74c4dc948509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a329b32fbcedc45d196fc74c4dc948509">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename... OtherArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overloaded - operator to compute the difference of two points. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OtherArgs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="ada07bcb3bb7e0df395d1ba351cf5ccd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada07bcb3bb7e0df395d1ba351cf5ccd2">&#9670;&nbsp;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const real &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overloaded / operator to compute the scalar division of a point (point/scalar) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scalar</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="aa17a863152777a30594b81197ae98535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17a863152777a30594b81197ae98535">&#9670;&nbsp;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; Args... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define the comparison function based on edge Ids. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="aed21364b59fce7fca41001aa22db4694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed21364b59fce7fca41001aa22db4694">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename... OtherArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Custom definition of operator== for <a class="el" href="classgeometry_1_1Point.html">Point</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OtherArgs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a407f98d7d2d8bec1c1439a0f57c4120f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a407f98d7d2d8bec1c1439a0f57c4120f">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const real&amp; <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Access operator []. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>index i corresponding to coordinate i </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>const real&amp; coordinate i </dd></dl>
+
+</div>
+</div>
+<a id="a7f25bc6dae714ce8c9384acc2cd7ced4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f25bc6dae714ce8c9384acc2cd7ced4">&#9670;&nbsp;</a></span>piecewiseMultiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<div class="memtemplate">
+template&lt;typename... OtherArgs&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::piecewiseMultiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; OtherArgs... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Piecewise multiplication of two points. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OtherArgs</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>other point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="a1473578988cd179effe2d85d47a7662a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1473578988cd179effe2d85d47a7662a">&#9670;&nbsp;</a></span>setId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgeometry_1_1Point.html">geometry::Point</a>&lt; Args &gt;::setId </td>
+          <td>(</td>
+          <td class="paramtype">IndexType&#160;</td>
+          <td class="paramname"><em>_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Id object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_id</td><td>id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="ae214bb96b7d9dc9064120d57679f57c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae214bb96b7d9dc9064120d57679f57c7">&#9670;&nbsp;</a></span>operator*</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto operator* </td>
+          <td>(</td>
+          <td class="paramtype">const real &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; Args &gt; &amp;&#160;</td>
+          <td class="paramname"><em>point</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overloaded * operator to support scalar * point multiplication. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scalar</td><td></td></tr>
+    <tr><td class="paramname">point</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>auto </dd></dl>
+
+</div>
+</div>
+<a id="a3e56ea203baff1a44ba69b79ff28bc4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e56ea203baff1a44ba69b79ff28bc4e">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classgeometry_1_1Point.html">Point</a>&lt; Args... &gt; &amp;&#160;</td>
+          <td class="paramname"><em>point</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Output stream operator to stream coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td></td></tr>
+    <tr><td class="paramname">point</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::ostream&amp; </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Mesh/<a class="el" href="point_8hpp_source.html">point.hpp</a></li>
+<li>include/<a class="el" href="point_8hpp_source.html">point.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -3,47 +3,235 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classgeometry_1_1Edge_af1c7d1d35a2bcf44cee1f6f1fe95f86b}\label{classgeometry_1_1Edge_af1c7d1d35a2bcf44cee1f6f1fe95f86b}} 
-{\bfseries Edge} (const Point\+Type \&point1, const Point\+Type \&point2, bool \+\_\+flipped=false)
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Edge_a281b1eb5375483ff963e8c3ea0820efc}\label{classgeometry_1_1Edge_a281b1eb5375483ff963e8c3ea0820efc}} 
-void {\bfseries set\+Other\+Half\+Edge} (const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&other\+Edge)
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Edge_a40f7bcb64f184713b234889842736e99}\label{classgeometry_1_1Edge_a40f7bcb64f184713b234889842736e99}} 
-\mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \& {\bfseries get\+Other\+Half\+Edge} () const
-\item 
+\mbox{\hyperlink{classgeometry_1_1Edge_af1c7d1d35a2bcf44cee1f6f1fe95f86b}{Edge}} (const Point\+Type \&point1, const Point\+Type \&point2, bool \+\_\+flipped=false)
+\begin{DoxyCompactList}\small\item\em Constructor with two points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgeometry_1_1Edge_a281b1eb5375483ff963e8c3ea0820efc}{set\+Other\+Half\+Edge}} (const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&other\+Edge)
+\begin{DoxyCompactList}\small\item\em Setter method to set the other half-\/edge. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \& \mbox{\hyperlink{classgeometry_1_1Edge_a40f7bcb64f184713b234889842736e99}{get\+Other\+Half\+Edge}} () const
+\begin{DoxyCompactList}\small\item\em Getter method to get the other half-\/edge. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classgeometry_1_1Edge_acece96a0e74b14b9654aace6e3988fc4}\label{classgeometry_1_1Edge_acece96a0e74b14b9654aace6e3988fc4}} 
-void {\bfseries update} ()
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Edge_aa3b9a294c44cefb28c8f99c6925efebb}\label{classgeometry_1_1Edge_aa3b9a294c44cefb28c8f99c6925efebb}} 
-void {\bfseries set\+Id} (Index\+Type \+\_\+id)
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Edge_adb37272e097808f6843c94af84e4e29b}\label{classgeometry_1_1Edge_adb37272e097808f6843c94af84e4e29b}} 
-const Index\+Type \& {\bfseries get\+Id} () const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Edge_aee06c2bcf3037c9ab4d2416a48087ad8}\label{classgeometry_1_1Edge_aee06c2bcf3037c9ab4d2416a48087ad8}} 
-const real \& {\bfseries get\+Length} () const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Edge_aa4b432fc1fb547667395667af424b535}\label{classgeometry_1_1Edge_aa4b432fc1fb547667395667af424b535}} 
-const Point\+Type {\bfseries get\+Direction} () const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Edge_a88b796f377787434ddabc001f11be68d}\label{classgeometry_1_1Edge_a88b796f377787434ddabc001f11be68d}} 
-const Point\+Type \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (Index\+Type index) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Edge_a5809930ed76280c4944e994ebc754861}\label{classgeometry_1_1Edge_a5809930ed76280c4944e994ebc754861}} 
-bool {\bfseries operator$<$} (const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&other) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Edge_abf94838b1e75bfbd9025b631b27e40b4}\label{classgeometry_1_1Edge_abf94838b1e75bfbd9025b631b27e40b4}} 
-bool {\bfseries operator==} (const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&other) const
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classgeometry_1_1Edge_acece96a0e74b14b9654aace6e3988fc4}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the properties of the edge. When modifying one point, the edge autmatically sees the change as they are references. It is not the case for other data structures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgeometry_1_1Edge_aa3b9a294c44cefb28c8f99c6925efebb}{set\+Id}} (Index\+Type \+\_\+id)
+\begin{DoxyCompactList}\small\item\em Set id. \end{DoxyCompactList}\item 
+const Index\+Type \& \mbox{\hyperlink{classgeometry_1_1Edge_adb37272e097808f6843c94af84e4e29b}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Get id. \end{DoxyCompactList}\item 
+const real \& \mbox{\hyperlink{classgeometry_1_1Edge_aee06c2bcf3037c9ab4d2416a48087ad8}{get\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Get length. \end{DoxyCompactList}\item 
+const Point\+Type \mbox{\hyperlink{classgeometry_1_1Edge_aa4b432fc1fb547667395667af424b535}{get\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Get direction. \end{DoxyCompactList}\item 
+const Point\+Type \& \mbox{\hyperlink{classgeometry_1_1Edge_a88b796f377787434ddabc001f11be68d}{operator\mbox{[}$\,$\mbox{]}}} (Index\+Type index) const
+\begin{DoxyCompactList}\small\item\em Constant getter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgeometry_1_1Edge_a5809930ed76280c4944e994ebc754861}{operator$<$}} (const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Define the comparison function based on edge Ids. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgeometry_1_1Edge_abf94838b1e75bfbd9025b631b27e40b4}{operator==}} (const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Equality operator for edges. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
+std\+::ostream \& \mbox{\hyperlink{classgeometry_1_1Edge_a8c829db7e7730a98add12918a1393095}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&edge)
+\begin{DoxyCompactList}\small\item\em Stream output operator for the \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgeometry_1_1Edge_af1c7d1d35a2bcf44cee1f6f1fe95f86b}\label{classgeometry_1_1Edge_af1c7d1d35a2bcf44cee1f6f1fe95f86b}} 
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!Edge@{Edge}}
+\index{Edge@{Edge}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+\mbox{\hyperlink{classgeometry_1_1Edge}{geometry\+::\+Edge}}$<$ Point\+Type $>$\+::\mbox{\hyperlink{classgeometry_1_1Edge}{Edge}} (\begin{DoxyParamCaption}\item[{const Point\+Type \&}]{point1,  }\item[{const Point\+Type \&}]{point2,  }\item[{bool}]{\+\_\+flipped = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with two points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point1} & \\
+\hline
+{\em point2} & \\
+\hline
+{\em \+\_\+flipped} & if reading direction is flipped \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgeometry_1_1Edge_aa4b432fc1fb547667395667af424b535}\label{classgeometry_1_1Edge_aa4b432fc1fb547667395667af424b535}} 
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+const Point\+Type \mbox{\hyperlink{classgeometry_1_1Edge}{geometry\+::\+Edge}}$<$ Point\+Type $>$\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get direction. 
+
+\begin{DoxyReturn}{Returns}
+const Point\+Type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Edge_adb37272e097808f6843c94af84e4e29b}\label{classgeometry_1_1Edge_adb37272e097808f6843c94af84e4e29b}} 
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!getId@{getId}}
+\index{getId@{getId}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+const Index\+Type\& \mbox{\hyperlink{classgeometry_1_1Edge}{geometry\+::\+Edge}}$<$ Point\+Type $>$\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get id. 
+
+\begin{DoxyReturn}{Returns}
+const Index\+Type\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Edge_aee06c2bcf3037c9ab4d2416a48087ad8}\label{classgeometry_1_1Edge_aee06c2bcf3037c9ab4d2416a48087ad8}} 
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!getLength@{getLength}}
+\index{getLength@{getLength}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+const real\& \mbox{\hyperlink{classgeometry_1_1Edge}{geometry\+::\+Edge}}$<$ Point\+Type $>$\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get length. 
+
+\begin{DoxyReturn}{Returns}
+const real\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Edge_a40f7bcb64f184713b234889842736e99}\label{classgeometry_1_1Edge_a40f7bcb64f184713b234889842736e99}} 
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!getOtherHalfEdge@{getOtherHalfEdge}}
+\index{getOtherHalfEdge@{getOtherHalfEdge}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{getOtherHalfEdge()}{getOtherHalfEdge()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+\mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$Point\+Type$>$\& \mbox{\hyperlink{classgeometry_1_1Edge}{geometry\+::\+Edge}}$<$ Point\+Type $>$\+::get\+Other\+Half\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter method to get the other half-\/edge. 
+
+\begin{DoxyReturn}{Returns}
+Edge$<$\+Point\+Type$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Edge_a5809930ed76280c4944e994ebc754861}\label{classgeometry_1_1Edge_a5809930ed76280c4944e994ebc754861}} 
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+bool \mbox{\hyperlink{classgeometry_1_1Edge}{geometry\+::\+Edge}}$<$ Point\+Type $>$\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define the comparison function based on edge Ids. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Edge_abf94838b1e75bfbd9025b631b27e40b4}\label{classgeometry_1_1Edge_abf94838b1e75bfbd9025b631b27e40b4}} 
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+bool \mbox{\hyperlink{classgeometry_1_1Edge}{geometry\+::\+Edge}}$<$ Point\+Type $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equality operator for edges. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Edge_a88b796f377787434ddabc001f11be68d}\label{classgeometry_1_1Edge_a88b796f377787434ddabc001f11be68d}} 
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+const Point\+Type\& \mbox{\hyperlink{classgeometry_1_1Edge}{geometry\+::\+Edge}}$<$ Point\+Type $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{Index\+Type}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constant getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const Point\+Type\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Edge_aa3b9a294c44cefb28c8f99c6925efebb}\label{classgeometry_1_1Edge_aa3b9a294c44cefb28c8f99c6925efebb}} 
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!setId@{setId}}
+\index{setId@{setId}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+void \mbox{\hyperlink{classgeometry_1_1Edge}{geometry\+::\+Edge}}$<$ Point\+Type $>$\+::set\+Id (\begin{DoxyParamCaption}\item[{Index\+Type}]{\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classgeometry_1_1Edge_a281b1eb5375483ff963e8c3ea0820efc}\label{classgeometry_1_1Edge_a281b1eb5375483ff963e8c3ea0820efc}} 
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!setOtherHalfEdge@{setOtherHalfEdge}}
+\index{setOtherHalfEdge@{setOtherHalfEdge}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{setOtherHalfEdge()}{setOtherHalfEdge()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+void \mbox{\hyperlink{classgeometry_1_1Edge}{geometry\+::\+Edge}}$<$ Point\+Type $>$\+::set\+Other\+Half\+Edge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&}]{other\+Edge }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter method to set the other half-\/edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+Edge} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Friends And Related Function Documentation}
 \mbox{\Hypertarget{classgeometry_1_1Edge_a8c829db7e7730a98add12918a1393095}\label{classgeometry_1_1Edge_a8c829db7e7730a98add12918a1393095}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&edge)
-\end{DoxyCompactItemize}
+\index{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename Point\+Type $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}}$<$ Point\+Type $>$ \&}]{edge }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Stream output operator for the \mbox{\hyperlink{classgeometry_1_1Edge}{Edge}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+{\em edge} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Mesh/edge.\+hpp\end{DoxyCompactItemize}
+include/edge.\+hpp\end{DoxyCompactItemize}

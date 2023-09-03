@@ -1,7 +1,417 @@
-\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{1}
-\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{2}
-\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{2}
-\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!Point@{Point}|hyperpage}{3}
-\indexentry{Point@{Point}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{3}
-\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{3}
-\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{4}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{3}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!Edge@{Edge}|hyperpage}{4}
+\indexentry{Edge@{Edge}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{4}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!getDirection@{getDirection}|hyperpage}{4}
+\indexentry{getDirection@{getDirection}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{4}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!getId@{getId}|hyperpage}{4}
+\indexentry{getId@{getId}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{4}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!getLength@{getLength}|hyperpage}{4}
+\indexentry{getLength@{getLength}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{4}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!getOtherHalfEdge@{getOtherHalfEdge}|hyperpage}{5}
+\indexentry{getOtherHalfEdge@{getOtherHalfEdge}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{5}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!operator$<$@{operator$<$}|hyperpage}{5}
+\indexentry{operator$<$@{operator$<$}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{5}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!operator==@{operator==}|hyperpage}{5}
+\indexentry{operator==@{operator==}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{5}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{6}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{6}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!setId@{setId}|hyperpage}{6}
+\indexentry{setId@{setId}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{6}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!setOtherHalfEdge@{setOtherHalfEdge}|hyperpage}{6}
+\indexentry{setOtherHalfEdge@{setOtherHalfEdge}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{6}
+\indexentry{geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}!operator$<$$<$@{operator$<$$<$}|hyperpage}{7}
+\indexentry{operator$<$$<$@{operator$<$$<$}!geometry::Edge$<$ PointType $>$@{geometry::Edge$<$ PointType $>$}|hyperpage}{7}
+\indexentry{EdgeDof@{EdgeDof}|hyperpage}{7}
+\indexentry{FaceDof@{FaceDof}|hyperpage}{7}
+\indexentry{FaceDof@{FaceDof}!FaceDof@{FaceDof}|hyperpage}{7}
+\indexentry{FaceDof@{FaceDof}!FaceDof@{FaceDof}|hyperpage}{7}
+\indexentry{FaceDof@{FaceDof}!getId@{getId}|hyperpage}{8}
+\indexentry{getId@{getId}!FaceDof@{FaceDof}|hyperpage}{8}
+\indexentry{FaceDof@{FaceDof}!getMonomial@{getMonomial}|hyperpage}{8}
+\indexentry{getMonomial@{getMonomial}!FaceDof@{FaceDof}|hyperpage}{8}
+\indexentry{FaceDof@{FaceDof}!operator$<$$<$@{operator$<$$<$}|hyperpage}{8}
+\indexentry{operator$<$$<$@{operator$<$$<$}!FaceDof@{FaceDof}|hyperpage}{8}
+\indexentry{Gauss::GaussData@{Gauss::GaussData}|hyperpage}{9}
+\indexentry{GaussLobatto::GaussLobattoCache@{GaussLobatto::GaussLobattoCache}|hyperpage}{9}
+\indexentry{GaussLobatto::GaussLobattoCache@{GaussLobatto::GaussLobattoCache}!getCache@{getCache}|hyperpage}{9}
+\indexentry{getCache@{getCache}!GaussLobatto::GaussLobattoCache@{GaussLobatto::GaussLobattoCache}|hyperpage}{9}
+\indexentry{GaussLobatto::GaussLobattoCache@{GaussLobatto::GaussLobattoCache}!initialize@{initialize}|hyperpage}{9}
+\indexentry{initialize@{initialize}!GaussLobatto::GaussLobattoCache@{GaussLobatto::GaussLobattoCache}|hyperpage}{9}
+\indexentry{LinearTrinomialPower@{LinearTrinomialPower}|hyperpage}{10}
+\indexentry{LinearTrinomialPower@{LinearTrinomialPower}!LinearTrinomialPower@{LinearTrinomialPower}|hyperpage}{10}
+\indexentry{LinearTrinomialPower@{LinearTrinomialPower}!LinearTrinomialPower@{LinearTrinomialPower}|hyperpage}{10}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{11}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{11}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{11}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!EToLocalId@{EToLocalId}|hyperpage}{12}
+\indexentry{EToLocalId@{EToLocalId}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{12}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!FToLocalId@{FToLocalId}|hyperpage}{12}
+\indexentry{FToLocalId@{FToLocalId}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{12}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!getDof@{getDof}|hyperpage}{12}
+\indexentry{getDof@{getDof}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{12}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!getID@{getID}|hyperpage}{13}
+\indexentry{getID@{getID}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{13}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!getnumDofs@{getnumDofs}|hyperpage}{13}
+\indexentry{getnumDofs@{getnumDofs}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{13}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!getnumEdofs@{getnumEdofs}|hyperpage}{13}
+\indexentry{getnumEdofs@{getnumEdofs}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{13}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!getnumFdofs@{getnumFdofs}|hyperpage}{13}
+\indexentry{getnumFdofs@{getnumFdofs}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{13}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!getnumPdofs@{getnumPdofs}|hyperpage}{14}
+\indexentry{getnumPdofs@{getnumPdofs}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{14}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!getnumVdofs@{getnumVdofs}|hyperpage}{14}
+\indexentry{getnumVdofs@{getnumVdofs}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{14}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!PToLocalId@{PToLocalId}|hyperpage}{14}
+\indexentry{PToLocalId@{PToLocalId}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{14}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!VToLocalId@{VToLocalId}|hyperpage}{14}
+\indexentry{VToLocalId@{VToLocalId}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{14}
+\indexentry{LocalVirtualDofs@{LocalVirtualDofs}!operator$<$$<$@{operator$<$$<$}|hyperpage}{15}
+\indexentry{operator$<$$<$@{operator$<$$<$}!LocalVirtualDofs@{LocalVirtualDofs}|hyperpage}{15}
+\indexentry{LocalVirtualDofsCollection@{LocalVirtualDofsCollection}|hyperpage}{15}
+\indexentry{LocalVirtualDofsCollection@{LocalVirtualDofsCollection}!LocalVirtualDofsCollection@{LocalVirtualDofsCollection}|hyperpage}{15}
+\indexentry{LocalVirtualDofsCollection@{LocalVirtualDofsCollection}!LocalVirtualDofsCollection@{LocalVirtualDofsCollection}|hyperpage}{15}
+\indexentry{LocalVirtualDofsCollection@{LocalVirtualDofsCollection}!getLocalDofs@{getLocalDofs}|hyperpage}{16}
+\indexentry{getLocalDofs@{getLocalDofs}!LocalVirtualDofsCollection@{LocalVirtualDofsCollection}|hyperpage}{16}
+\indexentry{LocalVirtualDofsCollection@{LocalVirtualDofsCollection}!numLocalDofsCollection@{numLocalDofsCollection}|hyperpage}{16}
+\indexentry{numLocalDofsCollection@{numLocalDofsCollection}!LocalVirtualDofsCollection@{LocalVirtualDofsCollection}|hyperpage}{16}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{16}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!Mesh@{Mesh}|hyperpage}{17}
+\indexentry{Mesh@{Mesh}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{17}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getEdge@{getEdge}|hyperpage}{17}
+\indexentry{getEdge@{getEdge}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{17}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getEdges@{getEdges}|hyperpage}{18}
+\indexentry{getEdges@{getEdges}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{18}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getPolygon@{getPolygon}|hyperpage}{18}
+\indexentry{getPolygon@{getPolygon}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{18}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getPolygons@{getPolygons}|hyperpage}{18}
+\indexentry{getPolygons@{getPolygons}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{18}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getPolyhedra@{getPolyhedra}|hyperpage}{19}
+\indexentry{getPolyhedra@{getPolyhedra}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{19}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getPolyhedron@{getPolyhedron}|hyperpage}{19}
+\indexentry{getPolyhedron@{getPolyhedron}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{19}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getSize@{getSize}|hyperpage}{19}
+\indexentry{getSize@{getSize}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{19}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getVertex@{getVertex}|hyperpage}{19}
+\indexentry{getVertex@{getVertex}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{19}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getVertices@{getVertices}|hyperpage}{20}
+\indexentry{getVertices@{getVertices}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{20}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!numEdges@{numEdges}|hyperpage}{20}
+\indexentry{numEdges@{numEdges}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{20}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!numPolygons@{numPolygons}|hyperpage}{20}
+\indexentry{numPolygons@{numPolygons}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{20}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!numPolyhedra@{numPolyhedra}|hyperpage}{20}
+\indexentry{numPolyhedra@{numPolyhedra}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{20}
+\indexentry{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!numVertices@{numVertices}|hyperpage}{21}
+\indexentry{numVertices@{numVertices}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}|hyperpage}{21}
+\indexentry{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}|hyperpage}{21}
+\indexentry{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!Monomial@{Monomial}|hyperpage}{22}
+\indexentry{Monomial@{Monomial}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}|hyperpage}{22}
+\indexentry{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!derivative@{derivative}|hyperpage}{22}
+\indexentry{derivative@{derivative}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}|hyperpage}{22}
+\indexentry{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!evaluate@{evaluate}|hyperpage}{22}
+\indexentry{evaluate@{evaluate}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}|hyperpage}{22}
+\indexentry{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!getCoefficient@{getCoefficient}|hyperpage}{23}
+\indexentry{getCoefficient@{getCoefficient}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}|hyperpage}{23}
+\indexentry{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!getExponents@{getExponents}|hyperpage}{23}
+\indexentry{getExponents@{getExponents}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}|hyperpage}{23}
+\indexentry{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!getOrder@{getOrder}|hyperpage}{23}
+\indexentry{getOrder@{getOrder}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}|hyperpage}{23}
+\indexentry{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!operator$\ast$@{operator$\ast$}|hyperpage}{23}
+\indexentry{operator$\ast$@{operator$\ast$}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}|hyperpage}{23}
+\indexentry{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!setCoefficient@{setCoefficient}|hyperpage}{24}
+\indexentry{setCoefficient@{setCoefficient}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}|hyperpage}{24}
+\indexentry{Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}!operator$<$$<$@{operator$<$$<$}|hyperpage}{24}
+\indexentry{operator$<$$<$@{operator$<$$<$}!Monomial$<$ Dimension $>$@{Monomial$<$ Dimension $>$}|hyperpage}{24}
+\indexentry{Monomial2D@{Monomial2D}|hyperpage}{24}
+\indexentry{Monomial2D@{Monomial2D}!Monomial2D@{Monomial2D}|hyperpage}{25}
+\indexentry{Monomial2D@{Monomial2D}!Monomial2D@{Monomial2D}|hyperpage}{25}
+\indexentry{Monomial2D@{Monomial2D}!Monomial2D@{Monomial2D}|hyperpage}{26}
+\indexentry{Monomial2D@{Monomial2D}!Monomial2D@{Monomial2D}|hyperpage}{26}
+\indexentry{Monomial2D@{Monomial2D}!computeLaplaciansToMonomialsOrdered@{computeLaplaciansToMonomialsOrdered}|hyperpage}{26}
+\indexentry{computeLaplaciansToMonomialsOrdered@{computeLaplaciansToMonomialsOrdered}!Monomial2D@{Monomial2D}|hyperpage}{26}
+\indexentry{Monomial2D@{Monomial2D}!computeMonomialsUpToOrder@{computeMonomialsUpToOrder}|hyperpage}{26}
+\indexentry{computeMonomialsUpToOrder@{computeMonomialsUpToOrder}!Monomial2D@{Monomial2D}|hyperpage}{26}
+\indexentry{Monomial2D@{Monomial2D}!derivative@{derivative}|hyperpage}{26}
+\indexentry{derivative@{derivative}!Monomial2D@{Monomial2D}|hyperpage}{26}
+\indexentry{Monomial2D@{Monomial2D}!dx@{dx}|hyperpage}{27}
+\indexentry{dx@{dx}!Monomial2D@{Monomial2D}|hyperpage}{27}
+\indexentry{Monomial2D@{Monomial2D}!dy@{dy}|hyperpage}{27}
+\indexentry{dy@{dy}!Monomial2D@{Monomial2D}|hyperpage}{27}
+\indexentry{Monomial2D@{Monomial2D}!getLaplaciansToMonomialsOrdered@{getLaplaciansToMonomialsOrdered}|hyperpage}{27}
+\indexentry{getLaplaciansToMonomialsOrdered@{getLaplaciansToMonomialsOrdered}!Monomial2D@{Monomial2D}|hyperpage}{27}
+\indexentry{Monomial2D@{Monomial2D}!getMonomialsOrdered@{getMonomialsOrdered}|hyperpage}{27}
+\indexentry{getMonomialsOrdered@{getMonomialsOrdered}!Monomial2D@{Monomial2D}|hyperpage}{27}
+\indexentry{Monomial2D@{Monomial2D}!operator$\ast$@{operator$\ast$}|hyperpage}{28}
+\indexentry{operator$\ast$@{operator$\ast$}!Monomial2D@{Monomial2D}|hyperpage}{28}
+\indexentry{Monomial2D@{Monomial2D}!operator$<$$<$@{operator$<$$<$}|hyperpage}{28}
+\indexentry{operator$<$$<$@{operator$<$$<$}!Monomial2D@{Monomial2D}|hyperpage}{28}
+\indexentry{Monomial3D@{Monomial3D}|hyperpage}{29}
+\indexentry{Monomial3D@{Monomial3D}!Monomial3D@{Monomial3D}|hyperpage}{30}
+\indexentry{Monomial3D@{Monomial3D}!Monomial3D@{Monomial3D}|hyperpage}{30}
+\indexentry{Monomial3D@{Monomial3D}!Monomial3D@{Monomial3D}|hyperpage}{30}
+\indexentry{Monomial3D@{Monomial3D}!Monomial3D@{Monomial3D}|hyperpage}{30}
+\indexentry{Monomial3D@{Monomial3D}!computeGradientsToMonomialsOrdered@{computeGradientsToMonomialsOrdered}|hyperpage}{30}
+\indexentry{computeGradientsToMonomialsOrdered@{computeGradientsToMonomialsOrdered}!Monomial3D@{Monomial3D}|hyperpage}{30}
+\indexentry{Monomial3D@{Monomial3D}!computeLaplaciansToMonomialsOrdered@{computeLaplaciansToMonomialsOrdered}|hyperpage}{30}
+\indexentry{computeLaplaciansToMonomialsOrdered@{computeLaplaciansToMonomialsOrdered}!Monomial3D@{Monomial3D}|hyperpage}{30}
+\indexentry{Monomial3D@{Monomial3D}!computeMonomialsUpToOrder@{computeMonomialsUpToOrder}|hyperpage}{31}
+\indexentry{computeMonomialsUpToOrder@{computeMonomialsUpToOrder}!Monomial3D@{Monomial3D}|hyperpage}{31}
+\indexentry{Monomial3D@{Monomial3D}!derivative@{derivative}|hyperpage}{31}
+\indexentry{derivative@{derivative}!Monomial3D@{Monomial3D}|hyperpage}{31}
+\indexentry{Monomial3D@{Monomial3D}!dx@{dx}|hyperpage}{31}
+\indexentry{dx@{dx}!Monomial3D@{Monomial3D}|hyperpage}{31}
+\indexentry{Monomial3D@{Monomial3D}!dy@{dy}|hyperpage}{31}
+\indexentry{dy@{dy}!Monomial3D@{Monomial3D}|hyperpage}{31}
+\indexentry{Monomial3D@{Monomial3D}!dz@{dz}|hyperpage}{32}
+\indexentry{dz@{dz}!Monomial3D@{Monomial3D}|hyperpage}{32}
+\indexentry{Monomial3D@{Monomial3D}!getGradientsToMonomialsOrdered@{getGradientsToMonomialsOrdered}|hyperpage}{32}
+\indexentry{getGradientsToMonomialsOrdered@{getGradientsToMonomialsOrdered}!Monomial3D@{Monomial3D}|hyperpage}{32}
+\indexentry{Monomial3D@{Monomial3D}!getLaplaciansToMonomialsOrdered@{getLaplaciansToMonomialsOrdered}|hyperpage}{32}
+\indexentry{getLaplaciansToMonomialsOrdered@{getLaplaciansToMonomialsOrdered}!Monomial3D@{Monomial3D}|hyperpage}{32}
+\indexentry{Monomial3D@{Monomial3D}!getMonomialsOrdered@{getMonomialsOrdered}|hyperpage}{33}
+\indexentry{getMonomialsOrdered@{getMonomialsOrdered}!Monomial3D@{Monomial3D}|hyperpage}{33}
+\indexentry{Monomial3D@{Monomial3D}!operator$\ast$@{operator$\ast$}|hyperpage}{33}
+\indexentry{operator$\ast$@{operator$\ast$}!Monomial3D@{Monomial3D}|hyperpage}{33}
+\indexentry{Monomial3D@{Monomial3D}!operator$<$$<$@{operator$<$$<$}|hyperpage}{33}
+\indexentry{operator$<$$<$@{operator$<$$<$}!Monomial3D@{Monomial3D}|hyperpage}{33}
+\indexentry{IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}|hyperpage}{34}
+\indexentry{IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}!getCacheMonomial@{getCacheMonomial}|hyperpage}{34}
+\indexentry{getCacheMonomial@{getCacheMonomial}!IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}|hyperpage}{34}
+\indexentry{IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}!getCacheMonomials@{getCacheMonomials}|hyperpage}{34}
+\indexentry{getCacheMonomials@{getCacheMonomials}!IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}|hyperpage}{34}
+\indexentry{IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}!initialize@{initialize}|hyperpage}{36}
+\indexentry{initialize@{initialize}!IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}|hyperpage}{36}
+\indexentry{IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}!initialize@{initialize}|hyperpage}{36}
+\indexentry{initialize@{initialize}!IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}|hyperpage}{36}
+\indexentry{Parameters@{Parameters}|hyperpage}{36}
+\indexentry{Parameters@{Parameters}!Parameters@{Parameters}|hyperpage}{37}
+\indexentry{Parameters@{Parameters}!Parameters@{Parameters}|hyperpage}{37}
+\indexentry{Parameters@{Parameters}!getExactSolution@{getExactSolution}|hyperpage}{37}
+\indexentry{getExactSolution@{getExactSolution}!Parameters@{Parameters}|hyperpage}{37}
+\indexentry{Parameters@{Parameters}!getExactStrains@{getExactStrains}|hyperpage}{37}
+\indexentry{getExactStrains@{getExactStrains}!Parameters@{Parameters}|hyperpage}{37}
+\indexentry{Parameters@{Parameters}!getFirstLame@{getFirstLame}|hyperpage}{38}
+\indexentry{getFirstLame@{getFirstLame}!Parameters@{Parameters}|hyperpage}{38}
+\indexentry{Parameters@{Parameters}!getForcing@{getForcing}|hyperpage}{38}
+\indexentry{getForcing@{getForcing}!Parameters@{Parameters}|hyperpage}{38}
+\indexentry{Parameters@{Parameters}!getHomogeneousDirichletBC@{getHomogeneousDirichletBC}|hyperpage}{38}
+\indexentry{getHomogeneousDirichletBC@{getHomogeneousDirichletBC}!Parameters@{Parameters}|hyperpage}{38}
+\indexentry{Parameters@{Parameters}!getInitializeFaceIntegrals@{getInitializeFaceIntegrals}|hyperpage}{38}
+\indexentry{getInitializeFaceIntegrals@{getInitializeFaceIntegrals}!Parameters@{Parameters}|hyperpage}{38}
+\indexentry{Parameters@{Parameters}!getInputMesh@{getInputMesh}|hyperpage}{38}
+\indexentry{getInputMesh@{getInputMesh}!Parameters@{Parameters}|hyperpage}{38}
+\indexentry{Parameters@{Parameters}!getOrder@{getOrder}|hyperpage}{39}
+\indexentry{getOrder@{getOrder}!Parameters@{Parameters}|hyperpage}{39}
+\indexentry{Parameters@{Parameters}!getPoissonRatio@{getPoissonRatio}|hyperpage}{39}
+\indexentry{getPoissonRatio@{getPoissonRatio}!Parameters@{Parameters}|hyperpage}{39}
+\indexentry{Parameters@{Parameters}!getSecondLame@{getSecondLame}|hyperpage}{39}
+\indexentry{getSecondLame@{getSecondLame}!Parameters@{Parameters}|hyperpage}{39}
+\indexentry{Parameters@{Parameters}!getYoungsModulus@{getYoungsModulus}|hyperpage}{39}
+\indexentry{getYoungsModulus@{getYoungsModulus}!Parameters@{Parameters}|hyperpage}{39}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{40}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!Point@{Point}|hyperpage}{41}
+\indexentry{Point@{Point}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{41}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!binaryOperation@{binaryOperation}|hyperpage}{41}
+\indexentry{binaryOperation@{binaryOperation}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{41}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!cross@{cross}|hyperpage}{42}
+\indexentry{cross@{cross}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{42}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!distance@{distance}|hyperpage}{42}
+\indexentry{distance@{distance}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{42}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!dot@{dot}|hyperpage}{43}
+\indexentry{dot@{dot}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{43}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!getCoordinates@{getCoordinates}|hyperpage}{43}
+\indexentry{getCoordinates@{getCoordinates}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{43}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!getId@{getId}|hyperpage}{43}
+\indexentry{getId@{getId}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{43}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!multiplyByScalar@{multiplyByScalar}|hyperpage}{43}
+\indexentry{multiplyByScalar@{multiplyByScalar}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{43}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!norm@{norm}|hyperpage}{44}
+\indexentry{norm@{norm}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{44}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!normalize@{normalize}|hyperpage}{44}
+\indexentry{normalize@{normalize}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{44}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator$\ast$@{operator$\ast$}|hyperpage}{44}
+\indexentry{operator$\ast$@{operator$\ast$}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{44}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator+@{operator+}|hyperpage}{45}
+\indexentry{operator+@{operator+}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{45}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator-\/@{operator-\/}|hyperpage}{45}
+\indexentry{operator-\/@{operator-\/}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{45}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator/@{operator/}|hyperpage}{45}
+\indexentry{operator/@{operator/}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{45}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator$<$@{operator$<$}|hyperpage}{46}
+\indexentry{operator$<$@{operator$<$}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{46}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator==@{operator==}|hyperpage}{46}
+\indexentry{operator==@{operator==}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{46}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{47}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{47}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!piecewiseMultiply@{piecewiseMultiply}|hyperpage}{47}
+\indexentry{piecewiseMultiply@{piecewiseMultiply}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{47}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!setId@{setId}|hyperpage}{47}
+\indexentry{setId@{setId}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{47}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator$\ast$@{operator$\ast$}|hyperpage}{48}
+\indexentry{operator$\ast$@{operator$\ast$}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{48}
+\indexentry{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator$<$$<$@{operator$<$$<$}|hyperpage}{48}
+\indexentry{operator$<$$<$@{operator$<$$<$}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}|hyperpage}{48}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{49}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!Polygon@{Polygon}|hyperpage}{50}
+\indexentry{Polygon@{Polygon}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{50}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!addEdge@{addEdge}|hyperpage}{50}
+\indexentry{addEdge@{addEdge}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{50}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!areEdgesConsistent@{areEdgesConsistent}|hyperpage}{50}
+\indexentry{areEdgesConsistent@{areEdgesConsistent}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{50}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!get\_e\_x@{get\_e\_x}|hyperpage}{50}
+\indexentry{get\_e\_x@{get\_e\_x}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{50}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!get\_e\_y@{get\_e\_y}|hyperpage}{51}
+\indexentry{get\_e\_y@{get\_e\_y}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{51}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!getArea@{getArea}|hyperpage}{51}
+\indexentry{getArea@{getArea}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{51}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!getDiameter@{getDiameter}|hyperpage}{51}
+\indexentry{getDiameter@{getDiameter}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{51}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!getEdge@{getEdge}|hyperpage}{51}
+\indexentry{getEdge@{getEdge}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{51}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!getId@{getId}|hyperpage}{52}
+\indexentry{getId@{getId}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{52}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!getOtherPolygon@{getOtherPolygon}|hyperpage}{52}
+\indexentry{getOtherPolygon@{getOtherPolygon}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{52}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!getOutwardNormal@{getOutwardNormal}|hyperpage}{52}
+\indexentry{getOutwardNormal@{getOutwardNormal}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{52}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!getPositiveEdge@{getPositiveEdge}|hyperpage}{52}
+\indexentry{getPositiveEdge@{getPositiveEdge}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{52}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!numEdges@{numEdges}|hyperpage}{53}
+\indexentry{numEdges@{numEdges}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{53}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!operator$<$@{operator$<$}|hyperpage}{53}
+\indexentry{operator$<$@{operator$<$}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{53}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!operator==@{operator==}|hyperpage}{53}
+\indexentry{operator==@{operator==}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{53}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{54}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{54}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!setId@{setId}|hyperpage}{54}
+\indexentry{setId@{setId}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{54}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!setOrientation@{setOrientation}|hyperpage}{54}
+\indexentry{setOrientation@{setOrientation}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{54}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!setOtherPolygon@{setOtherPolygon}|hyperpage}{54}
+\indexentry{setOtherPolygon@{setOtherPolygon}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{54}
+\indexentry{geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}!operator$<$$<$@{operator$<$$<$}|hyperpage}{55}
+\indexentry{operator$<$$<$@{operator$<$$<$}!geometry::Polygon$<$ EdgeType $>$@{geometry::Polygon$<$ EdgeType $>$}|hyperpage}{55}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{55}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!Polyhedron@{Polyhedron}|hyperpage}{56}
+\indexentry{Polyhedron@{Polyhedron}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{56}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!addPolygon@{addPolygon}|hyperpage}{56}
+\indexentry{addPolygon@{addPolygon}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{56}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!getDiameter@{getDiameter}|hyperpage}{56}
+\indexentry{getDiameter@{getDiameter}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{56}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!getId@{getId}|hyperpage}{57}
+\indexentry{getId@{getId}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{57}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!getPolygon@{getPolygon}|hyperpage}{57}
+\indexentry{getPolygon@{getPolygon}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{57}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!numPolygons@{numPolygons}|hyperpage}{57}
+\indexentry{numPolygons@{numPolygons}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{57}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!operator\mbox{[}\mbox{]}@{operator[]}|hyperpage}{57}
+\indexentry{operator\mbox{[}\mbox{]}@{operator[]}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{57}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!setId@{setId}|hyperpage}{58}
+\indexentry{setId@{setId}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{58}
+\indexentry{geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}!operator$<$$<$@{operator$<$$<$}|hyperpage}{58}
+\indexentry{operator$<$$<$@{operator$<$$<$}!geometry::Polyhedron$<$ PolygonType $>$@{geometry::Polyhedron$<$ PolygonType $>$}|hyperpage}{58}
+\indexentry{PolyhedronDof@{PolyhedronDof}|hyperpage}{59}
+\indexentry{PolyhedronDof@{PolyhedronDof}!PolyhedronDof@{PolyhedronDof}|hyperpage}{59}
+\indexentry{PolyhedronDof@{PolyhedronDof}!PolyhedronDof@{PolyhedronDof}|hyperpage}{59}
+\indexentry{PolyhedronDof@{PolyhedronDof}!getId@{getId}|hyperpage}{59}
+\indexentry{getId@{getId}!PolyhedronDof@{PolyhedronDof}|hyperpage}{59}
+\indexentry{PolyhedronDof@{PolyhedronDof}!getMonomial@{getMonomial}|hyperpage}{59}
+\indexentry{getMonomial@{getMonomial}!PolyhedronDof@{PolyhedronDof}|hyperpage}{59}
+\indexentry{PolyhedronDof@{PolyhedronDof}!operator$<$$<$@{operator$<$$<$}|hyperpage}{60}
+\indexentry{operator$<$$<$@{operator$<$$<$}!PolyhedronDof@{PolyhedronDof}|hyperpage}{60}
+\indexentry{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}|hyperpage}{60}
+\indexentry{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!Polynomial@{Polynomial}|hyperpage}{61}
+\indexentry{Polynomial@{Polynomial}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}|hyperpage}{61}
+\indexentry{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!addMonomial@{addMonomial}|hyperpage}{61}
+\indexentry{addMonomial@{addMonomial}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}|hyperpage}{61}
+\indexentry{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!getOrder@{getOrder}|hyperpage}{61}
+\indexentry{getOrder@{getOrder}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}|hyperpage}{61}
+\indexentry{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!getPolynomial@{getPolynomial}|hyperpage}{61}
+\indexentry{getPolynomial@{getPolynomial}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}|hyperpage}{61}
+\indexentry{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!operator$\ast$@{operator$\ast$}|hyperpage}{62}
+\indexentry{operator$\ast$@{operator$\ast$}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}|hyperpage}{62}
+\indexentry{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!operator$\ast$@{operator$\ast$}|hyperpage}{62}
+\indexentry{operator$\ast$@{operator$\ast$}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}|hyperpage}{62}
+\indexentry{Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}!size@{size}|hyperpage}{62}
+\indexentry{size@{size}!Polynomial$<$ Dimension $>$@{Polynomial$<$ Dimension $>$}|hyperpage}{62}
+\indexentry{Problem@{Problem}|hyperpage}{63}
+\indexentry{Solver@{Solver}|hyperpage}{63}
+\indexentry{Solver@{Solver}!Solver@{Solver}|hyperpage}{64}
+\indexentry{Solver@{Solver}!Solver@{Solver}|hyperpage}{64}
+\indexentry{Solver@{Solver}!getRightHandSide@{getRightHandSide}|hyperpage}{64}
+\indexentry{getRightHandSide@{getRightHandSide}!Solver@{Solver}|hyperpage}{64}
+\indexentry{Solver@{Solver}!getSolutionDisplacements@{getSolutionDisplacements}|hyperpage}{64}
+\indexentry{getSolutionDisplacements@{getSolutionDisplacements}!Solver@{Solver}|hyperpage}{64}
+\indexentry{Solver@{Solver}!getSolutionDisplacementsEig@{getSolutionDisplacementsEig}|hyperpage}{64}
+\indexentry{getSolutionDisplacementsEig@{getSolutionDisplacementsEig}!Solver@{Solver}|hyperpage}{64}
+\indexentry{SolverVEM@{SolverVEM}|hyperpage}{65}
+\indexentry{SolverVEM@{SolverVEM}!SolverVEM@{SolverVEM}|hyperpage}{65}
+\indexentry{SolverVEM@{SolverVEM}!SolverVEM@{SolverVEM}|hyperpage}{65}
+\indexentry{SolverVEM@{SolverVEM}!computeStrainError@{computeStrainError}|hyperpage}{65}
+\indexentry{computeStrainError@{computeStrainError}!SolverVEM@{SolverVEM}|hyperpage}{65}
+\indexentry{SolverVEM@{SolverVEM}!enforceHomogeneousDirichletBC@{enforceHomogeneousDirichletBC}|hyperpage}{66}
+\indexentry{enforceHomogeneousDirichletBC@{enforceHomogeneousDirichletBC}!SolverVEM@{SolverVEM}|hyperpage}{66}
+\indexentry{VertexDof@{VertexDof}|hyperpage}{66}
+\indexentry{VertexDof@{VertexDof}!VertexDof@{VertexDof}|hyperpage}{67}
+\indexentry{VertexDof@{VertexDof}!VertexDof@{VertexDof}|hyperpage}{67}
+\indexentry{VertexDof@{VertexDof}!getId@{getId}|hyperpage}{67}
+\indexentry{getId@{getId}!VertexDof@{VertexDof}|hyperpage}{67}
+\indexentry{VertexDof@{VertexDof}!getVertex@{getVertex}|hyperpage}{67}
+\indexentry{getVertex@{getVertex}!VertexDof@{VertexDof}|hyperpage}{67}
+\indexentry{VertexDof@{VertexDof}!operator$<$$<$@{operator$<$$<$}|hyperpage}{67}
+\indexentry{operator$<$$<$@{operator$<$$<$}!VertexDof@{VertexDof}|hyperpage}{67}
+\indexentry{VirtualDof@{VirtualDof}|hyperpage}{68}
+\indexentry{VirtualDof@{VirtualDof}!getId@{getId}|hyperpage}{68}
+\indexentry{getId@{getId}!VirtualDof@{VirtualDof}|hyperpage}{68}
+\indexentry{VirtualDof@{VirtualDof}!operator$<$$<$@{operator$<$$<$}|hyperpage}{69}
+\indexentry{operator$<$$<$@{operator$<$$<$}!VirtualDof@{VirtualDof}|hyperpage}{69}
+\indexentry{VirtualDof@{VirtualDof}!operator$<$$<$@{operator$<$$<$}|hyperpage}{69}
+\indexentry{operator$<$$<$@{operator$<$$<$}!VirtualDof@{VirtualDof}|hyperpage}{69}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{70}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{70}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{70}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!getDof@{getDof}|hyperpage}{71}
+\indexentry{getDof@{getDof}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{71}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!getDof@{getDof}|hyperpage}{71}
+\indexentry{getDof@{getDof}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{71}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!getnumDofs@{getnumDofs}|hyperpage}{71}
+\indexentry{getnumDofs@{getnumDofs}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{71}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!getnumEdofs@{getnumEdofs}|hyperpage}{72}
+\indexentry{getnumEdofs@{getnumEdofs}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{72}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!getnumFdofs@{getnumFdofs}|hyperpage}{72}
+\indexentry{getnumFdofs@{getnumFdofs}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{72}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!getnumPdofs@{getnumPdofs}|hyperpage}{72}
+\indexentry{getnumPdofs@{getnumPdofs}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{72}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!getnumVdofs@{getnumVdofs}|hyperpage}{72}
+\indexentry{getnumVdofs@{getnumVdofs}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{72}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!getOrder@{getOrder}|hyperpage}{72}
+\indexentry{getOrder@{getOrder}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{72}
+\indexentry{VirtualDofsCollection@{VirtualDofsCollection}!operator$<$$<$@{operator$<$$<$}|hyperpage}{73}
+\indexentry{operator$<$$<$@{operator$<$$<$}!VirtualDofsCollection@{VirtualDofsCollection}|hyperpage}{73}
+\indexentry{VirtualFaceProjections@{VirtualFaceProjections}|hyperpage}{73}
+\indexentry{VirtualFaceProjections@{VirtualFaceProjections}!VirtualFaceProjections@{VirtualFaceProjections}|hyperpage}{73}
+\indexentry{VirtualFaceProjections@{VirtualFaceProjections}!VirtualFaceProjections@{VirtualFaceProjections}|hyperpage}{73}
+\indexentry{VirtualFaceProjections@{VirtualFaceProjections}!computeFaceProjection@{computeFaceProjection}|hyperpage}{74}
+\indexentry{computeFaceProjection@{computeFaceProjection}!VirtualFaceProjections@{VirtualFaceProjections}|hyperpage}{74}
+\indexentry{VirtualFaceProjections@{VirtualFaceProjections}!getFaceProjection@{getFaceProjection}|hyperpage}{74}
+\indexentry{getFaceProjection@{getFaceProjection}!VirtualFaceProjections@{VirtualFaceProjections}|hyperpage}{74}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{75}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{75}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{75}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{76}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{76}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!computePolyhedronProjections@{computePolyhedronProjections}|hyperpage}{76}
+\indexentry{computePolyhedronProjections@{computePolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{76}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getDeformationRBMMatrices@{getDeformationRBMMatrices}|hyperpage}{77}
+\indexentry{getDeformationRBMMatrices@{getDeformationRBMMatrices}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{77}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getElasticMatrices@{getElasticMatrices}|hyperpage}{77}
+\indexentry{getElasticMatrices@{getElasticMatrices}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{77}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getforcingProjections@{getforcingProjections}|hyperpage}{77}
+\indexentry{getforcingProjections@{getforcingProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{77}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getInverseMatricesG@{getInverseMatricesG}|hyperpage}{77}
+\indexentry{getInverseMatricesG@{getInverseMatricesG}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{77}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getOrder@{getOrder}|hyperpage}{78}
+\indexentry{getOrder@{getOrder}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{78}
+\indexentry{VirtualPolyhedronProjections@{VirtualPolyhedronProjections}!getPolyhedronProjections@{getPolyhedronProjections}|hyperpage}{78}
+\indexentry{getPolyhedronProjections@{getPolyhedronProjections}!VirtualPolyhedronProjections@{VirtualPolyhedronProjections}|hyperpage}{78}

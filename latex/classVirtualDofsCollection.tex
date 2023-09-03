@@ -1,0 +1,209 @@
+\hypertarget{classVirtualDofsCollection}{}\doxysubsection{Virtual\+Dofs\+Collection Class Reference}
+\label{classVirtualDofsCollection}\index{VirtualDofsCollection@{VirtualDofsCollection}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVirtualDofsCollection_ac3dc24ab03a19e4ba959f69c5e80a00a}\label{classVirtualDofsCollection_ac3dc24ab03a19e4ba959f69c5e80a00a}} 
+virtual \mbox{\hyperlink{classVirtualDofsCollection_ac3dc24ab03a19e4ba959f69c5e80a00a}{$\sim$\+Virtual\+Dofs\+Collection}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual default destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVirtualDofsCollection_aa49b71503f6092dc629f398be73cdfce}{Virtual\+Dofs\+Collection}} (const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&mesh, unsigned int order\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor to create Virtual\+Dofs from a \mbox{\hyperlink{classMesh}{Mesh}} and order. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classVirtualDofsCollection_a1dfd1652ee247fe0142db7d7e0e53b0e}{getnum\+Vdofs}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of vertex-\/type dofs. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classVirtualDofsCollection_ae32c9872dadfef137bcf0b11d0c8e09c}{getnum\+Edofs}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of edge-\/type dofs. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classVirtualDofsCollection_ae744d264883d18ec9b98620f43bbdcb2}{getnum\+Fdofs}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of face-\/type dofs. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classVirtualDofsCollection_ae2968474fca93392c9f73406e083b810}{getnum\+Pdofs}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of polyhedron-\/type dofs. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classVirtualDofsCollection_a6abd9bb3002c98adf059a22d5bd29263}{getnum\+Dofs}} () const
+\begin{DoxyCompactList}\small\item\em Get the total number of dofs. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Dof\+Type $>$ }\\std\+::shared\+\_\+ptr$<$ Dof\+Type $>$ \mbox{\hyperlink{classVirtualDofsCollection_a946829e09618259c73634f7ec4d9f10d}{get\+Dof}} (std\+::size\+\_\+t id) const
+\begin{DoxyCompactList}\small\item\em Method to get the corresponding specialized dof to a given id. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVirtualDof}{Virtual\+Dof}} $>$ \mbox{\hyperlink{classVirtualDofsCollection_a109c39fb423d45897b31e95405ae4862}{get\+Dof}} (std\+::size\+\_\+t id) const
+\begin{DoxyCompactList}\small\item\em Method to get the corresponding dof to a given id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVirtualDofsCollection_a99f076adeacb78efa07b486763750286}\label{classVirtualDofsCollection_a99f076adeacb78efa07b486763750286}} 
+void \mbox{\hyperlink{classVirtualDofsCollection_a99f076adeacb78efa07b486763750286}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \mbox{\hyperlink{classVirtualDofsCollection_add12318877e816a9fd2eeca7743a7b15}{get\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Get the order of the virtual dofs collection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classVirtualDofsCollection_ab6fa50a4502eeeb17700ed6468684f95}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&dofs\+Collection)
+\begin{DoxyCompactList}\small\item\em Output stream operator for \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVirtualDofsCollection_aa49b71503f6092dc629f398be73cdfce}\label{classVirtualDofsCollection_aa49b71503f6092dc629f398be73cdfce}} 
+\index{VirtualDofsCollection@{VirtualDofsCollection}!VirtualDofsCollection@{VirtualDofsCollection}}
+\index{VirtualDofsCollection@{VirtualDofsCollection}!VirtualDofsCollection@{VirtualDofsCollection}}
+\doxyparagraph{\texorpdfstring{VirtualDofsCollection()}{VirtualDofsCollection()}}
+{\footnotesize\ttfamily Virtual\+Dofs\+Collection\+::\+Virtual\+Dofs\+Collection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&}]{mesh,  }\item[{unsigned int}]{order\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructor to create Virtual\+Dofs from a \mbox{\hyperlink{classMesh}{Mesh}} and order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+{\em order\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVirtualDofsCollection_a946829e09618259c73634f7ec4d9f10d}\label{classVirtualDofsCollection_a946829e09618259c73634f7ec4d9f10d}} 
+\index{VirtualDofsCollection@{VirtualDofsCollection}!getDof@{getDof}}
+\index{getDof@{getDof}!VirtualDofsCollection@{VirtualDofsCollection}}
+\doxyparagraph{\texorpdfstring{getDof()}{getDof()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Dof\+Type $>$ \\
+std\+::shared\+\_\+ptr$<$Dof\+Type$>$ Virtual\+Dofs\+Collection\+::get\+Dof (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to get the corresponding specialized dof to a given id. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Dof\+Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Dof\+Type$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualDofsCollection_a109c39fb423d45897b31e95405ae4862}\label{classVirtualDofsCollection_a109c39fb423d45897b31e95405ae4862}} 
+\index{VirtualDofsCollection@{VirtualDofsCollection}!getDof@{getDof}}
+\index{getDof@{getDof}!VirtualDofsCollection@{VirtualDofsCollection}}
+\doxyparagraph{\texorpdfstring{getDof()}{getDof()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classVirtualDof}{Virtual\+Dof}} $>$ Virtual\+Dofs\+Collection\+::get\+Dof (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Method to get the corresponding dof to a given id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Virtual\+Dof$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualDofsCollection_a6abd9bb3002c98adf059a22d5bd29263}\label{classVirtualDofsCollection_a6abd9bb3002c98adf059a22d5bd29263}} 
+\index{VirtualDofsCollection@{VirtualDofsCollection}!getnumDofs@{getnumDofs}}
+\index{getnumDofs@{getnumDofs}!VirtualDofsCollection@{VirtualDofsCollection}}
+\doxyparagraph{\texorpdfstring{getnumDofs()}{getnumDofs()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Virtual\+Dofs\+Collection\+::getnum\+Dofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the total number of dofs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualDofsCollection_ae32c9872dadfef137bcf0b11d0c8e09c}\label{classVirtualDofsCollection_ae32c9872dadfef137bcf0b11d0c8e09c}} 
+\index{VirtualDofsCollection@{VirtualDofsCollection}!getnumEdofs@{getnumEdofs}}
+\index{getnumEdofs@{getnumEdofs}!VirtualDofsCollection@{VirtualDofsCollection}}
+\doxyparagraph{\texorpdfstring{getnumEdofs()}{getnumEdofs()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Virtual\+Dofs\+Collection\+::getnum\+Edofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of edge-\/type dofs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualDofsCollection_ae744d264883d18ec9b98620f43bbdcb2}\label{classVirtualDofsCollection_ae744d264883d18ec9b98620f43bbdcb2}} 
+\index{VirtualDofsCollection@{VirtualDofsCollection}!getnumFdofs@{getnumFdofs}}
+\index{getnumFdofs@{getnumFdofs}!VirtualDofsCollection@{VirtualDofsCollection}}
+\doxyparagraph{\texorpdfstring{getnumFdofs()}{getnumFdofs()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Virtual\+Dofs\+Collection\+::getnum\+Fdofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of face-\/type dofs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualDofsCollection_ae2968474fca93392c9f73406e083b810}\label{classVirtualDofsCollection_ae2968474fca93392c9f73406e083b810}} 
+\index{VirtualDofsCollection@{VirtualDofsCollection}!getnumPdofs@{getnumPdofs}}
+\index{getnumPdofs@{getnumPdofs}!VirtualDofsCollection@{VirtualDofsCollection}}
+\doxyparagraph{\texorpdfstring{getnumPdofs()}{getnumPdofs()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Virtual\+Dofs\+Collection\+::getnum\+Pdofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of polyhedron-\/type dofs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualDofsCollection_a1dfd1652ee247fe0142db7d7e0e53b0e}\label{classVirtualDofsCollection_a1dfd1652ee247fe0142db7d7e0e53b0e}} 
+\index{VirtualDofsCollection@{VirtualDofsCollection}!getnumVdofs@{getnumVdofs}}
+\index{getnumVdofs@{getnumVdofs}!VirtualDofsCollection@{VirtualDofsCollection}}
+\doxyparagraph{\texorpdfstring{getnumVdofs()}{getnumVdofs()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Virtual\+Dofs\+Collection\+::getnum\+Vdofs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of vertex-\/type dofs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualDofsCollection_add12318877e816a9fd2eeca7743a7b15}\label{classVirtualDofsCollection_add12318877e816a9fd2eeca7743a7b15}} 
+\index{VirtualDofsCollection@{VirtualDofsCollection}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!VirtualDofsCollection@{VirtualDofsCollection}}
+\doxyparagraph{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily unsigned int Virtual\+Dofs\+Collection\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the order of the virtual dofs collection. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int 
+\end{DoxyReturn}
+
+
+\doxysubsubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classVirtualDofsCollection_ab6fa50a4502eeeb17700ed6468684f95}\label{classVirtualDofsCollection_ab6fa50a4502eeeb17700ed6468684f95}} 
+\index{VirtualDofsCollection@{VirtualDofsCollection}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!VirtualDofsCollection@{VirtualDofsCollection}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&}]{dofs\+Collection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator for \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+{\em dofs\+Collection} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/virtual\+Dofs.\+hpp\item 
+src/virtual\+Dofs.\+cpp\end{DoxyCompactItemize}

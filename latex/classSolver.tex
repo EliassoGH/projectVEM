@@ -1,0 +1,118 @@
+\hypertarget{classSolver}{}\doxysubsection{Solver Class Reference}
+\label{classSolver}\index{Solver@{Solver}}
+
+
+Inheritance diagram for Solver\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSolver_a9dfe7ae9ce617e8a6398be34284c907a}\label{classSolver_a9dfe7ae9ce617e8a6398be34284c907a}} 
+\mbox{\hyperlink{classSolver_a9dfe7ae9ce617e8a6398be34284c907a}{Solver}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSolver_af2973763863e026672ce7d2c927a361d}{Solver}} (const Eigen\+::\+Sparse\+Matrix$<$ real $>$ \&K, const Eigen\+::\+Vector\+Xd \&F)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSolver_ab651560a089c3beaf420deb61ea4bd87}\label{classSolver_ab651560a089c3beaf420deb61ea4bd87}} 
+void \mbox{\hyperlink{classSolver_ab651560a089c3beaf420deb61ea4bd87}{solve}} ()
+\begin{DoxyCompactList}\small\item\em Solve the system KU=F. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{classSolver_a4367a317674e5f56108743d8ea5810af}{get\+Right\+Hand\+Side}} () const
+\begin{DoxyCompactList}\small\item\em Getter for F. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector\+Xd \& \mbox{\hyperlink{classSolver_a03b8ec5f7c24584cd7eb811d14fc3fec}{get\+Solution\+Displacements\+Eig}} () const
+\begin{DoxyCompactList}\small\item\em Getter for U as Eigen\+::\+Vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ real $>$ \mbox{\hyperlink{classSolver_a1d19b7dd6832611b2c73896364472a50}{get\+Solution\+Displacements}} () const
+\begin{DoxyCompactList}\small\item\em Getter for U as std\+::vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSolver_ada194b0abf073417e1f5088badec0fd3}\label{classSolver_ada194b0abf073417e1f5088badec0fd3}} 
+real {\bfseries compute\+H1error} (const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&mesh, const std\+::function$<$ std\+::array$<$ real, 3 $>$(real, real, real)$>$ \&Uex\+\_\+func)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSolver_a2e4f3101b209b730882c99974ed2873c}\label{classSolver_a2e4f3101b209b730882c99974ed2873c}} 
+Eigen\+::\+Sparse\+Matrix$<$ real $>$ {\bfseries K}
+\item 
+\mbox{\Hypertarget{classSolver_ae7d0532d0c102cc635c1579a4c63d6fc}\label{classSolver_ae7d0532d0c102cc635c1579a4c63d6fc}} 
+Eigen\+::\+Vector\+Xd {\bfseries F}
+\item 
+\mbox{\Hypertarget{classSolver_a119fd1f5a7fc4c27b161975580aa2e30}\label{classSolver_a119fd1f5a7fc4c27b161975580aa2e30}} 
+Eigen\+::\+Vector\+Xd {\bfseries U}
+\item 
+\mbox{\Hypertarget{classSolver_ac7c4795e70d3f8d6a8e2f6608deb4778}\label{classSolver_ac7c4795e70d3f8d6a8e2f6608deb4778}} 
+std\+::vector$<$ bool $>$ {\bfseries is\+Constrained}
+\item 
+\mbox{\Hypertarget{classSolver_a2f9f336aa83bdd0a16b787ddfa599098}\label{classSolver_a2f9f336aa83bdd0a16b787ddfa599098}} 
+std\+::vector$<$ std\+::size\+\_\+t $>$ {\bfseries unconstrained\+Dofs}
+\item 
+\mbox{\Hypertarget{classSolver_a6e82c1cf615a8608a1f56827481715a9}\label{classSolver_a6e82c1cf615a8608a1f56827481715a9}} 
+std\+::vector$<$ std\+::size\+\_\+t $>$ {\bfseries constrained\+Dofs}
+\item 
+\mbox{\Hypertarget{classSolver_ad48118a0b789742ce981f30181ba56f7}\label{classSolver_ad48118a0b789742ce981f30181ba56f7}} 
+std\+::vector$<$ real $>$ {\bfseries constrained\+Dofs\+Values}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSolver_af2973763863e026672ce7d2c927a361d}\label{classSolver_af2973763863e026672ce7d2c927a361d}} 
+\index{Solver@{Solver}!Solver@{Solver}}
+\index{Solver@{Solver}!Solver@{Solver}}
+\doxyparagraph{\texorpdfstring{Solver()}{Solver()}}
+{\footnotesize\ttfamily Solver\+::\+Solver (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Sparse\+Matrix$<$ real $>$ \&}]{K,  }\item[{const Eigen\+::\+Vector\+Xd \&}]{F }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em K} & \\
+\hline
+{\em F} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSolver_a4367a317674e5f56108743d8ea5810af}\label{classSolver_a4367a317674e5f56108743d8ea5810af}} 
+\index{Solver@{Solver}!getRightHandSide@{getRightHandSide}}
+\index{getRightHandSide@{getRightHandSide}!Solver@{Solver}}
+\doxyparagraph{\texorpdfstring{getRightHandSide()}{getRightHandSide()}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector\+Xd \& Solver\+::get\+Right\+Hand\+Side (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for F. 
+
+\begin{DoxyReturn}{Returns}
+const Eigen\+::\+Vector\+Xd\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSolver_a1d19b7dd6832611b2c73896364472a50}\label{classSolver_a1d19b7dd6832611b2c73896364472a50}} 
+\index{Solver@{Solver}!getSolutionDisplacements@{getSolutionDisplacements}}
+\index{getSolutionDisplacements@{getSolutionDisplacements}!Solver@{Solver}}
+\doxyparagraph{\texorpdfstring{getSolutionDisplacements()}{getSolutionDisplacements()}}
+{\footnotesize\ttfamily std\+::vector$<$ real $>$ Solver\+::get\+Solution\+Displacements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for U as std\+::vector. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$real$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSolver_a03b8ec5f7c24584cd7eb811d14fc3fec}\label{classSolver_a03b8ec5f7c24584cd7eb811d14fc3fec}} 
+\index{Solver@{Solver}!getSolutionDisplacementsEig@{getSolutionDisplacementsEig}}
+\index{getSolutionDisplacementsEig@{getSolutionDisplacementsEig}!Solver@{Solver}}
+\doxyparagraph{\texorpdfstring{getSolutionDisplacementsEig()}{getSolutionDisplacementsEig()}}
+{\footnotesize\ttfamily const Eigen\+::\+Vector\+Xd \& Solver\+::get\+Solution\+Displacements\+Eig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for U as Eigen\+::\+Vector. 
+
+\begin{DoxyReturn}{Returns}
+const Eigen\+::\+Vector\+Xd\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/solver.\+hpp\item 
+src/solver.\+cpp\end{DoxyCompactItemize}

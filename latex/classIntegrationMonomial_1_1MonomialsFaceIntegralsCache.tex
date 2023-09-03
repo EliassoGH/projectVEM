@@ -1,0 +1,96 @@
+\hypertarget{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache}{}\doxysubsection{Integration\+Monomial\+::Monomials\+Face\+Integrals\+Cache Class Reference}
+\label{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache}\index{IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a6e051ac0053b264d5c9c48452718dd44}{initialize}} (const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&mesh, unsigned int order)
+\begin{DoxyCompactList}\small\item\em Initialize the cache for the whole faces in the mesh. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a02e77e14379fef28198e0e96ea4aad89}{initialize}} (const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} \&F, unsigned int order)
+\begin{DoxyCompactList}\small\item\em Initialize the cache for a face. \end{DoxyCompactList}\item 
+static std\+::vector$<$ real $>$ \& \mbox{\hyperlink{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a67da706d6dc223a9e65ecdc170d33d04}{get\+Cache\+Monomials}} (const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} \&F, unsigned int order)
+\begin{DoxyCompactList}\small\item\em Get the integrals of monomials up to a given order over a face. \end{DoxyCompactList}\item 
+static real \& \mbox{\hyperlink{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a110e2dca7657f42f744baa00dc62c5dd}{get\+Cache\+Monomial}} (const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} \&F, const \mbox{\hyperlink{classMonomial2D}{Monomial2D}} \&m)
+\begin{DoxyCompactList}\small\item\em Get the integrals of monomials up to a given order over a face. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a110e2dca7657f42f744baa00dc62c5dd}\label{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a110e2dca7657f42f744baa00dc62c5dd}} 
+\index{IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}!getCacheMonomial@{getCacheMonomial}}
+\index{getCacheMonomial@{getCacheMonomial}!IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}}
+\doxyparagraph{\texorpdfstring{getCacheMonomial()}{getCacheMonomial()}}
+{\footnotesize\ttfamily real \& Integration\+Monomial\+::\+Monomials\+Face\+Integrals\+Cache\+::get\+Cache\+Monomial (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} \&}]{F,  }\item[{const \mbox{\hyperlink{classMonomial2D}{Monomial2D}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the integrals of monomials up to a given order over a face. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & \\
+\hline
+{\em m} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+real\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a67da706d6dc223a9e65ecdc170d33d04}\label{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a67da706d6dc223a9e65ecdc170d33d04}} 
+\index{IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}!getCacheMonomials@{getCacheMonomials}}
+\index{getCacheMonomials@{getCacheMonomials}!IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}}
+\doxyparagraph{\texorpdfstring{getCacheMonomials()}{getCacheMonomials()}}
+{\footnotesize\ttfamily std\+::vector$<$ real $>$ \& Integration\+Monomial\+::\+Monomials\+Face\+Integrals\+Cache\+::get\+Cache\+Monomials (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} \&}]{F,  }\item[{unsigned int}]{order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the integrals of monomials up to a given order over a face. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & \\
+\hline
+{\em order} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$real$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a6e051ac0053b264d5c9c48452718dd44}\label{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a6e051ac0053b264d5c9c48452718dd44}} 
+\index{IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}!initialize@{initialize}}
+\index{initialize@{initialize}!IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}}
+\doxyparagraph{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Integration\+Monomial\+::\+Monomials\+Face\+Integrals\+Cache\+::initialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&}]{mesh,  }\item[{unsigned int}]{order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initialize the cache for the whole faces in the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+{\em order} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a02e77e14379fef28198e0e96ea4aad89}\label{classIntegrationMonomial_1_1MonomialsFaceIntegralsCache_a02e77e14379fef28198e0e96ea4aad89}} 
+\index{IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}!initialize@{initialize}}
+\index{initialize@{initialize}!IntegrationMonomial::MonomialsFaceIntegralsCache@{IntegrationMonomial::MonomialsFaceIntegralsCache}}
+\doxyparagraph{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Integration\+Monomial\+::\+Monomials\+Face\+Integrals\+Cache\+::initialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} \&}]{F,  }\item[{unsigned int}]{order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initialize the cache for a face. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F} & \\
+\hline
+{\em order} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/integration.\+hpp\item 
+src/integration.\+cpp\end{DoxyCompactItemize}

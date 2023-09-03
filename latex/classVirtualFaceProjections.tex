@@ -1,0 +1,84 @@
+\hypertarget{classVirtualFaceProjections}{}\doxysubsection{Virtual\+Face\+Projections Class Reference}
+\label{classVirtualFaceProjections}\index{VirtualFaceProjections@{VirtualFaceProjections}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVirtualFaceProjections_a40d7fc841c35678316b56db3f329cf52}{Virtual\+Face\+Projections}} (const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&dofs, const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&mesh, const unsigned int \&order)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ 2 $>$ $>$ \mbox{\hyperlink{classVirtualFaceProjections_ac2477f0faec6f2c0409c8e64efae4cf7}{compute\+Face\+Projection}} (const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&dofs, const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} \&face, const unsigned int \&order, bool check\+Consistency=false)
+\begin{DoxyCompactList}\small\item\em Compute the projections of the basis functions corresponding to the dofs defined on the face. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ 2 $>$ $>$ \& \mbox{\hyperlink{classVirtualFaceProjections_ab5d203b6aa7dd3c4172a7685d9fdf1aa}{get\+Face\+Projection}} (const std\+::size\+\_\+t \&Id) const
+\begin{DoxyCompactList}\small\item\em Get the face projections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVirtualFaceProjections_a40d7fc841c35678316b56db3f329cf52}\label{classVirtualFaceProjections_a40d7fc841c35678316b56db3f329cf52}} 
+\index{VirtualFaceProjections@{VirtualFaceProjections}!VirtualFaceProjections@{VirtualFaceProjections}}
+\index{VirtualFaceProjections@{VirtualFaceProjections}!VirtualFaceProjections@{VirtualFaceProjections}}
+\doxyparagraph{\texorpdfstring{VirtualFaceProjections()}{VirtualFaceProjections()}}
+{\footnotesize\ttfamily Virtual\+Face\+Projections\+::\+Virtual\+Face\+Projections (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&}]{dofs,  }\item[{const \mbox{\hyperlink{classMesh}{Mesh}}$<$ \mbox{\hyperlink{classgeometry_1_1Point}{Point3D}}, \mbox{\hyperlink{classgeometry_1_1Edge}{Edge3D}}, \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}}, \mbox{\hyperlink{classgeometry_1_1Polyhedron}{Polyhedron}}$<$ \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} $>$$>$ \&}]{mesh,  }\item[{const unsigned int \&}]{order }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dofs} & \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \\
+\hline
+{\em mesh} & \\
+\hline
+{\em order} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVirtualFaceProjections_ac2477f0faec6f2c0409c8e64efae4cf7}\label{classVirtualFaceProjections_ac2477f0faec6f2c0409c8e64efae4cf7}} 
+\index{VirtualFaceProjections@{VirtualFaceProjections}!computeFaceProjection@{computeFaceProjection}}
+\index{computeFaceProjection@{computeFaceProjection}!VirtualFaceProjections@{VirtualFaceProjections}}
+\doxyparagraph{\texorpdfstring{computeFaceProjection()}{computeFaceProjection()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ 2 $>$ $>$ Virtual\+Face\+Projections\+::compute\+Face\+Projection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \&}]{dofs,  }\item[{const \mbox{\hyperlink{classgeometry_1_1Polygon}{Polygon3D}} \&}]{face,  }\item[{const unsigned int \&}]{order,  }\item[{bool}]{check\+Consistency = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Compute the projections of the basis functions corresponding to the dofs defined on the face. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dofs} & \mbox{\hyperlink{classVirtualDofsCollection}{Virtual\+Dofs\+Collection}} \\
+\hline
+{\em face} & face over which the projection is performed \\
+\hline
+{\em order} & \\
+\hline
+{\em check\+Consistency} & if true the code checks the Frobenius norm of the difference between the matrix Gf and matrix Bf\+Df, exploiting the identity Bf\+Df=Gf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\mbox{\hyperlink{classPolynomial}{Polynomial$<$2$>$}}$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVirtualFaceProjections_ab5d203b6aa7dd3c4172a7685d9fdf1aa}\label{classVirtualFaceProjections_ab5d203b6aa7dd3c4172a7685d9fdf1aa}} 
+\index{VirtualFaceProjections@{VirtualFaceProjections}!getFaceProjection@{getFaceProjection}}
+\index{getFaceProjection@{getFaceProjection}!VirtualFaceProjections@{VirtualFaceProjections}}
+\doxyparagraph{\texorpdfstring{getFaceProjection()}{getFaceProjection()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classPolynomial}{Polynomial}}$<$ 2 $>$ $>$ \& Virtual\+Face\+Projections\+::get\+Face\+Projection (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t \&}]{Id }\end{DoxyParamCaption}) const}
+
+
+
+Get the face projections. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$\mbox{\hyperlink{classPolynomial}{Polynomial$<$2$>$}}$>$\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/virtual\+Projections.\+hpp\item 
+src/virtual\+Projections.\+cpp\end{DoxyCompactItemize}

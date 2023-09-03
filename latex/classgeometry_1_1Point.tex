@@ -8,72 +8,58 @@
 \begin{DoxyCompactList}\small\item\em Default constructor to initialize coordinates to 0. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classgeometry_1_1Point_ae9afee96cbad0bd763deb463d6e8c531}{Point}} (Args... args)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classgeometry_1_1Point}{Point}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a11b28cf3f7043f7155f446af5fc80440}\label{classgeometry_1_1Point_a11b28cf3f7043f7155f446af5fc80440}} 
+\mbox{\hyperlink{classgeometry_1_1Point_a11b28cf3f7043f7155f446af5fc80440}{$\sim$\+Point}} ()
+\begin{DoxyCompactList}\small\item\em Destructor to free the id when the point goes out of scope. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classgeometry_1_1Point_a2655db0b73e1e0090307f358523c76b5}\label{classgeometry_1_1Point_a2655db0b73e1e0090307f358523c76b5}} 
 constexpr std\+::size\+\_\+t {\bfseries get\+Dimension} () const
 \item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a1473578988cd179effe2d85d47a7662a}\label{classgeometry_1_1Point_a1473578988cd179effe2d85d47a7662a}} 
-void {\bfseries set\+Id} (Index\+Type \+\_\+id)
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a031426b882ad32a53dace5610c219cc7}\label{classgeometry_1_1Point_a031426b882ad32a53dace5610c219cc7}} 
-const Index\+Type \& {\bfseries get\+Id} () const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_ab7b87e8fc20551b1d0cdd55ab80b2bda}\label{classgeometry_1_1Point_ab7b87e8fc20551b1d0cdd55ab80b2bda}} 
-const std\+::array$<$ real, sizeof...(Args)$>$ {\bfseries get\+Coordinates} () const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a407f98d7d2d8bec1c1439a0f57c4120f}\label{classgeometry_1_1Point_a407f98d7d2d8bec1c1439a0f57c4120f}} 
-const real \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (std\+::size\+\_\+t index) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a997af977ccccb43b4d9bc5b58a4556ef}\label{classgeometry_1_1Point_a997af977ccccb43b4d9bc5b58a4556ef}} 
-auto {\bfseries operator$\ast$} (const real \&scalar) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a1670281c92b8c01eafc14dc8c64401ac}\label{classgeometry_1_1Point_a1670281c92b8c01eafc14dc8c64401ac}} 
-{\footnotesize template$<$size\+\_\+t... Indices$>$ }\\auto {\bfseries multiply\+By\+Scalar} (real scalar, std\+::index\+\_\+sequence$<$ Indices... $>$) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_ada07bcb3bb7e0df395d1ba351cf5ccd2}\label{classgeometry_1_1Point_ada07bcb3bb7e0df395d1ba351cf5ccd2}} 
-auto {\bfseries operator/} (const real \&scalar) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a7a13fe805835867ead10750760660248}\label{classgeometry_1_1Point_a7a13fe805835867ead10750760660248}} 
-{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries operator+} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a329b32fbcedc45d196fc74c4dc948509}\label{classgeometry_1_1Point_a329b32fbcedc45d196fc74c4dc948509}} 
-{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries operator-\/} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a7f25bc6dae714ce8c9384acc2cd7ced4}\label{classgeometry_1_1Point_a7f25bc6dae714ce8c9384acc2cd7ced4}} 
-{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries piecewise\+Multiply} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a33b2262b6989886d93a7ae67ae3b2f04}\label{classgeometry_1_1Point_a33b2262b6989886d93a7ae67ae3b2f04}} 
-{\footnotesize template$<$typename... Other\+Args, size\+\_\+t... Indices, typename Operation $>$ }\\auto {\bfseries binary\+Operation} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other, Operation operation, std\+::index\+\_\+sequence$<$ Indices... $>$) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a9a1389f6f0f9c379fffb2690094d4287}\label{classgeometry_1_1Point_a9a1389f6f0f9c379fffb2690094d4287}} 
-{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries dot} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a4069148c9fd7837802dfd579d53b8ce7}\label{classgeometry_1_1Point_a4069148c9fd7837802dfd579d53b8ce7}} 
-{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries cross} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a8ba38755b3ecd8971c9ccf0213424191}\label{classgeometry_1_1Point_a8ba38755b3ecd8971c9ccf0213424191}} 
-{\footnotesize template$<$typename... Other\+Args$>$ }\\auto {\bfseries distance} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a37ef86043e41af79e6e804cb0a54d9ac}\label{classgeometry_1_1Point_a37ef86043e41af79e6e804cb0a54d9ac}} 
-auto {\bfseries norm} () const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a8787291025bef9a73ba7b9ac468a22d0}\label{classgeometry_1_1Point_a8787291025bef9a73ba7b9ac468a22d0}} 
-auto {\bfseries normalize} () const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_aa17a863152777a30594b81197ae98535}\label{classgeometry_1_1Point_aa17a863152777a30594b81197ae98535}} 
-bool {\bfseries operator$<$} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Args... $>$ \&other) const
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_aed21364b59fce7fca41001aa22db4694}\label{classgeometry_1_1Point_aed21364b59fce7fca41001aa22db4694}} 
-{\footnotesize template$<$typename... Other\+Args$>$ }\\bool {\bfseries operator==} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+void \mbox{\hyperlink{classgeometry_1_1Point_a1473578988cd179effe2d85d47a7662a}{set\+Id}} (Index\+Type \+\_\+id)
+\begin{DoxyCompactList}\small\item\em Set the Id object. \end{DoxyCompactList}\item 
+const Index\+Type \& \mbox{\hyperlink{classgeometry_1_1Point_a031426b882ad32a53dace5610c219cc7}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Get the Id object. \end{DoxyCompactList}\item 
+const std\+::array$<$ real, sizeof...(Args)$>$ \mbox{\hyperlink{classgeometry_1_1Point_ab7b87e8fc20551b1d0cdd55ab80b2bda}{get\+Coordinates}} () const
+\begin{DoxyCompactList}\small\item\em Get the Coordinates object. \end{DoxyCompactList}\item 
+const real \& \mbox{\hyperlink{classgeometry_1_1Point_a407f98d7d2d8bec1c1439a0f57c4120f}{operator\mbox{[}$\,$\mbox{]}}} (std\+::size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Access operator \mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classgeometry_1_1Point_a997af977ccccb43b4d9bc5b58a4556ef}{operator$\ast$}} (const real \&scalar) const
+\begin{DoxyCompactList}\small\item\em Overloaded $\ast$ operator to compute the scalar multiplication of a point (point$\ast$scalar) \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t... Indices$>$ }\\auto \mbox{\hyperlink{classgeometry_1_1Point_a1670281c92b8c01eafc14dc8c64401ac}{multiply\+By\+Scalar}} (real scalar, std\+::index\+\_\+sequence$<$ Indices... $>$) const
+\begin{DoxyCompactList}\small\item\em scalar multiplication of a point \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classgeometry_1_1Point_ada07bcb3bb7e0df395d1ba351cf5ccd2}{operator/}} (const real \&scalar) const
+\begin{DoxyCompactList}\small\item\em Overloaded / operator to compute the scalar division of a point (point/scalar) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto \mbox{\hyperlink{classgeometry_1_1Point_a7a13fe805835867ead10750760660248}{operator+}} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Overloaded + operator to compute the sum of two points. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto \mbox{\hyperlink{classgeometry_1_1Point_a329b32fbcedc45d196fc74c4dc948509}{operator-\/}} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Overloaded -\/ operator to compute the difference of two points. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto \mbox{\hyperlink{classgeometry_1_1Point_a7f25bc6dae714ce8c9384acc2cd7ced4}{piecewise\+Multiply}} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Piecewise multiplication of two points. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Other\+Args, size\+\_\+t... Indices, typename Operation $>$ }\\auto \mbox{\hyperlink{classgeometry_1_1Point_a33b2262b6989886d93a7ae67ae3b2f04}{binary\+Operation}} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other, Operation operation, std\+::index\+\_\+sequence$<$ Indices... $>$) const
+\begin{DoxyCompactList}\small\item\em Binary operation in class. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto \mbox{\hyperlink{classgeometry_1_1Point_a9a1389f6f0f9c379fffb2690094d4287}{dot}} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Dot product in the form point1.\+dot(point2) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto \mbox{\hyperlink{classgeometry_1_1Point_a4069148c9fd7837802dfd579d53b8ce7}{cross}} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em In-\/class cross product calculation (3D points only) in the form point1.\+cross(point2) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\auto \mbox{\hyperlink{classgeometry_1_1Point_a8ba38755b3ecd8971c9ccf0213424191}{distance}} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Euclidean distance. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classgeometry_1_1Point_a37ef86043e41af79e6e804cb0a54d9ac}{norm}} () const
+\begin{DoxyCompactList}\small\item\em Compute the norm. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classgeometry_1_1Point_a8787291025bef9a73ba7b9ac468a22d0}{normalize}} () const
+\begin{DoxyCompactList}\small\item\em Normalize coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgeometry_1_1Point_aa17a863152777a30594b81197ae98535}{operator$<$}} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Args... $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Define the comparison function based on edge Ids. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\bool \mbox{\hyperlink{classgeometry_1_1Point_aed21364b59fce7fca41001aa22db4694}{operator==}} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Custom definition of operator== for \mbox{\hyperlink{classgeometry_1_1Point}{Point}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classgeometry_1_1Point_a0a35a79dcb8d24e2569ec7b7b27629fe}\label{classgeometry_1_1Point_a0a35a79dcb8d24e2569ec7b7b27629fe}} 
+{\footnotesize template$<$typename... Other\+Args$>$ }\\bool {\bfseries operator!=} (const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&other) const
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classgeometry_1_1Point_ae214bb96b7d9dc9064120d57679f57c7}\label{classgeometry_1_1Point_ae214bb96b7d9dc9064120d57679f57c7}} 
-auto {\bfseries operator$\ast$} (const real \&scalar, const \mbox{\hyperlink{classgeometry_1_1Point}{Point}} \&point)
-\item 
-\mbox{\Hypertarget{classgeometry_1_1Point_a3e56ea203baff1a44ba69b79ff28bc4e}\label{classgeometry_1_1Point_a3e56ea203baff1a44ba69b79ff28bc4e}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Args... $>$ \&point)
-\end{DoxyCompactItemize}
+auto \mbox{\hyperlink{classgeometry_1_1Point_ae214bb96b7d9dc9064120d57679f57c7}{operator$\ast$}} (const real \&scalar, const \mbox{\hyperlink{classgeometry_1_1Point}{Point}} \&point)
+\begin{DoxyCompactList}\small\item\em Overloaded $\ast$ operator to support scalar $\ast$ point multiplication. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classgeometry_1_1Point_a3e56ea203baff1a44ba69b79ff28bc4e}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Args... $>$ \&point)
+\begin{DoxyCompactList}\small\item\em Output stream operator to stream coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsection{Constructor \& Destructor Documentation}
@@ -95,6 +81,437 @@ Construct a new \mbox{\hyperlink{classgeometry_1_1Point}{Point}} object.
 \end{DoxyParams}
 
 
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgeometry_1_1Point_a33b2262b6989886d93a7ae67ae3b2f04}\label{classgeometry_1_1Point_a33b2262b6989886d93a7ae67ae3b2f04}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!binaryOperation@{binaryOperation}}
+\index{binaryOperation@{binaryOperation}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{binaryOperation()}{binaryOperation()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename... Other\+Args, size\+\_\+t... Indices, typename Operation $>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::binary\+Operation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&}]{other,  }\item[{Operation}]{operation,  }\item[{std\+::index\+\_\+sequence$<$ Indices... $>$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Binary operation in class. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Other\+Args} & \\
+\hline
+{\em Indices} & \\
+\hline
+{\em Operation} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other point \\
+\hline
+{\em operation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a4069148c9fd7837802dfd579d53b8ce7}\label{classgeometry_1_1Point_a4069148c9fd7837802dfd579d53b8ce7}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!cross@{cross}}
+\index{cross@{cross}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename... Other\+Args$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::cross (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+In-\/class cross product calculation (3D points only) in the form point1.\+cross(point2) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Other\+Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a8ba38755b3ecd8971c9ccf0213424191}\label{classgeometry_1_1Point_a8ba38755b3ecd8971c9ccf0213424191}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!distance@{distance}}
+\index{distance@{distance}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename... Other\+Args$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Euclidean distance. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Other\+Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a9a1389f6f0f9c379fffb2690094d4287}\label{classgeometry_1_1Point_a9a1389f6f0f9c379fffb2690094d4287}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!dot@{dot}}
+\index{dot@{dot}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{dot()}{dot()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename... Other\+Args$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::dot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dot product in the form point1.\+dot(point2) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Other\+Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_ab7b87e8fc20551b1d0cdd55ab80b2bda}\label{classgeometry_1_1Point_ab7b87e8fc20551b1d0cdd55ab80b2bda}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!getCoordinates@{getCoordinates}}
+\index{getCoordinates@{getCoordinates}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{getCoordinates()}{getCoordinates()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+const std\+::array$<$real, sizeof...(Args)$>$ \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::get\+Coordinates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Coordinates object. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::array$<$real, sizeof...(\+Args)$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a031426b882ad32a53dace5610c219cc7}\label{classgeometry_1_1Point_a031426b882ad32a53dace5610c219cc7}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!getId@{getId}}
+\index{getId@{getId}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+const Index\+Type\& \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Id object. 
+
+\begin{DoxyReturn}{Returns}
+const Index\+Type\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a1670281c92b8c01eafc14dc8c64401ac}\label{classgeometry_1_1Point_a1670281c92b8c01eafc14dc8c64401ac}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!multiplyByScalar@{multiplyByScalar}}
+\index{multiplyByScalar@{multiplyByScalar}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{multiplyByScalar()}{multiplyByScalar()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$size\+\_\+t... Indices$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::multiply\+By\+Scalar (\begin{DoxyParamCaption}\item[{real}]{scalar,  }\item[{std\+::index\+\_\+sequence$<$ Indices... $>$}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+scalar multiplication of a point 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Indices} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a37ef86043e41af79e6e804cb0a54d9ac}\label{classgeometry_1_1Point_a37ef86043e41af79e6e804cb0a54d9ac}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!norm@{norm}}
+\index{norm@{norm}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{norm()}{norm()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::norm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the norm. 
+
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a8787291025bef9a73ba7b9ac468a22d0}\label{classgeometry_1_1Point_a8787291025bef9a73ba7b9ac468a22d0}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!normalize@{normalize}}
+\index{normalize@{normalize}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Normalize coordinates. 
+
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a997af977ccccb43b4d9bc5b58a4556ef}\label{classgeometry_1_1Point_a997af977ccccb43b4d9bc5b58a4556ef}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const real \&}]{scalar }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded $\ast$ operator to compute the scalar multiplication of a point (point$\ast$scalar) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a7a13fe805835867ead10750760660248}\label{classgeometry_1_1Point_a7a13fe805835867ead10750760660248}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename... Other\+Args$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded + operator to compute the sum of two points. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Other\+Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a329b32fbcedc45d196fc74c4dc948509}\label{classgeometry_1_1Point_a329b32fbcedc45d196fc74c4dc948509}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename... Other\+Args$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded -\/ operator to compute the difference of two points. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Other\+Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_ada07bcb3bb7e0df395d1ba351cf5ccd2}\label{classgeometry_1_1Point_ada07bcb3bb7e0df395d1ba351cf5ccd2}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::operator/ (\begin{DoxyParamCaption}\item[{const real \&}]{scalar }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overloaded / operator to compute the scalar division of a point (point/scalar) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_aa17a863152777a30594b81197ae98535}\label{classgeometry_1_1Point_aa17a863152777a30594b81197ae98535}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+bool \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Args... $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define the comparison function based on edge Ids. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_aed21364b59fce7fca41001aa22db4694}\label{classgeometry_1_1Point_aed21364b59fce7fca41001aa22db4694}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename... Other\+Args$>$ \\
+bool \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Custom definition of operator== for \mbox{\hyperlink{classgeometry_1_1Point}{Point}}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Other\+Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a407f98d7d2d8bec1c1439a0f57c4120f}\label{classgeometry_1_1Point_a407f98d7d2d8bec1c1439a0f57c4120f}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+const real\& \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Access operator \mbox{[}\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index i corresponding to coordinate i \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const real\& coordinate i 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a7f25bc6dae714ce8c9384acc2cd7ced4}\label{classgeometry_1_1Point_a7f25bc6dae714ce8c9384acc2cd7ced4}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!piecewiseMultiply@{piecewiseMultiply}}
+\index{piecewiseMultiply@{piecewiseMultiply}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{piecewiseMultiply()}{piecewiseMultiply()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+template$<$typename... Other\+Args$>$ \\
+auto \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::piecewise\+Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Other\+Args... $>$ \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Piecewise multiplication of two points. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Other\+Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a1473578988cd179effe2d85d47a7662a}\label{classgeometry_1_1Point_a1473578988cd179effe2d85d47a7662a}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!setId@{setId}}
+\index{setId@{setId}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+void \mbox{\hyperlink{classgeometry_1_1Point}{geometry\+::\+Point}}$<$ Args $>$\+::set\+Id (\begin{DoxyParamCaption}\item[{Index\+Type}]{\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Id object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & id \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classgeometry_1_1Point_ae214bb96b7d9dc9064120d57679f57c7}\label{classgeometry_1_1Point_ae214bb96b7d9dc9064120d57679f57c7}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{operator$\ast$}{operator*}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+auto operator$\ast$ (\begin{DoxyParamCaption}\item[{const real \&}]{scalar,  }\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Args $>$ \&}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloaded $\ast$ operator to support scalar $\ast$ point multiplication. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & \\
+\hline
+{\em point} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+auto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classgeometry_1_1Point_a3e56ea203baff1a44ba69b79ff28bc4e}\label{classgeometry_1_1Point_a3e56ea203baff1a44ba69b79ff28bc4e}} 
+\index{geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!geometry::Point$<$ Args $>$@{geometry::Point$<$ Args $>$}}
+\doxyparagraph{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classgeometry_1_1Point}{Point}}$<$ Args... $>$ \&}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Output stream operator to stream coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & \\
+\hline
+{\em point} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::ostream\& 
+\end{DoxyReturn}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Mesh/point.\+hpp\end{DoxyCompactItemize}
+include/point.\+hpp\end{DoxyCompactItemize}

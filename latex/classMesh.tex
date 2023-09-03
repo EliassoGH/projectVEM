@@ -3,53 +3,266 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMesh_a7d1bff13d5001e8d4382e4bc76ebbf20}\label{classMesh_a7d1bff13d5001e8d4382e4bc76ebbf20}} 
-{\bfseries Mesh} (const std\+::string \&filename)
-\item 
-\mbox{\Hypertarget{classMesh_a9b3bb2401b09ad2e824e473cf442646d}\label{classMesh_a9b3bb2401b09ad2e824e473cf442646d}} 
-std\+::size\+\_\+t {\bfseries num\+Vertices} () const
-\item 
-\mbox{\Hypertarget{classMesh_a2fe0a4347f90a3e1c23951736b446fda}\label{classMesh_a2fe0a4347f90a3e1c23951736b446fda}} 
-std\+::size\+\_\+t {\bfseries num\+Edges} () const
-\item 
-\mbox{\Hypertarget{classMesh_ac1160685d782baf4b03fafb55c6ad16f}\label{classMesh_ac1160685d782baf4b03fafb55c6ad16f}} 
-std\+::size\+\_\+t {\bfseries num\+Polygons} () const
-\item 
-\mbox{\Hypertarget{classMesh_a4f6eefd43cb38be5dd67e26799c1b12f}\label{classMesh_a4f6eefd43cb38be5dd67e26799c1b12f}} 
-std\+::size\+\_\+t {\bfseries num\+Polyhedra} () const
-\item 
-\mbox{\Hypertarget{classMesh_a3688a68c29d7bdd4a78a2edba5f5332b}\label{classMesh_a3688a68c29d7bdd4a78a2edba5f5332b}} 
-const Point\+Type \& {\bfseries get\+Vertex} (std\+::size\+\_\+t index) const
-\item 
-\mbox{\Hypertarget{classMesh_a99ba4ec4136502fd58f65fada0d9558d}\label{classMesh_a99ba4ec4136502fd58f65fada0d9558d}} 
-const Edge\+Type \& {\bfseries get\+Edge} (Index\+Type index) const
-\item 
-\mbox{\Hypertarget{classMesh_a534d94a68dc85ea466217384174f4591}\label{classMesh_a534d94a68dc85ea466217384174f4591}} 
-const Polygon\+Type \& {\bfseries get\+Polygon} (Index\+Type index) const
-\item 
-\mbox{\Hypertarget{classMesh_a25741c9ef507e3b248479318c290ea5b}\label{classMesh_a25741c9ef507e3b248479318c290ea5b}} 
-const Polyhedron\+Type \& {\bfseries get\+Polyhedron} (std\+::size\+\_\+t index) const
-\item 
-\mbox{\Hypertarget{classMesh_a5c3cea5d8b3e22cd8b4602fe2c43af9d}\label{classMesh_a5c3cea5d8b3e22cd8b4602fe2c43af9d}} 
-const std\+::map$<$ std\+::size\+\_\+t, Point\+Type $>$ \& {\bfseries get\+Vertices} () const
-\item 
-\mbox{\Hypertarget{classMesh_a17e4aa905f33fb41370164c60f65458f}\label{classMesh_a17e4aa905f33fb41370164c60f65458f}} 
-const std\+::map$<$ Index\+Type, Edge\+Type $>$ {\bfseries get\+Edges} () const
-\item 
-\mbox{\Hypertarget{classMesh_a25cad622752cf44ad8aca70b3fdaeece}\label{classMesh_a25cad622752cf44ad8aca70b3fdaeece}} 
-const std\+::map$<$ Index\+Type, Polygon\+Type $>$ {\bfseries get\+Polygons} () const
-\item 
-\mbox{\Hypertarget{classMesh_a23be74f14f96efd73b744153e784b8f3}\label{classMesh_a23be74f14f96efd73b744153e784b8f3}} 
-const std\+::map$<$ std\+::size\+\_\+t, Polyhedron\+Type $>$ \& {\bfseries get\+Polyhedra} () const
-\item 
-\mbox{\Hypertarget{classMesh_a4051cfb1246741f58e61d66dbf29fbfb}\label{classMesh_a4051cfb1246741f58e61d66dbf29fbfb}} 
-const real \& {\bfseries get\+Size} () const
-\item 
+\mbox{\Hypertarget{classMesh_ad0a790b51a91c01e87848d779cedd5ed}\label{classMesh_ad0a790b51a91c01e87848d779cedd5ed}} 
+\mbox{\hyperlink{classMesh_ad0a790b51a91c01e87848d779cedd5ed}{Mesh}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMesh_a7d1bff13d5001e8d4382e4bc76ebbf20}{Mesh}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Constructor reading entities from Gmsh .geo file. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classMesh_a9b3bb2401b09ad2e824e473cf442646d}{num\+Vertices}} () const
+\begin{DoxyCompactList}\small\item\em Method to get the number of vertices. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classMesh_a2fe0a4347f90a3e1c23951736b446fda}{num\+Edges}} () const
+\begin{DoxyCompactList}\small\item\em Method to get the number of edges. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classMesh_ac1160685d782baf4b03fafb55c6ad16f}{num\+Polygons}} () const
+\begin{DoxyCompactList}\small\item\em Method to get the number of polygons. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classMesh_a4f6eefd43cb38be5dd67e26799c1b12f}{num\+Polyhedra}} () const
+\begin{DoxyCompactList}\small\item\em Method to get the number of polyhedra. \end{DoxyCompactList}\item 
+const Point\+Type \& \mbox{\hyperlink{classMesh_a3688a68c29d7bdd4a78a2edba5f5332b}{get\+Vertex}} (std\+::size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Getter for a vertex. \end{DoxyCompactList}\item 
+const Edge\+Type \& \mbox{\hyperlink{classMesh_a99ba4ec4136502fd58f65fada0d9558d}{get\+Edge}} (Index\+Type index) const
+\begin{DoxyCompactList}\small\item\em Getter for an edge. \end{DoxyCompactList}\item 
+const Polygon\+Type \& \mbox{\hyperlink{classMesh_a534d94a68dc85ea466217384174f4591}{get\+Polygon}} (Index\+Type index) const
+\begin{DoxyCompactList}\small\item\em Getter for a polygon. \end{DoxyCompactList}\item 
+const Polyhedron\+Type \& \mbox{\hyperlink{classMesh_a25741c9ef507e3b248479318c290ea5b}{get\+Polyhedron}} (std\+::size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Getter for a polyhedron. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::size\+\_\+t, Point\+Type $>$ \& \mbox{\hyperlink{classMesh_a5c3cea5d8b3e22cd8b4602fe2c43af9d}{get\+Vertices}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the map of vertices. \end{DoxyCompactList}\item 
+const std\+::map$<$ Index\+Type, Edge\+Type $>$ \mbox{\hyperlink{classMesh_a17e4aa905f33fb41370164c60f65458f}{get\+Edges}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the map of edges. \end{DoxyCompactList}\item 
+const std\+::map$<$ Index\+Type, Polygon\+Type $>$ \mbox{\hyperlink{classMesh_a25cad622752cf44ad8aca70b3fdaeece}{get\+Polygons}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the map of polygons. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::size\+\_\+t, Polyhedron\+Type $>$ \& \mbox{\hyperlink{classMesh_a23be74f14f96efd73b744153e784b8f3}{get\+Polyhedra}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the map of polyhedra. \end{DoxyCompactList}\item 
+const real \& \mbox{\hyperlink{classMesh_a4051cfb1246741f58e61d66dbf29fbfb}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the average diameter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMesh_a52e1e957d9d3710db1f5c785ae6d57f3}\label{classMesh_a52e1e957d9d3710db1f5c785ae6d57f3}} 
-void {\bfseries print} () const
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classMesh_a52e1e957d9d3710db1f5c785ae6d57f3}{print}} () const
+\begin{DoxyCompactList}\small\item\em Print mesh information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMesh_a7d1bff13d5001e8d4382e4bc76ebbf20}\label{classMesh_a7d1bff13d5001e8d4382e4bc76ebbf20}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+\mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::\mbox{\hyperlink{classMesh}{Mesh}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor reading entities from Gmsh .geo file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMesh_a99ba4ec4136502fd58f65fada0d9558d}\label{classMesh_a99ba4ec4136502fd58f65fada0d9558d}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getEdge@{getEdge}}
+\index{getEdge@{getEdge}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{getEdge()}{getEdge()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+const Edge\+Type\& \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::get\+Edge (\begin{DoxyParamCaption}\item[{Index\+Type}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for an edge. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const Edge\+Type\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a17e4aa905f33fb41370164c60f65458f}\label{classMesh_a17e4aa905f33fb41370164c60f65458f}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getEdges@{getEdges}}
+\index{getEdges@{getEdges}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{getEdges()}{getEdges()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+const std\+::map$<$Index\+Type, Edge\+Type$>$ \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::get\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the map of edges. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$\+Index\+Type, Edge\+Type$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a534d94a68dc85ea466217384174f4591}\label{classMesh_a534d94a68dc85ea466217384174f4591}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getPolygon@{getPolygon}}
+\index{getPolygon@{getPolygon}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{getPolygon()}{getPolygon()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+const Polygon\+Type\& \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::get\+Polygon (\begin{DoxyParamCaption}\item[{Index\+Type}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for a polygon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const Polygon\+Type\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a25cad622752cf44ad8aca70b3fdaeece}\label{classMesh_a25cad622752cf44ad8aca70b3fdaeece}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getPolygons@{getPolygons}}
+\index{getPolygons@{getPolygons}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{getPolygons()}{getPolygons()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+const std\+::map$<$Index\+Type, Polygon\+Type$>$ \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::get\+Polygons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the map of polygons. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$\+Index\+Type, Polygon\+Type$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a23be74f14f96efd73b744153e784b8f3}\label{classMesh_a23be74f14f96efd73b744153e784b8f3}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getPolyhedra@{getPolyhedra}}
+\index{getPolyhedra@{getPolyhedra}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{getPolyhedra()}{getPolyhedra()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+const std\+::map$<$std\+::size\+\_\+t, Polyhedron\+Type$>$\& \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::get\+Polyhedra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the map of polyhedra. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$std\+::size\+\_\+t, Polyhedron\+Type$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a25741c9ef507e3b248479318c290ea5b}\label{classMesh_a25741c9ef507e3b248479318c290ea5b}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getPolyhedron@{getPolyhedron}}
+\index{getPolyhedron@{getPolyhedron}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{getPolyhedron()}{getPolyhedron()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+const Polyhedron\+Type\& \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::get\+Polyhedron (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for a polyhedron. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const Polyhedron\+Type\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a4051cfb1246741f58e61d66dbf29fbfb}\label{classMesh_a4051cfb1246741f58e61d66dbf29fbfb}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+const real\& \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the average diameter. 
+
+\begin{DoxyReturn}{Returns}
+const real\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a3688a68c29d7bdd4a78a2edba5f5332b}\label{classMesh_a3688a68c29d7bdd4a78a2edba5f5332b}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getVertex@{getVertex}}
+\index{getVertex@{getVertex}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{getVertex()}{getVertex()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+const Point\+Type\& \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::get\+Vertex (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for a vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const Point\+Type\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a5c3cea5d8b3e22cd8b4602fe2c43af9d}\label{classMesh_a5c3cea5d8b3e22cd8b4602fe2c43af9d}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!getVertices@{getVertices}}
+\index{getVertices@{getVertices}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{getVertices()}{getVertices()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+const std\+::map$<$std\+::size\+\_\+t, Point\+Type$>$\& \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::get\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the map of vertices. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::map$<$std\+::size\+\_\+t, Point\+Type$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a2fe0a4347f90a3e1c23951736b446fda}\label{classMesh_a2fe0a4347f90a3e1c23951736b446fda}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!numEdges@{numEdges}}
+\index{numEdges@{numEdges}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{numEdges()}{numEdges()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::num\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to get the number of edges. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_ac1160685d782baf4b03fafb55c6ad16f}\label{classMesh_ac1160685d782baf4b03fafb55c6ad16f}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!numPolygons@{numPolygons}}
+\index{numPolygons@{numPolygons}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{numPolygons()}{numPolygons()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::num\+Polygons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to get the number of polygons. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a4f6eefd43cb38be5dd67e26799c1b12f}\label{classMesh_a4f6eefd43cb38be5dd67e26799c1b12f}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!numPolyhedra@{numPolyhedra}}
+\index{numPolyhedra@{numPolyhedra}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{numPolyhedra()}{numPolyhedra()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::num\+Polyhedra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to get the number of polyhedra. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMesh_a9b3bb2401b09ad2e824e473cf442646d}\label{classMesh_a9b3bb2401b09ad2e824e473cf442646d}} 
+\index{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}!numVertices@{numVertices}}
+\index{numVertices@{numVertices}!Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$@{Mesh$<$ PointType, EdgeType, PolygonType, PolyhedronType $>$}}
+\doxyparagraph{\texorpdfstring{numVertices()}{numVertices()}}
+{\footnotesize\ttfamily template$<$typename Point\+Type , typename Edge\+Type , typename Polygon\+Type , typename Polyhedron\+Type $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classMesh}{Mesh}}$<$ Point\+Type, Edge\+Type, Polygon\+Type, Polyhedron\+Type $>$\+::num\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Method to get the number of vertices. 
+
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Mesh/mesh.\+hpp\end{DoxyCompactItemize}
+include/mesh.\+hpp\end{DoxyCompactItemize}

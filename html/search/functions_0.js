@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['point_12',['Point',['../classgeometry_1_1Point.html#a19bbc4521b4cf40cc0c46f4598bde7be',1,'geometry::Point::Point()'],['../classgeometry_1_1Point.html#ae9afee96cbad0bd763deb463d6e8c531',1,'geometry::Point::Point(Args... args)']]]
+  ['addedge_181',['addEdge',['../classgeometry_1_1Polygon.html#a70745e1c5ab9eca3b81eab397e044cfd',1,'geometry::Polygon']]],
+  ['addmonomial_182',['addMonomial',['../classPolynomial.html#a3a82c5fdf35c7161919fce05e92ebf17',1,'Polynomial']]],
+  ['addpolygon_183',['addPolygon',['../classgeometry_1_1Polyhedron.html#a15e7c2a9f80b5f0b41e630356adfd363',1,'geometry::Polyhedron']]],
+  ['areedgesconsistent_184',['areEdgesConsistent',['../classgeometry_1_1Polygon.html#a7c8018a60a047c08cfeec5913c86df20',1,'geometry::Polygon']]]
 ];
